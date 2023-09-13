@@ -1,0 +1,3 @@
+[submodule "themes/tty-blocks"]
+	path = themes/tty-blocks
+	url = https://github.com/signet-marigold/gohugo-theme-tty-blocks.git
