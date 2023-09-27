@@ -1,0 +1,48 @@
+.text-white {
+    color: $white;
+}
+.bg-white {
+    background-color: $white;
+}
+.text-black {
+    color: $black;
+}
+.bg-black {
+    background-color: $black;
+}
+
+@each $key, $val in $grays {
+    .text-#{$key} {
+        color: $val;
+    }
+    .bg-#{$key} {
+        background-color: $val;
+    }
+}
+
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val;
+    }
+    .bg-#{$key} {
+        background-color: $val;
+    }
+}
+
+@each $key, $val in $light-colors {
+    .text-#{$key} {
+        color: $val;
+    }
+    .bg-#{$key} {
+        background-color: $val;
+    }
+}
+
+@each $key, $val in $dark-colors {
+    .text-#{$key} {
+        color: $val;
+    }
+    .bg-#{$key} {
+        background-color: $val;
+    }
+}

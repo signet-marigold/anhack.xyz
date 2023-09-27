@@ -1,0 +1,243 @@
+// Variables
+//
+//
+
+
+// Colors
+
+/* old pallet
+$black:         #141416;
+$dark-gray:     #4b4b4b;
+$gray:          #828282;
+$light-gray:    #b9b9b9;
+$white:         #efefef;
+
+$red:           #ff0000;
+$orange:        #ff5f00;
+$yellow:        #e9e100;
+$green:         #22cf00;
+$cyan:          #00dcdc;
+$blue:          #0084ff;
+$violet:        #0400ee;
+$magenta:       #7c00ee;
+$pink:          #ea00ee;
+*/
+
+$white:         #efefef !default;
+$black:         #141416 !default;
+$gray-100:      mix($black, $white, 10%) !default;
+$gray-200:      mix($black, $white, 20%) !default;
+$gray-300:      mix($black, $white, 30%) !default;
+$gray-400:      mix($black, $white, 40%) !default;
+$gray-500:      mix($black, $white, 50%) !default;
+$gray-600:      mix($black, $white, 60%) !default;
+$gray-700:      mix($black, $white, 70%) !default;
+$gray-800:      mix($black, $white, 80%) !default;
+$gray-900:      mix($black, $white, 90%) !default;
+
+$code-dark:     #26272d;
+$code-light:    lighten($code-dark, 10%);
+
+$grays: () !default;
+$grays: map-merge(
+	(
+		"100": $gray-100,
+		"200": $gray-200,
+		"300": $gray-300,
+		"400": $gray-400,
+		"500": $gray-500,
+		"600": $gray-600,
+		"700": $gray-700,
+		"800": $gray-800,
+		"900": $gray-900
+	),
+	$grays
+);
+
+$cornflower:    #4769ff !default;
+$amethyst:      #7e55eb !default;
+$fuchsia:       #ed55ff !default;
+$violet:        #f55c9b !default;
+$vermilion:     #f5473a !default;
+$ocher:         #ff7534 !default;
+$amber:         #eb9d38 !default; /* #eba438 */
+$dandelion:     #dfbb2c !default; /* #ffd73e */
+$chartreuse:    #c1f01a !default; /* #f5f442 */
+$emerald:       #51f54a !default;
+$caribbean:     #47ffb5 !default;
+$turquoise:     #5adaeb !default;
+$cerulean:      #4eaeff !default;
+
+$colors: () !default;
+$colors: map-merge(
+	(
+		"cornflower":  $cornflower,
+		"amethyst":    $amethyst,
+		"fuchsia":     $fuchsia,
+		"violet":      $violet,
+		"vermilion":   $vermilion,
+		"ocher":       $ocher,
+		"amber":       $amber,
+		"dandelion":   $dandelion,
+		"chartreuse":  $chartreuse,
+		"emerald":     $emerald,
+		"caribbean":   $caribbean,
+		"turquoise":   $turquoise,
+		"cerulean":    $cerulean,
+		"white":       $white,
+		"gray":        $gray-600,
+		"gray-dark":   $gray-800
+	),
+	$colors
+);
+
+$primary:       $cornflower !default;
+$secondary:     $gray-600 !default;
+$success:       $emerald !default;
+$info:          $turquoise !default;
+$warning:       $dandelion !default;
+$danger:        $vermilion !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		"primary":    $primary,
+		"secondary":  $secondary,
+		"success":    $success,
+		"info":       $info,
+		"warning":    $warning,
+		"danger":     $danger,
+		"light":      $light,
+		"dark":       $dark
+	),
+	$theme-colors
+);
+
+@function lighten-color($c) {
+	@return lighten(
+		scale-color($c,
+			$red:    10,
+			$green:  0,
+			$blue:  -15
+		), 15%);
+}
+@function darken-color($c) {
+	@return darken(
+		scale-color($c,
+			$red:    15,
+			$green: -10,
+			$blue:  -10
+		), 28% );
+}
+
+$light-cornflower:    lighten-color($cornflower);
+$light-amethyst:      lighten-color($amethyst);
+$light-fuchsia:       lighten-color($fuchsia);
+$light-violet:        lighten-color($violet);
+$light-vermilion:     lighten-color($vermilion);
+$light-ocher:         lighten-color($ocher);
+$light-amber:         lighten-color($amber);
+$light-dandelion:     lighten-color($dandelion);
+$light-chartreuse:    lighten-color($chartreuse);
+$light-emerald:       lighten-color($emerald);
+$light-caribbean:     lighten-color($caribbean);
+$light-turquoise:     lighten-color($turquoise);
+$light-cerulean:      lighten-color($cerulean);
+
+$light-colors: () !default;
+$light-colors: map-merge(
+	(
+		"light-cornflower":  $light-cornflower,
+		"light-amethyst":    $light-amethyst,
+		"light-fuchsia":     $light-fuchsia,
+		"light-violet":      $light-violet,
+		"light-vermilion":   $light-vermilion,
+		"light-ocher":       $light-ocher,
+		"light-amber":       $light-amber,
+		"light-dandelion":   $light-dandelion,
+		"light-chartreuse":  $light-chartreuse,
+		"light-emerald":     $light-emerald,
+		"light-caribbean":   $light-caribbean,
+		"light-turquoise":   $light-turquoise,
+		"light-cerulean":    $light-cerulean
+	),
+	$light-colors
+);
+
+$dark-cornflower:     darken-color($cornflower);
+$dark-amethyst:       darken-color($amethyst);
+$dark-fuchsia:        darken-color($fuchsia);
+$dark-violet:         darken-color($violet);
+$dark-vermilion:      darken-color($vermilion);
+$dark-ocher:          darken-color($ocher);
+$dark-amber:          darken-color($amber);
+$dark-dandelion:      darken-color($dandelion);
+$dark-chartreuse:     darken-color($chartreuse);
+$dark-emerald:        darken-color($emerald);
+$dark-caribbean:      darken-color($caribbean);
+$dark-turquoise:      darken-color($turquoise);
+$dark-cerulean:       darken-color($cerulean);
+
+$dark-colors: () !default;
+$dark-colors: map-merge(
+	(
+		"dark-cornflower":   $dark-cornflower,
+		"dark-amethyst":     $dark-amethyst,
+		"dark-fuchsia":      $dark-fuchsia,
+		"dark-violet":       $dark-violet,
+		"dark-vermilion":    $dark-vermilion,
+		"dark-ocher":        $dark-ocher,
+		"dark-amber":        $dark-amber,
+		"dark-dandelion":    $dark-dandelion,
+		"dark-chartreuse":   $dark-chartreuse,
+		"dark-emerald":      $dark-emerald,
+		"dark-caribbean":    $dark-caribbean,
+		"dark-turquoise":    $dark-turquoise,
+		"dark-cerulean":     $dark-cerulean
+	),
+	$dark-colors
+);
+
+
+// Font sizes
+$base-font-size: 1rem;
+$font-size-xxl: $base-font-size * 1.75;
+$font-size-xl:  $base-font-size * 1.5;
+$font-size-lg:  $base-font-size * 1.17;
+$font-size-md:  $base-font-size * 1;
+$font-size-sm:  $base-font-size * 0.83;
+$font-size-xsm: $base-font-size * 0.67;
+
+
+// Spacing
+$base-padding: 0.5rem;
+$base-margin: 8px;
+$header-1-padding: $base-font-size * 1.245  0;
+$header-2-padding: $base-font-size * 1.245  0;
+$header-3-padding: $base-font-size * 1.17   0;
+$header-4-padding: $base-font-size * 1.33   0;
+$header-5-padding: $base-font-size * 1.3861 0;
+$header-6-padding: $base-font-size * 1.5611 0;
+
+
+// Scrollbar
+$scrollbar-thumb-color: $gray-100;
+$scrollbar-track-color: rgba(0,0,0,0.3);
+$scrollbar-webkit-track-width: 15px;
+$scrollbar-webkit-thumb-border-radius: 20px;
+$scrollbar-webkit-thumb-border-size: 2px;
+$scrollbar-webkit-thumb-border-style: solid;
+
+
+// Borders
+$base-border-thickness: 2px;
+$base-border-radius: 4px;
+
+
+// Box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+
+

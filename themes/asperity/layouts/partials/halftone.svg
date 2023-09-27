@@ -1,0 +1,12 @@
+<svg width="100%" height="100%" id="halftone-plate" style="display: none;">
+	<defs>
+		<pattern id="halftone" patternUnits="userSpaceOnUse" x="0" y="0" width="4" height="4" viewBox="0 0 4 4">
+			<rect width="1" height="3" x="1" y="0" fill="rgba(0,0,0,0.15)"></rect>
+			<rect width="3" height="1" x="0" y="1" fill="rgba(0,0,0,0.15)"></rect>
+			<rect width="1" height="1" x="1" y="1" fill="rgba(0,0,0,0.4)" stroke="rgba(0,0,0,0.05)" stroke-width="2"></rect>
+		</pattern>
+	</defs>
+	<g>
+		<rect x="0" y="0" width="100%" height="100%" fill="url(#halftone)"></rect>
+	</g>
+</svg>

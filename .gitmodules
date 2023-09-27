@@ -1,3 +1,4 @@
-[submodule "themes/tty-blocks"]
-	path = themes/tty-blocks
-	url = https://github.com/signet-marigold/gohugo-theme-tty-blocks.git
+ 
+[submodule "static/decentralized-social-icons"]
+	path = static/decentralized-social-icons
+	url = https://codeberg.org/deadsuperhero/decentralized-social-icons.git

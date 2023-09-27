@@ -1,0 +1,31 @@
+baseURL = 'https://anhack.com/'
+languageCode = 'en-us'
+title = 'anhack'
+theme = 'asperity'
+copyright = '2023 Alexander Hack. All Right Reserved.'
+logo = '/logo.png'
+
+[menu]
+    [[menu.main]]
+        identifier = 'about'
+        name = 'About'
+        url = '/about/'
+        weight = 10
+
+    [[menu.main]]
+        identifier = 'posts'
+        name = 'Blog'
+        url = '/posts/'
+        weight = 20
+
+    [[menu.main]]
+        identifier = 'projects'
+        name = 'Projects'
+        url = '/projects/'
+        weight = 30
+
+    [[menu.main]]
+        identifier = 'github'
+        name = 'Github'
+        url = 'https://github.com/signet-marigold/'
+        weight = 900

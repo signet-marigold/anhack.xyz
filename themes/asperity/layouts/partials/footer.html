@@ -1,0 +1,14 @@
+{{- if .Site.Copyright }}<br><span>&copy; {{ .Site.Copyright }}</span>{{ end }}
+<br>
+<p>
+    Published with <a href="https://gohugo.io/">Hugo</a> using <a href="https://github.com/signet-marigold/anhack.xyz/tree/main/themes/asperty">Asperity Theme</a> <a href='/theme-license.html'>license</a>
+</p>
+
+<a href="https://github.com/signet-marigold/anhack.xyz" class="noicon"><button class="btn-cerulean">Website Source</button></a>
+
+{{- if .Param "showrss" }}
+<br><br>
+<a href="/index.xml" class="noicon"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+{{ end }}
+
+

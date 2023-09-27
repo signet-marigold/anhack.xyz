@@ -1,0 +1,9 @@
+#!/bin/sh
+USER=my-user
+HOST=my-server.com
+DIR=my/directory/to/topologix.fr/   # the directory where your web site files should go
+
+# this will delete everything on the server that's not in the local public folder
+hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+
+exit 0
