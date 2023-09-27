@@ -83,6 +83,7 @@ div.highlight > pre {
 	border-radius: $base-border-radius;
 }
 
+// Headers
 h1 {
 	font-size: $font-size-xxl;
 	margin: $header-1-padding;
@@ -114,6 +115,7 @@ header h1 {
 	margin: 1.34rem 0;
 }
 
+// main
 body {
 	font-family: sans-serif;
 	background: $black;
@@ -155,7 +157,7 @@ footer {
 // Nav
 nav {
 	background-color: #363245;
-	padding: 3px 8px;
+	padding: 6px 8px;
 	border-radius: $base-border-radius;
 
 	#logo {
@@ -181,8 +183,14 @@ nav {
 				content: '';
 			}
 
-			&:link, &:visited, &:hover, &:active {
+			&:link, &:visited {
 				color: inherit;
+			}
+			&:hover {
+				color: $gray-400;
+			}
+			&:active {
+				color: $gray-700;
 			}
 		}
 	}
