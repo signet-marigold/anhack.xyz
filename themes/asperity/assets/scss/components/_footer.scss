@@ -1,0 +1,23 @@
+footer {
+	padding: 30px 0 20px;
+	font-size: $font-size-sm;
+	text-align: center;
+	clear: both;
+	p {
+		margin: 1rem 0;
+	}
+	#website-copyright {
+	}
+	#website-extra {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		#rss-feed-link {
+			margin-left: 10px;
+			img {
+				min-height: 1.76em; // button margins combined plus base font size
+			}
+		}
+	}
+}

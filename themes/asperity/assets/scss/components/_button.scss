@@ -1,0 +1,53 @@
+@mixin btn() {
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border: 0;
+	padding: $base-padding * 0.68 $base-padding * 2.2;
+	border-radius: $base-border-radius;
+}
+
+%btn {
+	@include btn();
+	color: $black;
+}
+
+%btn-outlined {
+	@include btn();
+	background-color: $black;
+}
+
+// Create button classes
+//
+// Note: recalculating light and dark color values
+// Fix: pull light and dark color values from available maps
+@each $map in ($colors, $grays) {
+	@each $key, $val in $map {
+		$light-color: lighten-color($val);
+		$dark-color:  darken-color($val);
+
+		.btn-#{$key} {
+			@extend %btn;
+				background-color: $val;
+			&:hover {
+				background-color: $light-color;
+			}
+			&:active {
+				background-color: $dark-color;
+			}
+		}
+		.btn-outlined-#{$key} {
+			@extend %btn-outlined;
+			color: $val;
+			border: $base-border-thickness * 2 solid $val;
+			&:hover {
+				color: $light-color;
+				border-color: $light-color;
+			}
+			&:active {
+				color: $dark-color;
+				border-color: $dark-color;
+			}
+		}
+	}
+}

@@ -6,14 +6,17 @@
 <ul>
 {{- range.Pages }}
 <li>
-	{{- if .Param "datesinlist" }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time> &ndash; {{ end -}}
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	{{- if .Param "authorsinlist" }}
-	{{ with .Params.authors }}
-		by 
-		{{ delimit . ", " " and " }}
-	{{end}}
+	{{- if .Param "datesinlist" }}
+	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time> &ndash;
 	{{ end -}}
+	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+	{{- if .Param "draft" }} [DRAFT]{{ end -}}
+	{{- if .Param "authorsinlist" }}
+	{{- with .Params.authors }}
+		by
+		{{ delimit . ", " " and " }}
+	{{ end -}}
+	{{ end }}
 </li>
 {{- end }}
 </ul>

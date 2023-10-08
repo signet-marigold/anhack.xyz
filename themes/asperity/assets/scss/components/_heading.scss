@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	a:where(.heading-link) {
+		i.link::after {
+			display: none;
+		}
+	}
+	&:hover {
+		a:where(.heading-link) {
+			i.link::after {
+				display: inline-block;
+			}
+		}
+	}
+}
+h1 {
+	font-size: $font-size-xxl;
+	margin: $header-xxl-margin;
+}
+h2 {
+	font-size: $font-size-xl;
+	margin: $header-xl-margin;
+}
+h3 {
+	font-size: $font-size-lg;
+	margin: $header-lg-margin;
+}
+h4 {
+	font-size: $font-size-md;
+	margin: $header-md-margin;
+}
+h5 {
+	font-size: $font-size-sm;
+	margin: $header-sm-margin;
+}
+h6 {
+	font-size: $font-size-xs;
+	margin: $header-xs-margin;
+}

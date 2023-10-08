@@ -1,0 +1,35 @@
+$panel-colors: (
+    "success":    $emerald,
+    "info":       $turquoise,
+    "warning":    $dandelion,
+    "danger":     $vermilion,
+    "error":      $dark-violet
+);
+
+// example
+// note
+// warning
+// danger
+// info
+//
+
+%panel {
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: $base-border-radius;
+    border-width: $base-border-thickness;
+    border-style: solid;
+    text-align: center;
+    box-shadow: $base-box-shadow;
+    p { margin: 1rem 0; }
+}
+
+@each $key, $val in $panel-colors {
+    .panel-#{$key} {
+        @extend %panel;
+        border-color: $val;
+        $dark-color: darken-color($val);
+        background-color: $dark-color;
+        background-color: rgba($dark-color, 0.3);
+    }
+}

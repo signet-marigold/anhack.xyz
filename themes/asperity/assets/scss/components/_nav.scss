@@ -1,0 +1,42 @@
+nav {
+	background-color: #363245;
+	padding: 6px 8px;
+	border-radius: $base-border-radius;
+	a {
+		&:hover,
+		&:focus {
+			color: $cerulean;
+		}
+	}
+	#logo {
+		height: 50px;
+		img {
+			margin: 0 5px;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		a {
+			padding: 1px 6px;
+			color: $white;
+			&:link, &:visited {
+				color: inherit;
+			}
+			&:hover {
+				color: $gray-100;
+			}
+			&:active {
+				color: $gray-200;
+			}
+		}
+	}
+	li {
+		border-left: $base-border-thickness $gray-400 solid;
+		display: inline;
+		&:first-child {
+			border: none;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+figure {
+	@include xs {
+		margin: 1rem 0;
+	}
+	@include sm {
+		margin: 1rem 1rem;
+	}
+	@include md {
+		margin: 1rem 2rem;
+	}
+	@include lg {
+		margin: 1rem 3rem;
+	}
+	display: inline-block;
+/*	&.half {
+		width: 47%;
+		display: inline-block;
+		margin-left: 1%;
+		margin-right: 1%;
+	}*/
+	img {
+		vertical-align: middle;
+		margin: 0;
+	}
+	figcaption {
+		background-color: $caption-bg;
+		padding: 8px 16px;
+		padding-top: $base-border-radius + 8px;
+		margin-top: -$base-border-radius;
+		border-radius: 0 0 $base-border-radius $base-border-radius;
+		border: $base-border-thickness $gray-700 solid;
+		text-align: center;
+		@include xs {
+			font-size: $font-size-sm;
+		}
+		@include sm {
+			font-size: $base-font-size;
+		}
+	}
+}

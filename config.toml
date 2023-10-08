@@ -1,9 +1,22 @@
-baseURL = 'https://anhack.com/'
-languageCode = 'en-us'
+baseURL = 'https://anhack.xyz/'
 title = 'anhack'
 theme = 'asperity'
-copyright = '2023 Alexander Hack. All Right Reserved.'
-logo = '/logo.png'
+languageCode = 'en'
+defaultContentLanguage = "en"
+copyright = '&copy; 2023 Alexander Hack. All Right Reserved.'
+
+keywords = "blog,developer,personal"
+tags = [
+  "blog"
+]
+features = [
+  "favicon",
+  "multilingual",
+  "pagination",
+  "single-column",
+  "syntax-highlighting"
+]
+min_version = "0.79.0"
 
 [menu]
     [[menu.main]]
@@ -14,7 +27,7 @@ logo = '/logo.png'
 
     [[menu.main]]
         identifier = 'posts'
-        name = 'Blog'
+        name = 'Posts'
         url = '/posts/'
         weight = 20
 

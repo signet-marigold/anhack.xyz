@@ -1,0 +1,41 @@
+table {
+	margin: 2rem auto;
+	code {
+		font-size: 0.75em;
+	}
+	@include xs {
+		font-size: $font-size-sm;
+	}
+	@include sm {
+		font-size: $base-font-size;
+	}
+	@include md {
+		padding: $base-padding;
+	}
+	@include lg {
+		padding: $base-padding * 2;
+	}
+	background-color: $table-bg;
+	border: $base-border-thickness $gray-700 solid;
+	border-radius: $base-border-radius;
+	thead,
+	tbody {
+		tr {
+			th,
+			td {
+				@include xs {
+					padding: $base-padding * 0.06125 $base-padding * 0.25;
+				}
+				@include sm {
+					padding: $base-padding * 0.125 $base-padding * 0.5;
+				}
+				@include md {
+					padding: $base-padding * 0.25 $base-padding;
+				}
+				@include lg {
+					padding: $base-padding * 0.75 $base-padding * 1.5;
+				}
+			}
+		}
+	}
+}

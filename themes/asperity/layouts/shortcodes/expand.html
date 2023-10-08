@@ -1,0 +1,16 @@
+<!--
+	summary: Text of the colapsed detail block
+	Inner: Content inside shortcode
+-->
+<details>
+	<summary>
+		{{ if .IsNamedParams }}
+		{{ .Get "summary" }}
+		{{ else }}
+		{{ .Get 0 | default "Expand me" }}
+		{{ end }}
+	</summary>
+	<div class="content">
+	{{ .Inner | markdownify }}
+	</div>
+</details>

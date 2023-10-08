@@ -1,0 +1,409 @@
+// Scrollbar
+html, code[class^="language-"] {
+	// Firefox
+	scrollbar-width: auto;
+	scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+
+	// Chrome, Edge, and Safari
+	&::-webkit-scrollbar {
+		width: $scrollbar-webkit-track-width;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $scrollbar-track-color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $scrollbar-thumb-color;
+		border-radius: $scrollbar-webkit-thumb-border-radius;
+		border: $scrollbar-webkit-thumb-border-size $scrollbar-webkit-thumb-border-style $scrollbar-track-color;
+	}
+}
+
+// Link
+a {
+	text-decoration: none;
+	font-weight: 500;
+	color: $cerulean;
+
+	&:link {
+
+	}
+
+	&:visited {
+		color: $dandelion;
+	}
+
+	&:focus,
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:hover {
+		color: $amethyst;
+	}
+
+	&:active {
+		color: $fuchsia;
+	}
+}
+
+article {
+	a:where(.external-link)::after {
+		content: "";
+		background-image: url("/external-link-white.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		display: inline-block;
+		width: 0.9em;
+		height: 1em;
+		margin: 0 0.25em -0.05em;
+	}
+	a:where(.heading-link) {
+		i.link::after {
+			content: "";
+			background-image: url("/link-white.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			width: 0.9em;
+			height: 1em;
+			margin-bottom: -0.15em;
+		}
+		span.sr-only {
+			display: none;
+		}
+	}
+}
+
+// Code blocks
+code {
+//	font-feature-settings: "tnum", "zero";
+	background-color: $code-light;
+	padding: 1px 6px;
+	border-radius: $base-border-radius;
+	//line-break: anywhere; // loose; sometimes allows block to overflow
+	line-break: loose;
+	overflow-wrap: anywhere;
+	display: inline-block;
+	font-size: 0.75rem;
+
+	// Language specific
+	&[class^="language-"] {
+		background-color: $code-dark;
+		display: block;
+		@include xs {
+			padding: 6px 8px;
+		}
+		@include sm {
+			padding: 12px 16px;
+		}
+		overflow-x: scroll;
+
+		// Fixes right side padding on scrollable content
+		& > span > span {
+			padding-right: 16px;
+		}
+	}
+}
+
+div.highlight > pre {
+	border-radius: $base-border-radius;
+}
+
+p {
+	margin: 2rem 0;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	a:where(.heading-link) {
+		i.link::after {
+			display: none;
+		}
+	}
+	&:hover {
+		a:where(.heading-link) {
+			i.link::after {
+				display: inline-block;
+			}
+		}
+	}
+}
+h1 {
+	font-size: $font-size-xxl;
+	margin: $header-xxl-margin;
+}
+h2 {
+	font-size: $font-size-xl;
+	margin: $header-xl-margin;
+}
+h3 {
+	font-size: $font-size-lg;
+	margin: $header-lg-margin;
+}
+h4 {
+	font-size: $font-size-md;
+	margin: $header-md-margin;
+}
+h5 {
+	font-size: $font-size-sm;
+	margin: $header-sm-margin;
+}
+h6 {
+	font-size: $font-size-xs;
+	margin: $header-xs-margin;
+}
+
+header h1 {
+	text-align: center;
+	font-size: $base-font-size * 2;
+	margin: 1.34rem 0;
+}
+
+hr {
+	margin: 1rem 0;
+	border: $base-border-thickness $gray-700 solid;
+}
+
+ol,
+ul {
+	@include xs { padding-left: 20px; }
+	@include sm { padding-left: 30px; }
+	@include md { padding-left: 40px; }
+}
+
+table {
+	margin: 2rem auto;
+	code {
+		font-size: 0.75em;
+	}
+	@include xs {
+		font-size: $font-size-sm;
+	}
+	@include sm {
+		font-size: $base-font-size;
+	}
+	@include md {
+		padding: $base-padding;
+	}
+	@include lg {
+		padding: $base-padding * 2;
+	}
+	background-color: $table-bg;
+	border: $base-border-thickness $gray-700 solid;
+	border-radius: $base-border-radius;
+	thead,
+	tbody {
+		tr {
+			th,
+			td {
+				@include xs {
+					padding: $base-padding * 0.06125 $base-padding * 0.25;
+				}
+				@include sm {
+					padding: $base-padding * 0.125 $base-padding * 0.5;
+				}
+				@include md {
+					padding: $base-padding * 0.25 $base-padding;
+				}
+				@include lg {
+					padding: $base-padding * 0.75 $base-padding * 1.5;
+				}
+			}
+		}
+	}
+}
+
+
+// main
+body {
+	overflow-wrap: anywhere;
+	font-family: sans-serif;
+	font-size: $base-font-size;
+	letter-spacing: -0.01em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-variant-ligatures: contextual;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+
+	background: $black;
+	color: $white;
+	margin: 10px;
+
+	background-image: url("/background.webp");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	image-rendering: pixelated;
+
+	& > * {
+		image-rendering: initial;
+/*		image-rendering: smooth;
+		image-rendering: high-quality;
+		image-rendering: optimizequality;*/
+	}
+}
+
+main, header, footer, nav {
+	max-width: 800px;
+	margin: auto;
+}
+
+// Main
+main {
+
+}
+
+// Header
+header {
+
+}
+
+// Footer
+footer {
+	padding: 30px 0 20px;
+	font-size: $font-size-sm;
+	p {
+		margin: 1rem 0;
+	}
+}
+
+img {
+//	display: block;
+	max-width: 100%;
+	border-radius: $base-border-radius;
+	display: block;
+	margin: 1rem auto;
+}
+
+figure {
+	@include xs {
+		margin: 1rem 0;
+	}
+	@include sm {
+		margin: 1rem 1rem;
+	}
+	@include md {
+		margin: 1rem 2rem;
+	}
+	@include lg {
+		margin: 1rem 3rem;
+	}
+	display: inline-block;
+/*	&.half {
+		width: 47%;
+		display: inline-block;
+		margin-left: 1%;
+		margin-right: 1%;
+	}*/
+	img {
+		vertical-align: middle;
+		margin: 0;
+	}
+	figcaption {
+		background-color: $caption-bg;
+		padding: 8px 16px;
+		padding-top: $base-border-radius + 8px;
+		margin-top: -$base-border-radius;
+		border-radius: 0 0 $base-border-radius $base-border-radius;
+		border: $base-border-thickness $gray-700 solid;
+		text-align: center;
+		@include xs {
+			font-size: $font-size-sm;
+		}
+		@include sm {
+			font-size: $base-font-size;
+		}
+	}
+}
+
+details {
+	margin: 2rem 0;
+	background-color: $gray-900;
+	border: $base-border-thickness $gray-800 solid;
+	border-radius: $base-border-radius + $base-border-thickness;
+
+	summary {
+		cursor: pointer;
+		padding: $base-margin;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	img {
+		display: block;
+	}
+
+	.content {
+		padding: 0 $base-margin $base-margin;
+	}
+
+	&[open] {
+		summary {
+			margin-bottom: 1rem;
+			background-color: $gray-800;
+			border-radius: $base-border-radius;
+			padding-bottom: $base-margin + $base-border-thickness;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	clear: both;
+
+	#website-copyright {
+
+	}
+	#website-extra {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		#rss-feed-link {
+			margin-left: 10px;
+			img {
+				min-height: 1.76em; // button margins combined plus base font size
+			}
+		}
+	}
+}
+
+// For TAGLIST.HTML
+.taglist {
+	text-align: center;
+	clear: both;
+}
+
+// For NEXTPREV.HTML
+#nextprev {
+	// The container for both the previous and next articles.
+}
+#prevart {
+	float: left;
+	text-align: left;
+}
+#nextart {
+	float: right;
+	text-align: right;
+}
+#nextart,#prevart {
+	max-width: 33%;
+}
+
+#halftone-plate {
+	// Only display pattern if stylesheet is loaded
+	display: block !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}

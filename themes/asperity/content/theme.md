@@ -6,15 +6,13 @@ draft: true
 ---
 ## A demo of this websites theme
 
-
-
-
-
 test content test content test content test content
 {{< img src="https://images.unsplash.com/photo-1513002749550-c59d786b8e6c" caption="yo look its the sky" >}}
 test content test content test content test content
 
 {{< img src="https://www.lifewire.com/thmb/h7EaBTySHep9awDAQfwJuASLQrk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WindowsVista-56aa11d15f9b58b7d000b1e1.jpg" caption="yo its a vista" >}}
+
+{{< img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuixstkqoKPgX71iazJjdu16qXsMN9nv3JCA&usqp=CAU" caption="IMG" >}}
 
 # Title text
 ## Subtitle 1
