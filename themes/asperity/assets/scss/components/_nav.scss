@@ -1,7 +1,8 @@
 nav {
-	background-color: #363245;
+	background-color: $nav-bg;
 	padding: 6px 8px;
 	border-radius: $base-border-radius;
+	box-shadow: $base-box-shadow;
 	a {
 		&:hover,
 		&:focus {

@@ -68,9 +68,30 @@ hr {
 
 ol,
 ul {
-	@include xs { padding-left: 20px; }
-	@include sm { padding-left: 30px; }
-	@include md { padding-left: 40px; }
+	@include xs {
+		padding-left: 1.25rem;
+	}
+	@include sm {
+		padding-left: 1.875rem;
+	}
+	@include md {
+		padding-left: 2.5rem;
+	}
+}
+
+blockquote {
+	@include xs {
+		margin-left: 1.25rem;
+		margin-right: 1.25rem;
+	}
+	@include sm {
+		margin-left: 1.875rem;
+		margin-right: 1.875rem;
+	}
+	@include md {
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
 }
 
 img {
@@ -81,6 +102,7 @@ img {
 	margin: 1rem auto;
 }
 
+// IDs
 #halftone-plate { // Background 'dot' pattern
 	display: block !important; // Only display pattern if stylesheet is loaded
 	position: fixed;
