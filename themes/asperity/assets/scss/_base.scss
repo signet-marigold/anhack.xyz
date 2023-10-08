@@ -94,6 +94,22 @@ blockquote {
 	}
 }
 
+dl {
+	dt {
+	}
+	dd {
+		@include xs {
+			margin-left: 1.25rem;
+		}
+		@include sm {
+			margin-left: 1.875rem;
+		}
+		@include md {
+			margin-left: 2.5rem;
+		}
+	}
+}
+
 img {
 //	display: block;
 	max-width: 100%;
