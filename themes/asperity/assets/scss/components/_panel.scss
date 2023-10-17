@@ -1,22 +1,11 @@
 $panel-colors: (
-    "success":    $emerald,
+    "note":       $gray-300,
+    "example":    $emerald,
     "info":       $turquoise,
     "warning":    $dandelion,
     "danger":     $vermilion,
     "error":      $dark-violet
 );
-
-// example
-// note
-// warning
-// danger
-// info
-//
-
-// <aside>
-// infobox
-// note
-
 
 %panel {
     margin: 1rem 2rem;
@@ -27,6 +16,21 @@ $panel-colors: (
     text-align: center;
     box-shadow: $base-box-shadow;
     p { margin: 1rem 0; }
+    display: block;
+    position: relative;
+    // set the box large enough to fit the icon
+    min-height: 2.5rem;
+    &::before {
+        content: "";
+        background-image: url("/question-mark-white.svg");
+        background-repeat: no-repeat;
+		background-position: center;
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        left: 1.5rem;
+        top: 1rem;
+    }
 }
 
 @each $key, $val in $panel-colors {
@@ -37,4 +41,8 @@ $panel-colors: (
         background-color: $dark-color;
         background-color: rgba($dark-color, 0.3);
     }
+}
+
+.panel-error::before {
+    background-image: url("/caution-white.svg");
 }

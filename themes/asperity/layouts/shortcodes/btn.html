@@ -5,7 +5,7 @@
 	alt: alternative text
 	mouse: what the image says when moused over ("title" in HTML)
 -->
-<a href="{{ .Get "link" }}" class="noicon">
+<a href="{{ .Get "link" }}">
 <button {{ with .Get "color" }}class="btn-{{.}}"{{ end -}}
 		{{- with .Get "mouse" }} title="{{.}}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{.}}"{{ end -}}
