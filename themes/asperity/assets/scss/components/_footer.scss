@@ -1,12 +1,22 @@
 footer {
-	padding: 30px 0 20px;
+	padding: 30px 0 10px;
 	font-size: $font-size-sm;
 	text-align: center;
 	clear: both;
+	margin: auto auto 0;
 	p {
 		margin: 1rem 0;
 	}
 	#website-copyright {
+	}
+	#badges {
+		& > * {
+			display: inline-block;
+		}
+		img {
+			margin: 0;
+			height: 31px;
+		}
 	}
 	#website-extra {
 		display: flex;

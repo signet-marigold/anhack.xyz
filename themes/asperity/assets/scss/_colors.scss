@@ -1,54 +1,60 @@
-.text-white {
-	color: $white;
-}
-.bg-white {
-	background-color: $white;
-}
-.bg-pure-white {
-	background-color: $pure-white;
-}
-.text-black {
-	color: $black;
-}
-.bg-black {
-	background-color: $black;
-}
-.bg-pure-black {
-	background-color: $pure-black;
-}
-
-@each $key, $val in $grays {
-	.text-#{$key} {
-		color: $val;
-	}
-	.bg-#{$key} {
-		background-color: $val;
+@each $map in ($pure-black-and-white, $black-and-white, $grays, $colors, $light-colors, $dark-colors) {
+	@each $key, $val in $map {
+		.text-#{$key} {
+			color: $val;
+		}
+		.bg-#{$key} {
+			background-color: $val;
+		}
 	}
 }
 
-@each $key, $val in $colors {
-	.text-#{$key} {
-		color: $val;
-	}
-	.bg-#{$key} {
-		background-color: $val;
-	}
+@keyframes rainbow-tc {
+	0%    { color: $cornflower; }
+	7.7%  { color: $amethyst; }
+	15.4% { color: $fuchsia; }
+	23.0% { color: $violet; }
+	30.8% { color: $vermilion; }
+	38.5% { color: $ocher; }
+	46.2% { color: $amber; }
+	53.8% { color: $dandelion; }
+	61.5% { color: $chartreuse; }
+	69.2% { color: $emerald; }
+	76.9% { color: $caribbean; }
+	84.6% { color: $turquoise; }
+	92.3% { color: $cerulean; }
+	100%  { color: $cornflower; }
 }
 
-@each $key, $val in $light-colors {
-	.text-#{$key} {
-		color: $val;
-	}
-	.bg-#{$key} {
-		background-color: $val;
-	}
+@keyframes rainbow-bg {
+	0%    { background-color: $cornflower; }
+	7.7%  { background-color: $amethyst; }
+	15.4% { background-color: $fuchsia; }
+	23.0% { background-color: $violet; }
+	30.8% { background-color: $vermilion; }
+	38.5% { background-color: $ocher; }
+	46.2% { background-color: $amber; }
+	53.8% { background-color: $dandelion; }
+	61.5% { background-color: $chartreuse; }
+	69.2% { background-color: $emerald; }
+	76.9% { background-color: $caribbean; }
+	84.6% { background-color: $turquoise; }
+	92.3% { background-color: $cerulean; }
+	100%  { background-color: $cornflower; }
 }
 
-@each $key, $val in $dark-colors {
-	.text-#{$key} {
-		color: $val;
-	}
-	.bg-#{$key} {
-		background-color: $val;
-	}
+@mixin rainbow-animation {
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.text-rainbow {
+	animation-name: rainbow-tc;
+	@include rainbow-animation;
+}
+
+.bg-rainbow {
+	animation-name: rainbow-bg;
+	@include rainbow-animation;
 }

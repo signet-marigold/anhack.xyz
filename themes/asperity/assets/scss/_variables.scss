@@ -65,8 +65,20 @@ Gray pallet mix values
 
 $pure-white:    #fff;
 $pure-black:    #000;
+
+$pure-black-and-white: (
+	"pure-white": $pure-white,
+	"pure-black": $pure-black
+);
+
 $white:         #efefef !default;
 $black:         #141416 !default;
+
+$black-and-white: (
+	"white": $white,
+	"black": $black
+);
+
 $gray-100:      mix($black, $white, 23.4%) !default;
 $gray-200:      mix($black, $white, 40.5%) !default;
 $gray-300:      mix($black, $white, 53.3%) !default;
@@ -128,10 +140,7 @@ $colors: map-merge(
 		"emerald":     $emerald,
 		"caribbean":   $caribbean,
 		"turquoise":   $turquoise,
-		"cerulean":    $cerulean,
-		"white":       $white,
-		"gray":        $gray-600,
-		"gray-dark":   $gray-800
+		"cerulean":    $cerulean
 	),
 	$colors
 );
@@ -269,12 +278,11 @@ $header-xs-margin:  $base-font-size * 1.5611 0;
 
 
 // Scrollbar
-$scrollbar-thumb-color: $gray-100;
+$scrollbar-thumb-color: $gray-200;
 $scrollbar-track-color: rgba(0,0,0,0.3);
-$scrollbar-webkit-track-width: 15px;
-$scrollbar-webkit-thumb-border-radius: 20px;
-$scrollbar-webkit-thumb-border-size: 2px;
-$scrollbar-webkit-thumb-border-style: solid;
+$scrollbar-webkit-track-width: 17px;
+$scrollbar-webkit-thumb-border-radius: $scrollbar-webkit-track-width;
+$scrollbar-webkit-thumb-border: none;
 
 
 // Borders

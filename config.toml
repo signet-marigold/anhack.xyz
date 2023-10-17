@@ -6,39 +6,50 @@ defaultContentLanguage = "en"
 copyright = '&copy; 2023 Alexander Hack. All Right Reserved.'
 
 keywords = "blog,developer,personal"
-tags = [
-  "blog"
-]
-features = [
-  "favicon",
-  "multilingual",
-  "pagination",
-  "single-column",
-  "syntax-highlighting"
-]
-min_version = "0.79.0"
+
+enableRobotsTXT = true
+
+[params]
+	showbadges = true
+
+[sitemap]
+	changeFreq = 'weekly'
+	filename = 'sitemap.xml'
+	priority = -1
 
 [menu]
-    [[menu.main]]
-        identifier = 'about'
-        name = 'About'
-        url = '/about/'
-        weight = 10
+	[[menu.main]]
+		identifier = 'about'
+		name = 'About'
+		url = '/about/'
+		weight = 10
 
-    [[menu.main]]
-        identifier = 'posts'
-        name = 'Posts'
-        url = '/posts/'
-        weight = 20
+	[[menu.main]]
+		identifier = 'posts'
+		name = 'Posts'
+		url = '/posts/'
+		weight = 20
 
-    [[menu.main]]
-        identifier = 'projects'
-        name = 'Projects'
-        url = '/projects/'
-        weight = 30
+	[[menu.main]]
+		identifier = 'projects'
+		name = 'Projects'
+		url = '/projects/'
+		weight = 30
 
-    [[menu.main]]
-        identifier = 'github'
-        name = 'Github'
-        url = 'https://github.com/signet-marigold/'
-        weight = 900
+	[[menu.main]]
+		identifier = 'tags'
+		name = 'Tags'
+		url = '/tags/'
+		weight = 40
+
+	[[menu.main]]
+		identifier = 'categories'
+		name = 'Categories'
+		url = '/categories/'
+		weight = 50
+
+	[[menu.main]]
+		identifier = 'github'
+		name = 'Github'
+		url = 'https://github.com/signet-marigold/'
+		weight = 900

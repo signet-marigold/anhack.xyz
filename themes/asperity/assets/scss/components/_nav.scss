@@ -1,8 +1,15 @@
 nav {
 	background-color: $nav-bg;
-	padding: 6px 8px;
+	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
+	padding: 6px $base-margin;
 	border-radius: $base-border-radius;
 	box-shadow: $base-box-shadow;
+	@include xs {
+		padding-bottom: 0;
+	}
+	@include sm {
+		padding-bottom: $base-margin;
+	}
 	a {
 		&:hover,
 		&:focus {
@@ -11,6 +18,12 @@ nav {
 	}
 	#logo {
 		height: 50px;
+		a {
+			// fixes an issue where the selectable part of the anchor
+			// grows to be as large as its parent container
+			// without this line, you may accidentally press the home button quite often
+			display: inline-block;
+		}
 		img {
 			margin: 0 5px;
 		}
@@ -19,6 +32,7 @@ nav {
 		margin: 0;
 		padding: 0;
 		display: flex;
+		flex-wrap: wrap;
 		a {
 			padding: 1px 6px;
 			color: $white;
@@ -34,10 +48,17 @@ nav {
 		}
 	}
 	li {
-		border-left: $base-border-thickness $gray-400 solid;
+		border-right: $base-border-thickness $gray-400 solid;
 		display: inline;
-		&:first-child {
+		word-wrap: normal;
+		&:last-child {
 			border: none;
+		}
+		@include xs {
+			margin-bottom: $base-margin;
+		}
+		@include sm {
+			margin: 0;
 		}
 	}
 }

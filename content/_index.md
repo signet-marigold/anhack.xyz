@@ -1,6 +1,5 @@
 ---
 title: ""
-date: 2023-09-14T22:28:05-05:00
 ---
-# Personal dev blog
-
+{{< img src="https://media.tenor.com/bg8z6DnozfMAAAAi/synthwave-retrowave.gif" class="mt-n6 zi-n1" alt="retro skeleton" mouse="owo" >}}
+{{< customclass "text-vermilion text-rainbow ta-c" >}}[[[ just chillin in negative space ]]]{{< /customclass >}}

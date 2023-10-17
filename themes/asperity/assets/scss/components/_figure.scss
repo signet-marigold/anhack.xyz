@@ -21,6 +21,8 @@ figure {
 	img {
 		vertical-align: middle;
 		margin: 0;
+		min-width: 120px;
+		min-height: 42px;
 	}
 	figcaption {
 		background-color: $caption-bg;

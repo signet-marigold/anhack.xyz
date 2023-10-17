@@ -1,4 +1,4 @@
-@mixin btn() {
+@mixin btn {
 	text-decoration: none;
 	cursor: pointer;
 	display: inline-block;
@@ -8,12 +8,12 @@
 }
 
 %btn {
-	@include btn();
+	@include btn;
 	color: $black;
 }
 
 %btn-outlined {
-	@include btn();
+	@include btn;
 	background-color: $black;
 }
 
