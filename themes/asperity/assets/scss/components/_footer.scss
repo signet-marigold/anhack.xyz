@@ -9,6 +9,7 @@ footer {
 	}
 	#website-copyright {
 	}
+	// 88x31 old style badges
 	#badges {
 		& > * {
 			display: inline-block;
@@ -16,6 +17,8 @@ footer {
 		img {
 			margin: 0;
 			height: 31px;
+			border-radius: 0;
+			image-rendering: optimizequality;
 		}
 	}
 	#website-extra {

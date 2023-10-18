@@ -1,48 +1,90 @@
 $panel-colors: (
-    "note":       $gray-300,
-    "example":    $emerald,
-    "info":       $turquoise,
-    "warning":    $dandelion,
-    "danger":     $vermilion,
-    "error":      $dark-violet
+	"note":       $gray-300,
+	"example":    $emerald,
+	"info":       $turquoise,
+	"caution":    $dandelion,
+	"danger":     $vermilion,
+	"error":      $dark-violet
 );
 
+$panel-icon-size: 2.5rem;
+
 %panel {
-    margin: 1rem 2rem;
-    padding: 1rem 2rem;
-    border-radius: $base-border-radius;
-    border-width: $base-border-thickness;
-    border-style: solid;
-    text-align: center;
-    box-shadow: $base-box-shadow;
-    p { margin: 1rem 0; }
-    display: block;
-    position: relative;
-    // set the box large enough to fit the icon
-    min-height: 2.5rem;
-    &::before {
-        content: "";
-        background-image: url("/question-mark-white.svg");
-        background-repeat: no-repeat;
+	@include xs {
+		margin: 1rem 0;
+		padding: 1rem 1rem;
+	}
+	@include sm {
+		padding: 1rem 2rem;
+	}
+	@include md {
+		margin: 1rem 2rem;
+	}
+	margin: 1rem 2rem;
+	padding: 1rem 2rem;
+	border-radius: $base-border-radius;
+	border-width: $base-border-thickness;
+	border-style: solid;
+	text-align: center;
+	box-shadow: $base-box-shadow;
+	display: block;
+	p {
+		margin: 1rem 0;
+	}
+	// set the box large enough to always fit the icon
+	min-height: $panel-icon-size;
+	& > .panel-icon {
+		background-image: url("/question-mark-white.svg");
+		background-repeat: no-repeat;
 		background-position: center;
-        position: absolute;
-        width: 2.5rem;
-        height: 2.5rem;
-        left: 1.5rem;
-        top: 1rem;
-    }
+		width: $panel-icon-size;
+		height: $panel-icon-size;
+		float: left;
+		margin-bottom: 0.5rem;
+		margin-right: 1rem;
+	}
+	// the before sudo element is used here as a kind of spacer.
+	// opposite the icon- it keeps text and content
+	// centered at the top part of the panel element
+	&::before {
+		content: "";
+		width: $panel-icon-size;
+		height: $panel-icon-size;
+		float: right;
+		margin-bottom: 0.5rem;
+		margin-left: 1rem;
+	}
 }
 
 @each $key, $val in $panel-colors {
-    .panel-#{$key} {
-        @extend %panel;
-        border-color: $val;
-        $dark-color: darken-color($val);
-        background-color: $dark-color;
-        background-color: rgba($dark-color, 0.3);
-    }
+	.panel-#{$key} {
+		@extend %panel;
+		border-color: $val;
+		$dark-color: darken-color($val);
+		background-color: $dark-color;
+		background-color: rgba($dark-color, 0.3);
+	}
 }
 
-.panel-error::before {
-    background-image: url("/caution-white.svg");
+.panel-note > .panel-icon {
+	background-image: url("/notepad-white.svg");
 }
+
+.panel-example > .panel-icon {
+	background-image: url("/question-mark-white.svg");
+}
+
+.panel-info > .panel-icon {
+	background-image: url("/info-white.svg");
+}
+
+.panel-danger > .panel-icon {
+	background-image: url("/skull-n-bones-white.svg");
+}
+
+.panel-error > .panel-icon,
+.panel-caution > .panel-icon {
+	background-image: url("/caution-white.svg");
+}
+
+

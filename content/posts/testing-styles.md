@@ -111,6 +111,22 @@ text block
 css: block;
 ```
 
+{{< panel info >}}
+
+extra long content that will definatly overflow into the next line haha its so fun to write fluff and extra words all day long asnasjndasjnbdasjkbnajknbglsj
+
+# header test
+
+new line
+{{< /panel >}}
+
+
+{{< panel note >}}note panel{{< /panel >}}
+{{< panel example >}}example panel{{< /panel >}}
+{{< panel info >}}info panel{{< /panel >}}
+{{< panel caution >}}caution panel{{< /panel >}}
+{{< panel danger >}}danger panel{{< /panel >}}
+{{< panel error >}}error panel{{< /panel >}}
 
 ---
 __Advertisement :)__
