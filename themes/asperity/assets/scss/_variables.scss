@@ -280,8 +280,8 @@ $header-xs-margin:  $base-font-size * 1.5611 0;
 // Scrollbar
 $scrollbar-thumb-color: $gray-200;
 $scrollbar-track-color: rgba(0,0,0,0.3);
-$scrollbar-webkit-track-width: 17px;
-$scrollbar-webkit-thumb-border-radius: $scrollbar-webkit-track-width;
+$scrollbar-webkit-track-width: 14px;
+$scrollbar-webkit-thumb-border-radius: 4px;
 $scrollbar-webkit-thumb-border: none;
 
 

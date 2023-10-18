@@ -56,44 +56,6 @@ html, code[class^="language-"] {
 		background-color: $scrollbar-thumb-color;
 		border-radius: $scrollbar-webkit-thumb-border-radius;
 		border: $scrollbar-webkit-thumb-border;
-		&:hover {
-			background-color: darken($scrollbar-thumb-color, 15%);
-		}
-	}
-	$scrollbar-webkit-button-color: #fff;
-	&::-webkit-scrollbar-button {
-		//background-color: $white;
-		&:hover {
-
-		}
-		&:single-button {
-			background-color: none;
-			display: block;
-			height: $scrollbar-webkit-track-width;
-			width: $scrollbar-webkit-track-width;
-
-			&:hover {
-				background-color: $scrollbar-track-color;
-			}
-
-			&:vertical {
-				&:decrement {
-					border-width: 0 8px 8px 8px;
-					border-color: transparent transparent $scrollbar-webkit-button-color transparent;
-					&:hover {
-						border-color: transparent transparent $scrollbar-webkit-button-color transparent;
-					}
-				}
-				&:increment {
-					border-width: 8px 8px 0 8px;
-					border-color: $scrollbar-webkit-button-color transparent transparent transparent;
-					&:hover {
-						border-color: $scrollbar-webkit-button-color transparent transparent transparent;
-					}
-				}
-			}
-
-		}
 	}
 }
 
