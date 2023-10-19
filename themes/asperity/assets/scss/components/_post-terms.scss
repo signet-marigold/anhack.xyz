@@ -1,0 +1,65 @@
+// terms list
+.post-term-list {
+	margin: 5rem 4rem;
+	@include xs {
+		margin: 1rem 0rem;
+	}
+	@include sm {
+		margin: 3rem 1rem;
+	}
+	@include md {
+		margin: 5rem 4rem;
+	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	.post-term {
+		flex-shrink: 0;
+		min-width: 6rem;
+		display: inline-block;
+		margin: 0.6rem;
+		@include xs {
+			margin: 0.25rem;
+		}
+		@include sm {
+			margin: 0.33rem;
+		}
+		@include md {
+			margin: 0.6rem;
+		}
+		background-color: rgba(0,0,0,0.1);
+		border: $base-border-thickness $gray-400 solid;
+		border-radius: 1rem;
+		&:hover {
+			background-color: $gray-900;
+		}
+		&:active {
+			background-color: $gray-800;
+		}
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+		.panel-heading {
+			padding: 0.25rem;
+			.panel-title {
+				margin: 0;
+				margin-left: 0.5rem;
+				.badge {
+					margin-left: 1.5rem;
+					float: right;
+					font-weight: lighter;
+					color: $black;
+					background-color: $white;
+					border-radius: 1rem;
+					text-align: center;
+					width: 3rem;
+					border: $base-border-thickness $white solid;
+					margin-top: -$base-border-thickness;
+				}
+			}
+		}
+	}
+}
+

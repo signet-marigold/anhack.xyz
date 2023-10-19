@@ -16,3 +16,11 @@ languageCode = 'en-us'
 	taglist = true
 	showrss = true
 	showthemeinfo = true
+
+	dateFormat = "January 2, 2006"
+	commit = false
+	rss = true
+	readingTime = true
+	wordCount = true
+	showRelatedPosts = true
+	hideAuthor = true

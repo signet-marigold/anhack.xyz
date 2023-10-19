@@ -67,6 +67,11 @@ p {
 hr {
 	margin: 1rem 0;
 	border: $base-border-thickness $gray-700 solid;
+	&.small {
+		border-right-color: $pure-black;
+		border-left-color: $pure-black;
+		border-bottom-color: $pure-black;
+	}
 }
 
 ol,

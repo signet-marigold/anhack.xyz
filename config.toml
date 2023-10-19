@@ -4,10 +4,13 @@ theme = 'asperity'
 languageCode = 'en'
 defaultContentLanguage = "en"
 copyright = '&copy; 2023 Alexander Hack. All Right Reserved.'
-
 keywords = "blog,developer,personal"
-
 enableRobotsTXT = true
+summaryLength = 20
+
+[taxonomies]
+	category = 'categories'
+	tag = 'tags'
 
 [params]
 	showbadges = true

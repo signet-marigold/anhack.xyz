@@ -1,0 +1,19 @@
+// taxonomy category list
+.post-preview {
+	background-color: rgba(0,0,0,0.1);
+	border: $base-border-thickness $gray-300 solid;
+	border-radius: $base-border-radius;
+	padding: 1rem 2rem;
+	margin: 2rem 0;
+	.post-title {
+		margin-top: 0;
+	}
+	.post-meta {
+		margin: 0.5rem 0;
+	}
+	.post-entry {
+		.post-read-more {
+
+		}
+	}
+}

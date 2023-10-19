@@ -7,3 +7,34 @@ other = "Sorry, this page does not exist."
 
 [head_back]
 other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
+
+# Content
+[dateFormat]
+other = "January 2, 2006"
+[shortdateFormat]
+other = "Jan 2, 2006 15:04:05"
+[postedOnDate]
+other = "Posted on {{ . }}"
+[lastModified]
+other = "(Last modified on {{ . }})"
+[translationsLabel]
+other = "Other languages: "
+[translationsSeparator]
+other = ", "
+[readMore]
+other = "Read More"
+[olderPosts]
+other = "Older Posts"
+[newerPosts]
+other = "Newer Posts"
+[previousPost]
+other = "Previous Post"
+[nextPost]
+other = "Next Post"
+[readingTime]
+other = "Reading time"
+[readTime]
+other = "minutes"
+[words]
+other = "words"
+

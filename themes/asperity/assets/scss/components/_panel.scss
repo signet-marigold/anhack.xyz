@@ -78,13 +78,11 @@ $panel-icon-size: 2.5rem;
 	background-image: url("/info-white.svg");
 }
 
-.panel-danger > .panel-icon {
-	background-image: url("/skull-n-bones-white.svg");
-}
-
 .panel-error > .panel-icon,
 .panel-caution > .panel-icon {
 	background-image: url("/caution-white.svg");
 }
 
-
+.panel-danger > .panel-icon {
+	background-image: url("/skull-n-bones-white.svg");
+}

@@ -1,0 +1,11 @@
+name = "Asperty"
+license = "MIT"
+licenselink = "https://github.com/signet-marigold/anhack.xyz/blob/main/themes/asperity/LICENSE"
+description = ""
+tags = ["blog", "projects", "mobile"]
+features = ["blog", "projects", "mobile"]
+min_version = 0.48
+
+[author]
+    name = "anhack"
+    homepage = "https://anhack.xyz"

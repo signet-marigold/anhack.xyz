@@ -9,16 +9,15 @@ footer {
 	}
 	#website-copyright {
 	}
-	// 88x31 old style badges
+	// old style 88x31px banners
 	#badges {
 		& > * {
 			display: inline-block;
 		}
 		img {
+			border-radius: 0;
 			margin: 0;
 			height: 31px;
-			border-radius: 0;
-			image-rendering: optimizequality;
 		}
 	}
 	#website-extra {
