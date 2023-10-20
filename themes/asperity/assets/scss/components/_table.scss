@@ -1,13 +1,30 @@
 table {
 	margin: 2rem auto;
 	code {
-		font-size: 0.75em;
+		font-size: 0.825em;
 	}
 	@include xs {
 		font-size: $font-size-sm;
+		width: 100%;
+		code {
+			word-wrap: anywhere;
+		}
+	}
+	@include breakpoint(300px) {
+		width: auto;
+		min-width: 80%;
+	}
+	@include breakpoint(380px) {
+		code {
+			word-wrap: break-word;
+		}
 	}
 	@include sm {
 		font-size: $base-font-size;
+		min-width: auto;
+		code {
+			font-size: 0.75em;
+		}
 	}
 	@include md {
 		padding: $base-padding;
@@ -18,19 +35,25 @@ table {
 	background-color: $table-bg;
 	border: $base-border-thickness $gray-700 solid;
 	border-radius: $base-border-radius;
+	overflow-wrap: break-word;
 	thead,
 	tbody {
+		text-align: left;
 		tr {
 			th,
 			td {
 				@include xs {
-					padding: $base-padding * 0.06125 $base-padding * 0.25;
+					padding: $base-padding * 0.25 $base-padding * 0.25;
+					width: 1%;
+				}
+				@include breakpoint(300px) {
+					width: initial;
 				}
 				@include sm {
-					padding: $base-padding * 0.125 $base-padding * 0.5;
+					padding: $base-padding * 0.25 $base-padding * 0.5;
 				}
 				@include md {
-					padding: $base-padding * 0.25 $base-padding;
+					padding: $base-padding * 0.375 $base-padding;
 				}
 				@include lg {
 					padding: $base-padding * 0.75 $base-padding * 1.5;
