@@ -13,6 +13,7 @@ body {
 	background: $black;
 	color: $white;
 	margin: 10px;
+	margin-bottom: 0;
 
 	background-image: url("/background.webp");
 	background-size: 100%;
@@ -21,7 +22,10 @@ body {
 
 	display: flex;
 	flex-flow: column;
+	// fallback
 	height: 100vh;
+	// remove padding from footer
+	height: calc(100vh - 10px);
 
 	& > * {
 		image-rendering: initial;
