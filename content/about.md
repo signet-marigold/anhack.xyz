@@ -20,7 +20,7 @@ and also updates on projects other people may find useful.
 
 Big fan of the federated web movement <https://www.fediverse.to/>
 
-After the reddit implosion i mostly post on [lemmy](https://casavaga.com/u/alaliliiso)
+After the reddit implosion i mostly just post on [lemmy](https://casavaga.com/u/alaliliiso)
 
 You can also find me at:
 
