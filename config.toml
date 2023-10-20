@@ -9,8 +9,7 @@ enableRobotsTXT = true
 summaryLength = 40
 
 [taxonomies]
-	type = 'type'
-	category = 'categories'
+	category = 'category'
 	tag = 'tags'
 
 [params]
@@ -47,16 +46,10 @@ summaryLength = 40
 		weight = 40
 
 	[[menu.main]]
-		identifier = 'categories'
-		name = 'Categories'
-		url = '/categories/'
+		identifier = 'category'
+		name = 'Category'
+		url = '/category/'
 		weight = 50
-
-	[[menu.main]]
-		identifier = 'type'
-		name = 'Type'
-		url = '/type/'
-		weight = 60
 
 	[[menu.main]]
 		identifier = 'github'
