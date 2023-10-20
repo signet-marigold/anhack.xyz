@@ -53,6 +53,7 @@ nav {
 		border-right: $base-border-thickness $gray-400 solid;
 		display: inline;
 		word-wrap: normal;
+		margin: 0;
 		&:last-child {
 			border: none;
 		}
