@@ -12,15 +12,10 @@ figure {
 		margin: 1rem 3rem;
 	}
 	display: inline-block;
-/*	&.half {
-		width: 47%;
-		display: inline-block;
-		margin-left: 1%;
-		margin-right: 1%;
-	}*/
+	// overflow:hidden pushes content correctly after figcaption's negative margin
+	overflow: hidden;
 	img {
-		vertical-align: middle;
-		margin: 0;
+		margin: 0 auto;
 		min-width: 120px;
 		min-height: 42px;
 	}
@@ -37,6 +32,13 @@ figure {
 		}
 		@include sm {
 			font-size: $base-font-size;
+		}
+	}
+	// stretches image to full width
+	&.full {
+		display: block;
+		img {
+			width: 100%;
 		}
 	}
 }
