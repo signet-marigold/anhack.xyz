@@ -6,6 +6,7 @@ date: {{ .Date }}
 subtitle: ""
 image: ""
 tags: []
+categories: []
 draft: true
 ---
 

@@ -25,7 +25,7 @@ a {
 article {
 	a:where(.external-link)::after {
 		content: "";
-		background-image: url("/external-link-white.svg");
+		background-image: url("/icons/external-link-white.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		display: inline-block;
@@ -36,7 +36,7 @@ article {
 	a:where(.heading-link) {
 		i.link::after {
 			content: "";
-			background-image: url("/link-white.svg");
+			background-image: url("/icons/link-white.svg");
 			background-repeat: no-repeat;
 			background-position: center;
 			display: inline-block;

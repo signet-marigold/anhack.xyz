@@ -4,19 +4,15 @@
 		{{ partial "head.html" . }}
 	</head>
 	<body>
-		{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
-		<header>
-			{{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-		</header>
-		<main aria-role="main">
+		{{ if .Site.Menus.main }}<div>{{ partial "nav.html" . }}</div>{{ end }}
+		{{ block "header" . }}<div>{{ partial "header.html" . }}</div>{{ end }}
+		<div><main aria-role="main">
 			<article>
-				{{ block "main" . }}
-				{{ .Content }}
-				{{ end }}
-				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
-				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
+				{{ block "main" . }}{{ .Content }}{{ end }}
+				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end }}
+				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end }}
 			</article>
-		</main>
+		</main></div>
 		<footer>
 			{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
 		</footer>

@@ -9,6 +9,7 @@
 {{ $title := $.Scratch.Get "title" }}
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 
+<header>
 {{ if $title }}
 <div class="intro-header">
 	<div class="{{ .Type }}-heading">
@@ -33,3 +34,4 @@
 	</div>
 </div>
 {{ end }}
+</header>

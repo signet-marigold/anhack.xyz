@@ -1,14 +1,16 @@
 // terms list
 .post-term-list {
-	margin: 5rem 4rem;
 	@include xs {
-		margin: 1rem 0rem;
+		margin: 1rem 0;
+	}
+	@include breakpoint(300px) {
+		margin: 1rem 2rem;
 	}
 	@include sm {
-		margin: 3rem 1rem;
+		margin: 3rem 0;
 	}
 	@include md {
-		margin: 5rem 4rem;
+		margin: 5rem 2rem;
 	}
 	display: flex;
 	align-items: center;
@@ -18,24 +20,25 @@
 		flex-shrink: 0;
 		min-width: 6rem;
 		display: inline-block;
-		margin: 0.6rem;
+		background-color: rgba(0,0,0,0.1);
+		border: $base-border-thickness $gray-400 solid;
+		border-radius: 1rem;
 		@include xs {
 			margin: 0.25rem;
+			flex-basis: 100%;
 		}
 		@include sm {
 			margin: 0.33rem;
+			flex-basis: initial;
 		}
 		@include md {
 			margin: 0.6rem;
 		}
-		background-color: rgba(0,0,0,0.1);
-		border: $base-border-thickness $gray-400 solid;
-		border-radius: 1rem;
 		&:hover {
 			background-color: $gray-900;
 		}
 		&:active {
-			background-color: $gray-800;
+			background-color: $gray-700;
 		}
 		a {
 			color: $white;
@@ -45,9 +48,8 @@
 			padding: 0.25rem;
 			.panel-title {
 				margin: 0;
-				margin-left: 0.5rem;
+				margin-left: 0.75rem;
 				.badge {
-					margin-left: 1.5rem;
 					float: right;
 					font-weight: lighter;
 					color: $black;
@@ -57,6 +59,12 @@
 					width: 3rem;
 					border: $base-border-thickness $white solid;
 					margin-top: -$base-border-thickness;
+					@include xs {
+						margin-left: 0.5rem;
+					}
+					@include sm {
+						margin-left: 1.5rem;
+					}
 				}
 			}
 		}

@@ -9,38 +9,30 @@
 	}
 }
 
+
+@mixin rainbow-keyframes($property) {
+	0%    { #{$property}: $cornflower; }
+	7.7%  { #{$property}: $amethyst; }
+	15.4% { #{$property}: $fuchsia; }
+	23.0% { #{$property}: $violet; }
+	30.8% { #{$property}: $vermilion; }
+	38.5% { #{$property}: $ocher; }
+	46.2% { #{$property}: $amber; }
+	53.8% { #{$property}: $dandelion; }
+	61.5% { #{$property}: $chartreuse; }
+	69.2% { #{$property}: $emerald; }
+	76.9% { #{$property}: $caribbean; }
+	84.6% { #{$property}: $turquoise; }
+	92.3% { #{$property}: $cerulean; }
+	100%  { #{$property}: $cornflower; }
+}
+
 @keyframes rainbow-tc {
-	0%    { color: $cornflower; }
-	7.7%  { color: $amethyst; }
-	15.4% { color: $fuchsia; }
-	23.0% { color: $violet; }
-	30.8% { color: $vermilion; }
-	38.5% { color: $ocher; }
-	46.2% { color: $amber; }
-	53.8% { color: $dandelion; }
-	61.5% { color: $chartreuse; }
-	69.2% { color: $emerald; }
-	76.9% { color: $caribbean; }
-	84.6% { color: $turquoise; }
-	92.3% { color: $cerulean; }
-	100%  { color: $cornflower; }
+	@include rainbow-keyframes(color);
 }
 
 @keyframes rainbow-bg {
-	0%    { background-color: $cornflower; }
-	7.7%  { background-color: $amethyst; }
-	15.4% { background-color: $fuchsia; }
-	23.0% { background-color: $violet; }
-	30.8% { background-color: $vermilion; }
-	38.5% { background-color: $ocher; }
-	46.2% { background-color: $amber; }
-	53.8% { background-color: $dandelion; }
-	61.5% { background-color: $chartreuse; }
-	69.2% { background-color: $emerald; }
-	76.9% { background-color: $caribbean; }
-	84.6% { background-color: $turquoise; }
-	92.3% { background-color: $cerulean; }
-	100%  { background-color: $cornflower; }
+	@include rainbow-keyframes(background-color);
 }
 
 @mixin rainbow-animation {

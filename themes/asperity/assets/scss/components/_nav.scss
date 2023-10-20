@@ -1,4 +1,5 @@
 nav {
+	$nav-vertical-padding: 6px;
 	background-color: $nav-bg;
 	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
 	padding: 6px $base-margin;
@@ -8,7 +9,7 @@ nav {
 		padding-bottom: 0;
 	}
 	@include sm {
-		padding-bottom: $base-margin;
+		padding-bottom: $nav-vertical-padding;
 	}
 	a {
 		&:hover,
@@ -33,6 +34,7 @@ nav {
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
+		line-height: 1;
 		a {
 			padding: 1px 6px;
 			color: $white;
@@ -55,10 +57,10 @@ nav {
 			border: none;
 		}
 		@include xs {
-			margin-bottom: $base-margin;
+			margin-bottom: $nav-vertical-padding;
 		}
 		@include sm {
-			margin: 0;
+			margin-bottom: 0;
 		}
 	}
 }

@@ -2,13 +2,14 @@ baseURL = 'https://anhack.xyz/'
 title = 'anhack'
 theme = 'asperity'
 languageCode = 'en'
-defaultContentLanguage = "en"
+defaultContentLanguage = 'en'
 copyright = '&copy; 2023 Alexander Hack. All Right Reserved.'
-keywords = "blog,developer,personal"
+keywords = 'blog,developer,personal'
 enableRobotsTXT = true
-summaryLength = 20
+summaryLength = 40
 
 [taxonomies]
+	type = 'type'
 	category = 'categories'
 	tag = 'tags'
 
@@ -50,6 +51,12 @@ summaryLength = 20
 		name = 'Categories'
 		url = '/categories/'
 		weight = 50
+
+	[[menu.main]]
+		identifier = 'type'
+		name = 'Type'
+		url = '/type/'
+		weight = 60
 
 	[[menu.main]]
 		identifier = 'github'

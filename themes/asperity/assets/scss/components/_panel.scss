@@ -34,7 +34,7 @@ $panel-icon-size: 2.5rem;
 	// set the box large enough to always fit the icon
 	min-height: $panel-icon-size;
 	& > .panel-icon {
-		background-image: url("/question-mark-white.svg");
+		background-image: url("/icons/info-white.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		width: $panel-icon-size;
@@ -67,22 +67,22 @@ $panel-icon-size: 2.5rem;
 }
 
 .panel-note > .panel-icon {
-	background-image: url("/notepad-white.svg");
+	background-image: url("/icons/notepad-white.svg");
 }
 
 .panel-example > .panel-icon {
-	background-image: url("/question-mark-white.svg");
+	background-image: url("/icons/question-mark-white.svg");
 }
 
 .panel-info > .panel-icon {
-	background-image: url("/info-white.svg");
+	background-image: url("/icons/info-white.svg");
 }
 
 .panel-error > .panel-icon,
 .panel-caution > .panel-icon {
-	background-image: url("/caution-white.svg");
+	background-image: url("/icons/caution-white.svg");
 }
 
 .panel-danger > .panel-icon {
-	background-image: url("/skull-n-bones-white.svg");
+	background-image: url("/icons/skull-n-bones-white.svg");
 }

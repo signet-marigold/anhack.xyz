@@ -1,12 +1,28 @@
 // taxonomy category list
 .post-preview {
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.25);
 	border: $base-border-thickness $gray-300 solid;
 	border-radius: $base-border-radius;
 	padding: 1rem 2rem;
 	margin: 2rem 0;
+	@include xs {
+		padding: 0.5rem 0.625rem;
+		margin: 1rem 0;
+	}
+	@include sm {
+		padding: 1rem 2rem;
+		margin: 2rem 0;
+	}
+	@include md {
+		margin: 2rem 2rem;
+	}
 	.post-title {
-		margin-top: 0;
+		@include xs {
+			margin: 0.62rem 0 0.852rem;
+		}
+		@include sm {
+			margin: 0.75rem 0 1.245rem;
+		}
 	}
 	.post-meta {
 		margin: 0.5rem 0;
