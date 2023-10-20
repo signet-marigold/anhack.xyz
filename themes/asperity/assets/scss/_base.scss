@@ -91,6 +91,9 @@ ul {
 	@include md {
 		padding-left: 2.5rem;
 	}
+	li {
+		margin: 0.5rem 0;
+	}
 }
 
 blockquote {
