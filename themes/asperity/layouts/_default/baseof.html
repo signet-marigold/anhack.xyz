@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
 	<head>
-		{{ partial "head.html" . }}
+		{{- partial "head.html" . }}
 	</head>
 	<body>
-		{{ if .Site.Menus.main }}<div>{{ partial "nav.html" . }}</div>{{ end }}
-		{{ block "header" . }}<div>{{ partial "header.html" . }}</div>{{ end }}
-		<div><main aria-role="main">
+		{{ if .Site.Menus.main -}}<div>
+{{ partial "nav.html" . }}
+		</div>{{ end }}
+		{{ block "header" . -}}<div>
+{{ partial "header.html" . }}
+		</div>{{ end }}
+		<div>
+		<main aria-role="main">
 			<article>
 				{{ block "main" . }}{{ .Content }}{{ end }}
-				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end }}
-				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end }}
+				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end -}}
+				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
 			</article>
-		</main></div>
+		</main>
+		</div>
 		<footer>
-			{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+			{{ block "footer" . }}{{- partial "footer.html" . }}{{ end -}}
 		</footer>
 		{{ partial "halftone.html" . }}
 	</body>

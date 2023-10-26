@@ -12,7 +12,8 @@ figure {
 		margin: 1rem 3rem;
 	}
 	display: inline-block;
-	// overflow:hidden pushes content correctly after figcaption's negative margin
+	// overflow:hidden pushes content from the bottom
+	// correctly after figcaption's negative margin
 	overflow: hidden;
 	img {
 		margin: 0 auto;
@@ -34,7 +35,7 @@ figure {
 			font-size: $base-font-size;
 		}
 	}
-	// stretches image to full width
+	// Force full-width
 	&.full {
 		display: block;
 		img {

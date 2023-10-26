@@ -47,7 +47,7 @@ summaryLength = 40
 
 	[[menu.main]]
 		identifier = 'category'
-		name = 'Category'
+		name = 'Categories'
 		url = '/category/'
 		weight = 50
 

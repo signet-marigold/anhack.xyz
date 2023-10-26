@@ -69,9 +69,31 @@ code[class^="language-"] {
 	}
 }
 
+@mixin selection {
+	color: $selection-color;
+	background: $selection-background;
+}
+
+// Text/element mouse selection
+::-moz-selection {
+	// ! Keep Separate !
+	// When browsers find a part of a select they
+	// don’t understand, they drop the entire thing.
+	// Combining selection styles together will cause it to fail.
+	@include selection;
+}
+::selection {
+	@include selection;
+}
+
+// Disable mouse selection on screen-reader omitted content
+[aria-hidden="true"] {
+	user-select: none;
+}
+
 // Basic elements
 p {
-	margin: 2rem 0;
+	margin: 1rem 0;
 }
 
 hr {

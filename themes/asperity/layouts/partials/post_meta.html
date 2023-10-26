@@ -1,27 +1,27 @@
 <span class="post-meta">
-	{{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
-	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
-	{{ $datestr | i18n "postedOnDate"}}
+	{{- $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
+	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
+	{{ $datestr | i18n "postedOnDate" -}}
 	{{ if ne $datestr $lastmodstr }}
-		&nbsp;{{ $lastmodstr | i18n "lastModified"  }}
-	{{ end }}
-	{{ if .Site.Params.readingTime }}
-		&nbsp;|&nbsp;{{ i18n "readingTime"}}&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
-	{{ end }}
-	{{ if .Site.Params.wordCount }}
-		&nbsp;|&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
-	{{ end }}
-	{{ if not .Site.Params.hideAuthor }}
-		{{ if .Params.author }}
-		{{ if reflect.IsSlice .Params.author }}
-			{{ range .Params.author }}
-			&nbsp;|&nbsp;{{ . | safeHTML }}
-		{{ end }}
-		{{ else }}
-			&nbsp;|&nbsp;{{ .Params.author | safeHTML }}
-		{{ end }}
-		{{ else }}
-			&nbsp;|&nbsp;{{ .Site.Author.name | safeHTML }}
-		{{ end }}
-	{{ end }}
+		&nbsp;{{ $lastmodstr | i18n "lastModified" -}}
+	{{ end -}}
+	{{ if .Site.Params.readingTime -}}
+		&nbsp;|&nbsp;{{ i18n "readingTime"}}&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" -}}
+	{{ end -}}
+	{{ if .Site.Params.wordCount -}}
+		&nbsp;|&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
+	{{ end -}}
+	{{ if not .Site.Params.hideAuthor -}}
+		{{ if .Params.author -}}
+		{{ if reflect.IsSlice .Params.author -}}
+			{{ range .Params.author -}}
+			&nbsp;|&nbsp;{{ . | safeHTML -}}
+		{{ end -}}
+		{{ else -}}
+			&nbsp;|&nbsp;{{ .Params.author | safeHTML -}}
+		{{ end -}}
+		{{ else -}}
+			&nbsp;|&nbsp;{{ .Site.Author.name | safeHTML -}}
+		{{ end -}}
+	{{ end -}}
 </span>

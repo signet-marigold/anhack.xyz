@@ -1,6 +1,6 @@
 <article class="post-preview">
 	<a href="{{ .Permalink }}">
-		<h2 class="post-title">{{ .Title }}</h2>
+		<h2 class="post-title">{{ .Title }}{{- if .Param "draft" }} [DRAFT]{{ end -}}</h2>
 		{{ if .Params.subtitle }}
 		<h3 class="post-subtitle">
 			{{ .Params.subtitle }}
@@ -29,7 +29,7 @@
 	{{ if .Params.tags }}
 	<div class="blog-tags">
 		{{ range .Params.tags }}
-		<a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+		<a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>&nbsp;
 		{{ end }}
 	</div>
 	{{ end }}

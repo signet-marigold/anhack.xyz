@@ -1,4 +1,4 @@
-// taxonomy category list
+// taxonomy pagination list
 .post-preview {
 	background-color: rgba(0,0,0,0.25);
 	border: $base-border-thickness $gray-300 solid;
@@ -14,7 +14,7 @@
 		margin: 2rem 0;
 	}
 	@include md {
-		margin: 2rem 2rem;
+		margin: 2rem;
 	}
 	.post-title {
 		@include xs {
@@ -24,6 +24,9 @@
 			margin: 0.75rem 0 1.245rem;
 		}
 	}
+	.post-subtitle {
+		margin: 0.5rem 0;
+	}
 	.post-meta {
 		margin: 0.5rem 0;
 	}
@@ -31,5 +34,8 @@
 		.post-read-more {
 
 		}
+	}
+	.blog-tags {
+		margin-top: 0.5rem;
 	}
 }
