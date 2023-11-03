@@ -19,7 +19,7 @@
 					<hr class="small">
 				{{ if $subtitle -}}
 					{{ if eq .Type "page" -}}
-					<span class="{{ .Type }}-subheading">{{ $subtitle }}</span>
+					<div class="{{ .Type }}-subheading">{{ $subtitle }}</div>
 					{{ else -}}
 					<h3 class="{{ .Type }}-subheading">{{ $subtitle }}</h3>
 					{{ end -}}
