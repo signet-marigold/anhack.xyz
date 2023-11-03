@@ -4,13 +4,19 @@ header {
 		font-size: $base-font-size * 2;
 		margin: 1.34rem 0;
 	}
-
 	.intro-header {
-		.post-heading {
-
+		.posts-heading {
+			.posts-subheading {
+				text-align: center;
+			}
+			.post-meta {
+				text-align: center;
+			}
 		}
-		.post-meta {
-			text-align: center;
+		.projects-heading {
+			.projects-subheading {
+				text-align: center;
+			}
 		}
 	}
 }

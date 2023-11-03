@@ -1,18 +1,18 @@
 table {
-	margin: 2rem auto;
+	margin: 2rem 0;
+	width: 100%;
 	code {
-		font-size: 0.825em;
+		font-size: 0.75em;
 	}
 	@include xs {
 		font-size: $font-size-sm;
-		width: 100%;
+		padding: $base-padding * 0.5;
 		code {
 			word-wrap: anywhere;
 		}
 	}
 	@include breakpoint(300px) {
-		width: auto;
-		min-width: 80%;
+		font-size: $base-font-size;
 	}
 	@include breakpoint(380px) {
 		code {
@@ -20,17 +20,13 @@ table {
 		}
 	}
 	@include sm {
-		font-size: $base-font-size;
-		min-width: auto;
-		code {
-			font-size: 0.75em;
-		}
+		padding: $base-padding * 1.5;
 	}
 	@include md {
-		padding: $base-padding;
+		padding: $base-padding * 2;
 	}
 	@include lg {
-		padding: $base-padding * 2;
+		padding: $base-padding * 3;
 	}
 	background-color: $table-bg;
 	border: $base-border-thickness $gray-700 solid;
@@ -43,28 +39,38 @@ table {
 			th,
 			td {
 				@include xs {
-					padding: $base-padding * 0.25 $base-padding * 0.25;
+					padding: $base-padding * 0.25 $base-padding * 0.5;
 					width: 1%;
 				}
 				@include breakpoint(300px) {
 					width: initial;
+					padding: $base-padding * 0.25 $base-padding;
 				}
 				@include sm {
-					padding: $base-padding * 0.25 $base-padding * 0.5;
+
 				}
 				@include md {
 					padding: $base-padding * 0.375 $base-padding;
 				}
 				@include lg {
-					padding: $base-padding * 0.75 $base-padding * 1.5;
+					padding: $base-padding * 0.5 $base-padding * 1.75;
 				}
 			}
 		}
 	}
-	// Force full-width
-	&.full {
-		margin-left: 0;
-		margin-right: 0;
-		width: 100%;
+	&.center {
+		margin-left: auto;
+		margin-right: auto;
+
+		@include xs {
+			width: 100%;
+		}
+		@include breakpoint(300px) {
+			width: auto;
+			min-width: 80%;
+		}
+		@include sm {
+			min-width: auto;
+		}
 	}
 }

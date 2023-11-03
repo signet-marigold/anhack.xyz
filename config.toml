@@ -6,7 +6,8 @@ defaultContentLanguage = 'en'
 copyright = '&copy; 2023 Alexander Hack. All Right Reserved.'
 keywords = 'blog,developer,personal'
 enableRobotsTXT = true
-summaryLength = 40
+summaryLength = 50
+
 
 [taxonomies]
 	category = 'category'
@@ -14,6 +15,7 @@ summaryLength = 40
 
 [params]
 	showbadges = true
+	summaryMaxChar = 300
 
 [sitemap]
 	changeFreq = 'weekly'

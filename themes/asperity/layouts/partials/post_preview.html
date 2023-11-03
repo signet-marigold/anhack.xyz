@@ -1,36 +1,38 @@
 <article class="post-preview">
 	<a href="{{ .Permalink }}">
 		<h2 class="post-title">{{ .Title }}{{- if .Param "draft" }} [DRAFT]{{ end -}}</h2>
-		{{ if .Params.subtitle }}
-		<h3 class="post-subtitle">
+	{{ if .Params.subtitle }}
+		<h4 class="post-subtitle">
 			{{ .Params.subtitle }}
-		</h3>
-		{{ end }}
-		{{ if .Params.image }}
+		</h4>
+	{{ end }}
+	{{ if .Params.image }}
 		<img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
-		{{ end }}
-		{{ if .Params.video }}
+	{{ end }}
+	{{ if .Params.video }}
 		<video loop autoplay muted playsinline class="img-title">
 			<source src="{{ .Params.video }}">
 		</video>
-		{{ end }}
+	{{ end }}
 	</a>
 	<p class="post-meta">
 		{{ partial "post_meta.html" . }}
 	</p>
 	<div class="post-entry">
-		{{ if or (.Truncated) (.Params.summary) }}
+	{{ if .Site.Params.summaryMaxChar }}
+		{{ htmlEscape (substr (htmlUnescape .Summary) 0 .Site.Params.summaryMaxChar) }}
+	{{ else }}
 		{{ .Summary }}
-		<a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
-		{{ else }}
-		{{ .Content }}
-		{{ end }}
-	</div>
-	{{ if .Params.tags }}
-	<div class="blog-tags">
-		{{ range .Params.tags }}
-		<a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>&nbsp;
-		{{ end }}
-	</div>
 	{{ end }}
+	{{ if .Truncated }}
+		<a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
+	{{ end }}
+	</div>
+{{ if .Params.tags }}
+	<div class="blog-tags">
+	{{ range .Params.tags }}
+		<a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>&nbsp;
+	{{ end }}
+	</div>
+{{ end }}
 </article>

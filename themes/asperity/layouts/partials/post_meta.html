@@ -1,4 +1,4 @@
-<span class="post-meta">
+<div class="post-meta">
 	{{- $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
 	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
 	{{ $datestr | i18n "postedOnDate" -}}
@@ -24,4 +24,4 @@
 			&nbsp;|&nbsp;{{ .Site.Author.name | safeHTML -}}
 		{{ end -}}
 	{{ end -}}
-</span>
+</div>

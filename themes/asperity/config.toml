@@ -19,7 +19,7 @@ languageCode = 'en-us'
 
 	dateFormat = "January 2, 2006"
 	commit = false
-	rss = true
+	summary = true
 	readingTime = true
 	wordCount = true
 	showRelatedPosts = true

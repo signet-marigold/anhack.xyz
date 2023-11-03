@@ -2,6 +2,5 @@
 	{{ .Text | safeHTML }}
 	<a class="heading-link" href="#{{ .Anchor | safeURL }}">
 		<i class="link" aria-hidden="true" title="{{ i18n "link_to_heading" | default "Link to heading" }}"></i>
-		<!--<span class="sr-only">{{ i18n "link_to_heading" | default "Link to heading" }}</span>-->
 	</a>
 </h{{ .Level }}>

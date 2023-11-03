@@ -4,6 +4,7 @@ h3,
 h4,
 h5,
 h6 {
+	line-height: 1;
 	a:where(.heading-link) {
 		i.link::after {
 			display: none;
