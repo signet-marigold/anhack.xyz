@@ -7,7 +7,13 @@
 		</h4>
 	{{ end }}
 	{{ if .Params.image }}
-		<img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
+		{{ $imageLink := "" }}
+		{{ if findRE "(^(https?:)?//|^/)" (lower .Params.image ) }}
+			{{ $imageLink = .Params.image }}
+		{{ else }}
+			{{ $imageLink = print (.Permalink) (.Params.image) }}
+		{{ end }}
+		<img src="{{ $imageLink }}" alt="[image missing]" class="img-title" />
 	{{ end }}
 	{{ if .Params.video }}
 		<video loop autoplay muted playsinline class="img-title">
@@ -15,9 +21,7 @@
 		</video>
 	{{ end }}
 	</a>
-	<p class="post-meta">
-		{{ partial "post_meta.html" . }}
-	</p>
+	{{ partial "post_meta.html" . }}
 	<div class="post-entry">
 	{{ if .Site.Params.summaryMaxChar }}
 		{{ htmlEscape (substr (htmlUnescape .Summary) 0 .Site.Params.summaryMaxChar) }}

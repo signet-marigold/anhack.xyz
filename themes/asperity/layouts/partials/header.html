@@ -28,6 +28,9 @@
 				{{ if .IsPage -}}
 					{{ partial "post_meta.html" . -}}
 				{{ end -}}
+				{{ end -}}
+				{{ if .Params.image -}}
+					<img src="{{ .Params.image }}" alt="[image missing]" class="img-header" />
 				{{ end }}
 				</div>
 			</div>

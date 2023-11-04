@@ -2,6 +2,7 @@
 title: "The Sphere"
 date: 2023-10-20T17:37:47Z
 subtitle: "Quote from Chad the Bird's Green Mill Cocktail Lounge Rant"
+image: "image.jpg"
 category: ""
 tags: ["shitpost","quote"]
 draft: false

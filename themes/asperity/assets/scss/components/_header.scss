@@ -5,6 +5,13 @@ header {
 		margin: 1.34rem 0;
 	}
 	.intro-header {
+		.img-header {
+			margin: 1.25rem auto 0.5rem;
+			max-height: 400px;
+			width: 100%;
+			object-fit: cover;
+		}
+
 		.page-heading {
 			.page-subheading {
 				text-align: center;
@@ -13,6 +20,7 @@ header {
 		.posts-heading {
 			.posts-subheading {
 				text-align: center;
+				margin-bottom: 0.5rem
 			}
 			.post-meta {
 				text-align: center;
