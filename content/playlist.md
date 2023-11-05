@@ -4,7 +4,7 @@ author: ""
 date: 2023-10-30T21:48:22Z
 subtitle: ""
 image: ""
-category: ""
+category: "single"
 tags: []
 draft: true
 ---
