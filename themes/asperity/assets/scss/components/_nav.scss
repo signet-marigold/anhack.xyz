@@ -3,6 +3,7 @@ nav {
 	background-color: $nav-bg;
 	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
 	padding: 6px $base-margin;
+	max-width: 800px - ($base-margin * 2);
 	border-radius: $base-border-radius;
 	box-shadow: $base-box-shadow;
 	@include xs {
