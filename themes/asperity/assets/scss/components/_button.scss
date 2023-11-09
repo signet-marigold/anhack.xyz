@@ -1,10 +1,12 @@
 @mixin btn {
+	font-size: $font-size-sm;
 	text-decoration: none;
 	cursor: pointer;
 	display: inline-block;
 	border: 0;
 	padding: $base-padding * 0.68 $base-padding * 2.2;
 	border-radius: $base-border-radius;
+	font-weight: 500;
 }
 
 %btn {

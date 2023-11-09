@@ -1,8 +1,9 @@
 <!--
-
+	link: URL to soundcloud single or list
+	height: override the height of the iframe
 -->
 
-{{ $url := .Get "url" }}
+{{ $url := .Get "link" }}
 
 {{ $urlsplit := split $url "soundcloud.com/" }}
 {{ $urltail := split (index $urlsplit 1) "/" }}

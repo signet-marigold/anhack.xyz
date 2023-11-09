@@ -47,7 +47,6 @@ table {
 					padding: $base-padding * 0.25 $base-padding;
 				}
 				@include sm {
-
 				}
 				@include md {
 					padding: $base-padding * 0.375 $base-padding;
@@ -58,7 +57,9 @@ table {
 			}
 		}
 	}
-	&.center {
+	// Default view is stretched to the body
+	// Compact class only contains content and centers in the body
+	&.compact {
 		margin-left: auto;
 		margin-right: auto;
 

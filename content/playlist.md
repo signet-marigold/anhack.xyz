@@ -9,5 +9,5 @@ tags: []
 draft: true
 ---
 
-{{< sc url="https://soundcloud.com/anhack/sets/large" height="700" >}}
+{{< sc link="https://soundcloud.com/anhack/sets/large" height="700" >}}
 

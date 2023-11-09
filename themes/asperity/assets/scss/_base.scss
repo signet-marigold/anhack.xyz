@@ -1,6 +1,7 @@
 body {
 	overflow-wrap: anywhere;
 	font-family: sans-serif;
+//	font-family: "Noto Sans", sans-serif;
 	font-size: $base-font-size;
 	letter-spacing: -0.01em;
 	line-height: 1.425;
@@ -39,6 +40,10 @@ nav,
 main {
 	max-width: 800px;
 	margin: 0 auto;
+}
+nav {
+	// Remove padding from width
+	max-width: 800px - ($base-margin * 2);
 }
 
 main {}

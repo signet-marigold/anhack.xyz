@@ -259,6 +259,10 @@ $dark-colors: map-merge(
 
 
 // Font sizes
+// ** Design created using a 16px base font size
+// No Fixed Pixel Size.
+// Everything spacing-wise (except for the margin
+// & border) is using the default browser font size.
 $base-font-size: 1rem;
 $font-size-xxl: $base-font-size * 1.75;
 $font-size-xl:  $base-font-size * 1.5;

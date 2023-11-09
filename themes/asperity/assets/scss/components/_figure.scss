@@ -35,11 +35,17 @@ figure {
 			font-size: $base-font-size;
 		}
 	}
-	// Force full-width
-	&.full {
+	// Image fill to container
+	&.stretch {
 		display: block;
 		img {
 			width: 100%;
 		}
+	}
+	// Force full-width. No horizontal margins
+	&.full {
+		@extend .stretch;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }

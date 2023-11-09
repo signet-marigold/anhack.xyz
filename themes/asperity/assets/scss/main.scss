@@ -1,7 +1,11 @@
+// normalize
 @import 'css/normalize';
 
 // variables & functions
 @import 'variables';
+
+// fonts
+@import 'css/fonts/noto-sans';
 
 // base layout
 @import 'breakpoints';
@@ -24,6 +28,7 @@
 @import 'components/footer';
 @import 'components/post-preview';
 @import 'components/post-terms';
+@import 'components/badge';
 
 // utilities
 @import 'utilities';
