@@ -54,7 +54,7 @@ summaryLength = 50
 		weight = 50
 
 	[[menu.main]]
-		identifier = 'github'
-		name = 'Github'
-		url = 'https://github.com/signet-marigold/'
-		weight = 900
+		identifier = 'playlist'
+		name = 'Playlist'
+		url = '/playlist/'
+		weight = 90

@@ -1,62 +1,21 @@
 ---
 ---
-{{< img src="/singles-res/synthwave-retrowave.gif" class="mt-n6 zi-n1" alt="retro skeleton" mouse="owo" >}}
+{{< img src="/singles-resources/index/synthwave-retrowave.gif" class="mt-n6 zi-n1" alt="retro skeleton" mouse="owo" >}}
 {{< customclass "text-vermilion text-rainbow ta-c" >}}[[[ just chillin in negative space ]]]{{< /customclass >}}
 
 Welcome welcome!
 
-test _test_
+I hope your day was full of corporate sabotage
 
-{{< btn color="cerulean" link="he" text="gfsd " >}}
+{{< img src="/singles-resources/index/stickfight.jpg" class="full" lazy=true caption="sticky bois" >}}
 
-{{< gridcontainer >}}
-{{< plaque class="invert-img bg-g-black"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-blue"   link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-purple" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-pink"   link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-orange" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-yellow" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-green"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-
-
-{{< plaque class="invert-img bg-g-cornflower-black" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-amethyst-black"   link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-fuchsia-black"    link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-violet-black"     link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-vermilion-black"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-ocher-black"      link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-amber-black"      link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-dandelion-black"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-chartreuse-black" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-emerald-black"    link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-caribbean-black"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-turquoise-black"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-cerulean-black"   link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-
-
-{{< plaque class="invert-img bg-g-cornflower" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-amethyst"   link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-fuchsia"    link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-violet"     link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-vermilion"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-ocher"      link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-amber"      link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-dandelion"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-chartreuse" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-emerald"    link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-caribbean"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-turquoise"  link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-cerulean"   link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-
-
-{{< plaque class="invert-img bg-g-dreamsky" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-techvalley" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-seaside" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< plaque class="invert-img bg-g-watermellon" link="hello" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="weird" >}}
-{{< /gridcontainer >}}
-
-
-{{< img src="/testimage.png" class="full" lazy=true >}}
-{{< img src="/testimage.png" class="full" lazy=true >}}
-{{< img src="/testimage.png" class="full" lazy=true >}}
-{{< img src="/testimage.png" class="full" lazy=true >}}
+## Socials
+{{< grid >}}
+{{< plaque class="invert-img bg-g-orange" text="Firefish" img="/decentralized-social-icons/src/ds-firefish.svg" mouse="" link="https://firefish.social/@alis" >}}
+{{< plaque class="invert-img bg-g-yellow" text="Lemmy"    img="/decentralized-social-icons/src/ds-lemmy.svg"    mouse="" link="https://casavaga.com/u/alaliliiso" >}}
+{{< plaque class="invert-img bg-g-blue"   text="Kbin"     img="/decentralized-social-icons/src/ds-kbin.svg"     mouse="" link="https://kbin.social/u/alis" >}}
+{{< plaque class="invert-img bg-g-green"  text="Matrix"   img="/decentralized-social-icons/src/ds-matrix.svg"   mouse="@alaliliiso:matrix.org" link="" >}}
+{{< plaque class="invert-img bg-g-purple" text="Mastodon" img="/decentralized-social-icons/src/ds-mastodon.svg" mouse="" link="https://mastodon.social/@alis_sy" >}}
+{{< plaque class="invert-img bg-g-pink"   text="Pixelfed" img="/decentralized-social-icons/src/ds-pixelfed.svg" mouse="" link="https://pixelfed.social/tenebriscaelum" >}}
+{{< plaque class="bg-g-black"             text="Github"   img="/icons/github-mark-white.svg"                    mouse="" link="https://github.com/signet-marigold/" >}}
+{{< /grid >}}

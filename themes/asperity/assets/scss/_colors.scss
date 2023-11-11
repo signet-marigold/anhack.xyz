@@ -65,7 +65,7 @@
 @mixin d-gradient-analogous($color) {
 	$color1: scale-color(
 		adjust-hue($color, 10deg),
-		$red:   -6,
+		$red:    -6,
 		$green: -15,
 		$blue:   -4
 	);

@@ -26,8 +26,9 @@ figure {
 		padding-top: $base-border-radius + $base-padding;
 		margin-top: -$base-border-radius;
 		border-radius: 0 0 $base-border-radius $base-border-radius;
-		border: $base-border-thickness $gray-700 solid;
+//		border: $base-border-thickness $gray-700 solid;
 		text-align: center;
+		letter-spacing: 0.01em;
 		@include xs {
 			font-size: $font-size-sm;
 		}
