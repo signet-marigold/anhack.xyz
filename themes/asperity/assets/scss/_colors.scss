@@ -1,3 +1,4 @@
+// All colors text & background classes
 @each $map in ($pure-black-and-white, $black-and-white, $grays, $colors, $light-colors, $dark-colors) {
 	@each $key, $val in $map {
 		.text-#{$key} {
@@ -10,6 +11,7 @@
 }
 
 
+// Rainbow animation text & background classes
 @mixin rainbow-keyframes($property) {
 	0%    { #{$property}: $cornflower; }
 	7.7%  { #{$property}: $amethyst; }
@@ -26,27 +28,110 @@
 	92.3% { #{$property}: $cerulean; }
 	100%  { #{$property}: $cornflower; }
 }
-
 @keyframes rainbow-tc {
 	@include rainbow-keyframes(color);
 }
-
 @keyframes rainbow-bg {
 	@include rainbow-keyframes(background-color);
 }
-
 @mixin rainbow-animation {
 	animation-duration: 5s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
-
 .text-rainbow {
 	animation-name: rainbow-tc;
 	@include rainbow-animation;
 }
-
 .bg-rainbow {
 	animation-name: rainbow-bg;
 	@include rainbow-animation;
 }
+
+
+// Helper function because sass does not have an actual saturation adjustment
+@function full-saturation($color, $mix: 100%) {
+	@return mix(hsl(hue($color), 100%, 50%), $color, $mix)
+}
+
+
+// Gradient backgrounds
+@mixin d-gradient($color1, $color2) {
+	// Fallback in case browser does not support gradient
+	background: mix($color1, $color2, 50%);
+	background: linear-gradient(135deg, #{$color1}, #{$color2});
+}
+
+@mixin d-gradient-analogous($color) {
+	$color1: scale-color(
+		adjust-hue($color, 10deg),
+		$red:   -6,
+		$green: -15,
+		$blue:   -4
+	);
+	$color2: scale-color(
+		adjust-hue($color, -40deg),
+		$red:   -14,
+		$green: -25,
+		$blue:   -5
+	);
+	@include d-gradient($color1, $color2);
+}
+
+@mixin d-gradient-black($color) {
+	@include d-gradient($color, mix(#000, $color, 80%));
+}
+
+// Main colors analogous
+@each $key, $val in $colors {
+	.bg-g-#{$key} {
+		$color: full-saturation($val, 50%);
+		@include d-gradient-analogous($color);
+	}
+}
+
+// Main colors to black
+@each $key, $val in $colors {
+	.bg-g-#{$key}-black {
+		$color: full-saturation($val, 50%);
+		@include d-gradient-black($color);
+	}
+}
+
+// Main set
+.bg-g-black {
+	@include d-gradient(#666, #151515);
+}
+.bg-g-blue {
+	@include d-gradient(#01d5f8, #023ae3);
+}
+.bg-g-purple {
+	@include d-gradient(#d027ff, #2614ff);
+}
+.bg-g-pink {
+	@include d-gradient(#f700ff, #e40d49);
+}
+.bg-g-orange {
+	@include d-gradient(#f85b01, #e3024c);
+}
+.bg-g-yellow {
+	@include d-gradient(#e1d300, #ff3c00); //alt #f4c716, #ff3030
+}
+.bg-g-green {
+	@include d-gradient(#58d900, #0080b3);
+}
+
+// Extra
+.bg-g-dreamsky {
+	@include d-gradient(#ff0af0, #07dcff); // Pink & aqua
+}
+.bg-g-techvalley {
+	@include d-gradient(#ff7816, #8c11df); // Orange & purple
+}
+.bg-g-seaside {
+	@include d-gradient(#5580ff, #33ca09); // Blue & green
+}
+.bg-g-watermellon {
+	@include d-gradient(#00ff6f, #ff008f); // Green & pink
+}
+

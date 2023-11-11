@@ -2,7 +2,7 @@
 code {
 //	font-feature-settings: "tnum", "zero";
 	background-color: $code-light;
-	padding: 1px 6px;
+	padding: $base-padding * 0.125 $base-padding * 0.75; //1px 6px
 	border-radius: $base-border-radius;
 	//line-break: anywhere; // loose; sometimes allows block to overflow
 	line-break: loose;
@@ -15,16 +15,16 @@ code {
 		background-color: $code-dark;
 		display: block;
 		@include xs {
-			padding: 6px 8px;
+			padding: $base-padding * 0.75 $base-padding; //6px 8px
 		}
 		@include sm {
-			padding: 12px 16px;
+			padding: $base-padding * 1.5 $base-padding * 2; //12px 16px
 		}
 		overflow-x: scroll;
 
 		// Fixes right side padding on scrollable content
 		& > span > span {
-			padding-right: 16px;
+			padding-right: $base-padding * 2;
 		}
 	}
 }

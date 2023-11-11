@@ -171,21 +171,21 @@ $theme-colors: map-merge(
 	$theme-colors
 );
 
-@function lighten-color($c) {
+@function lighten-color($color) {
 	@return lighten(
-		scale-color($c,
+		scale-color($color,
 			$red:    10,
 			$green:  0,
 			$blue:  -15
 		), 15%);
 }
-@function darken-color($c) {
+@function darken-color($color) {
 	@return darken(
-		scale-color($c,
+		scale-color($color,
 			$red:    15,
 			$green: -10,
 			$blue:  -10
-		), 28% );
+		), 28%);
 }
 
 $light-cornflower:    lighten-color($cornflower);
@@ -258,11 +258,14 @@ $dark-colors: map-merge(
 // End colors
 
 
+// Sizes
+$page-max-width: 50rem; //800px
+
+
 // Font sizes
-// ** Design created using a 16px base font size
-// No Fixed Pixel Size.
-// Everything spacing-wise (except for the margin
-// & border) is using the default browser font size.
+// ** Design made using 1rem = 16px
+// Everything spacing-wise (except for the webkit scrollbar) is using
+// the default browser font size as a basis for spacing and size.
 $base-font-size: 1rem;
 $font-size-xxl: $base-font-size * 1.75;
 $font-size-xl:  $base-font-size * 1.5;
@@ -274,7 +277,7 @@ $font-size-xs:  $base-font-size * 0.67;
 
 // Spacing
 $base-padding: 0.5rem;
-$base-margin: 8px;
+$base-margin: 0.5rem; //8px;
 $header-xxl-margin: $base-font-size * 1.245  0;
 $header-xl-margin:  $base-font-size * 1.245  0;
 $header-lg-margin:  $base-font-size * 1.17   0;
@@ -292,12 +295,9 @@ $scrollbar-webkit-thumb-border: none;
 
 
 // Borders
-$base-border-thickness: 1px;
-$base-border-radius: 4px;
+$base-border-thickness: 0.0625rem; //1px;
+$base-border-radius: 0.25rem; //4px;
 
 
 // Box-shadow
-$base-box-shadow: 4px 8px 11px rgba(0,0,0,0.55);
-
-
-
+$base-box-shadow: 0.25rem 0.5rem 0.6875rem rgba(0,0,0,0.55); //4px 8px 11px rgba(0,0,0,0.55);

@@ -13,8 +13,8 @@ body {
 
 	background: $black;
 	color: $white;
-	margin: 10px;
-	margin-bottom: 0;
+	margin: 0.625rem; //10px
+
 
 	background-image: url("/background.webp");
 	background-size: 100%;
@@ -25,8 +25,10 @@ body {
 	flex-flow: column;
 	// fallback
 	height: 100vh;
+
 	// remove padding from footer
-	height: calc(100vh - 10px);
+	margin-bottom: 0;
+	height: calc(100vh - 0.625rem); // - 10px
 
 	& > * {
 		image-rendering: initial;
@@ -38,12 +40,12 @@ header,
 footer,
 nav,
 main {
-	max-width: 800px;
+	max-width: $page-max-width;
 	margin: 0 auto;
 }
 nav {
 	// Remove padding from width
-	max-width: 800px - ($base-margin * 2);
+	max-width: $page-max-width - ($base-margin * 2);
 }
 
 main {}

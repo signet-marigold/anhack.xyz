@@ -5,14 +5,11 @@
 @import 'variables';
 
 // fonts
-@import 'css/fonts/noto-sans';
+//@import 'css/fonts/noto-sans';
 
 // base layout
 @import 'breakpoints';
 @import 'base';
-
-// colors
-@import 'colors';
 
 // components
 @import 'components/anchor';
@@ -28,7 +25,9 @@
 @import 'components/footer';
 @import 'components/post-preview';
 @import 'components/post-terms';
-@import 'components/badge';
+@import 'components/plaque';
+@import 'components/gridcontainer';
 
 // utilities
+@import 'colors';
 @import 'utilities';

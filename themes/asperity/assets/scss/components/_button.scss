@@ -1,4 +1,13 @@
-@mixin btn {
+@function set-color($color) {
+	@if (lightness($color) > 55) {
+		@return $black;
+	}
+	@else {
+		@return $white;
+	}
+}
+
+%btn {
 	font-size: $font-size-sm;
 	text-decoration: none;
 	cursor: pointer;
@@ -7,16 +16,6 @@
 	padding: $base-padding * 0.68 $base-padding * 2.2;
 	border-radius: $base-border-radius;
 	font-weight: 500;
-}
-
-%btn {
-	@include btn;
-	color: $black;
-}
-
-%btn-outlined {
-	@include btn;
-	background-color: $black;
 }
 
 // Create button classes
@@ -30,23 +29,29 @@
 
 		.btn-#{$key} {
 			@extend %btn;
-				background-color: $val;
+			color: set-color($val);
+			background-color: $val;
 			&:hover {
+				color: set-color($light-color);
 				background-color: $light-color;
 			}
 			&:active {
+				color: set-color($dark-color);
 				background-color: $dark-color;
 			}
 		}
 		.btn-outlined-#{$key} {
-			@extend %btn-outlined;
+			@extend %btn;
+			background-color: set-color($val);
 			color: $val;
 			border: $base-border-thickness * 2 solid $val;
 			&:hover {
+				background-color: set-color($light-color);
 				color: $light-color;
 				border-color: $light-color;
 			}
 			&:active {
+				background-color: set-color($dark-color);
 				color: $dark-color;
 				border-color: $dark-color;
 			}

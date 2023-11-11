@@ -1,5 +1,5 @@
 footer {
-	padding: 30px 0 10px;
+	padding: 1.875rem 0 0.625rem; //30px 0 10px
 	font-size: $font-size-sm;
 	text-align: center;
 	clear: both;
@@ -27,8 +27,9 @@ footer {
 		justify-content: center;
 
 		#rss-feed-link {
-			margin-left: 10px;
+			margin-left: 0.625rem; //10px
 			img {
+				$rss-icon-size: $base-font-size + 38rem * 2;
 				min-height: 1.76em; // button margins combined plus base font size
 				height: 1.76em;
 				width: 1.76em;

@@ -17,13 +17,13 @@ figure {
 	overflow: hidden;
 	img {
 		margin: 0 auto;
-		min-width: 120px;
-		min-height: 42px;
+		min-width: 7.5rem; //120px
+		min-height: 2.625rem; //42px
 	}
 	figcaption {
 		background-color: $caption-bg;
-		padding: 8px 16px;
-		padding-top: $base-border-radius + 8px;
+		padding: $base-padding $base-padding * 2;
+		padding-top: $base-border-radius + $base-padding;
 		margin-top: -$base-border-radius;
 		border-radius: 0 0 $base-border-radius $base-border-radius;
 		border: $base-border-thickness $gray-700 solid;

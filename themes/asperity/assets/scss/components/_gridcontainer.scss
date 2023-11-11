@@ -1,0 +1,11 @@
+.gridcontainer {
+	margin: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	& > * {
+		margin: 1rem;
+	}
+}

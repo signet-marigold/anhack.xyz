@@ -1,0 +1,13 @@
+<!--
+	link: url
+	img: image link
+	class: style class
+	text: button text
+	mouse: what the image says when moused over ("title" in HTML)
+-->
+{{- with .Get "link"}}<a href="{{.}}">{{ end -}}
+<div class="plaque{{ if .Get "link"}} plaque-clickable{{ end }}{{ with .Get "class"}} {{.}}{{ end }}" {{ with .Get "mouse"}}title="{{.}}"{{ end }}>
+	<img class="plaque-img" src="{{ .Get "img" }}">
+	<span class="plaque-text">{{ .Get "text" }}</span>
+</div>
+{{- if .Get "link"}}</a>{{ end -}}
