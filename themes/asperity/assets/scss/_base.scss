@@ -1,4 +1,7 @@
 body {
+	$body-margin: 0.625rem;
+
+	// Font & text settings
 	overflow-wrap: anywhere;
 	font-family: sans-serif;
 //	font-family: "Noto Sans", sans-serif;
@@ -13,22 +16,25 @@ body {
 
 	background: $black;
 	color: $white;
-	margin: 0.625rem; //10px
 
+	margin: $body-margin; //10px
 
+	// Background image settings
 	background-image: url("/background.webp");
 	background-size: 100%;
 	background-repeat: repeat-y;
 	image-rendering: pixelated;
 
+	// Footer alignment
 	display: flex;
 	flex-flow: column;
 	// fallback
 	height: 100vh;
 
-	// remove padding from footer
+	// Remove margin from footer
 	margin-bottom: 0;
-	height: calc(100vh - 0.625rem); // - 10px
+	// calculate out the top margin
+	height: calc(100vh - $body-margin); // - 10px
 
 	& > * {
 		image-rendering: initial;

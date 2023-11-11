@@ -1,5 +1,8 @@
 .grid-container {
-	margin: 1rem;
+	margin: 1rem 0;
+	@include lg {
+		margin: 1rem;
+	}
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -7,5 +10,14 @@
 	justify-content: center;
 	& > * {
 		margin: 1rem;
+		@include xs {
+			margin: 0.5rem;
+		}
+		@include sm {
+			margin: 0.75rem;
+		}
+		@include md {
+			margin: 1rem;
+		}
 	}
 }

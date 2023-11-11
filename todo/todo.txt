@@ -1,0 +1,5 @@
+ 
+plaques should probably have reader support disabled
+
+add small disclamer to /playlist "this page will be updated with whatever im listening to atm"
+
