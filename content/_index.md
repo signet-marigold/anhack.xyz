@@ -5,7 +5,7 @@
 
 Welcome welcome!
 
-I hope your day was full of industrial espionage (｡•̀‿ -｡)
+I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
 {{< img src="/singles-resources/index/stickfight.jpg" class="full" lazy=true caption="sticky bois" >}}
 
