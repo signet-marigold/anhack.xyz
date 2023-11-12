@@ -1,6 +1,6 @@
 {{ define "main" -}}
 {{ .Content }}
-{{ range .Paginator.Pages }}
+{{ range .Paginator.Pages -}}
 	{{ partial "post_preview.html" .}}
-{{ end }}
+{{- end }}
 {{- end }}

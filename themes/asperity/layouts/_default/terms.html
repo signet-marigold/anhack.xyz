@@ -1,7 +1,7 @@
-{{ define "main" }}
-{{ $data := .Data }}
+{{ define "main" -}}
+{{ $data := .Data -}}
 <article class="post-term-list">
-	{{ range $key, $value := .Data.Terms.ByCount }}
+	{{ range $key, $value := .Data.Terms.ByCount -}}
 	<div class="post-term">
 		<a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}/">
 			<div class="panel-heading" id="header-{{ $value.Name | anchorize }}">
@@ -12,6 +12,6 @@
 			</div>
 		</a>
 	</div>
-	{{ end }}
+	{{ end -}}
 </article>
-{{ end }}
+{{- end }}

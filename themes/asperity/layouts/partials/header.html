@@ -2,9 +2,13 @@
 {{/*	{{ if .Site.Params.homeTitle }}{{ $.Scratch.Set "title" .Site.Params.homeTitle }}{{ else }}{{ $.Scratch.Set "title" .Site.Title }}{{ end -}}
 	{{ if .Site.Params.subtitle }}{{ $.Scratch.Set "subtitle" .Site.Params.subtitle }}{{ end -}} */}}
 {{ else -}}
+	{{- if eq .Kind "term" -}}
+		{{- $.Scratch.Set "term" (humanize .Data.Singular) -}}
+	{{- end -}}
 	{{ $.Scratch.Set "title" .Title -}}
 	{{ if .Params.subtitle }}{{ $.Scratch.Set "subtitle" .Params.subtitle }}{{ end -}}
 {{ end -}}
+{{ $preterm := $.Scratch.Get "term" -}}
 {{ $title := $.Scratch.Get "title" -}}
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 		<header>
@@ -14,7 +18,7 @@
 				{{ if eq .Type "list" -}}
 					<h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
 				{{ else -}}
-					<h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+					<h1>{{ with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
 				{{ end -}}
 					<hr class="small">
 				{{ if $subtitle -}}
