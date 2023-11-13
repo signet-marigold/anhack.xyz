@@ -7,6 +7,6 @@ image: ""
 category: "single"
 tags: []
 ---
-This page will be updated regularly to match whatever im listening to atm
-{{< sc link="https://soundcloud.com/anhack/sets/large" height="700" >}}
+This page will be updated regularly to whatever im listening to atm
 
+{{< sc link="https://soundcloud.com/anhack/sets/large" height="700" >}}

@@ -21,7 +21,9 @@
 		</video>
 	{{- end }}
 	</a>
+{{ if ne .Type "page" -}}
 	{{ partial "post_meta.html" . }}
+{{- end }}
 {{ if ne .WordCount 0 -}}
 	<div class="post-entry">
 	{{ if .Site.Params.summaryMaxChar -}}
