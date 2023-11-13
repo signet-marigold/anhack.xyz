@@ -38,3 +38,7 @@ tags
 # Kate #
 .*.kate-swp
 .swp.*
+
+# Extra
+/deploy
+/todo/

@@ -1,7 +1,7 @@
 #!/bin/sh
-USER=my-user
-HOST=my-server.com
-DIR=my/directory/to/topologix.fr/   # the directory where your web site files should go
+USER=dh_eppcxj
+HOST=haines.dreamhost.com
+DIR=anhack.xyz/   # the directory where your web site files should go
 
 # clean build
 rm -rf public/*

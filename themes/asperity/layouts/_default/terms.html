@@ -1,12 +1,14 @@
 {{ define "main" -}}
 {{ $data := .Data -}}
+{{ $isTag := eq .Data.Singular "tag" }}
+
 <article class="post-term-list">
 	{{ range $key, $value := .Data.Terms.ByCount -}}
 	<div class="post-term">
 		<a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}/">
 			<div class="panel-heading" id="header-{{ $value.Name | anchorize }}">
 			<h4 class="panel-title">
-				#{{ $value.Name }}
+				{{ if $isTag }}#{{ end }}{{ $value.Name }}
 				<span class="badge">{{ $value.Count }}</span>
 			</h4>
 			</div>

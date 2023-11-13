@@ -34,7 +34,7 @@ body {
 	// Remove margin from footer
 	margin-bottom: 0;
 	// calculate out the top margin
-	height: calc(100vh - $body-margin); // - 10px
+	height: calc(100vh - #{$body-margin}); // - 10px
 
 	& > * {
 		image-rendering: initial;

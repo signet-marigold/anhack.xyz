@@ -5,12 +5,14 @@
 	{{ if ne $datestr $lastmodstr }}
 		&nbsp;{{ $lastmodstr | i18n "lastModified" -}}
 	{{ end -}}
+{{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
 		&nbsp;|&nbsp;{{ i18n "readingTime"}}&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" -}}
 	{{ end -}}
 	{{ if .Site.Params.wordCount -}}
 		&nbsp;|&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
 	{{ end -}}
+{{- end }}
 	{{ if not .Site.Params.hideAuthor -}}
 		{{ if .Params.author -}}
 		{{ if reflect.IsSlice .Params.author -}}

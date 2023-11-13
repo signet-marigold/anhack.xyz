@@ -3,3 +3,4 @@ plaques should probably have reader support disabled
 
 add small disclamer to /playlist "this page will be updated with whatever im listening to atm"
 
+clean up header code generating title (extra terms specifying when list view; which isnt possible)
