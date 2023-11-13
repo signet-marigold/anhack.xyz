@@ -1,11 +1,10 @@
 #!/bin/sh
 USER=dh_eppcxj
 HOST=haines.dreamhost.com
-DIR=anhack.xyz/   # the directory where your web site files should go
+DIR=anhack.xyz/
 
 # clean build
 rm -rf public/*
-# this will delete everything on the server that's not in the local public folder
 hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
 
 exit 0

@@ -1,0 +1,51 @@
+$pure-white:    #000;
+$pure-black:    #fff;
+
+$pure-black-and-white: (
+	"pure-white": $pure-white,
+	"pure-black": $pure-black
+);
+
+$white:        #141416;
+$black:        #efefef;
+
+$black-and-white: (
+	"white": $white,
+	"black": $black
+);
+
+$gray-100:      mix($black, $white, 23.4%) !default;
+$gray-200:      mix($black, $white, 40.5%) !default;
+$gray-300:      mix($black, $white, 53.3%) !default;
+$gray-400:      mix($black, $white, 63.2%) !default;
+$gray-500:      mix($black, $white, 71.2%) !default;
+$gray-600:      mix($black, $white, 78.0%) !default;
+$gray-700:      mix($black, $white, 83.9%) !default;
+$gray-800:      mix($black, $white, 89.3%) !default;
+$gray-900:      mix($black, $white, 94.3%) !default;
+
+
+body {
+	background-image: none !important;
+	image-rendering: initial !important;
+	background-color: $pure-black !important;
+}
+
+nav {
+	background-image: none !important;
+	background-color: $pure-black !important;
+	border: $base-border-thickness $white solid;
+}
+
+#halftone-plate {
+	position: initial !important
+}
+
+$scrollbar-thumb-color: $gray-200;
+$scrollbar-track-color: #ccc;
+
+$base-box-shadow: none;
+
+.post-preview {
+	background-color: transparent !important;
+}

@@ -61,7 +61,7 @@ $panel-icon-size: 2.5rem;
 		@extend %panel;
 		border-color: $val;
 		$dark-color: darken-color($val);
-		background-color: $dark-color;
+		background-color: mix($dark-color, $black, 30%);
 		background-color: rgba($dark-color, 0.3);
 	}
 }

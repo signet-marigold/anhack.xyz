@@ -40,5 +40,4 @@ tags
 .swp.*
 
 # Extra
-/deploy
 /todo/
