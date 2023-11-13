@@ -5,7 +5,7 @@
 	text: button text
 	mouse: what the image says when moused over ("title" in HTML)
 -->
-{{- with .Get "link"}}<a href="{{.}}">{{ end -}}
+{{- with .Get "link"}}<a href="{{.}}"{{ if findRE "^(https?:)?//" (lower . ) }} target="_blank" rel="noopener"{{ end }}>{{ end -}}
 <div class="plaque{{ if .Get "link"}} plaque-clickable{{ end }}{{ with .Get "class"}} {{.}}{{ end }}" {{ with .Get "mouse"}}title="{{.}}"{{ end }}>
 	<img class="plaque-img" src="{{ .Get "img" }}">
 	<span class="plaque-text">{{ .Get "text" }}</span>
