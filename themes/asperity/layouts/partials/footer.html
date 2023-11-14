@@ -1,18 +1,15 @@
 	<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
 	{{- if .Site.Copyright }}<br><span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
 	<br>
-
 	{{- if .Param "showthemeinfo" }}
 	<p>
 		Published with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> using the <a href="https://github.com/signet-marigold/anhack.xyz/tree/main/themes/asperity" target="_blank" rel="noopener">Asperity Theme</a>.&nbsp; <a href='/theme-license.html'>Theme License</a>.
 	</p>
 	{{ end -}}
-
 	<div>Last build: {{ time.Now | time.Format "Jan 02, 2006 3:04 PM Z07:00" }}</div>
 	<br>
-
 	{{ if .Param "showbadges" }}<div id="badges">
-		{{ partial "badges.html" . }}
+		{{ partialCached "badges.html" . }}
 	</div>{{ end -}}
 	<div id="website-extra">
 		<a href="https://github.com/signet-marigold/anhack.xyz" target="_blank" rel="noopener">
@@ -20,4 +17,4 @@
 		</a>
 		{{- if .Param "showrss" }}<a href="/index.xml" id="rss-feed-link" target="_blank" rel="noopener"><img src="/icons/rss.svg" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
 	</div>
-
+	{{ partialCached "assets/js.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" }}

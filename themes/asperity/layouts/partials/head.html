@@ -1,15 +1,15 @@
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
 		<link rel="canonical" href="{{ .Site.BaseURL }}">
 		<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="/index.xml">
-{{ partial "preload.html" . -}}
+{{ partialCached "preload.html" . -}}
 		{{ $options := dict "transpiler" "libsass" "targetPath" "css/style.css" -}}
 		{{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint -}}
 		<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 		{{ end -}}
-		<link rel="stylesheet" type="text/css" href="/custom.css">
 		{{ with .Site.Params.favicon -}}<link rel="icon" href="{{ . }}">{{ end }}
 		<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 		{{ if isset .Params "tags" -}}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">{{ end }}
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="index, follow">
-		<meta charset="utf-8">
+		{{ partialCached "assets/css.html" "easyzoom.css" }}

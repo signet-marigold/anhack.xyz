@@ -6,8 +6,15 @@ subtitle: ""
 image: ""
 category: ""
 tags: ["radio"]
-draft: true
+draft: false
 ---
+
+{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-7000px-tinypng.png" zoomsrc="2003-allochrt-verticle-edit-7000px-tinypng.png" >}}
+
+
+### Page a work in progress. Bear with me here
+
+
 
 <http://www.sckans.edu/~sireland/radio/>
 
@@ -18,6 +25,7 @@ draft: true
 <https://www.radioqth.net/>
 
 <https://hamradioprep.com/>
+
 
 
 
@@ -87,5 +95,23 @@ In 1859, the Western Union Company published the “92 Code”. This code is sim
 | `91` | Superintendent's signal. |
 | `92` | Deliver Promptly. |
 | `134` | Who is at the key? |
+
+
+
+Structre
+1. Common codes
+1. Types of comunication
+1. Repeater operation
+1. Frequency partitions
+1. Band plan
+1. Radio clubs
+
+{{< expand "US Freq Allocation Chart 2003" >}}
+{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-7000px-tinypng.png" zoomsrc="2003-allochrt-verticle-edit-7000px-tinypng.png" >}}
+{{< /expand >}}
+
+
+
+
 
 
