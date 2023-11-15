@@ -3,13 +3,13 @@ title: "Ham Radio Operating Resources"
 author: ""
 date: 2023-10-20T21:20:05Z
 subtitle: ""
-image: ""
+image: "image.jpg"
 category: ""
 tags: ["radio"]
 draft: false
 ---
 
-{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-7000px-tinypng.png" zoomsrc="2003-allochrt-verticle-edit-7000px-tinypng.png" >}}
+{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-800px-min.png" zoomsrc="2003-allochrt-verticle-edit-5000px-min.png" >}}
 
 
 ### Page a work in progress. Bear with me here
@@ -107,11 +107,14 @@ Structre
 1. Radio clubs
 
 {{< expand "US Freq Allocation Chart 2003" >}}
-{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-7000px-tinypng.png" zoomsrc="2003-allochrt-verticle-edit-7000px-tinypng.png" >}}
+{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-800px-min.png" zoomsrc="2003-allochrt-verticle-edit-5000px-min.png" >}}
 {{< /expand >}}
 
+{{< expand "US Amature Radio Bands 2017 ARRL" >}}
+{{< img class="full" lazy=true src="Amateur-Radio-Band-Plans-800px.png" zoomsrc="Amateur-Radio-Band-Plans.jpg" >}}
+{{< /expand >}}
 
-
-
-
+{{< expand "Morse Code Chart" >}}
+{{< img class="full" lazy=true src="morse-code-chart-gray-ef-min.png" >}}
+{{< /expand >}}
 

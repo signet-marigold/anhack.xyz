@@ -5,7 +5,9 @@
 	position: relative;
 
 	/* 'Shrink-wrap' the element */
-	display: inline-block;
+	/* inline-block preventing full width
+	 * seems to work without it
+	display: inline-block; */
 	*display: inline;
 	*zoom: 1;
 }
@@ -36,8 +38,11 @@
 	margin: -1em 0 0 -5em;
 	line-height: 2em;
 	text-align: center;
-	background: #FFF;
-	box-shadow: 0 0 10px #888;
+	background: #222;
+	box-shadow: 3px 3px 12px rgba(0,0,0,0.75);
+	border-radius: 0.25rem;
+	border: 0.0625rem #444 solid;
+	color: #fff;
 }
 
 .easyzoom-flyout {
@@ -45,12 +50,13 @@
 	position: absolute;
 	z-index: 100;
 	overflow: hidden;
-	background: #FFF;
+	background: #141414;
 }
 
 .easyzoom-flyout img {
 	max-width: initial;
 	width: initial !important;
+	image-rendering: smooth;
 }
 
 /**

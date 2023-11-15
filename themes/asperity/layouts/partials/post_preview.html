@@ -13,7 +13,7 @@
 		{{ else -}}
 			{{ $imageLink = print (.Permalink) (.Params.image) }}
 		{{- end }}
-		<img src="{{ $imageLink }}" alt="[image missing]" class="img-title" />
+		<div class="img-title"><img src="{{ $imageLink }}" alt="[image missing]" /></div>
 	{{- end }}
 	{{ if .Params.video -}}
 		<video loop autoplay muted playsinline class="img-title">

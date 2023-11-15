@@ -27,14 +27,16 @@
 	}
 	.post-subtitle {
 		margin: 0;
-		padding-top: 0.25rem
+		padding-top: 0.25rem;
 	}
 	.img-title {
-		margin: 0 auto;
 		padding-top: 1rem;
-		max-height: 10rem; //160px
-		width: 100%;
-		object-fit: cover;
+		img {
+			margin: 0 auto;
+			max-height: 10rem; //160px
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 	.post-meta {
 		padding-top: 0.75rem;

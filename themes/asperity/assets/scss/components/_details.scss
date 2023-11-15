@@ -15,6 +15,12 @@ details {
 	}
 	.content {
 		padding: 0 $base-margin $base-margin;
+		// Remove any padding or margin that would be on
+		// the last element inside of the content body
+		& *:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 	&[open] {
 		summary {

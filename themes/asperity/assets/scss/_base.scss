@@ -14,7 +14,7 @@ body {
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
 
-	background: $black;
+	background-color: $black;
 	color: $white;
 
 	margin: $body-margin; //10px
@@ -167,6 +167,7 @@ dl {
 }
 
 img {
+	color: red;
 	display: block;
 	max-width: 100%;
 	border-radius: $base-border-radius;
