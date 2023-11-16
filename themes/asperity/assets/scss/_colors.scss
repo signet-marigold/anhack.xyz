@@ -32,7 +32,7 @@
 	@include rainbow-keyframes(color);
 }
 @keyframes rainbow-bg {
-	@include rainbow-keyframes(background-color);
+	@include rainbow-keyframes(background);
 }
 @mixin rainbow-animation {
 	animation-duration: 5s;

@@ -17,5 +17,6 @@ I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 {{< plaque class="invert-img bg-g-green"  text="Matrix"   img="/decentralized-social-icons/src/ds-matrix.svg"   mouse="" link="https://matrix.to/#/@alaliliiso:matrix.org" >}}
 {{< plaque class="invert-img bg-g-purple" text="Mastodon" img="/decentralized-social-icons/src/ds-mastodon.svg" mouse="" link="https://mastodon.social/@alis_sy" >}}
 {{< plaque class="invert-img bg-g-pink"   text="Pixelfed" img="/decentralized-social-icons/src/ds-pixelfed.svg" mouse="" link="https://pixelfed.social/tenebriscaelum" >}}
-{{< plaque class="bg-g-black"             text="Github"   img="/icons/github-mark-white.svg"                    mouse="" link="https://github.com/signet-marigold/" >}}
+{{< plaque class="bg-g-black"             text="Github"   img="/icons/github-mark-white.svg"                    mouse="" link="https://github.com/signet-marigold" >}}
+{{< plaque class="bg-g-cornflower"        text="Codeberg" img="/icons/Codeberg-white.svg"                       mouse="" link="https://codeberg.org/signet-marigold" >}}
 {{< /grid >}}
