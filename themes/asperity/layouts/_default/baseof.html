@@ -4,6 +4,7 @@
 		{{- partial "head.html" . }}
 	</head>
 	<body>
+		{{ partial "halftone.html" . }}
 		{{ if .Site.Menus.main -}}<div>
 {{ partial "nav.html" . }}
 		</div>{{ end }}
@@ -22,6 +23,5 @@
 		<footer>
 			{{ block "footer" . }}{{- partial "footer.html" . }}{{ end -}}
 		</footer>
-		{{ partial "halftone.html" . }}
 	</body>
 </html>

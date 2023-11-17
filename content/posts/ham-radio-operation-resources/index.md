@@ -17,8 +17,6 @@ Structure
 1. [Band plan](#band-plan)
 1. [Radio clubs](#radio-clubs)
 
-
-
 {{< expand "Morse Code Chart" >}}
 {{< img class="full" lazy=true src="morse-code-chart-gray-ef-min.png" >}}
 {{< /expand >}}
@@ -60,11 +58,27 @@ Structure
 
 # Types of Comunication
 
+Simplex
+Duplex
+
+type:
+- Phone
+- CW
+
+modulation
+- FM
+- AM
+
+
 
 
 # Repeater Operation
 
 <http://www.hamuniverse.com/repeater.html>
+
+Repeaters, simply put, allow you to have a further range when using a radio.
+
+
 
 
 
