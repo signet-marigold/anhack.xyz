@@ -13,3 +13,4 @@
 		{{ if isset .Params "tags" -}}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">{{ end }}
 		<meta name="robots" content="index, follow">
 		{{ partialCached "assets/css.html" "easyzoom.css" }}
+		{{ partialCached "analytics.html" . }}
