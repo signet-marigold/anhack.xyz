@@ -19,6 +19,28 @@ h6 {
 		}
 	}
 }
+
+h1,
+h2 {
+	color: $light-cerulean;
+}
+
+h3,
+h4,
+h5,
+h6 {
+}
+
+h3,
+h4 {
+	font-weight: 400;
+}
+
+h5,
+h6 {
+
+}
+
 h1 {
 	font-size: $font-size-xxl;
 	margin: $header-xxl-margin;
@@ -40,6 +62,7 @@ h5 {
 	margin: $header-sm-margin;
 }
 h6 {
-	font-size: $font-size-xs;
+	font-size: $font-size-sm;
 	margin: $header-xs-margin;
+	color: $gray-300;
 }
