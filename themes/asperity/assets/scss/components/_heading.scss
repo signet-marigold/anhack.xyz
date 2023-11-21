@@ -18,51 +18,99 @@ h6 {
 			}
 		}
 	}
+	&.leaf {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// only here because im relying on whitespace to margin the icon normally.
+		// flex removes this spacing so we have to add it back.
+		.heading-link {
+			margin-left: 0.25em;
+		}
+		&::after {
+			content: "";
+			height: 0.125rem;
+			margin-left: 1.45em;
+			border-radius: 1rem;
+			border: $base-border-thickness $white solid;
+			flex-grow: 100;
+		}
+		&:hover::after {
+			// 0.9em is the width of the icon.
+			// removing it from the margin allows the leaf bar to stay the same width.
+			//margin-left: 2.65em - 0.9em;
+		}
+	}
+}
+
+header {
+	h1 {
+		font-size: $base-font-size * 2;
+		margin: 1.34rem 0;
+	}
+}
+main {
+	h1,
+	h2 {
+		font-weight: 800;
+	}
 }
 
 h1,
 h2 {
-	color: $light-cerulean;
-}
-
-h3,
-h4,
-h5,
-h6 {
+	word-spacing: 0.015em;
 }
 
 h3,
 h4 {
-	font-weight: 400;
+	word-spacing: 0.035em;
 }
 
 h5,
 h6 {
-
+	word-spacing: 0.05em;
 }
 
 h1 {
 	font-size: $font-size-xxl;
-	margin: $header-xxl-margin;
+	margin: $base-font-size * 1.315 0
 }
 h2 {
 	font-size: $font-size-xl;
-	margin: $header-xl-margin;
+	margin: $base-font-size * 1.245 0;
 }
 h3 {
 	font-size: $font-size-lg;
-	margin: $header-lg-margin;
+	margin: $base-font-size * 1.17 0;
 }
 h4 {
 	font-size: $font-size-md;
-	margin: $header-md-margin;
+	margin: $base-font-size * 1.33 0;
+
 }
 h5 {
 	font-size: $font-size-sm;
-	margin: $header-sm-margin;
+	margin: $base-font-size * 1.3861 0;
 }
 h6 {
 	font-size: $font-size-sm;
-	margin: $header-xs-margin;
+	margin: $base-font-size * 1.5611 0;
 	color: $gray-300;
 }
+
+// Reset color if heading is in post preview
+.post-preview {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: inherit;
+	}
+}
+
+
+
+
+

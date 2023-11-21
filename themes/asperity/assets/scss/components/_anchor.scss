@@ -1,7 +1,7 @@
 // Link
 a {
-	text-decoration: none;
 	font-weight: 500;
+	text-decoration: none;
 	color: $cerulean;
 	&:link {
 	}
@@ -21,26 +21,24 @@ a {
 }
 
 // Icons
+@mixin link-icon {
+	content: "";
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	width: 0.9em;
+	height: 1em;
+}
 article {
 	a:where(.external-link)::after {
-		content: "";
+		@include link-icon;
 		background-image: url("/icons/external-link-white.svg");
-		background-repeat: no-repeat;
-		background-position: center;
-		display: inline-block;
-		width: 0.9em;
-		height: 1em;
 		margin: 0 0.25em -0.05em;
 	}
 	a:where(.heading-link) {
 		i.link::after {
-			content: "";
+			@include link-icon;
 			background-image: url("/icons/link-white.svg");
-			background-repeat: no-repeat;
-			background-position: center;
-			display: inline-block;
-			width: 0.9em;
-			height: 1em;
 			margin-bottom: -0.15em;
 		}
 		span.sr-only {

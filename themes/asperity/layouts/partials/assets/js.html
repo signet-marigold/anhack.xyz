@@ -13,7 +13,7 @@
 	{{- else }}
 		{{- $opts := dict "minify" true }}
 		{{- with . | minify | fingerprint }}
-			<script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+			<script async src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
 		{{- end }}
 	{{- end }}
 {{- end }}

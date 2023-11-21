@@ -48,13 +48,6 @@
 	@include rainbow-animation;
 }
 
-
-// Helper function because sass does not have an actual saturation adjustment
-@function full-saturation($color, $mix: 100%) {
-	@return mix(hsl(hue($color), 100%, 50%), $color, $mix)
-}
-
-
 // Gradient backgrounds
 @mixin d-gradient($color1, $color2) {
 	// Fallback in case browser does not support gradient

@@ -7,6 +7,6 @@ BUILD_FLAGS=--minify
 
 # clean build
 rm -rf public/*
-hugo $BUILD_FLAGS && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+hugo ${BUILD_FLAGS} && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
 
 exit 0

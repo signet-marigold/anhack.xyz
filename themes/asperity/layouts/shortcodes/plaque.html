@@ -7,7 +7,7 @@
 -->
 {{- with .Get "link"}}<a href="{{.}}"{{ if findRE "^(https?:)?//" (lower . ) }} target="_blank" rel="noopener"{{ end }}>{{ end -}}
 <div class="plaque{{ if .Get "link"}} plaque-clickable{{ end }}{{ with .Get "class"}} {{.}}{{ end }}" {{ with .Get "mouse"}}title="{{.}}"{{ end }}>
-	<img class="plaque-img" src="{{ .Get "img" }}">
+	<img class="plaque-img" src="{{ .Get "img" }}" width="32px" height="32px">
 	<span class="plaque-text">{{ .Get "text" }}</span>
 </div>
 {{- if .Get "link"}}</a>{{ end -}}

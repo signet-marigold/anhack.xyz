@@ -22,13 +22,46 @@ Structure
 {{< /expand >}}
 
 ---------------- content
-# H1 header
-## H2 header
-### H3 header
-#### H4 header
-##### H5 header
-###### H6 header
+# H1 header Test words lmao here's something to read.
+## H2 header Test words lmao here's something to read.
+### H3 header Test words lmao here's something to read.
+#### H4 header Test words lmao here's something to read.
+##### H5 header Test words lmao here's something to read.
+###### H6 header Test words lmao here's something to read.
 ---------------- content
+
+[# h1](style)
+
+{{< btn color="cake" text="cake" >}}
+
+{{< btn color="cornflower" text="cornflower" >}}
+{{< btn color="amethyst" text="amethyst" >}}
+{{< btn color="fuchsia" text="fuchsia" >}}
+{{< btn color="violet" text="violet" >}}
+{{< btn color="vermilion" text="vermilion" >}}
+{{< btn color="ocher" text="ocher" >}}
+{{< btn color="amber" text="amber" >}}
+{{< btn color="dandelion" text="dandelion" >}}
+{{< btn color="chartreuse" text="chartreuse" >}}
+{{< btn color="emerald" text="emerald" >}}
+{{< btn color="caribbean" text="caribbean" >}}
+{{< btn color="turquoise" text="turquoise" >}}
+{{< btn color="cerulean" text="cerulean" >}}
+
+{{< btn color="outlined-cornflower" text="cornflower" >}}
+{{< btn color="outlined-amethyst" text="amethyst" >}}
+{{< btn color="outlined-fuchsia" text="fuchsia" >}}
+{{< btn color="outlined-violet" text="violet" >}}
+{{< btn color="outlined-vermilion" text="vermilion" >}}
+{{< btn color="outlined-ocher" text="ocher" >}}
+{{< btn color="outlined-amber" text="amber" >}}
+{{< btn color="outlined-dandelion" text="dandelion" >}}
+{{< btn color="outlined-chartreuse" text="chartreuse" >}}
+{{< btn color="outlined-emerald" text="emerald" >}}
+{{< btn color="outlined-caribbean" text="caribbean" >}}
+{{< btn color="outlined-turquoise" text="turquoise" >}}
+{{< btn color="outlined-cerulean" text="cerulean" >}}
+
 
 ### Page a work in progress. Bear with me here
 
