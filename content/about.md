@@ -31,9 +31,8 @@ You can also find me at:
 - [Firefish](https://firefish.social/@alis)
 
 im hosting [a lemmy instance](https://casavaga.com/)
-but not currently accepting new users
 
-if youd like to try lemmy out as a replacement for reddit:
+lemmy, the tolerable link aggregator.
 you can find an instance to use here <https://join-lemmy.org/>
 
 Thanks for joining me !

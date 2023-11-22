@@ -23,6 +23,7 @@
 		display: inline-block;
 		background-color: rgba(0,0,0,0.1);
 		border: $base-border-thickness $gray-400 solid;
+		@include multi-color-list(box-shadow, "#{$base-border-thickness} #{$base-border-thickness} 0");
 		border-radius: 1rem;
 		@include xs {
 			margin: 0.25rem;
@@ -36,10 +37,10 @@
 			margin: 0.6rem;
 		}
 		&:hover {
-			background-color: $gray-900;
+			background-color: $gray-800;
 		}
 		&:active {
-			background-color: $gray-700;
+			background-color: $gray-600;
 		}
 		a {
 			color: $white;
