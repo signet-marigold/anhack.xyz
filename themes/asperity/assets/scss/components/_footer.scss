@@ -29,10 +29,10 @@ footer {
 		#rss-feed-link {
 			margin-left: 0.625rem; //10px
 			img {
-				//$rss-icon-size: $base-font-size + 38rem * 2;
-				min-height: 1.76em; // button margins combined plus base font size
-				height: 1.76em;
-				width: 1.76em;
+				$rss-icon-size: 1.968em;
+				border: $base-border-thickness solid $gray-800;
+				height: $rss-icon-size;
+				width: $rss-icon-size;
 			}
 		}
 	}
