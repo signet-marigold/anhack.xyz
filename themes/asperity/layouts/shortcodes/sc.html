@@ -2,26 +2,24 @@
 	link: URL to soundcloud single or list
 	height: override the height of the iframe
 -->
+{{- $url := .Get "link" -}}
 
-{{ $url := .Get "link" }}
+{{- $urlsplit := split $url "soundcloud.com/" -}}
+{{- $urltail := split (index $urlsplit 1) "/" -}}
+{{- $second := split (index $urltail 1) "/" -}}
+{{- $group := index $second 0 -}}
 
-{{ $urlsplit := split $url "soundcloud.com/" }}
-{{ $urltail := split (index $urlsplit 1) "/" }}
-{{ $second := split (index $urltail 1) "/" }}
-{{ $group := index $second 0 }}
+{{- $islist := 0 -}}
+{{- if eq $group "sets" -}}
+	{{- $islist = 1 -}}
+{{ end -}}
 
-{{ $islist := 0 }}
-{{ if eq $group "sets" }}
-	{{ $islist = 1 }}
-{{ end }}
+{{- $height := 166 -}}
+{{- if $islist }}
+	{{- $height = 450 -}}
+{{ end -}}
 
-
-{{ $height := 166 }}
-{{ if $islist }}
-	{{ $height = 450 }}
-{{ end }}
-
-{{ with .Get "height" }}{{ $height = . }}{{ end }}
+{{- with .Get "height" }}{{- $height = . -}}{{ end -}}
 
 <iframe
 	style="

@@ -1,14 +1,14 @@
-{{ $s := split . "," }}
-{{ $b := slice }}
-{{ range $s }}
-	{{ $r := resources.Get (print "js/" .) }}
-	{{ $b = $b | append $r }}
-{{ end }}
-{{ $c := $b | resources.Concat "js/main.js" }}
+{{- $s := split . "," -}}
+{{- $b := slice -}}
+{{- range $s -}}
+	{{- $r := resources.Get (print "js/" .) -}}
+	{{- $b = $b | append $r -}}
+{{- end -}}
+{{- $c := $b | resources.Concat "js/main.js" }}
 {{- with $c }}
-	{{- if eq hugo.Environment "development" }}
+	{{- if eq hugo.Environment "development" -}}
 		{{- with . }}
-			<script src="{{ .RelPermalink }}"></script>
+		<script src="{{ .RelPermalink }}"></script>
 		{{- end }}
 	{{- else }}
 		{{- $opts := dict "minify" true }}
@@ -16,4 +16,4 @@
 			<script async src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
 		{{- end }}
 	{{- end }}
-{{- end }}
+{{- end -}}

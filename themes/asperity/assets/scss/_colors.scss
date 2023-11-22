@@ -78,16 +78,14 @@
 // Main colors analogous
 @each $key, $val in $colors {
 	.bg-g-#{$key} {
-		$color: full-saturation($val, 50%);
-		@include d-gradient-analogous($color);
+		@include d-gradient-analogous(full-saturation($val, 50%));
 	}
 }
 
 // Main colors to black
 @each $key, $val in $colors {
 	.bg-g-#{$key}-black {
-		$color: full-saturation($val, 50%);
-		@include d-gradient-black($color);
+		@include d-gradient-black(full-saturation($val, 50%));
 	}
 }
 
@@ -127,4 +125,3 @@
 .bg-g-watermellon {
 	@include d-gradient(#00ff6f, #ff008f); // Green & pink
 }
-

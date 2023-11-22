@@ -22,6 +22,10 @@
 			@extend %btn;
 			color: set-color($val);
 			background-color: $val;
+			border: $base-border-thickness solid $gray-800;
+			box-shadow:
+				inset $base-border-thickness * 2 $base-border-thickness * 2 0 rgba(255, 255, 255, 0.6),
+				inset $base-border-thickness * -2 $base-border-thickness * -2 0 rgba(0, 0, 0, 0.6);
 			&:hover {
 				color: set-color($light-color);
 				background-color: $light-color;
@@ -36,6 +40,9 @@
 			background-color: transparent;
 			color: $val;
 			border: $base-border-thickness * 2 solid $val;
+			box-shadow:
+				inset $base-border-thickness * 2 $base-border-thickness * 2 0 rgba(0, 0, 0, 0.6),
+				inset $base-border-thickness * -1 $base-border-thickness * -1 0 rgba(255, 255, 255, 0.6);
 			&:hover {
 				color: $light-color;
 				border-color: $light-color;

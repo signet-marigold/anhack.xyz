@@ -1,0 +1,42 @@
+// Multi-color nth selector
+@mixin multi-color-list($property, $property-options:"", $child-selector:"") {
+	&:nth-child(13n + 1) #{$child-selector} {
+		#{$property}: #{$property-options} $cornflower;
+	}
+	&:nth-child(13n + 2) #{$child-selector} {
+		#{$property}: #{$property-options} $amethyst;
+	}
+	&:nth-child(13n + 3) #{$child-selector} {
+		#{$property}: #{$property-options} $fuchsia;
+	}
+	&:nth-child(13n + 4) #{$child-selector} {
+		#{$property}: #{$property-options} $violet;
+	}
+	&:nth-child(13n + 5) #{$child-selector} {
+		#{$property}: #{$property-options} $vermilion;
+	}
+	&:nth-child(13n + 6) #{$child-selector} {
+		#{$property}: #{$property-options} $ocher;
+	}
+	&:nth-child(13n + 7) #{$child-selector} {
+		#{$property}: #{$property-options} $amber;
+	}
+	&:nth-child(13n + 8) #{$child-selector} {
+		#{$property}: #{$property-options} $dandelion;
+	}
+	&:nth-child(13n + 9) #{$child-selector} {
+		#{$property}: #{$property-options} $chartreuse;
+	}
+	&:nth-child(13n + 10) #{$child-selector} {
+		#{$property}: #{$property-options} $emerald;
+	}
+	&:nth-child(13n + 11) #{$child-selector} {
+		#{$property}: #{$property-options} $caribbean;
+	}
+	&:nth-child(13n + 12) #{$child-selector} {
+		#{$property}: #{$property-options} $turquoise;
+	}
+	&:nth-child(13n + 13) #{$child-selector} {
+		#{$property}: #{$property-options} $cerulean;
+	}
+}

@@ -12,6 +12,6 @@
 		<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 		{{ if isset .Params "tags" -}}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">{{ end }}
 		<meta name="robots" content="index, follow">
-		{{ partialCached "assets/css.html" "easyzoom.css" }}
-		{{ partialCached "assets/js.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" }}
-		{{ partialCached "analytics.html" . }}
+		{{- partialCached "assets/css.html" "easyzoom.css" -}}
+		{{- partialCached "assets/js.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}
+		{{- partialCached "analytics.html" . -}}

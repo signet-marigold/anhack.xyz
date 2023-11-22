@@ -4,11 +4,11 @@
 -->
 <details>
 	<summary>
-		{{ if .IsNamedParams }}
+	{{- if .IsNamedParams -}}
 		{{ .Get "summary" }}
-		{{ else }}
+	{{- else -}}
 		{{ .Get 0 | default "Expand me" }}
-		{{ end }}
+	{{- end -}}
 	</summary>
 	<div class="content">
 	{{ .Inner }}

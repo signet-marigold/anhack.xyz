@@ -11,18 +11,21 @@ nav {
 	@include sm {
 		padding-bottom: $vertical-padding;
 	}
+
+	// don't know why this is here
+	// review later
 	a {
 		&:hover,
 		&:focus {
 			color: $cerulean;
 		}
 	}
+
 	#logo {
 		height: 3.125rem;
 		a {
-			// fixes an issue where the selectable part of the anchor
-			// grows to be as large as its parent container
-			// without this line, you may accidentally press the home button quite often
+			// normally the clickable part of the anchor grows to be as large as its parent container
+			// with display block you may accidentally press the home button quite often
 			display: inline-block;
 		}
 		img {
@@ -35,33 +38,37 @@ nav {
 		display: flex;
 		flex-wrap: wrap;
 		line-height: 1;
-		a {
-			padding: $base-padding * 0.125 $base-padding * 0.75; //1px 6px
-			color: $white;
-			&:link, &:visited {
-				color: inherit;
+
+		li {
+			border-right: $base-border-thickness $gray-400 solid;
+			display: inline;
+			word-wrap: normal;
+			margin: 0;
+			&:last-child {
+				border: none;
 			}
-			&:hover {
-				color: $gray-100;
+			@include xs {
+				margin-bottom: $vertical-padding;
 			}
-			&:active {
-				color: $gray-200;
+			@include sm {
+				margin-bottom: 0;
 			}
-		}
-	}
-	li {
-		border-right: $base-border-thickness $gray-400 solid;
-		display: inline;
-		word-wrap: normal;
-		margin: 0;
-		&:last-child {
-			border: none;
-		}
-		@include xs {
-			margin-bottom: $vertical-padding;
-		}
-		@include sm {
-			margin-bottom: 0;
+			a {
+				padding: $base-padding * 0.125 $base-padding * 0.75; //1px 6px
+				color: $white;
+				&:link, &:visited {
+					color: inherit;
+				}
+				&:hover {
+					color: $gray-100;
+				}
+				&:active {
+					color: $gray-200;
+				}
+				&.menuactive {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
