@@ -13,25 +13,23 @@
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 		<header>
 		{{- if $title }}
-			<div class="intro-header">
+			<div class="intro-header {{ .Kind }}-header">
 				{{ if .Params.image -}}
 					<img src="{{ .Params.image }}" alt="[image missing]" class="img-header" />
 				{{ end -}}
-
-				<div class="{{ .Type }}-heading">
+				<div class="heading {{ .Type }}-heading">
+				{{ if and (eq .Type "posts") .IsPage -}}
+					{{ partial "post_meta.html" . -}}
+				{{ end }}
 					<h1>{{ with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
 				{{ if $subtitle -}}
 					{{ if eq .Type "page" -}}
-					<div class="{{ .Type }}-subheading">{{ $subtitle }}</div>
+					<div class="subheading {{ .Type }}-subheading">{{ $subtitle }}</div>
 					{{ else -}}
-					<h3 class="{{ .Type }}-subheading">{{ $subtitle }}</h3>
+					<h3 class="subheading {{ .Type }}-subheading">{{ $subtitle }}</h3>
 					{{ end -}}
 				{{ end -}}
-				{{ if eq .Type "posts" -}}
-				{{ if .IsPage -}}
-					{{ partial "post_meta.html" . -}}
-				{{ end -}}
-				{{ end }}
+
 				</div>
 				<hr class="small">
 			</div>

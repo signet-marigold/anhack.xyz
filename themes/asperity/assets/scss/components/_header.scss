@@ -1,36 +1,48 @@
 header {
+	text-align: center;
 	h1 {
-		text-align: center;
 	}
 	.intro-header {
 		margin-bottom: 1rem;
+		padding-top: 1rem;
+		.heading {
+			h1 {
+				margin: $h1-margin - 1rem 0;
+			}
+			.subheading {
+				margin: 0.5rem 0;
+			}
+			.post-meta {
+				margin: 0.5rem 0 0.5rem;
+				font-size: $font-size-sm;
+			}
+		}
 		.img-header {
 			margin: 0 auto;
-			margin-top: 1rem;
 			max-height: 25rem; //400px
 			width: 100%;
 			object-fit: cover;
 		}
+
 		.page-heading {
 			.page-subheading {
-				text-align: center;
 			}
 		}
-		.posts-heading {
-			.posts-subheading {
-				text-align: center;
-				margin: 0;
-				margin-top: 1rem;
-			}
-			.post-meta {
-				text-align: center;
-				margin-top: 0.5rem;
+		.page-header {
+			.posts-heading {
 			}
 		}
 		.projects-heading {
 			.projects-subheading {
-				text-align: center;
+			}
+		}
+
+		&.page-header {
+			.posts-heading,
+			.projects-heading {
+				text-align: left;
 			}
 		}
 	}
 }
+

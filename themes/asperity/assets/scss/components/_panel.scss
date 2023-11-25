@@ -10,18 +10,23 @@ $panel-colors: (
 $panel-icon-size: 2.5rem;
 
 %panel {
+	&.full {
+		margin: 1rem 0;
+	}
 	@include xs {
 		margin: 1rem 0;
 		padding: 1rem 1rem;
 	}
 	@include sm {
+		margin: 1rem $indent-sm;
 		padding: 1rem 2rem;
 	}
 	@include md {
-		margin: 1rem 2rem;
+		margin: 1rem $indent-lg;
 	}
-	margin: 1rem 2rem;
-	padding: 1rem 2rem;
+	@include lg {
+		margin: 1rem $indent-xxl;
+	}
 	border-radius: $base-border-radius;
 	border-width: $base-border-thickness;
 	border-style: solid;

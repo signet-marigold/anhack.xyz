@@ -23,14 +23,13 @@
 	}
 	.post-title {
 		margin: 0;
-		padding-top: 0.35rem;
 	}
 	.post-subtitle {
 		margin: 0;
-		padding-top: 0.25rem;
+		margin-top: 0.25rem;
 	}
 	.img-title {
-		padding-top: 1rem;
+		margin-top: 0.75rem;
 		img {
 			margin: 0 auto;
 			max-height: 10rem; //160px
@@ -39,9 +38,8 @@
 		}
 	}
 	.post-meta {
-		padding-top: 0.75rem;
 		font-size: $font-size-sm;
-		margin-top: 0.5rem;	
+		margin-top: 0.25rem;
 	}
 	.post-entry {
 		@include xs {
@@ -50,7 +48,7 @@
 		@include sm {
 			line-height: 1.25;
 		}
-		padding-top: 0.75rem;
+		margin-top: 0.75rem;
 		.post-read-more {
 
 		}

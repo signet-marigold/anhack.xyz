@@ -16,7 +16,6 @@ languageCode = 'en-us'
 	taglist = true
 	showrss = true
 	showthemeinfo = false
-
 	dateFormat = "Jan 2, 2006"
 	commit = false
 	summary = true
@@ -25,3 +24,6 @@ languageCode = 'en-us'
 	showRelatedPosts = true
 	hideAuthor = true
 	metaTags = true
+	showPreviewImage = false
+	showPreviewVideo = false
+	showPreviewSummary = false

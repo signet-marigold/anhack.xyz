@@ -7,40 +7,34 @@
 	{{ end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
-		&nbsp;|&nbsp;{{ i18n "readingTime"}}&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" -}}
-	{{ end -}}
+		&nbsp;&middot;&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" -}}&nbsp;{{ i18n "toRead" }}
+	{{- end -}}
 	{{ if .Site.Params.wordCount -}}
-		&nbsp;|&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
-	{{ end -}}
+		&nbsp;&middot;&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
+	{{- end -}}
 {{- end }}
-	{{ if not .Site.Params.hideAuthor -}}
-		{{ if .Params.author -}}
-		{{ if reflect.IsSlice .Params.author -}}
-			{{ range .Params.author -}}
-			&nbsp;|&nbsp;{{ . | safeHTML -}}
+	{{- if not .Site.Params.hideAuthor -}}
+		{{- if .Params.author -}}
+		{{- if reflect.IsSlice .Params.author -}}
+			{{- range .Params.author -}}
+			&nbsp;&middot;&nbsp;{{ . | safeHTML -}}
 		{{ end -}}
 		{{ else -}}
-			&nbsp;|&nbsp;{{ .Params.author | safeHTML -}}
+			&nbsp;&middot;&nbsp;{{ .Params.author | safeHTML -}}
 		{{ end -}}
 		{{ else -}}
-			&nbsp;|&nbsp;{{ .Site.Author.name | safeHTML -}}
+			&nbsp;&middot;&nbsp;{{ .Site.Author.name | safeHTML -}}
 		{{ end -}}
-	{{ end -}}
-{{ if .Site.Params.metaTags -}}
-{{ if .Params.tags -}}
-
+	{{- end -}}
+{{- if and .Params.tags .Site.Params.metaTags -}}
 {{- $tagsLen := len .Params.tags -}}
 {{- if gt $tagsLen 0 -}}
-	<span class="blog-tags">
-		&nbsp;|&nbsp;in
-	{{ range .Params.tags -}}
+	<span class="blog-tags">&nbsp;&middot;&nbsp;{{ i18n "inTags" }}&nbsp;
+	{{- range $key, $value := .Params.tags -}}
 		{{- $url := printf "tags/%s/" (. | urlize | lower) -}}
-		<a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . }}</a>&nbsp;
-		{{- if lt . (sub $tagsLen 1) }}, {{ end -}}
-	{{- end }}
+		<a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . }}</a>{{ if lt $key (sub $tagsLen 1) }},&nbsp;{{ end }}
+	{{- end -}}
 	</span>
 {{- end -}}
-
-{{- end }}
 {{- end }}
 </div>

@@ -1,10 +1,8 @@
 
 [page_not_found]
 other = "Page Not Found"
-
 [page_does_not_exist]
 other = "Sorry, this page does not exist."
-
 [head_back]
 other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
 
@@ -12,15 +10,16 @@ other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
 [dateFormat]
 other = "January 2, 2006"
 [shortdateFormat]
-other = "Jan 2, 2006 15:04:05"
+other = "Jan 2, 2006 15:04:05 Z07:00"
 [postedOnDate]
 other = "{{ . }}"
 [lastModified]
-other = "(Last modified on {{ . }})"
+other = "(Last modified {{ . }})"
 [translationsLabel]
 other = "Other languages: "
 [translationsSeparator]
 other = ", "
+
 [readMore]
 other = "Read More"
 [olderPosts]
@@ -31,10 +30,15 @@ other = "Newer Posts"
 other = "Previous Post"
 [nextPost]
 other = "Next Post"
-[readingTime]
-other = "Reading time"
+
+[toRead]
+other = "to read"
 [readTime]
 other = "minutes"
 [words]
 other = "words"
+[inTags]
+other = "in"
 
+[lastBuild]
+other = "Last build"

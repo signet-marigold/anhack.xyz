@@ -16,14 +16,12 @@
 			<article>
 				{{ block "main" . }}{{ .Content }}{{ end }}
 			</article>
-			<div class="panel-info">
-				<div class="panel-icon"></div>
-				heyya
-			</div>
-			<div id="article-info">
-				<hr class="small">
+			<section id="article-info">
+				{{ if and (eq .Kind "page") (ne .Type "page") }}
+					{{ partialCached "supportme.html" . }}
+				{{ end -}}
 				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end -}}
-			</div>
+			</section>
 		</main>
 		</div>
 		<footer>

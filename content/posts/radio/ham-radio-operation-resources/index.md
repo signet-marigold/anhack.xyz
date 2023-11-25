@@ -2,6 +2,7 @@
 title: "Ham Radio Operating Resources"
 author: ""
 date: 2023-10-20T21:20:05Z
+lastMod: 2023-11-20T21:20:05Z
 subtitle: ""
 image: "image.jpg"
 category: ""

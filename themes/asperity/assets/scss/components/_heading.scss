@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1;
+	line-height: 1.1;
 	font-weight: 700;
 	a:where(.heading-link) {
 		i.link::after {
@@ -43,12 +43,6 @@ h6 {
 	}
 }
 
-header {
-	h1 {
-		font-size: $base-font-size * 2;
-		margin: 1.34rem 0;
-	}
-}
 main {
 	h1,
 	h2 {
@@ -73,28 +67,27 @@ h6 {
 
 h1 {
 	font-size: $font-size-xxl;
-	margin: $base-font-size * 1.315 0
+	margin: $h1-margin 0;
 }
 h2 {
 	font-size: $font-size-xl;
-	margin: $base-font-size * 1.245 0;
+	margin: $h2-margin 0;
 }
 h3 {
 	font-size: $font-size-lg;
-	margin: $base-font-size * 1.17 0;
+	margin: $h3-margin 0;
 }
 h4 {
 	font-size: $font-size-md;
-	margin: $base-font-size * 1.33 0;
-
+	margin: $h4-margin 0;
 }
 h5 {
 	font-size: $font-size-sm;
-	margin: $base-font-size * 1.3861 0;
+	margin: $h5-margin 0;
 }
 h6 {
 	font-size: $font-size-sm;
-	margin: $base-font-size * 1.5611 0;
+	margin: $h6-margin 0;
 	color: $gray-300;
 }
 

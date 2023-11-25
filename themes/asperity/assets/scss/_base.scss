@@ -7,7 +7,7 @@ body {
 //	font-family: "Noto Sans", sans-serif;
 	font-size: $base-font-size;
 	letter-spacing: -0.01em;
-	line-height: 1.425;
+	line-height: 1.525;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-variant-ligatures: contextual;
@@ -177,6 +177,10 @@ img {
 	line-height: 1.1;
 }
 
+#article-info {
+	margin-top: 1rem;
+}
+
 #halftone-plate { // Background 'dot' pattern
 	display: block;
 	position: fixed;
@@ -194,6 +198,8 @@ img {
 }
 
 #nextprev {
+	overflow: auto;
+	margin-top: 1rem;
 }
 #prevart {
 	float: left;
@@ -204,5 +210,5 @@ img {
 	text-align: right;
 }
 #nextart,#prevart {
-	max-width: 33%;
+	max-width: 45%;
 }
