@@ -4,65 +4,6 @@
 
 
 // Colors
-
-/* old pallet
-$black:         #141416;
-$dark-gray:     #4b4b4b;
-$gray:          #828282;
-$light-gray:    #b9b9b9;
-$white:         #efefef;
-
-$red:           #ff0000;
-$orange:        #ff5f00;
-$yellow:        #e9e100;
-$green:         #22cf00;
-$cyan:          #00dcdc;
-$blue:          #0084ff;
-$violet:        #0400ee;
-$magenta:       #7c00ee;
-$pink:          #ea00ee;
-*/
-
-/*
-Gray pallet mix values
---- Linear + Scaled --- (11 values counting white & black)
-42.335  + 57.6650385
-38.1015 + 38.443359
-33.868  + 25.62890625
-29.6345 + 17.0859375
-25.401  + 11.390625
-21.1675 + 7.59375
-16.934  + 5.0625
-12.7005 + 3.375
-8.467   + 2.25
-4.2335  + 1.5
-0.0     + 0.0
---- Sum ---
-100
-76.6
-59.5
-46.7
-36.8
-28.8
-22
-16.1
-10.7
-5.7
-0
---- Inverted ---
-0
-23.4
-40.5
-53.3
-63.2
-71.2
-78
-83.9
-89.3
-94.3
-100
-*/
-
 $pure-white:    #fff;
 $pure-black:    #000;
 
@@ -262,7 +203,7 @@ $font-size-xs:  $base-font-size * 0.67;
 
 // Spacing
 $base-padding: 0.5rem;
-$base-margin: 0.5rem; //8px;
+$base-margin: 0.5rem;
 
 // indent
 $base-indent: 2.5rem;
@@ -281,8 +222,12 @@ $h4-margin: $base-font-size * 1.33;
 $h5-margin: $base-font-size * 1.3861;
 $h6-margin: $base-font-size * 1.5611;
 
+// btn padding
+$btn-padding-vertical:   $base-padding * 0.68;
+$btn-padding-horizontal: $base-padding * 2.2;
+
 // nav padding
-$nav-vertical-padding: $base-padding * 0.75;
+$nav-vertical-padding:   $base-padding * 0.75;
 $nav-horizontal-padding: $base-margin;
 
 
@@ -295,9 +240,9 @@ $scrollbar-webkit-thumb-border: none;
 
 
 // Borders
-$base-border-thickness: 0.0625rem; //1px;
-$base-border-radius: 0.25rem; //4px;
+$base-border-thickness: 0.0625rem;
+$base-border-radius: 0.25rem;
 
 
 // Box-shadow
-$base-box-shadow: 0.25rem 0.5rem 0 rgba(0,0,0,0.55); //4px 8px 11px rgba(0,0,0,0.55);
+$base-box-shadow: 0.25rem 0.5rem 0 rgba(0,0,0,0.55);

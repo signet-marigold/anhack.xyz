@@ -3,32 +3,32 @@
 	background: linear-gradient(135deg, blue, red);
 	display: inline-block;
 	line-height: 0;
-	width: 9.375rem; //150px
-	height: 10.625rem; //170px
+	width: 9.375rem;
+	height: 10.625rem;
 	border-radius: $base-border-radius;
 	.plaque-img {
 		display: inline-block;
-		width: 9.375rem; //150px
-		height: 5.75rem; //92px
-		margin: 1.5625rem 0 0.875rem; //25px 0 14px
+		width: 9.375rem;
+		height: 5.75rem;
+		margin: 1.5625rem 0 0.875rem;
 		object-fit: contain;
 	}
 	.plaque-text {
 		display: block;
-		width: 9.375rem; //150px
+		width: 9.375rem;
 		color: $white;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		font-size: 1.15rem; //18.4px //1.15rem
+		font-size: 1.15rem;
 		letter-spacing: 0;
 	}
 	&.plaque-clickable {
 		&:hover {
-			box-shadow: inset 0 0 0 $base-border-thickness * 2 $white; //2px
+			box-shadow: inset 0 0 0 $base-border-thickness * 2 $white;
 		}
 		&:active {
-			box-shadow: inset 0 0 0 $base-border-thickness * 2 $black; //2px
+			box-shadow: inset 0 0 0 $base-border-thickness * 2 $black;
 		}
 	}
 	&.invert-img .plaque-img {

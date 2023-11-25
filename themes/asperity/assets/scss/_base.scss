@@ -17,7 +17,7 @@ body {
 	background-color: $black;
 	color: $white;
 
-	margin: $body-margin; //10px
+	margin: $body-margin;
 
 	// Background image settings
 	background-image: url("/background.webp");
@@ -34,7 +34,7 @@ body {
 	// Remove margin from footer
 	margin-bottom: 0;
 	// calculate out the top margin
-	height: calc(100vh - #{$body-margin}); // - 10px
+	height: calc(100vh - #{$body-margin});
 
 	& > * {
 		image-rendering: initial;
@@ -181,7 +181,8 @@ img {
 	margin-top: 1rem;
 }
 
-#halftone-plate { // Background 'dot' pattern
+// Background 'dot' pattern
+#halftone-plate {
 	display: block;
 	position: fixed;
 	width: 100%;

@@ -8,9 +8,6 @@
 	font-weight: 600;
 }
 
-$btn-padding-vertical:   $base-padding * 0.68;
-$btn-padding-horizontal: $base-padding * 2.2;
-
 %btn {
 	@include btn;
 	border: $base-border-thickness $gray-800 solid;

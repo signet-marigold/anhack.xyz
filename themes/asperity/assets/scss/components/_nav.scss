@@ -28,7 +28,7 @@ nav {
 			display: inline-block;
 		}
 		img {
-			margin: 0 $base-margin * 0.625; //5px
+			margin: 0 $base-margin * 0.625;
 		}
 	}
 	ul {
@@ -53,7 +53,7 @@ nav {
 				margin-bottom: 0;
 			}
 			a {
-				padding: $base-padding * 0.125 $base-padding * 0.75; //1px 6px
+				padding: $base-padding * 0.125 $base-padding * 0.75;
 				color: $white;
 				&:link, &:visited {
 					color: inherit;

@@ -106,22 +106,26 @@
 	@include d-gradient(#f85b01, #e3024c);
 }
 .bg-g-yellow {
-	@include d-gradient(#e1d300, #ff3c00); //alt #f4c716, #ff3030
+	@include d-gradient(#e1d300, #ff3c00);
 }
 .bg-g-green {
 	@include d-gradient(#58d900, #0080b3);
 }
 
 // Extra
+// Pink & aqua
 .bg-g-dreamsky {
-	@include d-gradient(#ff0af0, #07dcff); // Pink & aqua
+	@include d-gradient(#ff0af0, #07dcff);
 }
+// Orange & purple
 .bg-g-techvalley {
-	@include d-gradient(#ff7816, #8c11df); // Orange & purple
+	@include d-gradient(#ff7816, #8c11df);
 }
+// Blue & green
 .bg-g-seaside {
-	@include d-gradient(#5580ff, #33ca09); // Blue & green
+	@include d-gradient(#5580ff, #33ca09);
 }
+// Green & pink
 .bg-g-watermellon {
-	@include d-gradient(#00ff6f, #ff008f); // Green & pink
+	@include d-gradient(#00ff6f, #ff008f);
 }
