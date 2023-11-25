@@ -7,7 +7,7 @@
 	{{ end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
-		&nbsp;&middot;&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" -}}&nbsp;{{ i18n "toRead" }}
+		&nbsp;&middot;&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" .ReadingTime -}}&nbsp;{{ i18n "toRead" }}
 	{{- end -}}
 	{{ if .Site.Params.wordCount -}}
 		&nbsp;&middot;&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
