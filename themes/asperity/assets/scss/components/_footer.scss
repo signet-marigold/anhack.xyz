@@ -8,11 +8,9 @@ footer {
 	p {
 		margin: 1rem 0;
 	}
-	#website-copyright {
-	}
 	// old style 88x31px banners
 	#badges {
-		margin-bottom: 0.625rem;
+		margin-bottom: 0.5rem;
 		& > * {
 			display: inline-block;
 		}
@@ -24,12 +22,18 @@ footer {
 			// standard size so no width is specified
 		}
 	}
+	#website-info {
+		& > * {
+			margin: 0 0.1rem;
+		}
+		#website-copyright {
+		}
+	}
 	#website-extra {
 		margin-top: 0.625rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
 		#rss-feed-link {
 			margin-left: 0.625rem;
 			img {

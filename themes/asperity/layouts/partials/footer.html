@@ -1,9 +1,11 @@
 	{{ if .Param "showbadges" }}<div id="badges">
 		{{ partialCached "badges.html" . }}
 	</div>{{ end -}}
-	<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
-	{{- if .Site.Copyright }}&nbsp;&nbsp;<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
-	<div class="display-ib">{{ i18n "lastBuild" }}: {{ time.Now | time.Format (i18n "shortdateFormat") }}</div>
+	<div id="website-info">
+		<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
+		{{- if .Site.Copyright }}&nbsp;&nbsp;<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
+		<div class="display-ib">{{ i18n "lastBuild" }}: {{ time.Now | time.Format (i18n "shortdateFormat") }}</div>
+	</div>
 	{{- if .Param "showthemeinfo" }}
 	<p>
 		Published with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> using the <a href="https://github.com/signet-marigold/anhack.xyz/tree/main/themes/asperity" target="_blank" rel="noopener">Asperity Theme</a>.&nbsp;<a href='/theme-license.html'>Theme License</a>.

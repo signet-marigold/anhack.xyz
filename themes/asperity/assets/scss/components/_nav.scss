@@ -10,16 +10,6 @@ nav {
 	@include sm {
 		padding-bottom: $nav-vertical-padding;
 	}
-
-	// don't know why this is here
-	// review later
-	a {
-		&:hover,
-		&:focus {
-			color: $cerulean;
-		}
-	}
-
 	#logo {
 		height: 3.125rem;
 		a {
@@ -37,7 +27,6 @@ nav {
 		display: flex;
 		flex-wrap: wrap;
 		line-height: 1;
-
 		li {
 			border-right: $base-border-thickness $gray-400 solid;
 			display: inline;
