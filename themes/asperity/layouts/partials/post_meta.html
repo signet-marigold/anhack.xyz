@@ -2,12 +2,12 @@
 	{{- $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
 	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
 	{{ $datestr | i18n "postedOnDate" -}}
-	{{ if ne $datestr $lastmodstr }}
+	{{ if ne $datestr $lastmodstr -}}
 		&nbsp;{{ $lastmodstr | i18n "lastModified" -}}
 	{{ end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
-		&nbsp;&middot;&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "readTime" .ReadingTime -}}&nbsp;{{ i18n "toRead" }}
+		&nbsp;&middot;&nbsp;{{ .ReadingTime }} {{ i18n "readTime" .ReadingTime }} {{ i18n "toRead" -}}
 	{{- end -}}
 	{{ if .Site.Params.wordCount -}}
 		&nbsp;&middot;&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
@@ -36,5 +36,5 @@
 	{{- end -}}
 	</span>
 {{- end -}}
-{{- end }}
+{{- end -}}
 </div>

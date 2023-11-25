@@ -1,15 +1,14 @@
 nav {
-	$vertical-padding: $base-padding * 0.75; //6px
 	background-color: $nav-bg;
 	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
-	padding: $vertical-padding $base-margin;
+	padding: $nav-vertical-padding $nav-horizontal-padding;
 	border-radius: $base-border-radius;
 	box-shadow: $base-box-shadow;
 	@include xs {
 		padding-bottom: 0;
 	}
 	@include sm {
-		padding-bottom: $vertical-padding;
+		padding-bottom: $nav-vertical-padding;
 	}
 
 	// don't know why this is here
@@ -48,7 +47,7 @@ nav {
 				border: none;
 			}
 			@include xs {
-				margin-bottom: $vertical-padding;
+				margin-bottom: $nav-vertical-padding;
 			}
 			@include sm {
 				margin-bottom: 0;

@@ -51,7 +51,7 @@ main {
 }
 nav {
 	// Remove padding from width
-	max-width: $page-max-width - ($base-margin * 2);
+	max-width: $page-max-width - ($nav-horizontal-padding * 2);
 }
 
 main {}
