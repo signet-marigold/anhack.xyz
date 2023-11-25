@@ -1,12 +1,32 @@
-%btn {
+@mixin btn {
 	font-size: $font-size-sm;
 	text-decoration: none;
 	cursor: pointer;
 	display: inline-block;
 	border: 0;
-	padding: $base-padding * 0.68 $base-padding * 2.2;
 	border-radius: $base-border-radius;
 	font-weight: 600;
+}
+
+$btn-padding-vertical:   $base-padding * 0.68;
+$btn-padding-horizontal: $base-padding * 2.2;
+
+%btn {
+	@include btn;
+	border: $base-border-thickness $gray-800 solid;
+	padding: $btn-padding-vertical $btn-padding-horizontal;
+	box-shadow:
+		inset $base-border-thickness *  2 $base-border-thickness *  2 0 rgba(255, 255, 255, 0.6),
+		inset $base-border-thickness * -2 $base-border-thickness * -2 0 rgba(0, 0, 0, 0.6);
+}
+
+%btn-outlined {
+	@include btn;
+	margin: $base-border-thickness;
+	padding: $btn-padding-vertical - $base-border-thickness * 2 $btn-padding-horizontal - $base-border-thickness * 2;
+	box-shadow:
+		inset $base-border-thickness *  2 $base-border-thickness *  2 0 rgba(0, 0, 0, 0.6),
+		inset $base-border-thickness * -1 $base-border-thickness * -1 0 rgba(255, 255, 255, 0.6);
 }
 
 // Create button classes
@@ -17,15 +37,10 @@
 	@each $key, $val in $map {
 		$light-color: lighten-color($val);
 		$dark-color:  darken-color($val);
-
 		.btn-#{$key} {
 			@extend %btn;
 			color: set-color($val);
 			background-color: $val;
-			border: $base-border-thickness solid $gray-800;
-			box-shadow:
-				inset $base-border-thickness * 2 $base-border-thickness * 2 0 rgba(255, 255, 255, 0.6),
-				inset $base-border-thickness * -2 $base-border-thickness * -2 0 rgba(0, 0, 0, 0.6);
 			&:hover {
 				color: set-color($light-color);
 				background-color: $light-color;
@@ -36,13 +51,10 @@
 			}
 		}
 		.btn-outlined-#{$key} {
-			@extend %btn;
-			background-color: transparent;
-			color: $val;
+			@extend %btn-outlined;
 			border: $base-border-thickness * 2 solid $val;
-			box-shadow:
-				inset $base-border-thickness * 2 $base-border-thickness * 2 0 rgba(0, 0, 0, 0.6),
-				inset $base-border-thickness * -1 $base-border-thickness * -1 0 rgba(255, 255, 255, 0.6);
+			color: $val;
+			background-color: transparent;
 			&:hover {
 				color: $light-color;
 				border-color: $light-color;

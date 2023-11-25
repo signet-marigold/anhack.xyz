@@ -15,12 +15,19 @@
 		<main aria-role="main">
 			<article>
 				{{ block "main" . }}{{ .Content }}{{ end }}
-				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end -}}
-				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
 			</article>
+			<div class="panel-info">
+				<div class="panel-icon"></div>
+				heyya
+			</div>
+			<div id="article-info">
+				<hr class="small">
+				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end -}}
+			</div>
 		</main>
 		</div>
 		<footer>
+			<hr>
 			{{ block "footer" . }}{{- partial "footer.html" . }}{{ end -}}
 		</footer>
 	</body>

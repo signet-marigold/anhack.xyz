@@ -40,6 +40,8 @@
 	}
 	.post-meta {
 		padding-top: 0.75rem;
+		font-size: $font-size-sm;
+		margin-top: 0.5rem;	
 	}
 	.post-entry {
 		@include xs {
@@ -54,7 +56,5 @@
 		}
 	}
 	.blog-tags {
-		font-size: $font-size-sm;
-		margin-top: 0.5rem;
-	}
+	}	
 }

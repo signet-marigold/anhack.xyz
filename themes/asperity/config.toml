@@ -15,12 +15,13 @@ languageCode = 'en-us'
 	nextprev = true
 	taglist = true
 	showrss = true
-	showthemeinfo = true
+	showthemeinfo = false
 
-	dateFormat = "January 2, 2006"
+	dateFormat = "Jan 2, 2006"
 	commit = false
 	summary = true
 	readingTime = true
-	wordCount = true
+	wordCount = false
 	showRelatedPosts = true
 	hideAuthor = true
+	metaTags = true

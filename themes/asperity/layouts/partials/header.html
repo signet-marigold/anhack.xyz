@@ -14,9 +14,12 @@
 		<header>
 		{{- if $title }}
 			<div class="intro-header">
+				{{ if .Params.image -}}
+					<img src="{{ .Params.image }}" alt="[image missing]" class="img-header" />
+				{{ end -}}
+
 				<div class="{{ .Type }}-heading">
 					<h1>{{ with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
-					<hr class="small">
 				{{ if $subtitle -}}
 					{{ if eq .Type "page" -}}
 					<div class="{{ .Type }}-subheading">{{ $subtitle }}</div>
@@ -28,11 +31,9 @@
 				{{ if .IsPage -}}
 					{{ partial "post_meta.html" . -}}
 				{{ end -}}
-				{{ end -}}
-				{{ if .Params.image -}}
-					<img src="{{ .Params.image }}" alt="[image missing]" class="img-header" />
 				{{ end }}
 				</div>
+				<hr class="small">
 			</div>
 		{{ end -}}
 		</header>

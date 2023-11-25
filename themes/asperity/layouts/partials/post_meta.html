@@ -26,4 +26,21 @@
 			&nbsp;|&nbsp;{{ .Site.Author.name | safeHTML -}}
 		{{ end -}}
 	{{ end -}}
+{{ if .Site.Params.metaTags -}}
+{{ if .Params.tags -}}
+
+{{- $tagsLen := len .Params.tags -}}
+{{- if gt $tagsLen 0 -}}
+	<span class="blog-tags">
+		&nbsp;|&nbsp;in
+	{{ range .Params.tags -}}
+		{{- $url := printf "tags/%s/" (. | urlize | lower) -}}
+		<a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . }}</a>&nbsp;
+		{{- if lt . (sub $tagsLen 1) }}, {{ end -}}
+	{{- end }}
+	</span>
+{{- end -}}
+
+{{- end }}
+{{- end }}
 </div>

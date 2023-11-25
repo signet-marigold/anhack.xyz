@@ -1,29 +1,36 @@
 <article class="post-preview">
 	<a href="{{ .Permalink }}">
 		<h2 class="post-title">{{ .Title }}{{- if .Param "draft" }} [DRAFT]{{ end -}}</h2>
-	{{ if .Params.subtitle -}}
-		<h4 class="post-subtitle">
-			{{ .Params.subtitle }}
-		</h4>
-	{{- end }}
+{{ if .Site.Params.showPreviewImage -}}
 	{{ if .Params.image -}}
-		{{ $imageLink := "" -}}
+		{{- $imageLink := "" -}}
 		{{ if findRE "(^(https?:)?//|^/)" (lower .Params.image ) -}}
-			{{ $imageLink = .Params.image }}
+			{{- $imageLink = .Params.image -}}
 		{{ else -}}
-			{{ $imageLink = print (.Permalink) (.Params.image) }}
+			{{- $imageLink = print (.Permalink) (.Params.image) -}}
 		{{- end }}
 		<div class="img-title"><img src="{{ $imageLink }}" alt="[image missing]" /></div>
 	{{- end }}
+{{- end }}
+{{ if .Site.Params.showPreviewVideo -}}
 	{{ if .Params.video -}}
 		<video loop autoplay muted playsinline class="img-title">
 			<source src="{{ .Params.video }}">
 		</video>
 	{{- end }}
+{{- end }}
 	</a>
 {{ if ne .Type "page" -}}
 	{{ partial "post_meta.html" . }}
 {{- end }}
+
+{{ if .Params.subtitle -}}
+	<h4 class="post-subtitle">
+		{{ .Params.subtitle }}
+	</h4>
+{{- end }}
+
+{{ if .Site.Params.showPreviewSummary -}}
 {{ if ne .WordCount 0 -}}
 	<div class="post-entry">
 	{{ if .Site.Params.summaryMaxChar -}}
@@ -36,12 +43,5 @@
 	{{- end }}
 	</div>
 {{- end }}
-{{ if .Params.tags -}}
-	<div class="blog-tags">
-	{{ range .Params.tags -}}
-		{{- $url := printf "tags/%s/" (. | urlize | lower) -}}
-		<a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">#{{ . }}</a>&nbsp;
-	{{- end }}
-	</div>
 {{- end }}
 </article>

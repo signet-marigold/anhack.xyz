@@ -5,7 +5,7 @@ details {
 	border-radius: $base-border-radius + $base-border-thickness;
 	summary {
 		cursor: pointer;
-		padding: $base-margin;
+		padding: $base-padding $base-padding * 1.5;
 	}
 	p {
 		margin-bottom: 0;
