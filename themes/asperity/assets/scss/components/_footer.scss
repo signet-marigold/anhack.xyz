@@ -23,6 +23,8 @@ footer {
 		}
 	}
 	#website-info {
+		max-width: 40rem;
+		margin: 0 auto;
 		& > * {
 			margin: 0 0.1rem;
 		}

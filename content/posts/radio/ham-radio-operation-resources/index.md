@@ -1,14 +1,17 @@
 ---
 title: "Ham Radio Operating Resources"
-author: ""
+subtitle: "VHF/UHF guide. Mostly for my own use"
 date: 2023-10-20T21:20:05Z
-lastMod: 2023-11-20T21:20:05Z
-subtitle: ""
+lastMod: 2023-11-26T2:30:40Z
 image: "image.jpg"
 category: ""
 tags: ["radio"]
-draft: true
+draft: false
 ---
+### Page a work in progress. Bear with me here
+
+This is focused as a training guide for getting on the air.
+Specifically for the VHF and UHF bands.
 
 Structure
 1. [Common codes](#common-codes)
@@ -22,49 +25,7 @@ Structure
 {{< img class="full" lazy=true src="morse-code-chart-gray-ef-min.png" >}}
 {{< /expand >}}
 
----------------- content
-# H1 header Test words lmao here's something to read.
-## H2 header Test words lmao here's something to read.
-### H3 header Test words lmao here's something to read.
-#### H4 header Test words lmao here's something to read.
-##### H5 header Test words lmao here's something to read.
-###### H6 header Test words lmao here's something to read.
----------------- content
-
-[# h1](style)
-
-{{< btn color="cake" text="cake" >}}
-
-{{< btn color="cornflower" text="cornflower" >}}
-{{< btn color="amethyst" text="amethyst" >}}
-{{< btn color="fuchsia" text="fuchsia" >}}
-{{< btn color="violet" text="violet" >}}
-{{< btn color="vermilion" text="vermilion" >}}
-{{< btn color="ocher" text="ocher" >}}
-{{< btn color="amber" text="amber" >}}
-{{< btn color="dandelion" text="dandelion" >}}
-{{< btn color="chartreuse" text="chartreuse" >}}
-{{< btn color="emerald" text="emerald" >}}
-{{< btn color="caribbean" text="caribbean" >}}
-{{< btn color="turquoise" text="turquoise" >}}
-{{< btn color="cerulean" text="cerulean" >}}
-
-{{< btn color="outlined-cornflower" text="cornflower" >}}
-{{< btn color="outlined-amethyst" text="amethyst" >}}
-{{< btn color="outlined-fuchsia" text="fuchsia" >}}
-{{< btn color="outlined-violet" text="violet" >}}
-{{< btn color="outlined-vermilion" text="vermilion" >}}
-{{< btn color="outlined-ocher" text="ocher" >}}
-{{< btn color="outlined-amber" text="amber" >}}
-{{< btn color="outlined-dandelion" text="dandelion" >}}
-{{< btn color="outlined-chartreuse" text="chartreuse" >}}
-{{< btn color="outlined-emerald" text="emerald" >}}
-{{< btn color="outlined-caribbean" text="caribbean" >}}
-{{< btn color="outlined-turquoise" text="turquoise" >}}
-{{< btn color="outlined-cerulean" text="cerulean" >}}
-
-
-### Page a work in progress. Bear with me here
+#### Resources
 
 <http://www.sckans.edu/~sireland/radio/>
 
@@ -75,7 +36,6 @@ Structure
 <https://www.radioqth.net/>
 
 <https://hamradioprep.com/>
-
 
 # Common Codes
 
@@ -97,8 +57,6 @@ Structure
 - 73- Best Regards.
 - 88- Love and kisses.
 
-
-
 # Types of Comunication
 
 Simplex
@@ -112,18 +70,11 @@ modulation
 - FM
 - AM
 
-
-
-
 # Repeater Operation
 
 <http://www.hamuniverse.com/repeater.html>
 
-Repeaters, simply put, allow you to have a further range when using a radio.
-
-
-
-
+Repeaters give you a wider usage cone compared to simplex operation.
 
 # Frequency Partitions
 
@@ -131,14 +82,11 @@ Repeaters, simply put, allow you to have a further range when using a radio.
 {{< img class="full" lazy=true src="2003-allochrt-verticle-edit-800px-min.png" zoomsrc="2003-allochrt-verticle-edit-5000px-min.png" >}}
 {{< /expand >}}
 
-
-
 # Band Plan
 
 {{< expand "US Amature Radio Bands 2017 ARRL" >}}
 {{< img class="full" lazy=true src="Amateur-Radio-Band-Plans-800px.png" zoomsrc="Amateur-Radio-Band-Plans.jpg" >}}
 {{< /expand >}}
 
-
-
 # Radio Clubs
+\<dont look>

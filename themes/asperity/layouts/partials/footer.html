@@ -3,7 +3,8 @@
 	</div>{{ end -}}
 	<div id="website-info">
 		<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
-		{{- if .Site.Copyright }}&nbsp;&nbsp;<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
+		{{ if .Site.Copyright }}<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
+		<span>{{ i18n "rights" }}</span>
 		<div class="display-ib">{{ i18n "lastBuild" }}: {{ time.Now | time.Format (i18n "shortdateFormat") }}</div>
 	</div>
 	{{- if .Param "showthemeinfo" }}
