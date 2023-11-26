@@ -1,35 +1,36 @@
 <div class="post-meta">
 	{{- $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
 	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
-	{{ $datestr | i18n "postedOnDate" -}}
-	{{ if ne $datestr $lastmodstr -}}
-		&nbsp;{{ $lastmodstr | i18n "lastModified" -}}
-	{{ end -}}
+	<span class="post-date">{{ $datestr | i18n "postedOnDate" -}}</span>
+	{{- if ne $datestr $lastmodstr -}}
+		&nbsp;<span class="post-last-modified">{{ $lastmodstr | i18n "lastModified" -}}</span>
+	{{- end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
-		&nbsp;&middot;&nbsp;{{ .ReadingTime }} {{ i18n "readTime" .ReadingTime }} {{ i18n "toRead" -}}
+		&nbsp;&middot;&nbsp;<span class="post-reading-time">{{ .ReadingTime }}&nbsp;{{ i18n "readTime" .ReadingTime }}&nbsp;{{ i18n "toRead" -}}</span>
 	{{- end -}}
-	{{ if .Site.Params.wordCount -}}
-		&nbsp;&middot;&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" -}}
+	{{- if .Site.Params.wordCount -}}
+		&nbsp;&middot;&nbsp;<span class="post-word-count">{{ .WordCount }}&nbsp;{{ i18n "words" .WordCount -}}</span>
 	{{- end -}}
 {{- end }}
-	{{- if not .Site.Params.hideAuthor -}}
-		{{- if .Params.author -}}
+{{- if not .Site.Params.hideAuthor -}}
+	{{- if .Params.author -}}
 		{{- if reflect.IsSlice .Params.author -}}
+			&nbsp;&middot;&nbsp;{{ i18n "authoredBy" }}&nbsp;
 			{{- range .Params.author -}}
-			&nbsp;&middot;&nbsp;{{ . | safeHTML -}}
-		{{ end -}}
-		{{ else -}}
-			&nbsp;&middot;&nbsp;{{ .Params.author | safeHTML -}}
-		{{ end -}}
-		{{ else -}}
-			&nbsp;&middot;&nbsp;{{ .Site.Author.name | safeHTML -}}
-		{{ end -}}
+				<span class="author-name">{{ . | safeHTML -}},&nbsp;</span>
+			{{- end -}}
+		{{- else -}}
+			&nbsp;&middot;&nbsp;{{ i18n "authoredBy" }}&nbsp;<span class="author-name">{{ .Params.author | safeHTML -}}</span>
+		{{- end -}}
+	{{- else -}}
+		&nbsp;&middot;&nbsp;{{ i18n "authoredBy" }}&nbsp;<span class="author-name">{{ .Site.Author.name | safeHTML -}}</span>
 	{{- end -}}
-{{- if and .Params.tags .Site.Params.metaTags -}}
+{{- end -}}
+{{- if and .Params.tags (not .Site.Params.hideTags) -}}
 {{- $tagsLen := len .Params.tags -}}
 {{- if gt $tagsLen 0 -}}
-	<span class="blog-tags">&nbsp;&middot;&nbsp;{{ i18n "inTags" }}&nbsp;
+	&nbsp;&middot;&nbsp;{{ i18n "inTags" }}&nbsp;<span class="post-tags">
 	{{- range $key, $value := .Params.tags -}}
 		{{- $url := printf "tags/%s/" (. | urlize | lower) -}}
 		<a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . }}</a>{{ if lt $key (sub $tagsLen 1) }},&nbsp;{{ end }}

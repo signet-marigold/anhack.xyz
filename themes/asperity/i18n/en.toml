@@ -19,7 +19,7 @@ other = "(Last modified {{ . }})"
 other = "Other languages: "
 [translationsSeparator]
 other = ", "
-
+# Post navigation
 [readMore]
 other = "Read More"
 [olderPosts]
@@ -30,16 +30,19 @@ other = "Newer Posts"
 other = "Previous Post"
 [nextPost]
 other = "Next Post"
-
+# Post meta
+[authoredBy]
+other = "by"
 [toRead]
 other = "to read"
 [readTime]
 one = "minute"
 other = "minutes"
 [words]
+one = "word"
 other = "words"
 [inTags]
 other = "in"
-
+# Footer
 [lastBuild]
 other = "Last build"

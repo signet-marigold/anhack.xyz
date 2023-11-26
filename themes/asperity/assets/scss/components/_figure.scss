@@ -36,6 +36,13 @@ figure {
 			font-size: $base-font-size;
 		}
 	}
+	// Center image without resizing
+	// one problem with this method is that the caption is now full width
+	&.center {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
 	// Image fill to container
 	&.stretch {
 		display: block;

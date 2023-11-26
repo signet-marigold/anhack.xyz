@@ -8,6 +8,8 @@ keywords = 'blog,developer,personal'
 enableRobotsTXT = true
 summaryLength = 50
 
+[author]
+	name = 'alex'
 
 [taxonomies]
 	category = 'category'

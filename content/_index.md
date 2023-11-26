@@ -1,6 +1,6 @@
 ---
 ---
-{{< img src="/singles-resources/index/synthwave-retrowave.gif" class="mt-n6 zi-n1" alt="retro skeleton" mouse="owo" >}}
+{{< img src="/singles-resources/index/synthwave-retrowave.gif" class="mt-n6 zi-n1 center" alt="retro skeleton" mouse="owo" >}}
 {{< customclass "text-vermilion text-rainbow ta-c" >}}[[[ just chillin in negative space ]]]{{< /customclass >}}
 
 Welcome welcome!
@@ -9,7 +9,7 @@ I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
 this website anonymously (without cookies) collects basic analytics on a self hosted instance of [umami](https://umami.is/)
 
-{{< img src="/singles-resources/index/stickfight.jpg" class="full" lazy=true caption="sticky bois" >}}
+{{< img src="/singles-resources/index/stickfight.jpg" class="stretch" lazy=true caption="sticky bois" >}}
 
 ## Socials
 {{< grid >}}
