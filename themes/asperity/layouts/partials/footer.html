@@ -18,3 +18,5 @@
 		</a>
 		{{- if .Param "showrss" }}<a href="/index.xml" id="rss-feed-link" target="_blank" rel="noopener"><img width="24px" src="/icons/rss.svg" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
 	</div>
+	{{- partialCached "assets/css-loader.html" "easyzoom.css" -}}
+	{{- partialCached "assets/js-loader.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}
