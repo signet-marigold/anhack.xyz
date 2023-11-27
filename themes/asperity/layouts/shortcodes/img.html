@@ -6,16 +6,17 @@
 	caption: text underneath
 	mouse: what the image says when moused over ("title" in HTML)
 -->
-{{ $zoom := 0 }}
-{{ with .Get "zoomsrc" }}
-	{{ $zoom = 1 }}
-	{{ $.Scratch.Set "link" . }}
-{{ else }}
-	{{ with .Get "link" }}
-		{{ $.Scratch.Set "link" . }}
-	{{ end }}
-{{ end }}
-{{ $link := $.Scratch.Get "link" }}
+{{ $zoom := 0 -}}
+{{ with .Get "zoomsrc" -}}
+	{{ $zoom = 1 -}}
+	{{ $.Scratch.Set "link" . -}}
+{{ else -}}
+	{{ with .Get "link" -}}
+		{{ $.Scratch.Set "link" . -}}
+	{{ end -}}
+{{ end -}}
+{{ $link := $.Scratch.Get "link" -}}
+{{ $alttext := default (i18n "missingImage") (.Get "alt") -}}
 
 <figure {{ with .Get "class" }}class="{{.}}"{{ end -}}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
@@ -23,7 +24,7 @@
 	<img {{- if not (.Get "nolazy") }} loading="lazy"{{ end -}}
 		src="{{ .Get "src" }}"
 		{{- with .Get "mouse" }} title="{{.}}"{{ end -}}
-		{{- with .Get "alt" }} alt="{{.}}"{{ end -}}>
+		alt="{{ $alttext }}">
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 
