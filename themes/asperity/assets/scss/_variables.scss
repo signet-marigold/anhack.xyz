@@ -242,7 +242,8 @@ $scrollbar-webkit-thumb-border: none;
 
 // Borders
 $base-border-thickness: 0.0625rem;
-$base-border-radius: 0.25rem;
+$base-border-radius: 0;//0.25rem;
+$term-border-radius: 0;//1rem;
 
 
 // Box-shadow
