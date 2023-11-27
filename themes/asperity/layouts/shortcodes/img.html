@@ -20,10 +20,10 @@
 <figure {{ with .Get "class" }}class="{{.}}"{{ end -}}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
 	{{- with $link }}<a href="{{.}}">{{ end -}}
-	<img src="{{ .Get "src" }}"
-	     {{- with .Get "mouse" }} title="{{.}}"{{ end -}}
-	     {{- with .Get "alt" }} alt="{{.}}"{{ end -}}
-	     {{- if .Get "lazy" }} loading="lazy"{{ end -}}>
+	<img {{- if not (.Get "nolazy") }} loading="lazy"{{ end -}}
+		src="{{ .Get "src" }}"
+		{{- with .Get "mouse" }} title="{{.}}"{{ end -}}
+		{{- with .Get "alt" }} alt="{{.}}"{{ end -}}>
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 

@@ -19,6 +19,8 @@ other = "(Last modified {{ . }})"
 other = "Other languages: "
 [translationsSeparator]
 other = ", "
+[missingImage]
+other = "[image missing]"
 # Post navigation
 [readMore]
 other = "Read More"

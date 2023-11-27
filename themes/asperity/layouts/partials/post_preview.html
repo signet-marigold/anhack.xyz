@@ -10,7 +10,7 @@
 		{{ else -}}
 			{{- $imageLink = print (.Permalink) (.Params.image) -}}
 		{{- end }}
-		<div class="img-title"><img src="{{ $imageLink }}" alt="[image missing]" /></div>
+		<div class="img-title"><img src="{{ $imageLink }}" alt="{{ i18n "missingImage" }}" /></div>
 	{{- end }}
 {{- end }}
 {{ if .Site.Params.showPreviewVideo -}}

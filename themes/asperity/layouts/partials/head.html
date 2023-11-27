@@ -4,14 +4,15 @@
 		<link rel="canonical" href="{{ .Site.BaseURL }}">
 		<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="/index.xml">
 {{ partialCached "preload.html" . }}
-		{{ $options := dict "transpiler" "libsass" "targetPath" "css/fonts.css" -}}
-		{{ with resources.Get "scss/fonts.scss" | toCSS $options | minify | fingerprint -}}
+	{{ $options := dict "transpiler" "libsass" "targetPath" "css/fonts.css" -}}
+	{{ with resources.Get "scss/fonts.scss" | toCSS $options | minify | fingerprint -}}
 		<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-		{{ end -}}
-		{{ $options := dict "transpiler" "libsass" "targetPath" "css/style.css" -}}
-		{{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint -}}
+	{{ end -}}
+	{{ $options := dict "transpiler" "libsass" "targetPath" "css/style.css" -}}
+	{{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint -}}
 		<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-		{{ end -}}
+	{{ end -}}
+		<link href="/css/print.css" rel="stylesheet" media="print" />
 		{{ with .Site.Params.favicon -}}<link rel="icon" href="{{ . }}">{{ end }}
 		<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 		{{ if isset .Params "tags" -}}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">{{ end }}
