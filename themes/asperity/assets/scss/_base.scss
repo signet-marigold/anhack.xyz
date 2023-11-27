@@ -1,13 +1,11 @@
 body {
-	$body-margin: 0.625rem;
-
 	// Font & text settings
-	overflow-wrap: anywhere;
 	font-family: sans-serif;
-//	font-family: "Noto Sans", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: $base-font-size;
 	letter-spacing: -0.01em;
 	line-height: 1.525;
+	overflow-wrap: anywhere;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-variant-ligatures: contextual;
