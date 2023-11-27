@@ -22,7 +22,7 @@ Structure
 1. [Radio clubs](#radio-clubs)
 
 {{< expand "Morse Code Chart" >}}
-{{< img class="full" lazy=true src="morse-code-chart-gray-ef-min.png" >}}
+{{< img class="full" src="morse-code-chart-gray-ef-min.png" >}}
 {{< /expand >}}
 
 #### Resources
@@ -79,13 +79,13 @@ Repeaters give you a wider usage cone compared to simplex operation.
 # Frequency Partitions
 
 {{< expand "US Frequency Allocation Chart 2003" >}}
-{{< img class="full" lazy=true src="2003-allochrt-verticle-edit-800px-min.png" zoomsrc="2003-allochrt-verticle-edit-5000px-min.png" >}}
+{{< img class="full" src="2003-allochrt-verticle-edit-800px-min.png" zoomsrc="2003-allochrt-verticle-edit-5000px-min.png" >}}
 {{< /expand >}}
 
 # Band Plan
 
 {{< expand "US Amature Radio Bands 2017 ARRL" >}}
-{{< img class="full" lazy=true src="Amateur-Radio-Band-Plans-800px.png" zoomsrc="Amateur-Radio-Band-Plans.jpg" >}}
+{{< img class="full" src="Amateur-Radio-Band-Plans-800px.png" zoomsrc="Amateur-Radio-Band-Plans.jpg" >}}
 {{< /expand >}}
 
 # Radio Clubs

@@ -9,7 +9,7 @@ I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
 this website anonymously (without cookies) collects basic analytics on a self hosted instance of [umami](https://umami.is/)
 
-{{< img src="/singles-resources/index/stickfight.jpg" class="stretch" lazy=true caption="sticky bois" >}}
+{{< img src="/singles-resources/index/stickfight.jpg" class="stretch" caption="sticky bois" >}}
 
 ## Socials
 {{< grid >}}
