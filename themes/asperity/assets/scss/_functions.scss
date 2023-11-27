@@ -70,3 +70,7 @@
 			$blue:  -10
 		), 28%);
 }
+
+@function toRGB($color) {
+	@return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+}
