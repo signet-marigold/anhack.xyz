@@ -17,12 +17,6 @@ body {
 
 	margin: $body-margin;
 
-	// Background image settings
-	background-image: url("/background.webp");
-	background-size: 100%;
-	background-repeat: repeat-y;
-	image-rendering: pixelated;
-
 	// Footer alignment
 	display: flex;
 	flex-flow: column;
@@ -34,6 +28,13 @@ body {
 	// calculate out the top margin
 	height: calc(100vh - #{$body-margin});
 
+	// Background image settings
+	background-image: url("/background.webp");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	image-rendering: pixelated;
+
+	// Reset image rendering after background is set to pixelated
 	& > * {
 		image-rendering: initial;
 	}
