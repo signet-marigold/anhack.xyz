@@ -1,3 +1,4 @@
+// Panel
 $panel-colors: (
 	"note":       $gray-300,
 	"example":    $emerald,
@@ -9,7 +10,7 @@ $panel-colors: (
 
 $panel-icon-size: 2.5rem;
 
-%panel {
+%panel-base {
 	&.full {
 		margin: 1rem 0;
 	}
@@ -36,6 +37,9 @@ $panel-icon-size: 2.5rem;
 	p {
 		margin: 1rem 0;
 	}
+}
+
+%panel {
 	// set the box large enough to always fit the icon
 	min-height: $panel-icon-size;
 	& > .panel-icon {
@@ -61,13 +65,18 @@ $panel-icon-size: 2.5rem;
 	}
 }
 
+@mixin panel-colors($color) {
+	border-color: $color;
+	$dark-color: darken-color($color);
+	background-color: mix($dark-color, $black, 30%);
+	background-color: rgba($dark-color, 0.3);
+}
+
 @each $key, $val in $panel-colors {
 	.panel-#{$key} {
+		@extend %panel-base;
 		@extend %panel;
-		border-color: $val;
-		$dark-color: darken-color($val);
-		background-color: mix($dark-color, $black, 30%);
-		background-color: rgba($dark-color, 0.3);
+		@include panel-colors($val);
 	}
 }
 
@@ -90,4 +99,13 @@ $panel-icon-size: 2.5rem;
 
 .panel-danger > .panel-icon {
 	background-image: url("/icons/skull-n-bones-white.svg");
+}
+
+// Simplified panel
+@each $key, $val in $colors {
+	.simple-panel-#{$key} {
+		padding: $base-padding;
+		@extend %panel-base;
+		@include panel-colors($val);
+	}
 }
