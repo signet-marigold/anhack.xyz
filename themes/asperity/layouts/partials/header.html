@@ -18,18 +18,26 @@
 					<img src="{{ .Params.image }}" alt="{{ i18n "missingImage" }}" class="img-header" />
 				{{ end -}}
 				<div class="header-text {{ .Type }}-header-text">
-				{{ if and (eq .Type "posts") .IsPage -}}
-					{{ partial "post_meta.html" . -}}
-				{{ end }}
-					<h1 class="heading {{ .Type }}-heading">{{ with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
-				{{ if $subtitle -}}
-					{{ if eq .Type "page" -}}
-					<div class="subheading {{ .Type }}-subheading">{{ $subtitle }}</div>
-					{{ else -}}
-					<h3 class="subheading {{ .Type }}-subheading">{{ $subtitle }}</h3>
+					{{ if and (eq .Type "posts") .IsPage -}}
+						{{ partial "post_meta.html" . -}}
+					{{ end }}
+					<h1 class="heading {{ .Type }}-heading">
+						{{- with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end -}}
+					</h1>
+					{{- if eq .Kind "section" }}
+						{{- with .Paginator }}
+							{{- if ne .TotalPages 1 }}
+								<div class="subheading page-number">Page: {{ .PageNumber }}</div>
+							{{ end -}}
+						{{ end -}}
 					{{ end -}}
-				{{ end -}}
-
+					{{ if $subtitle -}}
+						{{ if eq .Type "page" -}}
+						<div class="subheading {{ .Type }}-subheading">{{ $subtitle }}</div>
+						{{ else -}}
+						<h3 class="subheading {{ .Type }}-subheading">{{ $subtitle }}</h3>
+						{{ end -}}
+					{{ end -}}
 				</div>
 				<hr class="small">
 			</div>

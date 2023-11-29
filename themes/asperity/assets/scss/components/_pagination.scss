@@ -1,0 +1,40 @@
+ul.pagination {
+	margin: 0;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	line-height: 1;
+	li {
+		margin: $base-margin * 0.25;
+		display: inline;
+		word-wrap: normal;
+
+		a,
+		span {
+			color: $white;
+			background-color: $gray-800;
+			border: $base-border-thickness $gray-800 solid;
+			padding: 0.125rem 0.5rem;
+			border-radius: $base-border-radius;
+		}
+		a {
+			&:hover {
+				background-color: $gray-900;
+				border-color: $gray-500;
+			}
+			&:active {
+				background-color: $black;
+				border-color: $white;
+			}
+		}
+		// Active page
+		span {
+			//background-color: $dark-emerald;
+			border: $base-border-thickness $emerald solid;
+		}
+		&.hidden {
+			//display: none;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {{ define "main" -}}
 {{ $data := .Data -}}
-{{ $isTag := eq .Data.Singular "tag" }}
+{{ $isTag := eq .Data.Singular "tag" -}}
 
 <article class="post-term-list">
 	{{ range $key, $value := .Data.Terms.ByCount -}}

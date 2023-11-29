@@ -3,4 +3,5 @@
 {{ range .Paginator.Pages -}}
 	{{ partial "post_preview.html" .}}
 {{- end }}
+{{ partial "pagination.html" . }}
 {{- end }}

@@ -22,7 +22,7 @@
 {{- end }}
 {{ if ne .Type "page" -}}
 	{{ partial "post_meta.html" . }}
-{{- end }}
+{{- end -}}
 
 {{ if .Params.subtitle -}}
 	<h4 class="post-subtitle">
@@ -30,7 +30,7 @@
 	</h4>
 {{- end }}
 
-{{ if .Site.Params.showPreviewSummary -}}
+{{- if .Site.Params.showPreviewSummary -}}
 {{ if ne .WordCount 0 -}}
 	<div class="post-entry">
 	{{ if .Site.Params.summaryMaxChar -}}

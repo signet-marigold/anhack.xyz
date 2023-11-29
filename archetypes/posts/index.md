@@ -2,7 +2,8 @@
 title: "{{ replace .Name "-" " " | title }}"
 subtitle: ""
 date: {{ .Date }}
-lastMod:
+lastMod: {{ .Date }}
+author: ""
 image: ""
 category: ""
 tags: []
