@@ -17,11 +17,11 @@
 				{{ if .Params.image -}}
 					<img src="{{ .Params.image }}" alt="{{ i18n "missingImage" }}" class="img-header" />
 				{{ end -}}
-				<div class="heading {{ .Type }}-heading">
+				<div class="header-text {{ .Type }}-header-text">
 				{{ if and (eq .Type "posts") .IsPage -}}
 					{{ partial "post_meta.html" . -}}
 				{{ end }}
-					<h1>{{ with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+					<h1 class="heading {{ .Type }}-heading">{{ with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
 				{{ if $subtitle -}}
 					{{ if eq .Type "page" -}}
 					<div class="subheading {{ .Type }}-subheading">{{ $subtitle }}</div>

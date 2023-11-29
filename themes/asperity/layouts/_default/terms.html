@@ -8,7 +8,7 @@
 		<a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}/">
 			<div class="panel-heading" id="header-{{ $value.Name | anchorize }}">
 			<h4 class="panel-title">
-				{{/*{{ if $isTag }}#{{ end }}*/}}{{ $value.Name }}
+				<span class="term">{{/*{{ if $isTag }}#{{ end }}*/}}{{ $value.Name }}</span>
 				<span class="badge">{{ $value.Count }}</span>
 			</h4>
 			</div>

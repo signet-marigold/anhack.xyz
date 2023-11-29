@@ -47,12 +47,16 @@
 			text-decoration: none;
 		}
 		.panel-heading {
-			padding: 0.25rem;
+			padding: $base-border-thickness * 3;
 			.panel-title {
 				margin: 0;
 				margin-left: 0.75rem;
+				display: flex;
+				position: relative;
+				align-items: center;
+				.term {
+				}
 				.badge {
-					float: right;
 					font-weight: lighter;
 					color: $black;
 					background-color: $white;
@@ -60,7 +64,7 @@
 					text-align: center;
 					width: 3rem;
 					border: $base-border-thickness $white solid;
-					margin-top: -$base-border-thickness;
+					//margin-top: -$base-border-thickness;
 					@include xs {
 						margin-left: 0.5rem;
 					}

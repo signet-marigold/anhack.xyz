@@ -2,8 +2,8 @@ header {
 	text-align: center;
 	.intro-header {
 		margin: 1.15rem 0 1rem;
-		.heading {
-			h1 {
+		.header-text {
+			.heading {
 				margin: $h1-margin - 1rem 0;
 				line-height: 1.05;
 			}
@@ -22,8 +22,8 @@ header {
 			object-fit: cover;
 		}
 		&.page-header {
-			.posts-heading,
-			.projects-heading {
+			.posts-header-text,
+			.projects-header-text {
 				text-align: left;
 			}
 		}
