@@ -1,16 +1,15 @@
 header {
 	text-align: center;
-	h1 {
-	}
 	.intro-header {
-		margin-bottom: 1rem;
-		padding-top: 1rem;
+		margin: 1.15rem 0 1rem;
 		.heading {
 			h1 {
 				margin: $h1-margin - 1rem 0;
+				line-height: 1.05;
 			}
 			.subheading {
 				margin: 0.5rem 0;
+				line-height: 1.05;
 			}
 			.post-meta {
 				margin: 0.5rem 0 0.5rem;
@@ -22,20 +21,6 @@ header {
 			width: 100%;
 			object-fit: cover;
 		}
-
-		.page-heading {
-			.page-subheading {
-			}
-		}
-		.page-header {
-			.posts-heading {
-			}
-		}
-		.projects-heading {
-			.projects-subheading {
-			}
-		}
-
 		&.page-header {
 			.posts-heading,
 			.projects-heading {
