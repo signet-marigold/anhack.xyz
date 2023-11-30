@@ -7,10 +7,14 @@ h6 {
 	line-height: 1.1;
 	font-weight: 700;
 	a:where(.heading-link) {
-	line-height: 0;
 		i.link::after {
 			display: none;
-			
+		}
+		// Make visable when selected with keyboard controls
+		&:focus {
+			i.link::after {
+				display: inline-block;
+			}
 		}
 	}
 	&:hover {
@@ -20,17 +24,11 @@ h6 {
 			}
 		}
 	}
-	// Make visable when selected with keyboard controls
-	a:where(.heading-link):focus {
-		i.link::after {
-			display: inline-block;
-		}
-	}
-	// When heading is selected with #{id} in uri
+	// When heading is selected with uri
 	&:target {
-		padding: $base-padding;
+		padding: $base-padding 0 $base-padding 1rem;
 		border-radius: $base-border-radius;
-		box-shadow: inset 0 0 0 $base-border-thickness $dandelion;
+		border-left: $base-border-thickness * 3 solid $dandelion;
 	}
 	&.leaf {
 		display: flex;
