@@ -80,7 +80,7 @@ h1 {
 	margin: $h1-margin 0;
 	word-spacing: 0.015em;
 	&:target {
-		margin: $h1-margin - $base-padding * 2 0;
+		margin: $h1-margin - $base-padding 0;
 	}
 }
 h2 {
@@ -88,7 +88,7 @@ h2 {
 	margin: $h2-margin 0;
 	word-spacing: 0.015em;
 	&:target {
-		margin: $h2-margin - $base-padding * 2 0;
+		margin: $h2-margin - $base-padding 0;
 	}
 }
 h3 {
@@ -96,7 +96,7 @@ h3 {
 	margin: $h3-margin 0;
 	word-spacing: 0.035em;
 	&:target {
-		margin: $h3-margin - $base-padding * 2 0;
+		margin: $h3-margin - $base-padding 0;
 	}
 }
 h4 {
@@ -104,7 +104,7 @@ h4 {
 	margin: $h4-margin 0;
 	word-spacing: 0.035em;
 	&:target {
-		margin: $h4-margin - $base-padding * 2 0;
+		margin: $h4-margin - $base-padding 0;
 	}
 }
 h5 {
@@ -112,7 +112,7 @@ h5 {
 	margin: $h5-margin 0;
 	word-spacing: 0.05em;
 	&:target {
-		margin: $h5-margin - $base-padding * 2 0;
+		margin: $h5-margin - $base-padding 0;
 	}
 }
 h6 {
@@ -121,7 +121,7 @@ h6 {
 	word-spacing: 0.05em;
 	color: $gray-300;
 	&:target {
-		margin: $h6-margin - $base-padding * 2 0;
+		margin: $h6-margin - $base-padding 0;
 	}
 }
 	
