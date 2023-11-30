@@ -133,6 +133,7 @@ blockquote {
 	background-color: mix($color, $black, 30%);
 	background-color: rgba($color, 0.3);
 	border-left: 0.1875rem solid $color;
+	border-radius: $base-border-radius;
 	padding: 0.5em;
 	p {
 		margin-top: 0;
