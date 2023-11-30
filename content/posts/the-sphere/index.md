@@ -1,13 +1,15 @@
 ---
 title: "The Sphere"
-date: 2023-10-20T17:37:47Z
 subtitle: "Quote from Chad the Bird's Green Mill Cocktail Lounge Rant"
+date: 2023-10-20T17:37:47Z
+lastMod: 2023-11-29T23:42:46Z
+author: ""
 image: "image.jpg"
-category: ""
+category: "text"
 tags: ["shitpost","quote"]
 draft: false
 ---
-By October of 2019  
+>By October of 2019  
 it was 80,000 square feet  
 dug 21ft into the adamantine humus  
 and reached 65ft above  
@@ -28,7 +30,7 @@ for 'twas to mighty a crane
 that it needed another fucking crane to help it crane  
 for it craned so crane...  
 
-none but the four before it could have craned that crane  
+>none but the four before it could have craned that crane  
 and those below wept  
 as it stood above them  
 and bolstered the construction with the hands of the Titans  
@@ -39,7 +41,7 @@ and then a great plague came upon the land
 willed by the gods to test the believers  
 and believe they did but harder  
 
-August 2020 they began again  
+>August 2020 they began again  
 following protocol  
 digging deeper  
 because  
@@ -53,7 +55,7 @@ only with was no mere chicken
 but the fourth largest crane in the world  
 so the move alone took a Cecil B McMillian two whole fucking days  
 
-and the Lord said "Pour me 6,000 cubic yards of concrete"  
+>and the Lord said "Pour me 6,000 cubic yards of concrete"  
 and they pumped it onto the roof  
 forming a 10 inch layer  
 weighing 10,000 tons  
@@ -64,7 +66,7 @@ the larges and the highest resolution screen
 in the world!  
 and they actually tested it in space  
 
-it's seating  
+>it's seating  
 shall accommodate 18,600 human souls  
 to witness Cthulu's fucking TV  
 20,000 standing  
@@ -84,7 +86,7 @@ like Doctors Stranges's podcast
 creating a system  
 that would give James Cameron a boner that could be seen from space  
 
-To herald its great majesty  
+>To herald its great majesty  
 and remind us all of kneel in its presence  
 the outside of the Colossus itself is bedecked  
 580,000 square feet of programmable lighting projection  
@@ -105,7 +107,7 @@ individual questions from all
 encompassed within the 875,000 square feet  
 of the largest spherical building in the world  
 
-Humans! Mortals!  
+>Humans! Mortals!  
 Bow and say its name  
 Sphere at the Venetian Resort  
 Opening September 29th in Las Vegas  
@@ -123,11 +125,11 @@ nd we are all part of the immersive experience
 its robot priests shall greet the coming with servos outstretched  
 and we will become as one  
 
-Rejoice, brothers!  
+>Rejoice, brothers!  
 Rejoice for the time is nigh and near!  
 Join me! Join me and become one with the single greatest entertainment venue  
 words are meaningless  
 all things serve the Sphere   
 
-And all this is actually happening and has happened, thanks to the only god that will give you what you crave in this stage of your evolution that you call SCIENCE!  
+>And all this is actually happening and has happened, thanks to the only god that will give you what you crave in this stage of your evolution that you call SCIENCE!  
 

@@ -1,13 +1,13 @@
 ---
-title: "Pistachio Salad"
+title: "Recipe: Pistachio Salad"
 subtitle: ""
 date: 2017-06-29T19:36:43Z
 lastMod: 2017-06-29T19:36:43Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
-draft: false
+draft: true
 ---
 1 9oz cool whip or Rich (brand) whip cream (thawed)  
 1 box pistachio instant pudding  

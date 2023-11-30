@@ -22,7 +22,7 @@
 						{{ partial "post_meta.html" . -}}
 					{{ end }}
 					<h1 class="heading {{ .Type }}-heading">
-						{{- with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end -}}
+						{{- with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
 					</h1>
 					{{- if eq .Kind "section" }}
 						{{- with .Paginator }}

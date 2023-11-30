@@ -1,11 +1,11 @@
 ---
-title: "Coconut Dream Bars"
+title: "Recipe: Coconut Dream Bars"
 subtitle: ""
 date: 2017-06-29T19:35:34Z
 lastMod: 2017-06-29T19:35:34Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: false
 ---

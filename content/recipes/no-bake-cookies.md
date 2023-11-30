@@ -1,11 +1,11 @@
 ---
-title: "No Bake Cookies"
+title: "Recipe: No Bake Cookies"
 subtitle: ""
 date: 2017-06-29T19:36:27Z
 lastMod: 2017-06-29T19:36:27Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: false
 ---

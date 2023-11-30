@@ -1,11 +1,11 @@
 ---
-title: "Fudge"
+title: "Recipe: Fudge"
 subtitle: ""
 date: 2017-06-29T19:35:48Z
 lastMod: 2017-06-29T19:35:48Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: true
 ---

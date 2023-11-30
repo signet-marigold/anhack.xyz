@@ -1,11 +1,11 @@
 ---
-title: "Show Cooker Pork Roast"
+title: "Recipe: Show Cooker Pork Roast"
 subtitle: ""
 date: 2017-06-29T19:37:38Z
 lastMod: 2017-06-29T19:37:38Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: true
 ---

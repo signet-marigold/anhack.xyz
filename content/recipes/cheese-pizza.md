@@ -1,11 +1,11 @@
 ---
-title: "Cheese Pizza"
+title: "Recipe: Cheese Pizza"
 subtitle: ""
 date: 2017-06-29T19:37:18Z
 lastMod: 2017-06-29T19:37:18Z
 author: ""
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: false
 ---

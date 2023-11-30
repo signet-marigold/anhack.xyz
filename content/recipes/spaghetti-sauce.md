@@ -1,11 +1,11 @@
 ---
-title: "Spaghetti Sauce"
+title: "Recipe: Spaghetti Sauce"
 subtitle: ""
 date: 2017-06-29T19:37:49Z
 lastMod: 2017-06-29T19:37:49Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: true
 ---

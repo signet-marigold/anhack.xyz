@@ -1,13 +1,13 @@
 ---
-title: "Banana Bread"
+title: "Recipe: Banana Bread"
 subtitle: ""
 date: 2017-06-29T19:35:15Z
 lastMod: 2017-06-29T19:35:15Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
-draft: false
+draft: true
 ---
 1 3/4 cups flour  
 2 teaspoons baking powder  

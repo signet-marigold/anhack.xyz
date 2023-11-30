@@ -1,11 +1,11 @@
 ---
-title: "The Seven 'C's Soup"
+title: "Recipe: The Seven 'C's Soup"
 subtitle: "Satan's gift to sensitive souls"
 date: 2022-02-11T15:38:12Z
 lastMod: 2022-02-11T15:38:12Z
 author: ""
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: false
 ---

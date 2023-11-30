@@ -4,7 +4,7 @@ subtitle: "VHF/UHF guide. Mostly for my own use"
 date: 2023-10-20T21:20:05Z
 lastMod: 2023-11-26T2:30:40Z
 image: "image.jpg"
-category: ""
+category: "resource"
 tags: ["radio"]
 draft: false
 ---

@@ -8,7 +8,6 @@ tags: ["personal"]
 ---
 Hi im Alex
 
-- 24 years old
 - socialist
 - communist
 - amateur photographer (you can see my work [here](https://pixelfed.social/tenebriscaelum))

@@ -21,6 +21,8 @@ other = "Other languages: "
 other = ", "
 [missingImage]
 other = "[image missing]"
+[draft]
+other = "[DRAFT]"
 # Post navigation
 [readMore]
 other = "Read More"

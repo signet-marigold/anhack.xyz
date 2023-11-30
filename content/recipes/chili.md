@@ -1,11 +1,11 @@
 ---
-title: "Chili"
+title: "Recipe: Chili"
 subtitle: ""
 date: 2017-06-29T19:37:26Z
 lastMod: 2017-06-29T19:37:26Z
 author: "Grandma"
 image: ""
-category: ""
+category: "recipe"
 tags: []
 draft: true
 ---

@@ -55,113 +55,6 @@ nav {
 
 main {}
 
-// Scrollbar
-:root,
-code[class^="language-"] {
-	// Firefox & Standard Brosers
-	scrollbar-width: auto;
-	scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
-
-	// Chrome, Edge, and Safari (e.g. webkit)
-	$wk-b-color: $scrollbar-thumb-color;
-	$wk-bh-color: lighten($scrollbar-thumb-color, 10%);
-	$wk-ba-color: darken($scrollbar-thumb-color, 10%);
-
-	&::-webkit-scrollbar {
-		width: $scrollbar-webkit-width;
-		height: $scrollbar-webkit-width;
-	}
-
-	&::-webkit-scrollbar-corner,
-	&::-webkit-scrollbar-track {
-		background-color: $scrollbar-track-color;
-		&:hover {
-			background-color: $scrollbar-webkit-track-hover;
-		}
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background-color: $wk-b-color;
-		background-clip: padding-box;
-		border: $scrollbar-webkit-width * 0.125 solid transparent;
-		border-radius: $scrollbar-webkit-border-radius;
-		&:hover {
-			background-color: $wk-bh-color;
-		}
-		&:active {
-			background-color: $wk-ba-color;
-		}
-	}
-
-	// Buttons
-	&::-webkit-scrollbar-button:single-button {
-		background-color: $scrollbar-track-color;
-		display: block;
-		background-size: $scrollbar-webkit-width * 0.625;
-		background-repeat: no-repeat;
-		&:vertical {
-			// Up
-			&:decrement {
-				height: $scrollbar-webkit-width * 0.75;
-				width: $scrollbar-webkit-width;
-				background-position: center $scrollbar-webkit-width * 0.25;
-				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-b-color)}'><polygon points='50,00 0,50 100,50'/></svg>");
-				&:hover {
-					background-color: $scrollbar-webkit-track-hover;
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-bh-color)}'><polygon points='50,00 0,50 100,50'/></svg>");
-				}
-				&:active {
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-ba-color)}'><polygon points='50,00 0,50 100,50'/></svg>");
-				}
-			}
-			// Down
-			&:increment {
-				height: $scrollbar-webkit-width * 0.75;
-				width: $scrollbar-webkit-width;
-				background-position: center $scrollbar-webkit-width * 0.1875;
-				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-b-color)}'><polygon points='0,0 100,0 50,50'/></svg>");
-				&:hover {
-					background-color: $scrollbar-webkit-track-hover;
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-bh-color)}'><polygon points='0,0 100,0 50,50'/></svg>");
-				}
-				&:active {
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-ba-color)}'><polygon points='0,0 100,0 50,50'/></svg>");
-				}
-			}
-		}
-		&:horizontal {
-			// Left
-			&:decrement {
-				height: $scrollbar-webkit-width * 0.75;
-				width: $scrollbar-webkit-width * 0.75;
-				background-position: $scrollbar-webkit-width * 0.1875 $scrollbar-webkit-width * 0.1875;
-				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-b-color)}'><polygon points='0,50 50,100 50,0'/></svg>");
-				&:hover {
-					background-color: $scrollbar-webkit-track-hover;
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-bh-color)}'><polygon points='0,50 50,100 50,0'/></svg>");
-				}
-				&:active {
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-ba-color)}'><polygon points='0,50 50,100 50,0'/></svg>");
-				}
-			}
-			// Right
-			&:increment {
-				height: $scrollbar-webkit-width * 0.75;
-				width: $scrollbar-webkit-width * 0.75;
-				background-position: $scrollbar-webkit-width * 0.25 $scrollbar-webkit-width * 0.1875;
-				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-b-color)}'><polygon points='0,0 0,100 50,50'/></svg>");
-				&:hover {
-					background-color: $scrollbar-webkit-track-hover;
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-bh-color)}'><polygon points='0,0 0,100 50,50'/></svg>");
-				}
-				&:active {
-					background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='#{toRGB($wk-ba-color)}'><polygon points='0,0 0,100 50,50'/></svg>");
-				}
-			}
-		}
-	}
-}
-
 @mixin selection {
 	background: $selection-background;
 	color: $selection-color;
@@ -216,17 +109,45 @@ ul {
 }
 
 blockquote {
+	$color: $dark-turquoise;
+	$quote-size: 3.5em;
+	@mixin quote {
+		color: $color;
+		vertical-align: $quote-size * (-0.1);
+		font-size: $quote-size;
+		line-height: 0;
+	}
 	@include xs {
-		margin-left: $indent-xs;
-		margin-right: $indent-xs;
+		margin: 1rem 0;
 	}
 	@include sm {
-		margin-left: $indent-sm;
-		margin-right: $indent-sm;
+		margin: 1rem $indent-sm;
 	}
 	@include md {
-		margin-left: $indent-md;
-		margin-right: $indent-md;
+		margin: 1rem $indent-lg;
+	}
+	@include lg {
+		margin: 1rem $indent-xxl;
+	}
+	quotes: "“" "”" "‘" "’";
+	background-color: mix($color, $black, 30%);
+	background-color: rgba($color, 0.3);
+	border-left: 0.1875rem solid $color;
+	padding: 0.5em;
+	p {
+		margin-top: 0;
+		//line-height: 1.4em;
+		display: inline;
+	}
+	&:before {
+		content: open-quote;
+		margin-right: 0.125rem;
+		@include quote;
+	}
+	&:after {
+		content: close-quote;
+		margin-left: 0.125rem;
+		@include quote;
 	}
 }
 
