@@ -8,7 +8,7 @@
 	{{ $.Scratch.Set "title" .Title -}}
 	{{ if .Params.subtitle }}{{ $.Scratch.Set "subtitle" .Params.subtitle }}{{ end -}}
 {{ end -}}
-{{ $preterm := $.Scratch.Get "term" -}}
+{{ $term := $.Scratch.Get "term" -}}
 {{ $title := $.Scratch.Get "title" -}}
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 		<header>
@@ -22,7 +22,7 @@
 						{{ partial "post_meta.html" . -}}
 					{{ end }}
 					<h1 class="heading {{ .Type }}-heading">
-						{{- with $preterm }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
+						{{- with $term }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
 					</h1>
 					{{- if eq .Kind "section" }}
 						{{- with .Paginator }}

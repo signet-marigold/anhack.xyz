@@ -48,6 +48,19 @@ main {
 	h2 {
 		font-weight: 800;
 	}
+	article.page {
+		h1,
+		h2 {
+			border-bottom: $base-border-thickness solid $gray-900;
+			padding-bottom: 0.5rem;
+		}
+		h1 {
+			margin-bottom: $h1-margin - 0.5rem;
+		}
+		h2 {
+			margin-bottom: $h2-margin - 0.5rem;
+		}
+	}
 }
 
 h1,

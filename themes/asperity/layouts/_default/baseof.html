@@ -17,7 +17,7 @@
 		{{ end }}
 		<div>
 			<main aria-role="main">
-				<article>
+				<article{{ if eq .Kind "home" "page" }} class="page"{{ end }}>
 					{{ block "main" . }}{{ .Content }}{{ end }}
 				</article>
 			</main>
