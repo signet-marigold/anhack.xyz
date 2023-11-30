@@ -55,6 +55,12 @@
 				position: relative;
 				align-items: center;
 				.term {
+					@include xs {
+						padding-right: 0.25rem;
+					}
+					@include sm {
+						padding-right: 0;
+					}
 				}
 				.badge {
 					font-weight: lighter;
@@ -64,9 +70,8 @@
 					text-align: center;
 					width: 3rem;
 					border: $base-border-thickness $white solid;
-					//margin-top: -$base-border-thickness;
 					@include xs {
-						margin-left: 0.5rem;
+						margin-left: auto;
 					}
 					@include sm {
 						margin-left: 1.5rem;
