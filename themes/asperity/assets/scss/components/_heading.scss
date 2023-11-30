@@ -7,8 +7,10 @@ h6 {
 	line-height: 1.1;
 	font-weight: 700;
 	a:where(.heading-link) {
+	line-height: 0;
 		i.link::after {
 			display: none;
+			
 		}
 	}
 	&:hover {
@@ -17,6 +19,18 @@ h6 {
 				display: inline-block;
 			}
 		}
+	}
+	// Make visable when selected with keyboard controls
+	a:where(.heading-link):focus {
+		i.link::after {
+			display: inline-block;
+		}
+	}
+	// When heading is selected with #{id} in uri
+	&:target {
+		padding: $base-padding;
+		border-radius: $base-border-radius;
+		box-shadow: inset 0 0 0 $base-border-thickness $dandelion;
 	}
 	&.leaf {
 		display: flex;
@@ -52,13 +66,13 @@ main {
 		h1,
 		h2 {
 			border-bottom: $base-border-thickness solid $gray-900;
-			padding-bottom: 0.5rem;
+			padding-bottom: $base-padding;
 		}
 		h1 {
-			margin-bottom: $h1-margin - 0.5rem;
+			margin-bottom: $h1-margin - $base-padding;
 		}
 		h2 {
-			margin-bottom: $h2-margin - 0.5rem;
+			margin-bottom: $h2-margin - $base-padding;
 		}
 	}
 }
