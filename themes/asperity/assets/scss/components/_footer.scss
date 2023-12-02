@@ -40,15 +40,36 @@ footer {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		#rss-feed-link {
-			margin-left: 0.625rem;
-			img {
-				$rss-icon-size: 1.6rem;
-				border: $base-border-thickness solid $gray-800;
-				height: $rss-icon-size;
-				width: $rss-icon-size;
-				margin: 0;
-			}
+	}
+	$we-horizontal-margin: 0.625rem;
+	$we-height: 1.6rem;
+	#rss-feed-link {
+		margin-left: $we-horizontal-margin;
+		img {
+			border: $base-border-thickness solid $gray-800;
+			height: $we-height;
+			width: $we-height;
+			margin: 0;
+		}
+	}
+	.theme-toggle {
+		// JS makes the element visable because it won't do anything without JS
+		display: none;
+		margin-left: $we-horizontal-margin;
+		height: $we-height;
+		cursor: pointer;
+		&::before {
+			content: "";
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			height: $we-height;
+			width: 1rem;
+			background-image: url("/icons/lightbulb-white.svg");
+			margin-bottom: -0.15em;
+		}
+		&.visable {
+			display: block;
 		}
 	}
 }

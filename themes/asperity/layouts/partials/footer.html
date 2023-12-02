@@ -17,6 +17,8 @@
 			<button class="btn-cerulean" title="View this website's source code.">View Source</button>
 		</a>
 		{{- if .Param "showrss" }}<a href="/index.xml" id="rss-feed-link" target="_blank" rel="noopener"><img width="24px" src="/icons/rss.svg" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
+		<div class="theme-toggle" title="Click to change color theme"></div>
 	</div>
 	{{- partialCached "assets/css-loader.html" "easyzoom.css" -}}
 	{{- partialCached "assets/js-loader.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}
+	{{- partialCached "theme-switcher/script-btn.html" . -}}

@@ -4,6 +4,7 @@
 		{{- partial "head.html" . }}
 	</head>
 	<body>
+		{{- partialCached "theme-switcher/script-body.html" . -}}
 		{{ partial "halftone.html" . }}
 		{{ if .Site.Menus.main -}}
 		<div>

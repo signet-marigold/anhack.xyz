@@ -1,0 +1,21 @@
+<script>
+	const btn = document.querySelector(".theme-toggle");
+	const logo = document.querySelector(".logo-image");
+	btn.classList.add("visable");
+	btn.addEventListener("click", function() {
+		document.body.classList.toggle("light-theme");
+		let theme = "dark";
+		if (document.body.classList.contains("light-theme")) {
+			theme = "light";
+			logo.src = "/logo-light.png";
+		} else {
+			logo.src = "/logo.png";
+		}
+		localStorage.setItem("theme", theme);
+	});
+	if (currentTheme == "light") {
+		logo.src = "/logo-light.png";
+	} else {
+		logo.src = "/logo.png";
+	}
+</script>

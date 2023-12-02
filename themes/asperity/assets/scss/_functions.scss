@@ -1,13 +1,13 @@
 @function pow($number, $exponent) {
-  $value: 1;
+	$value: 1;
 
-  @if $exponent > 0 {
-    @for $i from 1 through $exponent {
-      $value: $value * $number;
-    }
-  }
+	@if $exponent > 0 {
+		@for $i from 1 through $exponent {
+		$value: $value * $number;
+		}
+	}
 
-  @return $value;
+	@return $value;
 }
 
 /// Returns the luminance of `$color` as a float (between 0 and 1)
@@ -16,27 +16,27 @@
 /// @return {Number}
 /// @link http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef Reference
 @function luminance($color) {
-  $colors: (
-    'red': red($color),
-    'green': green($color),
-    'blue': blue($color)
-  );
+	$colors: (
+		'red': red($color),
+		'green': green($color),
+		'blue': blue($color)
+	);
 
-  @each $name, $value in $colors {
-    $adjusted: 0;
-    $value: $value / 255;
+	@each $name, $value in $colors {
+		$adjusted: 0;
+		$value: $value / 255;
 
-    @if $value < 0.03928 {
-      $value: $value / 12.92;
-    } @else {
-      $value: ($value + .055) / 1.055;
-      $value: pow($value, 2.4);
-    }
+		@if $value < 0.03928 {
+		$value: $value / 12.92;
+		} @else {
+		$value: ($value + .055) / 1.055;
+		$value: pow($value, 2.4);
+		}
 
-    $colors: map-merge($colors, ($name: $value));
-  }
+		$colors: map-merge($colors, ($name: $value));
+	}
 
-  @return (map-get($colors, 'red') * .2126) + (map-get($colors, 'green') * .7152) + (map-get($colors, 'blue') * .0722);
+	@return (map-get($colors, 'red') * .2126) + (map-get($colors, 'green') * .7152) + (map-get($colors, 'blue') * .0722);
 }
 
 @function set-color($color) {
@@ -73,4 +73,13 @@
 
 @function toRGB($color) {
 	@return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+}
+
+// Keeps the value clamped at positive zero.
+// ` |($var / 2)| + ($var / 2) `
+// - if $var is potitive then nothing happens in this transformation
+// - but if $var is negative both sides cancel out and become zero
+@function clamp-to-zero($num) {
+	$half: $num * 0.5;
+	@return abs($half) + $half;
 }

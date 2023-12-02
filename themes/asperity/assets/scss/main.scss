@@ -9,9 +9,6 @@
 @import 'variables';
 @import 'multi-color-list';
 
-// light theme variables & styles
-//@import 'light';
-
 // base layout
 @import 'breakpoints';
 @import 'base';
@@ -38,3 +35,6 @@
 // utilities
 @import 'colors';
 @import 'utilities';
+
+// light theme variables & styles
+@import 'light';

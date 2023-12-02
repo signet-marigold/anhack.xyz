@@ -1,51 +1,85 @@
-$pure-white:    #000;
-$pure-black:    #fff;
+$light-theme-text: #333;
+$light-theme-bg: $pure-white;
 
-$pure-black-and-white: (
-	"pure-white": $pure-white,
-	"pure-black": $pure-black
-);
-
-$white:        #141416;
-$black:        #efefef;
-
-$black-and-white: (
-	"white": $white,
-	"black": $black
-);
-
-$gray-100:      mix($black, $white, 23.4%) !default;
-$gray-200:      mix($black, $white, 40.5%) !default;
-$gray-300:      mix($black, $white, 53.3%) !default;
-$gray-400:      mix($black, $white, 63.2%) !default;
-$gray-500:      mix($black, $white, 71.2%) !default;
-$gray-600:      mix($black, $white, 78.0%) !default;
-$gray-700:      mix($black, $white, 83.9%) !default;
-$gray-800:      mix($black, $white, 89.3%) !default;
-$gray-900:      mix($black, $white, 94.3%) !default;
-
-
-body {
-	background-image: none !important;
-	image-rendering: initial !important;
-	background-color: $pure-black !important;
+body.light-theme {
+	.theme-toggle::before {
+		background-image: url("/icons/lightbulb.svg");
+	}
+	background-image: none;
+	background-color: $light-theme-bg;
+	color: $light-theme-text;
+	#halftone-plate {
+		display: none;
+	}
+	a {
+		color: #0b71c8;
+		&:link {
+		}
+		&:visited {
+			color: #df0a00;
+		}
+		&:hover {
+			color: #6a36f4;
+		}
+		&:active {
+			color: #e300df;
+		}
+	}
+	a:where(.external-link)::after {
+		background-image: url("/icons/external-link.svg");
+	}
+	a:where(.heading-link) {
+		i.link::after {
+			background-image: url("/icons/link.svg");
+		}
+	}
+	code,
+	nav {
+		background-image: none;
+		background-color: transparent;
+		box-shadow: $base-box-shadow, 0 0 0 $base-border-thickness $pure-black;
+		a .menuname {
+			color: $light-theme-text;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #555;
+	}
+	figure figcaption {
+		background-color: $light-theme-bg;
+	}
+	.post-term {
+		background-color: $light-theme-bg;
+		&:hover {
+			background-color: #ddd;
+		}
+		&:active {
+			background-color: #aaa;
+		}
+		.panel-heading .panel-title .badge {
+			background-color: $light-theme-bg;
+			border-color: #ddd;
+			color: #222;
+		}
+	}
+	details {
+		background-color: $light-theme-bg;
+		&[open] {
+			background-color: $light-theme-bg;
+			summary {
+				background-color: $light-theme-bg;
+			}
+		}
+	}
+	*[class^="panel-"],
+	*[class^="simple-panel-"] {
+		background-color: transparent;
+	}
 }
 
-nav {
-	background-image: none !important;
-	background-color: $pure-black !important;
-	border: $base-border-thickness $white solid;
-}
 
-#halftone-plate {
-	position: initial !important
-}
-
-$scrollbar-thumb-color: $gray-200;
-$scrollbar-track-color: #ccc;
-
-$base-box-shadow: none;
-
-.post-preview {
-	background-color: transparent !important;
-}

@@ -2,7 +2,7 @@ details {
 	margin: 2rem 0;
 	background-color: $gray-900;
 	border: $base-border-thickness $gray-800 solid;
-	border-radius: $base-border-radius + $base-border-thickness;
+	border-radius: $base-border-radius;
 	summary {
 		cursor: pointer;
 		padding: $base-padding $base-padding * 1.5;
@@ -26,7 +26,7 @@ details {
 		summary {
 			margin-bottom: 1rem;
 			background-color: $gray-800;
-			border-radius: $base-border-radius;
+			border-radius: clamp-to-zero($base-border-radius - $base-border-thickness);
 			padding-bottom: $base-margin + $base-border-thickness;
 		}
 	}
