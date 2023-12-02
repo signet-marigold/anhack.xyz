@@ -5,7 +5,7 @@
 	line-height: 0;
 	width: 9.375rem;
 	height: 10.625rem;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	.plaque-img {
 		display: inline-block;
 		width: 9.375rem;

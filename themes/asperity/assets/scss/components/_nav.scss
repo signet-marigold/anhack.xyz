@@ -2,7 +2,7 @@ nav {
 	background-color: $nav-bg;
 	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
 	padding: $nav-vertical-padding $nav-horizontal-padding;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	box-shadow: $base-box-shadow;
 	@include xs {
 		padding-bottom: 0;
@@ -10,14 +10,18 @@ nav {
 	@include sm {
 		padding-bottom: $nav-vertical-padding;
 	}
-	#logo {
+	#logo-banner {
 		height: 3.125rem;
 		a {
 			// normally the clickable part of the anchor grows to be as large as its parent container
 			// with display block you may accidentally press the home button quite often
 			display: inline-block;
 		}
-		img {
+		// Only displays when no styles are loaded
+		#logo-fallback {
+			display: none;
+		}
+		#logo-image {
 			height: 3.125rem;
 			margin: 0 $base-margin * 0.625;
 		}

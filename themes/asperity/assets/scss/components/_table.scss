@@ -30,7 +30,7 @@ table {
 	}
 	background-color: $table-bg;
 	border: $base-border-thickness $gray-700 solid;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	overflow-wrap: break-word;
 	thead,
 	tbody {

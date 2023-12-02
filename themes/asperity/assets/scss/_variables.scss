@@ -233,9 +233,10 @@ $nav-horizontal-padding: $base-margin;
 
 
 // Borders
+$rounded-corners: false; // Disables border-radius across all styles
 $base-border-thickness: 0.0625rem;
-$base-border-radius: 0;//0.25rem;
-$term-border-radius: 0;//1rem;
+$base-border-radius: 0.25rem;
+$term-border-radius: 1rem;
 
 
 // Scrollbar
@@ -247,4 +248,5 @@ $scrollbar-webkit-border-radius: $base-border-radius;
 
 
 // Box-shadow
-$base-box-shadow: 0.25rem 0.5rem 0 rgba(0,0,0,0.55);
+$base-box-shadow-spacing: 0.25rem 0.5rem 0;
+$base-box-shadow: $base-box-shadow-spacing rgba(0,0,0,0.55);

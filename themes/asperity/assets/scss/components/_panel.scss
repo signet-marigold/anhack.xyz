@@ -28,7 +28,7 @@ $panel-icon-size: 2.5rem;
 	@include lg {
 		margin: 1rem $indent-xxl;
 	}
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	border-width: $base-border-thickness;
 	border-style: solid;
 	text-align: center;

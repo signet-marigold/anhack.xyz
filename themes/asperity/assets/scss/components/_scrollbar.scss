@@ -27,7 +27,7 @@ code[class^="language-"] {
 		background-color: $wk-b-color;
 		background-clip: padding-box;
 		border: $scrollbar-webkit-width * 0.125 solid transparent;
-		border-radius: $scrollbar-webkit-border-radius;
+		border-radius: if($rounded-corners, $scrollbar-webkit-border-radius, null);
 		&:hover {
 			background-color: $wk-bh-color;
 		}

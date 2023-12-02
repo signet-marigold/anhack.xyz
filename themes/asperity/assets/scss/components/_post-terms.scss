@@ -12,7 +12,6 @@
 	@include md {
 		margin: 5rem 2rem;
 	}
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -24,7 +23,7 @@
 		background-color: rgba(0,0,0,0.1);
 		border: $base-border-thickness $gray-400 solid;
 		@include multi-color-list(box-shadow, "#{$base-border-thickness} #{$base-border-thickness} 0");
-		border-radius: $term-border-radius;
+		border-radius: if($rounded-corners, $term-border-radius, null);
 		@include xs {
 			margin: 0.25rem;
 			flex-basis: 100%;
@@ -46,9 +45,10 @@
 			color: $white;
 			text-decoration: none;
 		}
-		.panel-heading {
+		.term-heading {
 			padding: $base-border-thickness * 3;
-			.panel-title {
+			border-radius: if($rounded-corners, $term-border-radius, null);
+			.term-title {
 				margin: 0;
 				margin-left: 0.75rem;
 				display: flex;
@@ -66,7 +66,7 @@
 					font-weight: lighter;
 					color: $black;
 					background-color: $white;
-					border-radius: $term-border-radius;
+					border-radius: if($rounded-corners, $term-border-radius, null);
 					text-align: center;
 					width: 3rem;
 					border: $base-border-thickness $white solid;

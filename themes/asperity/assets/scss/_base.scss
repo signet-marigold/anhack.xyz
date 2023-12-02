@@ -133,7 +133,7 @@ blockquote {
 	background-color: mix($color, $black, 30%);
 	background-color: rgba($color, 0.3);
 	border-left: 0.1875rem solid $color;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	padding: 0.5em;
 	p {
 		margin-top: 0;
@@ -171,7 +171,7 @@ dl {
 img {
 	display: block;
 	max-width: 100%;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	margin: 1rem auto;
 }
 

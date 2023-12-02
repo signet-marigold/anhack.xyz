@@ -47,7 +47,7 @@ h6 {
 	// When heading is selected with uri
 	&:target {
 		padding: $base-padding 0 $base-padding 1rem;
-		border-radius: $base-border-radius;
+		border-radius: if($rounded-corners, $base-border-radius, null);
 		border-left: $base-border-thickness * 3 solid $dandelion;
 	}
 	&.leaf {
@@ -64,6 +64,7 @@ h6 {
 			height: 0.125rem;
 			margin-left: 1.45em;
 			border-radius: 1rem;
+			border-radius: if($rounded-corners, 1rem, null);
 			border: $base-border-thickness $white solid;
 			flex-grow: 100;
 		}

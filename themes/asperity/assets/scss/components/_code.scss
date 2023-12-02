@@ -3,7 +3,7 @@ code {
 //	font-feature-settings: "tnum", "zero";
 	background-color: $code-light;
 	padding: $base-padding * 0.125 $base-padding * 0.75;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	//line-break: anywhere; // loose; sometimes allows block to overflow
 	line-break: loose;
 	overflow-wrap: anywhere;
@@ -30,5 +30,5 @@ code {
 }
 
 div.highlight > pre {
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 }

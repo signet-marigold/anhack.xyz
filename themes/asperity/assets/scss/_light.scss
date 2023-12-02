@@ -2,15 +2,19 @@ $light-theme-text: #333;
 $light-theme-bg: $pure-white;
 
 body.light-theme {
+	// Toggle button at the footer
 	.theme-toggle::before {
 		background-image: url("/icons/lightbulb.svg");
 	}
+	// Disable background texture and halftone
+	// Set base font color
 	background-image: none;
 	background-color: $light-theme-bg;
 	color: $light-theme-text;
 	#halftone-plate {
 		display: none;
 	}
+	// Anchor tags
 	a {
 		color: #0b71c8;
 		&:link {
@@ -25,6 +29,7 @@ body.light-theme {
 			color: #e300df;
 		}
 	}
+	// Change anchor icons to black variant
 	a:where(.external-link)::after {
 		background-image: url("/icons/external-link.svg");
 	}
@@ -33,15 +38,28 @@ body.light-theme {
 			background-image: url("/icons/link.svg");
 		}
 	}
+	// White with black outline and drop shadow
 	code,
 	nav {
-		background-image: none;
-		background-color: transparent;
+		background-color: $light-theme-bg;
 		box-shadow: $base-box-shadow, 0 0 0 $base-border-thickness $pure-black;
+	}
+	code[class^="language-"] {
+		background-color: #404040;
+	}
+	// Disable gradient
+	// Reset link text color
+	// Change to black text variant of logo
+	nav {
+		background-image: none;
 		a .menuname {
 			color: $light-theme-text;
 		}
+		#logo-banner #logo-image {
+			content: url("/logo-light.png");
+		}
 	}
+	// Bold heading color less harsh
 	h1,
 	h2,
 	h3,
@@ -50,9 +68,13 @@ body.light-theme {
 	h6 {
 		color: #555;
 	}
+	// Some elements are simply the wrong color now
+	// Image display element
 	figure figcaption {
 		background-color: $light-theme-bg;
+		box-shadow: inset 0 0 0 $base-border-thickness $pure-black;
 	}
+	// Taxonomy term buttons
 	.post-term {
 		background-color: $light-theme-bg;
 		&:hover {
@@ -61,12 +83,13 @@ body.light-theme {
 		&:active {
 			background-color: #aaa;
 		}
-		.panel-heading .panel-title .badge {
+		.term-heading .term-title .badge {
 			background-color: $light-theme-bg;
 			border-color: #ddd;
 			color: #222;
 		}
 	}
+	// Expand element
 	details {
 		background-color: $light-theme-bg;
 		&[open] {
@@ -76,10 +99,25 @@ body.light-theme {
 			}
 		}
 	}
+	// Info panels
 	*[class^="panel-"],
 	*[class^="simple-panel-"] {
-		background-color: transparent;
+		background-color: $light-theme-bg;
+	}
+	@each $key, $val in $panel-colors {
+		.panel-#{$key} {
+			box-shadow: $base-box-shadow-spacing $val;
+		}
+	}
+	@each $key, $val in $colors {
+		.simple-panel-#{$key} {
+			box-shadow: $base-box-shadow-spacing $val;
+		}
 	}
 }
+
+
+
+
 
 

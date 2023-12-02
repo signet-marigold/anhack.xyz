@@ -83,3 +83,10 @@
 	$half: $num * 0.5;
 	@return abs($half) + $half;
 }
+
+@mixin imgdiv($filepath) {
+	background: url($filepath) no-repeat center / cover;
+	padding-top: image-height($filepath) / image-width($filepath) * 100%;
+}
+
+//

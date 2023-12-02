@@ -4,7 +4,7 @@
 	cursor: pointer;
 	display: inline-block;
 	border: 0;
-	border-radius: $base-border-radius;
+	border-radius: if($rounded-corners, $base-border-radius, null);
 	font-weight: 600;
 }
 @mixin btn {
