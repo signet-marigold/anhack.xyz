@@ -1,5 +1,28 @@
-$light-theme-text: #333;
+// Light Theme
+//
+// An optional color theme if you prefer to read on a white background
+//
+// These styles are hacked onto existing styling as the 'dark' theme is the default
+// and in this way take precedent. Styles are developed and finalized for the regular
+// color theme first. Then light theme support may be optionally added here.
+//
+// This part of the stylespace should be kept small and minimal since these styles will be 
+// updated and tracked all of the time to maintain compatibility with the default theme.
+//
+// One note: everything about the light theme is kept here except for the toggle
+// button styles which are kept in the "_footer.scss" file.
+//
+// Also, another note: color theming is compleatly ignored here. No rhyme or
+// reason for the colors being a way that they are. Mostly, colors are changed
+// until readability is at a point that i'm comfortable.
+//
+//
+//
+
+$light-theme-text: #111;
 $light-theme-bg: $pure-white;
+$light-theme-drop-shadow: $base-box-shadow-spacing #737373; //rgba(0,0,0,0.55)
+$light-theme-outline-shadow: 0 0 0 $base-border-thickness $pure-black;
 
 body.light-theme {
 	// Toggle button at the footer
@@ -42,8 +65,9 @@ body.light-theme {
 	code,
 	nav {
 		background-color: $light-theme-bg;
-		box-shadow: $base-box-shadow, 0 0 0 $base-border-thickness $pure-black;
+		box-shadow: $light-theme-outline-shadow, $light-theme-drop-shadow;
 	}
+	// Language specific
 	code[class^="language-"] {
 		background-color: #404040;
 	}
@@ -59,24 +83,18 @@ body.light-theme {
 			content: url("/logo-light.png");
 		}
 	}
-	// Bold heading color less harsh
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: #555;
-	}
 	// Some elements are simply the wrong color now
 	// Image display element
 	figure figcaption {
 		background-color: $light-theme-bg;
-		box-shadow: inset 0 0 0 $base-border-thickness $pure-black;
+		box-shadow: inset $light-theme-outline-shadow;
 	}
 	// Taxonomy term buttons
 	.post-term {
 		background-color: $light-theme-bg;
+		.term {
+			color: #444;
+		}
 		&:hover {
 			background-color: #ddd;
 		}
@@ -114,10 +132,25 @@ body.light-theme {
 			box-shadow: $base-box-shadow-spacing $val;
 		}
 	}
+	// Headings are big and bold, best to keep them less black
+	article.page {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #555;
+		}
+	}
+	.intro-header {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #333;
+		}
+	}
 }
-
-
-
-
-
-
