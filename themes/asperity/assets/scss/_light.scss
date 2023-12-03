@@ -83,6 +83,9 @@ body.light-theme {
 			content: url("/logo-light.png");
 		}
 	}
+	footer {
+		color: #444;
+	}
 	// Some elements are simply the wrong color now
 	// Image display element
 	figure figcaption {
@@ -132,25 +135,13 @@ body.light-theme {
 			box-shadow: $base-box-shadow-spacing $val;
 		}
 	}
-	// Headings are big and bold, best to keep them less black
-	article.page {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			color: #555;
-		}
-	}
-	.intro-header {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			color: #333;
-		}
+	// Headings are big and bold, best to keep them lighter then the rest of the text
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #555;
 	}
 }
