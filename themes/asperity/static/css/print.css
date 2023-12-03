@@ -1,8 +1,14 @@
 #halftone-plate {
 	display: none;
 }
-nav {
+/*nav {
 	display: none;
+}*/
+nav ul {
+	display: none;
+}
+#logo-banner #logo-image {
+	content: url("/logo-light.png");
 }
 #nextprev {
 	display: none;
@@ -15,7 +21,13 @@ a:link,
 a:visited,
 a:focus,
 a:hover,
-a:active {
+a:active,
+body.light-theme a,
+body.light-theme a:link,
+body.light-theme a:visited,
+body.light-theme a:focus,
+body.light-theme a:hover,
+body.light-theme a:active {
 	color: #000;
 	text-decoration: underline;
 }
