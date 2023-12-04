@@ -7,7 +7,7 @@
 	{{- if .IsNamedParams -}}
 		{{ .Get "summary" }}
 	{{- else -}}
-		{{ .Get 0 | default "Expand me" }}
+		{{ .Get 0 | default "Click to expand" }}
 	{{- end -}}
 	</summary>
 	<div class="content">

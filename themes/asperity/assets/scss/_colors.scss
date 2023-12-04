@@ -10,7 +10,6 @@
 	}
 }
 
-
 // Rainbow animation text & background classes
 @mixin rainbow-keyframes($property) {
 	0%    { #{$property}: $cornflower; }
@@ -75,7 +74,7 @@
 	@include d-gradient($color, mix(#000, $color, 80%));
 }
 
-// Main colors analogous
+// Main colors to analogous
 @each $key, $val in $colors {
 	.bg-g-#{$key} {
 		@include d-gradient-analogous(full-saturation($val, 50%));
