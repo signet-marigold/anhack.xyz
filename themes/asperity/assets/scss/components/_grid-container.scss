@@ -1,19 +1,13 @@
 .grid-container {
 	$margin: 0.75rem;
 	margin: clamp-to-zero(1rem - $margin) 0;
-	@include md {
-		justify-content: center;
-	}
-	@include lg {
-		justify-content: space-evenly;
-	}
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	align-content: center;
-	justify-content: center;
+	//justify-content: center;
+	justify-content: space-evenly;
 	& > * {
-		
 		@include xs {
 			margin: $margin * 0.5;
 		}
