@@ -145,4 +145,24 @@ body.light-theme {
 	h6 {
 		color: #555;
 	}
+	ul.pagination {
+		li {
+			a,
+			span {
+				color: #333;
+				background-color: transparent;
+				border: $base-border-thickness #000 solid;
+			}
+			a {
+				&:hover {
+					background-color: #ccc;
+
+				}
+				&:active {
+					background-color: #999;
+					border-color: #555;
+				}
+			}
+		}
+	}
 }
