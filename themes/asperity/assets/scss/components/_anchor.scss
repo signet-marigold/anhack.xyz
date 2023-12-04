@@ -33,13 +33,13 @@ article {
 	a:where(.external-link)::after {
 		@include link-icon;
 		background-image: url("/icons/external-link-white.svg");
-		margin: 0 0.25em -0.05em;
+		margin: 0 0.25em -0.15em;
 	}
 	a:where(.heading-link) {
 		i.link::after {
 			@include link-icon;
 			background-image: url("/icons/link-white.svg");
-			margin-bottom: -0.15em;
+			margin: 0 0.25em -0.15em;
 		}
 		span.sr-only {
 			display: none;
