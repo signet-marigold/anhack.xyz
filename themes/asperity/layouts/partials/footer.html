@@ -5,7 +5,7 @@
 		<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
 		{{ if .Site.Copyright }}<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
 		<span>{{ i18n "rights" }}</span>
-		<div class="display-ib">{{ i18n "lastBuild" }}: {{ time.Now | time.Format (i18n "shortdateFormat") }}</div>
+		<div class="display-ib">{{ i18n "lastBuild" }}: {{ time.Now | time.Format (i18n "timedateFormat") }}</div>
 	</div>
 	{{- if .Param "showthemeinfo" }}
 	<p>

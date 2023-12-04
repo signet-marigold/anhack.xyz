@@ -3,9 +3,11 @@ languageCode = 'en-us'
 
 [params]
 	# 'relatedtext' is the text that appears above the tag list at the bottom of pages.
-	relatedtext = 'Related'
+	#relatedtext = 'Related'
 	logo = '/logo.png'
 	favicon = '/favicon.ico'
+
+	#dateFormat = "Jan 2, 2006"
 
 	#list items
 	datesinlist = true
@@ -16,7 +18,6 @@ languageCode = 'en-us'
 	taglist = true
 	showrss = true
 	showthemeinfo = false
-	dateFormat = "Jan 2, 2006"
 	commit = false
 	summary = true
 	readingTime = true

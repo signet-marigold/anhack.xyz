@@ -1,28 +1,31 @@
-
-[page_not_found]
+# 404 http error page
+[pageNotFound]
 other = "Page Not Found"
-[page_does_not_exist]
+[pageDoesNotExist]
 other = "Sorry, this page does not exist."
-[head_back]
+[headBack]
 other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
 
 # Content
 [dateFormat]
-other = "January 2, 2006"
-[shortdateFormat]
-other = "Jan 2, 2006 15:04:05 Z07:00"
+other = "2006:01:02"
+#other = "Jan 2, 2006"
+[timedateFormat]
+other = "2006:01:02:15:04:05 Z07:00"
+#other = "Jan 2, 2006 15:04:05 Z07:00"
 [postedOnDate]
 other = "{{ . }}"
 [lastModified]
 other = "(Last modified {{ . }})"
 [translationsLabel]
-other = "Other languages: "
+#other = "Other languages: "
 [translationsSeparator]
-other = ", "
+#other = ", "
 [missingImage]
 other = "[image missing]"
 [draft]
 other = "[DRAFT]"
+
 # Post navigation
 [readMore]
 other = "Read More"
@@ -34,6 +37,7 @@ other = "Newer Posts"
 other = "Previous Post"
 [nextPost]
 other = "Next Post"
+
 # Post meta
 [authoredBy]
 other = "by"
@@ -47,6 +51,7 @@ one = "word"
 other = "words"
 [inTags]
 other = "in"
+
 # Footer
 [lastBuild]
 other = "Last build"
