@@ -16,7 +16,7 @@
 {{ if .Site.Params.showPreviewVideo -}}
 	{{ if .Params.video -}}
 		<video loop autoplay muted playsinline class="img-title">
-			<source src="{{ .Params.video }}">
+			<source src="{{ .Params.video }}"/>
 		</video>
 	{{- end }}
 {{- end }}
