@@ -2,14 +2,12 @@
 ---
 # Personal Dev Blog
 
-Welcome welcome!
-
+Welcome welcome!  
+this is my personal site for mayhem & mischief  
 I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
-this website anonymously (without cookies) collects basic analytics on a self hosted instance of [umami](https://umami.is/)
-
-{{< img src="/singles-resources/index/synthwave-retrowave.gif" class="center" alt="retro skeleton" mouse="owo" >}}
-{{< customclass "text-vermilion text-rainbow align-center" >}}[[[ just chillin in negative space ]]]{{< /customclass >}}
+this website anonymously (without cookies) collects basic analytics on a self hosted instance of [umami](https://umami.is/)  
+for the sake of transparency those analytics are [viewable here](https://data-sb-v-analytics.anhack.com/share/3SKpsTgESfggNkdM/anhack)
 
 {{< img src="/singles-resources/index/stickfight.jpg" class="stretch" caption="sticky bois" >}}
 

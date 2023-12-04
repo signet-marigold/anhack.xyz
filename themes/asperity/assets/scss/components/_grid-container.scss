@@ -1,5 +1,6 @@
 .grid-container {
-	margin: 1rem 0;
+	$margin: 0.75rem;
+	margin: clamp-to-zero(1rem - $margin) 0;
 	@include md {
 		justify-content: center;
 	}
@@ -12,15 +13,15 @@
 	align-content: center;
 	justify-content: center;
 	& > * {
-		margin: 1rem;
+		
 		@include xs {
-			margin: 0.5rem;
+			margin: $margin * 0.5;
 		}
 		@include sm {
-			margin: 0.75rem;
+			margin: $margin * 0.75;
 		}
 		@include md {
-			margin: 1rem;
+			margin: $margin;
 		}
 	}
 }

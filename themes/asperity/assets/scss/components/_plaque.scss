@@ -1,34 +1,35 @@
 // plaque badge
 .plaque {
+	$size-multiplier: 0.85;
 	background: linear-gradient(135deg, blue, red);
 	display: inline-block;
 	line-height: 0;
-	width: 9.375rem;
-	height: 10.625rem;
+	width: 9.375rem * $size-multiplier;
+	height: 10.625rem * $size-multiplier;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	.plaque-img {
 		display: inline-block;
-		width: 9.375rem;
-		height: 5.75rem;
-		margin: 1.5625rem 0 0.875rem;
+		width: 9.375rem * $size-multiplier;
+		height: 5.75rem * $size-multiplier;
+		margin: 1.5625rem * $size-multiplier 0 0.875rem * $size-multiplier;
 		object-fit: contain;
 	}
 	.plaque-text {
 		display: block;
-		width: 9.375rem;
+		width: 9.375rem * $size-multiplier;
 		color: $white;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		font-size: 1.15rem;
+		font-size: 1.15rem * $size-multiplier;
 		letter-spacing: 0;
 	}
 	&.plaque-clickable {
 		&:hover {
-			box-shadow: inset 0 0 0 $base-border-thickness * 2 $white;
+			box-shadow: inset 0 0 0 $base-border-thickness * 2 * $size-multiplier $white;
 		}
 		&:active {
-			box-shadow: inset 0 0 0 $base-border-thickness * 2 $black;
+			box-shadow: inset 0 0 0 $base-border-thickness * 2 * $size-multiplier $black;
 		}
 	}
 	&.invert-img .plaque-img {
