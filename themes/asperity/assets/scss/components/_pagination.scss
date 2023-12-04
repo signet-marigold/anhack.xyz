@@ -1,4 +1,4 @@
-// Taxonomy list navigation
+// Taxonomy page list navigation buttons
 ul.pagination {
 	margin: 0;
 	padding: 1rem 0;
@@ -7,31 +7,34 @@ ul.pagination {
 	flex-wrap: wrap;
 	line-height: 1;
 	li {
-		margin: $base-margin * 0.25;
+		margin: $base-margin * 0.1 $base-margin * 0.315;
 		display: inline;
 		word-wrap: normal;
 		a,
 		span {
+			padding: 0.125rem 0.535rem;
 			color: $white;
-			background-color: $gray-800;
-			border: $base-border-thickness $gray-800 solid;
-			padding: 0.125rem 0.5rem;
+			background-color: $gray-700;
+			border: $base-border-thickness $gray-900 solid;
 			border-radius: if($rounded-corners, $base-border-radius, null);
+			box-shadow:
+				inset $base-border-thickness $base-border-thickness 0 rgba(255, 255, 255, 0.6),
+				inset $base-border-thickness * -1 $base-border-thickness * -1 0 rgba(0, 0, 0, 0.6);
 		}
 		a {
 			&:hover {
-				background-color: $gray-900;
-				border-color: $gray-500;
+				background-color: $gray-500;
 			}
 			&:active {
-				background-color: $black;
-				border-color: $white;
+				background-color: $gray-900;
 			}
 		}
 		// Active page
 		span {
-			//background-color: $dark-emerald;
+			user-select: none;
+			background-color: $gray-900;
 			border: $base-border-thickness $emerald solid;
+			box-shadow: inset 0 0 0 $base-border-thickness $dark-emerald;
 		}
 		&.hidden {
 			display: none;
