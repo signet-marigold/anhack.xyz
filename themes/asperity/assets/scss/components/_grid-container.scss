@@ -1,6 +1,17 @@
 .grid-container {
 	$margin: 0.75rem;
-	margin: clamp-to-zero(1rem - $margin) 0;
+	@include xs {
+		margin: clamp-to-zero(1rem - $margin)        ($margin * 0.5 * -1);
+	}
+	@include sm {
+		margin: clamp-to-zero(1rem - $margin) (1rem + $margin * 0.75 * -1);
+	}
+	@include md {
+		margin: clamp-to-zero(1rem - $margin) (2rem + $margin * -1);
+	}
+	@include lg {
+		margin: clamp-to-zero(1rem - $margin) (3rem + $margin * -1);
+	}
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
