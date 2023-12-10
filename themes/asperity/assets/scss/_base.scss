@@ -58,11 +58,12 @@ main {}
 // Page content body margins
 .header-text,
 .main-article,
-#nextprev {
+#article-info {
 	@include xs {
 		padding-left:  0.156rem;
 		padding-right: 0.156rem;
 	}
+	// Breakpoint at the max width of the page
 	@include breakpoint($page-max-width + $body-margin * 2) {
 		padding-left:  0.078rem;
 		padding-right: 0.078rem;
