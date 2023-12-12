@@ -2,7 +2,7 @@
 
 ### Hugo Based personal blog
 
-![img](https://raw.githubusercontent.com/signet-marigold/anhack.xyz/main/.github/images/main_img.png)
+![img](https://raw.githubusercontent.com/signet-marigold/anhack.xyz/main/.github/images/main_img_3.png)
 
 just a place where i throw my posts, updates, news, projects, personal life and anything fun that others may enjoy.  
 
