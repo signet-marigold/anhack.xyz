@@ -76,8 +76,8 @@ table {
 	}
 	&.lines {
 		border-spacing: 0;
-		//border-collapse: collapse;
-		background-color: darken($table-bg, 2.5%);
+		background-color: transparent;
+		border-color: transparent;
 		thead,
 		tbody {
 			tr {

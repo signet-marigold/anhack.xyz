@@ -170,4 +170,23 @@ body.light-theme {
 			}
 		}
 	}
+	// Table
+	table {
+		background-color: $light-theme-bg;
+		border-color: #000;
+		&.lines {
+			background-color: transparent;
+			border-color: transparent;
+			thead,
+			tbody {
+				tr {
+					th,
+					td {
+						background-color: $light-theme-bg;
+						border-color: #999 #000 #000 #999;
+					}
+				}
+			}
+		}
+	}
 }
