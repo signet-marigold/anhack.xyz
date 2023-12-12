@@ -12,7 +12,10 @@ ul.pagination {
 		word-wrap: normal;
 		a,
 		span {
-			padding: 0.125rem 0.535rem;
+			display: inline-block;
+			text-align: center;
+			padding: 0.3125rem 0.135rem;
+			min-width: 1.45rem;
 			color: $white;
 			background-color: $gray-700;
 			border: $base-border-thickness $gray-900 solid;
@@ -35,9 +38,6 @@ ul.pagination {
 			background-color: $gray-900;
 			border: $base-border-thickness $emerald solid;
 			box-shadow: inset 0 0 0 $base-border-thickness $dark-emerald;
-		}
-		&.hidden {
-			display: none;
 		}
 	}
 }

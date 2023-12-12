@@ -24,4 +24,4 @@ misha's classic recipe
 1. Mix the lemon juice, lemon zest, and sweetend condensed milk
 1. Fold mixture into the cool whip until smooth
 1. Pour mixture into the pie shell
-1. and Freeze completely
+1. Freeze

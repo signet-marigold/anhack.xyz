@@ -2,6 +2,8 @@
 ---
 # Personal Dev Blog
 
+{{< img src="/singles-resources/index/waves.webp" class="full" >}}
+
 Welcome welcome!  
 this is my personal site for mayhem & mischief  
 I hope your day was full of industrial sabotage (｡•̀‿ -｡)
