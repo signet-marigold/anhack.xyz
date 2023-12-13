@@ -11,6 +11,7 @@ paginate = 10
 
 [author]
 	name = 'alex'
+	email = 'me@anhack.xyz'
 
 [taxonomies]
 	category = 'category'

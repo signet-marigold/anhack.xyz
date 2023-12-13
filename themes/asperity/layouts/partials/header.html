@@ -15,14 +15,14 @@
 		{{- if $title }}
 			<div class="intro-header {{ .Kind }}-header">
 				{{ if .Params.image -}}
-					<img src="{{ .Params.image }}" alt="{{ i18n "missingImage" }}" class="img-header"/>
+					<img src="{{ .Params.image }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} class="img-header" width="100%" height="100%"/>
 				{{ end -}}
 				<div class="header-text {{ .Type }}-header-text">
 					{{ if and (eq .Type "posts") .IsPage -}}
 						{{ partial "post_meta.html" . -}}
 					{{ end }}
 					<h1 class="heading {{ .Type }}-heading">
-						{{- with $term }}{{.}}: {{ end }}{{ with $title }}{{.}}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
+						{{- with $term }}{{ . }}: {{ end }}{{ with $title }}{{ . }}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
 					</h1>
 					{{- if eq .Kind "section" }}
 						{{- with .Paginator }}

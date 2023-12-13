@@ -5,6 +5,7 @@ date: 2023-10-20T17:37:47Z
 lastMod: 2023-11-29T23:42:46Z
 author: ""
 image: "image.jpg"
+imageAlt: "chad the bird in front of the sphere"
 category: "text"
 tags: ["shitpost","quote"]
 draft: false

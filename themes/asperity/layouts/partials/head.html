@@ -1,7 +1,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-		<link rel="canonical" href="{{ .Site.BaseURL }}"/>
+		<link rel="canonical" href="{{ .Permalink }}"/>
 		<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="/index.xml"/>
 {{ partialCached "preload.html" . }}
 		{{ $options := dict "transpiler" "libsass" "targetPath" "css/fonts.css" -}}
