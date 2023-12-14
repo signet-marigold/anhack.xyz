@@ -1,8 +1,22 @@
 User-agent: Baiduspider
+Disallow: /
+
 User-agent: 360Spider
+Disallow: /
+
 User-agent: Sogouspider
+Disallow: /
+
 User-agent: Yisouspider
+Disallow: /
+
 User-agent: PetalBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
 Disallow: /
 
 User-agent: *
