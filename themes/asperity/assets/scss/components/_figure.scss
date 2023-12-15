@@ -57,4 +57,30 @@ figure {
 		margin-left: 0;
 		margin-right: 0;
 	}
+	&.half {
+		float: left;
+		width: 48%;
+		margin: 1rem 2%;
+		&:nth-child(2n + 1) {
+			margin-left: 0;
+		}
+		&:nth-child(2n + 2) {
+			margin-right: 0;
+		}
+		img {
+			display: block;
+		}
+		figcaption {
+			@include xs {
+				font-size: $font-size-sm;
+			}
+			@include sm {
+				font-size: $base-font-size;
+			}
+		}
+		// Next element in dom list that is not class='half'
+		& + *:not(.half) {
+			clear: both;
+		}
+	}
 }
