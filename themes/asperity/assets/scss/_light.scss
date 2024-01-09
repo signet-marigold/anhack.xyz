@@ -128,12 +128,12 @@ body.light-theme {
 	}
 	@each $key, $val in $panel-colors {
 		.panel-#{$key} {
-			box-shadow: $base-box-shadow-spacing $val;
+			box-shadow: $base-box-shadow-spacing mix($val, $light-theme-bg, 50%);
 		}
 	}
 	@each $key, $val in $colors {
 		.simple-panel-#{$key} {
-			box-shadow: $base-box-shadow-spacing $val;
+			box-shadow: $base-box-shadow-spacing mix($val, $light-theme-bg, 50%);
 		}
 	}
 	// Headings are big and bold, best to keep them lighter then the rest of the text

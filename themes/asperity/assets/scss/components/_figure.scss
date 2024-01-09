@@ -61,12 +61,8 @@ figure {
 		float: left;
 		width: 48%;
 		margin: 1rem 2%;
-		&:nth-child(2n + 1) {
-			margin-left: 0;
-		}
-		&:nth-child(2n + 2) {
-			margin-right: 0;
-		}
+		width: calc(50% - 1rem);
+		margin: 1rem 0.5rem;
 		img {
 			display: block;
 		}

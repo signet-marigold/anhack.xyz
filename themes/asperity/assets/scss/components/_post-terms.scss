@@ -22,7 +22,11 @@
 		display: inline-block;
 		background-color: rgba(0,0,0,0.1);
 		border: $base-border-thickness $gray-400 solid;
-		@include multi-color-list(box-shadow, "#{$base-border-thickness} #{$base-border-thickness} 0");
+		@include multi-color-list(
+			shuffle($sample),
+			box-shadow,
+			"#{$base-border-thickness*2} #{$base-border-thickness*2}"
+		);
 		border-radius: if($rounded-corners, $term-border-radius, null);
 		@include xs {
 			margin: 0.25rem;
