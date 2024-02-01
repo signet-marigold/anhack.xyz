@@ -74,6 +74,18 @@ h6 {
 			//margin-left: 2.65em - 0.9em;
 		}
 	}
+	&::before {
+		content: "";
+	}
+	&::after {
+		content: "";
+	}
+}
+
+// header horizontal margin calculator
+@function hhmc($in) {
+	$mul: 0.02;
+	@return $in * -$mul;
 }
 
 h1 {
@@ -83,6 +95,12 @@ h1 {
 	&:target {
 		margin: $h1-margin - $base-padding 0;
 	}
+	&::before {
+		margin-left: hhmc($font-size-xxl);
+	}
+	&::after {
+		margin-right: hhmc($font-size-xxl);
+	}
 }
 h2 {
 	font-size: $font-size-xl;
@@ -90,6 +108,12 @@ h2 {
 	word-spacing: 0.015em;
 	&:target {
 		margin: $h2-margin - $base-padding 0;
+	}
+	&::before {
+		margin-left: hhmc($font-size-xl);
+	}
+	&::after {
+		margin-right: hhmc($font-size-xl);
 	}
 }
 h3 {
@@ -99,6 +123,12 @@ h3 {
 	&:target {
 		margin: $h3-margin - $base-padding 0;
 	}
+	&::before {
+		margin-left: hhmc($font-size-lg);
+	}
+	&::after {
+		margin-right: hhmc($font-size-lg);
+	}
 }
 h4 {
 	font-size: $font-size-md;
@@ -107,6 +137,12 @@ h4 {
 	&:target {
 		margin: $h4-margin - $base-padding 0;
 	}
+	&::before {
+		margin-left: hhmc($font-size-md);
+	}
+	&::after {
+		margin-right: hhmc($font-size-md);
+	}
 }
 h5 {
 	font-size: $font-size-sm;
@@ -114,6 +150,12 @@ h5 {
 	word-spacing: 0.05em;
 	&:target {
 		margin: $h5-margin - $base-padding 0;
+	}
+	&::before {
+		margin-left: hhmc($font-size-sm);
+	}
+	&::after {
+		margin-right: hhmc($font-size-sm);
 	}
 }
 h6 {
@@ -124,8 +166,14 @@ h6 {
 	&:target {
 		margin: $h6-margin - $base-padding 0;
 	}
+	&::before {
+		margin-left: hhmc($font-size-sm);
+	}
+	&::after {
+		margin-right: hhmc($font-size-sm);
+	}
 }
-	
+
 // Reset color for heading in post preview
 .post-preview h6 {
 	color: inherit;

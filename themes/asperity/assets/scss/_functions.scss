@@ -110,3 +110,13 @@
 	}
 	@return $shuffled_map;
 }
+
+// Multi-color nth selector
+@mixin multi-color-list($color-map, $property, $property-options:"", $child-selector:"") {
+	$l: length($color-map);
+	@for $i from 1 through $l {
+		&:nth-child(#{$l}n + #{$i}) #{$child-selector} {
+			#{$property}: #{$property-options} nth(nth($color-map, $i), 2);
+		}
+	}
+}

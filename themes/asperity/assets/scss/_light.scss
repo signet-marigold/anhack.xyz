@@ -86,6 +86,10 @@ body.light-theme {
 	}
 	footer {
 		color: #444;
+		#website-info .display-ib {
+			background: $cornflower;
+			color: #fff;
+		}
 	}
 	// Some elements are simply the wrong color now
 	// Image display element

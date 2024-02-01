@@ -2,3 +2,12 @@
 	display: block;
 	text-align: center;
 }
+// date separator
+span.ds {
+	padding: 0 0.08125em;
+	color: $gray-200;
+}
+span.dslm {
+	padding: 0 0.025em;
+	color: $gray-300;
+}

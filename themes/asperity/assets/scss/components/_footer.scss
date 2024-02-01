@@ -29,10 +29,21 @@ footer {
 	#website-info {
 		max-width: 40rem;
 		margin: 0 auto;
+		letter-spacing: 0.185em;
+		word-spacing: 0.05rem;
 		& > * {
 			margin: 0 0.1rem;
 		}
 		#website-copyright {
+		}
+		.display-ib {
+			font-weight: 600;
+			letter-spacing: 0.05em;
+			word-spacing: 0.01em;
+			font-family: mono;
+			background: $dark-cornflower;
+			width: fit-content;
+			margin: 0.4rem auto;
 		}
 	}
 	#website-extra {
@@ -53,7 +64,7 @@ footer {
 		}
 	}
 	.theme-toggle {
-		// JS makes the element visable because it won't do anything without JS
+		// javascript will set display to visable
 		display: none;
 		margin-left: $we-horizontal-margin;
 		height: $we-height;

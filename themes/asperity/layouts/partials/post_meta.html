@@ -1,9 +1,9 @@
 <div class="post-meta">
 	{{- $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
 	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
-	<span class="post-date">{{ $datestr | i18n "postedOnDate" -}}</span>
+	<span class="post-date">{{ replace ($datestr | i18n "postedOnDate") ":" "<span class='ds'>:</span>" | safeHTML -}}</span>
 	{{- if ne $datestr $lastmodstr -}}
-		&nbsp;<span class="post-last-modified">{{ $lastmodstr | i18n "lastModified" -}}</span>
+		&nbsp;<span class="post-last-modified">{{ replace ($lastmodstr | i18n "lastModified") ":" "<span class='dslm'>:</span>" | safeHTML -}}</span>
 	{{- end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
