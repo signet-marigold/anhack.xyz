@@ -1,6 +1,6 @@
 ---
 title: "Fun Links"
-subtitle: ""
+subtitle: "dont die"
 date: 2023-12-12T08:09:33Z
 lastMod: 2023-12-12T08:09:33Z
 author: ""
