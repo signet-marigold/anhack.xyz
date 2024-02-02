@@ -2,12 +2,18 @@
 	display: block;
 	text-align: center;
 }
-// date separator
+// Date Separator
 span.ds {
-	padding: 0 0.08125em;
-	color: $gray-200;
-}
-span.dslm {
-	padding: 0 0.025em;
+	padding: 0 0.0825em;
 	color: $gray-300;
+}
+// Last Modified
+span.dsm {
+	padding: 0 0.02em;
+	color: $gray-400;
+}
+// Last Build
+span.dsb {
+	padding: 0 0.04125em;
+	color: $gray-100;
 }

@@ -5,7 +5,7 @@
 		<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
 		{{ if .Site.Copyright }}<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
 		<span>{{ i18n "rights" }}</span>
-		<div class="display-ib">{{ i18n "lastBuild" }}: {{ time.Now | time.Format (i18n "timedateFormat") }}</div>
+		<div class="display-ib">{{ i18n "lastBuild" }}: {{ replace (time.Now | time.Format (i18n "timedateFormat")) ":" "<span class='dsb'>:</span>" | safeHTML -}}</div>
 	</div>
 	{{- if .Param "showthemeinfo" }}
 	<p>
@@ -17,7 +17,7 @@
 			<button class="btn-cerulean" title="View this website's source code.">View Source</button>
 		</a>
 		{{- if .Param "showrss" }}<a href="/index.xml" id="rss-feed-link" target="_blank" rel="noopener"><img width="24px" src="/icons/rss.svg" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
-		<div class="theme-toggle" title="Click to change color theme"></div>
+		<div class="theme-toggle" title="Click to change theme (light/dark)"></div>
 	</div>
 	{{- partialCached "assets/css-loader.html" "easyzoom.css" -}}
 	{{- partialCached "assets/js-loader.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}

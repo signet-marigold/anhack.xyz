@@ -115,6 +115,9 @@ body.light-theme {
 			color: #222;
 		}
 	}
+	.post-meta {
+		color: #444;
+	}
 	// Expand element
 	details {
 		background-color: $light-theme-bg;
@@ -142,12 +145,14 @@ body.light-theme {
 	}
 	// Headings are big and bold, best to keep them lighter then the rest of the text
 	h1,
-	h2,
+	h2 {
+		color: #777;
+	}
 	h3,
 	h4,
 	h5,
 	h6 {
-		color: #555;
+		color: #444;
 	}
 	// Taxonomy list navigation
 	ul.pagination {
@@ -192,5 +197,17 @@ body.light-theme {
 				}
 			}
 		}
+	}
+	// Date Separator
+	span.ds {
+		color: #666;
+	}
+	// Last Modified
+	span.dsm {
+		color: #555;
+	}
+	// Last Build
+	span.dsb {
+		color: $white;
 	}
 }
