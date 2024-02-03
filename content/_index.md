@@ -4,6 +4,8 @@
 
 {{< img src="/singles-resources/index/waves.webp" class="full" nolazy="true" ratio="16 / 9" alt="black and white waves" >}}
 
+{{< img src="/singles-resources/index/dinemd.webp" class="full" nolazy="true" >}}
+
 Welcome welcome!  
 this is my personal site for mayhem & mischief  
 I hope your day was full of industrial sabotage (｡•̀‿ -｡)
