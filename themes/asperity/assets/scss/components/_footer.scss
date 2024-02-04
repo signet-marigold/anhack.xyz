@@ -1,8 +1,8 @@
 // places footer at the bottom of the page
-#footer-lock {
+footer {
 	margin-top: auto;
 }
-footer {
+footer > div {
 	padding-bottom: 1rem;
 	font-size: $font-size-sm;
 	text-align: center;

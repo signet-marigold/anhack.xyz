@@ -1,6 +1,6 @@
 ---
 title: "Cat Update 2"
-subtitle: ""
+subtitle: "Aaaaannnd we;re back with another cat update!!~ :heart:"
 date: 2024-01-31T23:44:57-06:00
 lastMod: 2024-01-31T23:44:57-06:00
 author: ""
@@ -10,7 +10,7 @@ category: ""
 tags: ["cat-update", "gummy", "peeve"]
 draft: false
 ---
-Aaaaannnd we;re back with another cat update!!~
+Aaaaannnd we;re back with another cat update!!~ :heart:
 ================
 
 It's been a crazy month. almost missed this one...  

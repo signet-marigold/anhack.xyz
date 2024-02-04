@@ -1,9 +1,9 @@
 baseURL = 'https://anhack.xyz/'
 title = 'anhack blog'
 theme = 'asperity'
-languageCode = 'en'
+languageCode = 'en-US'
 defaultContentLanguage = 'en'
-copyright = '&copy; 2023 Alexander Hack.'
+copyright = '&copy; 2024 Alexander Hack.'
 keywords = 'blog,developer,development,personal'
 enableRobotsTXT = true
 summaryLength = 50

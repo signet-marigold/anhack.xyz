@@ -26,7 +26,7 @@
 		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
 		{{- with .Get "ratio" }} {{ printf "style=%q" (printf "%s:%s" "aspect-ratio" (replace . " " "")) | safeHTMLAttr }}{{ end -}}
-		width="100%" height="100%"/>
+		{{/**/}} width="100%" height="100%"/>
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 
@@ -34,5 +34,5 @@
 	<figcaption>
 	{{- . -}}
 	</figcaption>
-	{{- end -}}
+	{{- end }}
 </figure>

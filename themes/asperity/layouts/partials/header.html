@@ -11,7 +11,6 @@
 {{ $term := $.Scratch.Get "term" -}}
 {{ $title := $.Scratch.Get "title" -}}
 {{ $subtitle := $.Scratch.Get "subtitle" }}
-		<header>
 		{{- if $title }}
 			<div class="intro-header {{ .Kind }}-header">
 				{{ if .Params.image -}}
@@ -42,4 +41,3 @@
 				<hr class="small"/>
 			</div>
 		{{ end -}}
-		</header>

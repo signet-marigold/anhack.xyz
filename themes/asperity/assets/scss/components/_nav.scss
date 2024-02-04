@@ -1,4 +1,4 @@
-nav {
+nav > div {
 	background-color: $nav-bg;
 	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
 	padding: $nav-vertical-padding $nav-horizontal-padding;

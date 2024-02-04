@@ -8,11 +8,10 @@ tags: ["personal"]
 ---
 Hi im Alex
 
-- socialist
-- communist
 - amateur photographer (you can see my work [here](https://pixelfed.social/tenebriscaelum))
 - amateur radio operator
 - programmer (mostly c & python)
+- socialist
 - super gay
 
 This site is like a general shitposting, info dump, and interesting things i run into - blog.

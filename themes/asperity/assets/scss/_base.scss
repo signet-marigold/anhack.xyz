@@ -41,14 +41,14 @@ body {
 }
 
 // Content bodies
-header,
-footer,
-nav,
-main {
+header > div,
+footer > div,
+nav    > div,
+main   > div {
 	max-width: $page-max-width;
 	margin: 0 auto;
 }
-nav {
+nav > div {
 	// Remove padding from width
 	max-width: $page-max-width - ($nav-horizontal-padding * 2);
 }
