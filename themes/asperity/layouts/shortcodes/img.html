@@ -17,12 +17,12 @@
 	{{ end -}}
 {{ end -}}
 {{ $link := $.Scratch.Get "link" -}}
-
+{{ $imageLink := (.Get "src") -}}
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end -}}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
 	{{- with $link }}<a href="{{ . }}">{{ end -}}
 	<img {{ if not (.Get "nolazy") }}loading="lazy" {{ end -}}
-		src="{{ .Get "src" }}"
+		src="{{ $imageLink }}"
 		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
 		{{- with .Get "ratio" }} {{ printf "style=%q" (printf "%s:%s" "aspect-ratio" (replace . " " "")) | safeHTMLAttr }}{{ end -}}

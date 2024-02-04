@@ -62,7 +62,9 @@
 				{{ errorf "Unable to get remote resource %q" $imageLink -}}
 			{{ end -}}
 		{{ else -}}
-			{{ $image = .Resources.GetMatch $imageLink -}}
+			{{ with .Resources.GetMatch $imageLink -}}
+				{{ $image = . -}}
+			{{ end -}}
 		{{ end -}}
 
 		<meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
