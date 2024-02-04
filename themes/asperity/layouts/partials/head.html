@@ -49,7 +49,7 @@
 		<!-- OpenGraph tags -->
 		{{- $is_blog := and (eq .Type "posts") (eq .Kind "page") -}}
 		{{ $has_image := isset .Params "image" -}}
-		{{ $imageLink := cond $has_image .Params.image (.Site.Params.default_sharing_image | default "img/sharing-default.png") -}}
+		{{ $imageLink := cond $has_image .Params.image (.Site.Params.default_sharing_image | default ("images/sharing-default.png" | relURL)) -}}
 		{{ $image := "" -}}
 		{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
 			{{ with resources.GetRemote $imageLink -}}
@@ -62,6 +62,11 @@
 				{{ errorf "Unable to get remote resource %q" $imageLink -}}
 			{{ end -}}
 		{{ else -}}
+			<!-- Look for file in global res -->
+			{{ with resources.Get $imageLink -}}
+				{{ $image = . -}}
+			{{ end -}}
+			<!-- Look for file in page res -->
 			{{ with .Resources.GetMatch $imageLink -}}
 				{{ $image = . -}}
 			{{ end -}}
