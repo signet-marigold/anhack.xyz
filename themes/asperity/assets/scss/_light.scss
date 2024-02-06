@@ -64,7 +64,7 @@ body.light-theme {
 	}
 	// White with black outline and drop shadow
 	code,
-	nav {
+	nav > div {
 		background-color: $light-theme-bg;
 		box-shadow: $light-theme-outline-shadow, $light-theme-drop-shadow;
 	}
@@ -75,16 +75,16 @@ body.light-theme {
 	// Disable gradient
 	// Reset link text color
 	// Change to black text variant of logo
-	nav {
+	nav > div {
 		background-image: none;
 		a .menuname {
 			color: $light-theme-text;
 		}
 		#logo-banner #logo-image {
-			content: url("/logo-light.png");
+			content: url("/img/logo-light.png");
 		}
 	}
-	footer {
+	footer > div {
 		color: #444;
 		#website-info .display-ib {
 			background: $cornflower;
