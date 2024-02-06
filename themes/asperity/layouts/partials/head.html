@@ -1,7 +1,7 @@
 		{{- $has_subtitle := isset .Params "subtitle" -}}
 		
 		{{ $subtitle_plain := "" -}}
-		{{ if $has_subtitle }}{{ $subtitle_plain = .Params.subtitle | markdownify | plainify }}{{ end -}}
+		{{ if $has_subtitle }}{{ $subtitle_plain = .Params.subtitle | htmlEscape }}{{ end -}}
 		
 		{{ $title_plain := "" -}}
 		{{ if .IsHome -}}
@@ -18,26 +18,26 @@
 		{{ else -}}
 			{{ $description_plain = .Summary | markdownify | plainify -}}
 		{{ end }}
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="robots" content="index,follow"/>
-		<meta name="googlebot" content="index,follow,snippet,archive"/>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow, snippet, archive" />
 		<title>{{ $title_plain }}</title>
-		<meta name="description" content="{{ $description_plain }}"/>
-		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}"/>{{ end }}
+		<meta name="description" content="{{ $description_plain }}" />
+		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}" />{{ end }}
 {{ partialCached "preload.html" . }}
 		{{ $options := dict "transpiler" "libsass" "targetPath" "css/fonts.css" -}}
 		{{ with resources.Get "scss/fonts.scss" | toCSS $options | minify | fingerprint -}}
-			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"/>
+			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
 		{{ end -}}
 		{{ $options := dict "transpiler" "libsass" "targetPath" "css/style.css" -}}
 		{{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint -}}
-			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"/>
+			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
 		{{ end -}}
-		<link rel="stylesheet" href="/css/print.css" media="print"/>
+		<link rel="stylesheet" href="/css/print.css" media="print" />
 		
-		<link rel="canonical" href="{{ .Permalink }}"/>
-		<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="/index.xml"/>
+		<link rel="canonical" href="{{ .Permalink }}" />
+		<link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
 		
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-touch-icon.png" | relURL }}" />
 		<link rel="icon" type="image/png" sizes="128x128" href="{{ "img/favicon-128x128.png" | relURL }}" />
@@ -47,8 +47,8 @@
 		<link rel="shortcut icon" type="image/x-icon" href="{{ "img/favicon.ico" | relURL }}" />
 
 		<!-- OpenGraph tags -->
-		{{- $is_blog := and (eq .Type "posts") (eq .Kind "page") -}}
-		{{ $has_image := isset .Params "image" -}}
+		{{- $is_blog := and (eq .Kind "page") (or (eq .Type "posts") (eq .Type "project")) -}}
+		{{ $has_image := and (isset .Params "image") (ne .Params.image "") -}}
 		{{ $imageLink := cond $has_image .Params.image (.Site.Params.default_sharing_image | default ("images/sharing-default.png" | relURL)) -}}
 		{{ $image := "" -}}
 		{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
@@ -59,34 +59,105 @@
 					{{ $image = . -}}
 				{{ end -}}
 			{{ else -}}
-				{{ errorf "Unable to get remote resource %q" $imageLink -}}
+				{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
 			{{ end -}}
 		{{ else -}}
 			<!-- Look for file in global res -->
 			{{ with resources.Get $imageLink -}}
-				{{ $image = . -}}
-			{{ end -}}
-			<!-- Look for file in page res -->
-			{{ with .Resources.GetMatch $imageLink -}}
-				{{ $image = . -}}
+				{{ with .Err -}}
+					{{ errorf "%s" . -}}
+				{{ else -}}
+					{{ $image = . -}}
+				{{ end -}}
+			{{ else -}}
+				<!-- Look for file in page res -->
+				{{ with .Resources.GetMatch $imageLink -}}
+					{{ with .Err -}}
+						{{ errorf "%s" . -}}
+					{{ else -}}
+						{{ $image = . -}}
+					{{ end -}}
+				{{ else -}}
+					{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
+				{{ end -}}
 			{{ end -}}
 		{{ end -}}
+		
+		<!-- Process image -->
+		{{ if $has_image }}
+			{{ $image = $image.Process "fill 1200x630 Lanczos q70 png" }}
+			{{ $image = $image | images.Filter (images.GaussianBlur 5) }}
+			
+			<!-- add logo -->
+			{{ $overlay := "" }}
+			{{ $path := "images/sharing-splash.png" | relURL }}
+			{{ with resources.Get $path }}
+				{{ $overlay = . }}
+			{{ else }}
+				{{ errorf "Unable to get resource %q" $path }}
+			{{ end }}
+			
+			{{ $filter := images.Overlay $overlay 18 30 }}
+			{{ $image = $image | images.Filter $filter }}
+			
+			<!-- add text -->
+			{{ $font := "" }}
+			{{ $path := "https://github.com/notofonts/NotoSansMono/raw/main/fonts/ttf/unhinted/instance_ttf/NotoSansMono-Bold.ttf" }}
+			{{ with resources.GetRemote $path }}
+				{{ with .Err }}
+					{{ errorf "%s" . }}
+				{{ else }}
+					{{ $font = . }}
+				{{ end }}
+			{{ else }}
+				{{ errorf "Unable to get resource %q" $path }}
+			{{ end }}
+			
+			{{ $text := .Params.title }}
+			
+			{{ $opts := dict
+				"color" "#333333"
+				"font" $font
+				"linespacing" 8
+				"size" 100
+				"x" 28
+				"y" 228
+			}}
+			{{ $filter = images.Text $text $opts }}
+			{{ $image = $image | images.Filter $filter }}
+			
+			{{ $opts = dict
+				"color" "#fbfaf5"
+				"font" $font
+				"linespacing" 8
+				"size" 100
+				"x" 20
+				"y" 220
+			}}
+			{{ $filter = images.Text $text $opts }}
+			{{ $image = $image | images.Filter $filter }}
+		{{ end }}
+
+
 
 		<meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
+		<meta property="og:site" content="{{ .Site.Title }}">
 		<meta property="og:site_name" content="{{ .Site.Title }}">
 		<meta property="og:title" content="{{ $title_plain }}">
 		<meta property="og:type" content="{{ cond $is_blog "article" "website" }}">
 		<meta property="og:url" content="{{ .Permalink }}" />
 		<meta property="og:description" content="{{ $description_plain }}">
+		
 	{{- with $image }}
 		{{ $image_ext := path.Ext $imageLink -}}
 		<meta property="og:image" content="{{ .RelPermalink }}">
+		<meta name="twitter:image" content="{{ .RelPermalink }}">
 		<meta property="og:image:type" content="image/{{ if eq $image_ext ".svg" }}svg+xml{{ else }}{{ trim $image_ext "." }}{{ end }}">
 		{{- with .Params.imageAlt }}<meta property="og:image:alt" content="{{ . | markdownify | plainify }}">{{ end }}
 		<meta property="og:image:width" content="{{ .Width }}">
 		<meta property="og:image:height" content="{{ .Height }}">
 	{{- end }}
-
+		
 		{{ with .Lastmod }}<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
 	{{ if $is_blog -}}
 		{{ with .Params.categories }}<meta property="article:section" content="{{ index . 0 }}">{{ end }}
@@ -96,5 +167,8 @@
 		{{ with .PublishDate }}<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
 		{{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
 	{{ end -}}
-
+	
+		<meta name="twitter:card" content="summary{{ if and $has_image $is_blog }}_large_image{{ end }}">
+		<meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
+		<meta property="twitter:description" content="{{ $description_plain | truncate 200 }}">
 		{{- partialCached "analytics.html" . -}}

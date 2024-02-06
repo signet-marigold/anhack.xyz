@@ -26,3 +26,9 @@ languageCode = 'en-us'
 	showPreviewImage = false
 	showPreviewVideo = false
 	showPreviewSummary = false
+
+[imaging]
+  [imaging.exif]
+    disableDate = true
+    disableLatLong = true
+

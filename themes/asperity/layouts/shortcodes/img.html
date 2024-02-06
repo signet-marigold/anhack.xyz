@@ -17,22 +17,81 @@
 	{{ end -}}
 {{ end -}}
 {{ $link := $.Scratch.Get "link" -}}
-{{ $imageLink := (.Get "src") -}}
+
+{{ $imageLink := .Get "src" -}}
+
+<!-- Generate image object -->
+{{ $image := "" }}
+{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
+	{{ with resources.GetRemote $imageLink -}}
+		{{ with .Err -}}
+			{{ errorf "%s" . -}}
+		{{ else -}}
+			{{ $image = . -}}
+		{{ end -}}
+	{{ else -}}
+		{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
+	{{ end -}}
+{{ else -}}
+	<!-- Look for file in global res -->
+	{{ with resources.Get $imageLink -}}
+		{{ with .Err -}}
+			{{ errorf "%s" . -}}
+		{{ else -}}
+			{{ $image = . -}}
+		{{ end -}}
+	{{ else -}}
+		<!-- Look for file in page res -->
+		{{ with $.Page.Resources.GetMatch $imageLink -}}
+			{{ with .Err -}}
+				{{ errorf "%s" . -}}
+			{{ else -}}
+				{{ $image = . -}}
+			{{ end -}}
+		{{ else -}}
+			{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
+		{{ end -}}
+	{{ end -}}
+{{ end -}}
+
+<!-- Calculate image ratio -->
+{{ $width := $image.Width }}
+{{ $height := $image.Height }}
+<!-- Calculate greatest common factor -->
+{{ $n1 := $width }}
+{{ $n2 := $height }}
+{{ range seq 1000 }}
+	{{ if eq $n1 $n2 }}
+		{{ break }}
+	{{ end }}
+	{{ if gt $n1 $n2 }}
+		{{ $n1 = sub $n1 $n2 }}
+	{{ else }}
+		{{ $n2 = sub $n2 $n1 }}
+	{{ end }}
+{{ end }}
+<!-- Simplified ratio -->
+{{ $sw := div $width $n1 }}
+{{ $sh := div $height $n1 }}
+
+<!-- Process image -->
+{{ $image := $image.Process "resize 1000x Lanczos q95 webp" }}
+
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end -}}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
 	{{- with $link }}<a href="{{ . }}">{{ end -}}
 	<img {{ if not (.Get "nolazy") }}loading="lazy" {{ end -}}
-		src="{{ $imageLink }}"
+		src="{{ $image.RelPermalink }}"
 		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
-		{{- with .Get "ratio" }} {{ printf "style=%q" (printf "%s:%s" "aspect-ratio" (replace . " " "")) | safeHTMLAttr }}{{ end -}}
-		{{/**/}} width="100%" height="100%"/>
+		{{/**/}} style="aspect-ratio:{{ $sw }}/{{ $sh }};"
+		{{/**/}} width="{{ $width }}px" height="{{ $height }}px"/>
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 
 	{{- with .Get "caption" -}}
-	<figcaption>
-	{{- . -}}
-	</figcaption>
+		<figcaption>
+			{{- . -}}
+		</figcaption>
 	{{- end }}
 </figure>

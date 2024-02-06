@@ -46,7 +46,7 @@
 }
 
 .easyzoom-flyout {
-	border-radius: 0.25rem;
+	/*border-radius: 0.25rem;*/
 	position: absolute;
 	z-index: 100;
 	overflow: hidden;

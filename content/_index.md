@@ -2,9 +2,7 @@
 ---
 # Personal Dev Blog
 
-{{< img src="/singles-resources/index/waves.webp" class="full" nolazy="true" ratio="16 / 9" alt="black and white waves" >}}
-
-{{< img src="/singles-resources/index/dinemd.webp" class="full" nolazy="true" >}}
+{{< img src="/images/singles-resources/index/waves.webp" class="full" nolazy="true" ratio="16 / 9" alt="black and white waves" >}}
 
 Welcome welcome!  
 this is my personal site for mayhem & mischief  
@@ -13,7 +11,7 @@ I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 this website anonymously (without cookies) collects basic analytics on a self hosted instance of [umami](https://umami.is/)  
 for the sake of transparency those analytics are viewable [here](https://data-sb-v-analytics.anhack.com/share/3SKpsTgESfggNkdM/anhack)
 
-{{< img src="/singles-resources/index/stickfight.jpg" class="stretch" caption="sticky bois" ratio="2 / 1" alt="stick figures fighting" >}}
+{{< img src="/images/singles-resources/index/stickfight.jpg" class="stretch" caption="sticky bois" ratio="2 / 1" alt="stick figures fighting" >}}
 
 ## Socials
 {{< grid >}}
