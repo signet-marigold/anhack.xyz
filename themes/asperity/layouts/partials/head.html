@@ -83,24 +83,20 @@
 			{{ end -}}
 		{{ end -}}
 		
-		<!-- Process image -->
 		{{ if $has_image }}
+			<!-- Process image -->
 			{{ $image = $image.Process "fill 1200x630 Lanczos q70 png" }}
-			{{ $image = $image | images.Filter (images.GaussianBlur 5) }}
 			
-			<!-- add logo -->
-			{{ $overlay := "" }}
-			{{ $path := "images/sharing-splash.png" | relURL }}
-			{{ with resources.Get $path }}
-				{{ $overlay = . }}
-			{{ else }}
-				{{ errorf "Unable to get resource %q" $path }}
-			{{ end }}
+			{{ $text := .Params.title }}
 			
-			{{ $filter := images.Overlay $overlay 18 30 }}
-			{{ $image = $image | images.Filter $filter }}
+			<!-- add text vars -->
+			{{ $text_size := 80 }}
+			{{ $text_linespacing := 24 }}
+			{{ $text_pos_x := 20 }}
+			{{ $text_pos_y := 200 }}
 			
 			<!-- add text -->
+			<!-- get font object -->
 			{{ $font := "" }}
 			{{ $path := "https://github.com/notofonts/NotoSansMono/raw/main/fonts/ttf/unhinted/instance_ttf/NotoSansMono-Bold.ttf" }}
 			{{ with resources.GetRemote $path }}
@@ -113,28 +109,42 @@
 				{{ errorf "Unable to get resource %q" $path }}
 			{{ end }}
 			
-			{{ $text := .Params.title }}
-			
+			<!-- add black text -->
 			{{ $opts := dict
-				"color" "#333333"
+				"color" "#000000"
 				"font" $font
-				"linespacing" 8
-				"size" 100
-				"x" 28
-				"y" 228
+				"linespacing" $text_linespacing
+				"size" $text_size
+				"x" $text_pos_x
+				"y" $text_pos_y
 			}}
-			{{ $filter = images.Text $text $opts }}
+			{{ $filter := images.Text $text $opts }}
 			{{ $image = $image | images.Filter $filter }}
 			
-			{{ $opts = dict
+			<!-- blur background -->
+			{{ $image = $image | images.Filter (images.GaussianBlur 5) }}
+			
+			<!-- add logo image -->
+			{{ $overlay := "" }}
+			{{ $path := "images/sharing-splash.png" | relURL }}
+			{{ with resources.Get $path }}
+				{{ $overlay = . }}
+			{{ else }}
+				{{ errorf "Unable to get resource %q" $path }}
+			{{ end }}
+			{{ $filter := images.Overlay $overlay 18 30 }}
+			{{ $image = $image | images.Filter $filter }}
+			
+			<!-- add white text -->
+			{{ $opts := dict
 				"color" "#fbfaf5"
 				"font" $font
-				"linespacing" 8
-				"size" 100
-				"x" 20
-				"y" 220
+				"linespacing" $text_linespacing
+				"size" $text_size
+				"x" $text_pos_x
+				"y" $text_pos_y
 			}}
-			{{ $filter = images.Text $text $opts }}
+			{{ $filter := images.Text $text $opts }}
 			{{ $image = $image | images.Filter $filter }}
 		{{ end }}
 
