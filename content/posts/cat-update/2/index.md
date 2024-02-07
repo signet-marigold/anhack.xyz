@@ -17,13 +17,13 @@ It's been a crazy month. almost missed this one...
 
 The cats have definitely been in a better mood as of late.
 
-{{< img src="gato-9207259927577.jpeg" class="half" ratio="3/4" caption="he's right behind me isn't he" >}}
+{{< img src="gato-9207259927577.jpeg" class="half" ratio="3/4" caption="he's right behind me isn't he" row="begin" >}}
 
-{{< img src="gato-923591134619.jpeg" class="half" ratio="3/4" caption="sploingus" >}}
+{{< img src="gato-923591134619.jpeg" class="half" ratio="3/4" caption="sploingus" row="end" >}}
 
-{{< img src="gato-342960293406.jpeg" class="half" ratio="3/4" caption="*grap*" >}}
+{{< img src="gato-342960293406.jpeg" class="half" ratio="3/4" caption="*grap*" row="begin" >}}
 
-{{< img src="gato-243069432006.jpeg" class="half" ratio="3/4" caption="he scream" >}}
+{{< img src="gato-243069432006.jpeg" class="half" ratio="3/4" caption="he scream" row="end" >}}
 
 This has been cat update  
 

@@ -77,6 +77,18 @@
 <!-- Process image -->
 {{ $image := $image.Process "resize 1000x Lanczos q95 webp" }}
 
+{{ $nf_begin := 0 }}
+{{ $nf_end := 0 }}
+{{ with .Get "row" }}
+	{{ if findRE `^begin$` . }}
+		{{ $nf_begin = 1 }}
+	{{ else if findRE `^end$` . }}
+		{{ $nf_end = 1 }}
+	{{ end }}
+{{ end }}
+
+{{ if eq $nf_begin 1 }}<div class="nf-image-row">{{ end }}
+
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end -}}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
 	{{- with $link }}<a href="{{ . }}">{{ end -}}
@@ -95,3 +107,5 @@
 		</figcaption>
 	{{- end }}
 </figure>
+
+{{ if eq $nf_end 1 }}</div>{{ end }}

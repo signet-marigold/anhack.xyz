@@ -14,9 +14,9 @@ draft: false
 
 im going to try to have a monthy update here. really just free pictures of cats.
 
-{{< img src="gato_239213868.jpeg" class="half" ratio="3/4" caption="gumbo shlep" >}}
+{{< img src="gato_239213868.jpeg" class="half" ratio="3/4" caption="gumbo shlep" row="begin" >}}
 
-{{< img src="gato_630172953.jpeg" class="half" ratio="3/4" caption="pembo" >}}
+{{< img src="gato_630172953.jpeg" class="half" ratio="3/4" caption="pembo" row="end" >}}
 
 i can never really get a still photo of peeve. he just moves to quick
 

@@ -59,11 +59,10 @@ figure {
 		margin-right: 0;
 	}
 	&.half {
-		float: left;
-		width: 48%;
-		margin: 1rem 2%;
-		width: calc(50% - 1rem);
-		margin: 1rem 0.5rem;
+		width: 49%;
+		width: calc(50% - 0.5rem);
+		margin-left: 0;
+		margin-right: 0;
 		img {
 			display: block;
 		}
@@ -75,9 +74,13 @@ figure {
 				font-size: $base-font-size;
 			}
 		}
-		// Next element in dom list that is not class='half'
-		& + *:not(.half) {
-			clear: both;
-		}
 	}
+}
+
+.nf-image-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+	align-content: center;
+	justify-content: space-between;
 }
