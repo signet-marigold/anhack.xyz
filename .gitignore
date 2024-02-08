@@ -1,3 +1,6 @@
+# Enviroment variables
+.env
+
 ### Hugo ###
 # Generated files by hugo
 /public/

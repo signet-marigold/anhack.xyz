@@ -1,12 +1,11 @@
 #!/bin/sh
-USER=dh_eppcxj
-HOST=haines.dreamhost.com
-DIR=anhack.xyz/
+
+[ ! -f .env ] || export $(grep -v '^#' .env | xargs)
 
 BUILD_FLAGS=--minify
 
 # clean build
 rm -rf public/*
-hugo ${BUILD_FLAGS} && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+hugo ${BUILD_FLAGS} && sshpass -p ${DHOUS_PASS} rsync -avz --delete public/ ${DHOUS_USER}@${DHOUS_HOST}:~/${DHOUS_DIR}
 
 exit 0
