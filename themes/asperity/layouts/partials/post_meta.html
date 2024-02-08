@@ -1,9 +1,13 @@
+{{- $dateTime    := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format    -}}
+{{- $lastmodTime := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
+<!-- Match non number characters and add separator class -->
+{{- $dateTimeFormatted    := (replaceRE `[^0-9]+` "<span class='ds'>$0</span>"  $dateTime)    -}}
+{{- $lastmodTimeFormatted := (replaceRE `[^0-9]+` "<span class='dsm'>$0</span>" $lastmodTime) -}}
+
 <div class="post-meta">
-	{{- $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
-	{{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
-	<span class="post-date">{{ replace ($datestr | i18n "postedOnDate") ":" "<span class='ds'>:</span>" | safeHTML -}}</span>
-	{{- if ne $datestr $lastmodstr -}}
-		&nbsp;<span class="post-last-modified">{{ replace ($lastmodstr | i18n "lastModified") ":" "<span class='dsm'>:</span>" | safeHTML -}}</span>
+	<span class="post-date">{{ $dateTimeFormatted | i18n "postedOnDate" | safeHTML -}}</span>
+	{{- if ne $dateTime $lastmodTime -}}
+		&nbsp;<span class="post-last-modified">{{ $lastmodTimeFormatted | i18n "lastModified" | safeHTML -}}</span>
 	{{- end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}

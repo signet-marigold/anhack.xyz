@@ -8,11 +8,13 @@ other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
 
 # Content
 [dateFormat]
-other = "2006:01:02"
+other = "2006-01-02"
 #other = "Jan 2, 2006"
-[timedateFormat]
-other = "2006:01:02:15:04:05 Z07:00"
+[timeDateFormat]
+other = "2006-01-02T15:04:05 Z07:00"
 #other = "Jan 2, 2006 15:04:05 Z07:00"
+[buildTimeDateFormat]
+other = "2006-01-02T15:04:05 Z07:00"
 [postedOnDate]
 other = "{{ . }}"
 [lastModified]

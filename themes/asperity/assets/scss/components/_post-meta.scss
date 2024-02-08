@@ -1,3 +1,23 @@
 .post-meta {
-	color: $gray-100;
+	line-height: 1.1;
+	font-size: $font-size-sm;
+	color: $white;
+	.post-date,
+	.author-name {
+		font-weight: 700;
+		color: $gray-100;
+	}
+	.post-date {
+	}
+	.post-last-modified {
+	}
+	.post-reading-time {
+	}
+	.post-word-count {
+	}
+	.author-name {
+	}
+	.post-tags {
+
+	}
 }

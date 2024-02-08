@@ -77,8 +77,11 @@ body.light-theme {
 	// Change to black text variant of logo
 	nav > div {
 		background-image: none;
-		a .menuname {
+		.menuname {
 			color: $light-theme-text;
+		}
+		a.menuactive .menuname {
+			color: #444;
 		}
 		#logo-banner #logo-image {
 			content: url("/img/logo-light.png");
@@ -116,7 +119,11 @@ body.light-theme {
 		}
 	}
 	.post-meta {
-		color: #444;
+		color: #000;
+		.post-date,
+		.author-name {
+			color: #444;
+		}
 	}
 	// Expand element
 	details {
@@ -146,7 +153,7 @@ body.light-theme {
 	// Headings are big and bold, best to keep them lighter then the rest of the text
 	h1,
 	h2 {
-		color: #777;
+		color: #666;
 	}
 	h3,
 	h4,
