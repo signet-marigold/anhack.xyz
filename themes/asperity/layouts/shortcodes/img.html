@@ -20,6 +20,7 @@
 
 {{ $imageLink := .Get "src" -}}
 
+
 <!-- Generate image object -->
 {{ $image := "" }}
 {{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
@@ -54,6 +55,22 @@
 	{{ end -}}
 {{ end -}}
 
+
+<!-- Process image -->
+{{ with .Get "noprocess" }}
+{{ else }}
+	{{ with .Get "scalewidth" }}
+		{{ if gt $image.Width . }}
+			{{ $image = $image.Process (printf "resize %sx Lanczos q95 webp" .) }}
+		{{ else }}
+			{{ errorf "The \"img\" shortcode scalewidth: %s larger than original width: %d" . $image.Width }}
+		{{ end }}
+	{{ end }}
+
+	{{ $image = $image.Process "Lanczos q95 webp" }}
+{{ end }}
+
+
 <!-- Calculate image ratio -->
 {{ $width := $image.Width }}
 {{ $height := $image.Height }}
@@ -74,9 +91,8 @@
 {{ $sw := div $width $n1 }}
 {{ $sh := div $height $n1 }}
 
-<!-- Process image -->
-{{ $image := $image.Process "resize 1000x Lanczos q95 webp" }}
 
+<!-- Add row container when specified -->
 {{ $nf_begin := 0 }}
 {{ $nf_end := 0 }}
 {{ with .Get "row" }}
@@ -87,6 +103,7 @@
 	{{ end }}
 {{ end }}
 
+
 {{ if eq $nf_begin 1 }}<div class="nf-image-row">{{ end }}
 
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end -}}>
@@ -96,7 +113,7 @@
 		src="{{ $image.RelPermalink }}"
 		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
-		{{/**/}} style="aspect-ratio:{{ $sw }}/{{ $sh }};"
+		{{/**/}} style="aspect-ratio:{{ $sw }}/{{ $sh }}"
 		{{/**/}} width="{{ $width }}px" height="{{ $height }}px"/>
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
