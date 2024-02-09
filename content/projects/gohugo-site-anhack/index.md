@@ -12,45 +12,62 @@ toc: true
 draft: false
 ---
 
+## hugo structure
 
-Ut velit et molestiae tempora numquam temporibus voluptates. Numquam nesciunt quod libero dolores nobis. Ad eaque est tenetur fuga provident et et autem. Expedita expedita maxime pariatur.
+### pagination
 
-# Here
+### posts & projects
 
-Assumenda sunt quidem quisquam expedita dolore. Quam consequatur et eos. Ea veritatis totam aut error sit ea magnam. A ex tempore in velit. Nobis dolores eius perferendis qui quis temporibus. Iusto consequatur non veritatis quod.
+### shortcodes
 
-# and there
+### all the hacky shit
 
-Aut fugit velit quia reiciendis aperiam. Aut ad dolor voluptatum tenetur quam sit ullam recusandae. Quo vel sequi soluta aut.
+## scss
 
-Optio aliquid voluptatibus consequuntur et minus voluptatem tempore reprehenderit. Totam temporibus rerum dolorem iusto explicabo. Magni eos facilis deserunt architecto exercitationem sint. Aut quo corrupti labore ea. Itaque ducimus veniam modi. Dignissimos et beatae et blanditiis.
+### visual style
 
-In eligendi nam commodi est modi minima. Aspernatur est nesciunt qui id iste aut exercitationem. Quam labore consectetur ut. Modi quos ad qui et perspiciatis eveniet voluptas beatae. Nihil doloremque tempore non illo assumenda.
+### highlights and hacks
 
-Aut fugit velit quia reiciendis aperiam. Aut ad dolor voluptatum tenetur quam sit ullam recusandae. Quo vel sequi soluta aut.
+## a call to the old ways
 
-Optio aliquid voluptatibus consequuntur et minus voluptatem tempore reprehenderit. Totam temporibus rerum dolorem iusto explicabo. Magni eos facilis deserunt architecto exercitationem sint. Aut quo corrupti labore ea. Itaque ducimus veniam modi. Dignissimos et beatae et blanditiis.
+### personality
 
-In eligendi nam commodi est modi minima. Aspernatur est nesciunt qui id iste aut exercitationem. Quam labore consectetur ut. Modi quos ad qui et perspiciatis eveniet voluptas beatae. Nihil doloremque tempore non illo assumenda.
+#### badges
 
-## and here
+### personal blogs in general
 
-Aut fugit velit quia reiciendis aperiam. Aut ad dolor voluptatum tenetur quam sit ullam recusandae. Quo vel sequi soluta aut.
+#### examples
 
-Optio aliquid voluptatibus consequuntur et minus voluptatem tempore reprehenderit. Totam temporibus rerum dolorem iusto explicabo. Magni eos facilis deserunt architecto exercitationem sint. Aut quo corrupti labore ea. Itaque ducimus veniam modi. Dignissimos et beatae et blanditiis.
+##### neocities
 
-### and where
+##### underground webrings, i see u
 
-In eligendi nam commodi est modi minima. Aspernatur est nesciunt qui id iste aut exercitationem. Quam labore consectetur ut. Modi quos ad qui et perspiciatis eveniet voluptas beatae. Nihil doloremque tempore non illo assumenda.
+## whats the point of it all
 
-Aut fugit velit quia reiciendis aperiam. Aut ad dolor voluptatum tenetur quam sit ullam recusandae. Quo vel sequi soluta aut.
 
-Optio aliquid voluptatibus consequuntur et minus voluptatem tempore reprehenderit. Totam temporibus rerum dolorem iusto explicabo. Magni eos facilis deserunt architecto exercitationem sint. Aut quo corrupti labore ea. Itaque ducimus veniam modi. Dignissimos et beatae et blanditiis.
 
-In eligendi nam commodi est modi minima. Aspernatur est nesciunt qui id iste aut exercitationem. Quam labore consectetur ut. Modi quos ad qui et perspiciatis eveniet voluptas beatae. Nihil doloremque tempore non illo assumenda.
 
-Aut fugit velit quia reiciendis aperiam. Aut ad dolor voluptatum tenetur quam sit ullam recusandae. Quo vel sequi soluta aut.
 
-Optio aliquid voluptatibus consequuntur et minus voluptatem tempore reprehenderit. Totam temporibus rerum dolorem iusto explicabo. Magni eos facilis deserunt architecto exercitationem sint. Aut quo corrupti labore ea. Itaque ducimus veniam modi. Dignissimos et beatae et blanditiis.
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
+aia dos ng ois dn gi na ig n ao i g nis og nai sno igd oan sdgiona sdongio ndasoigansogn ioang oiang oino gings
 
-In eligendi nam commodi est modi minima. Aspernatur est nesciunt qui id iste aut exercitationem. Quam labore consectetur ut. Modi quos ad qui et perspiciatis eveniet voluptas beatae. Nihil doloremque tempore non illo assumenda.

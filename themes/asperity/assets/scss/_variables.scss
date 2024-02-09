@@ -333,6 +333,10 @@ $sample: (
 // Sizes
 $page-max-width: 60rem;
 
+$toc-loose-margin: 1rem;
+$toc-loose-min-width: 30rem;
+$toc-loose-bp-min-width: $page-max-width + $toc-loose-min-width * 2;
+
 
 // Font sizes
 // ** Design made using 1rem = 16px

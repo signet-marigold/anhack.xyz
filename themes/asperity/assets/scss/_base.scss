@@ -54,6 +54,7 @@ nav > div {
 }
 
 main {
+
 	#toc-container {
 		border-radius: if($rounded-corners, $base-border-radius, null);
 		margin: 0 0 2rem;
@@ -78,6 +79,19 @@ main {
 		nav > ol,
 		nav > ul {
 			margin: 1rem 0 0;
+		}
+		@include breakpoint($toc-loose-bp-min-width) {
+			$horizontal-padding: 2.5rem;
+			padding-left:  $horizontal-padding;
+			padding-right: $horizontal-padding;
+			padding-top: 1.75rem;
+			padding-bottom: 1.5rem;
+
+			position: absolute;
+			top: $body-margin + 12rem;
+			left: calc(50% + #{$page-max-width * 0.5 + $toc-loose-margin});
+			//min-width: #{$toc-loose-min-width - $toc-loose-margin * 2 - $horizontal-padding * 2};
+			max-width: calc((100% - #{$page-max-width}) * 0.5 - #{$toc-loose-margin * 2 + $horizontal-padding * 2})
 		}
 		
 	}
