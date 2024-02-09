@@ -53,7 +53,35 @@ nav > div {
 	max-width: $page-max-width - ($nav-horizontal-padding * 2);
 }
 
-main {}
+main {
+	#toc-container {
+		border-radius: if($rounded-corners, $base-border-radius, null);
+		margin: 0 0 2rem;
+		background-color: $black;
+		@include xs {
+			padding-left:  1rem;
+			padding-right: 1rem;
+		}
+		@include sm {
+			padding-left:  2rem;
+			padding-right: 2rem;
+		}
+		@include md {
+			padding-left:  3rem;
+			padding-right: 3rem;
+		}
+		padding-top: 1rem;
+		padding-bottom: 0.5rem;
+		h2 {
+			margin: 0;
+		}
+		nav > ol,
+		nav > ul {
+			margin: 1rem 0 0;
+		}
+		
+	}
+}
 
 // Page content body margins
 .header-text,

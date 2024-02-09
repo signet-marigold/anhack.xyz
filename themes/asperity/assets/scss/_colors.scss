@@ -33,8 +33,8 @@
 @keyframes rainbow-bg {
 	@include rainbow-keyframes(background);
 }
-@mixin rainbow-animation {
-	animation-duration: 5s;
+@mixin rainbow-animation($duration: 5) {
+	animation-duration: #{$duration}s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
@@ -45,6 +45,31 @@
 .bg-rainbow {
 	animation-name: rainbow-bg;
 	@include rainbow-animation;
+}
+
+@keyframes rainbow-bc {
+	0%    { border-image: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) 1 }
+	7.7%  { border-image: conic-gradient($amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst)   1 }
+	15.4% { border-image: conic-gradient($fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia)    1 }
+	23.0% { border-image: conic-gradient($violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet)     1 }
+	30.8% { border-image: conic-gradient($vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion)  1 }
+	38.5% { border-image: conic-gradient($ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher)      1 }
+	46.2% { border-image: conic-gradient($amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber)      1 }
+	53.8% { border-image: conic-gradient($dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion)  1 }
+	61.5% { border-image: conic-gradient($chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse) 1 }
+	69.2% { border-image: conic-gradient($emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald)    1 }
+	76.9% { border-image: conic-gradient($caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean)  1 }
+	84.6% { border-image: conic-gradient($turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise)  1 }
+	92.3% { border-image: conic-gradient($cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean)   1 }
+	100%  { border-image: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) 1 }
+}
+
+.border-rainbow {
+	border-width: $base-border-thickness;
+	border-style: solid;
+	border-image: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) 1;
+	animation-name: rainbow-bc;
+	@include rainbow-animation(20);
 }
 
 // Gradient backgrounds

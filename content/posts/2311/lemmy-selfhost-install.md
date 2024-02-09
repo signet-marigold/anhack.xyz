@@ -7,6 +7,7 @@ author: ""
 image: ""
 category: "dev"
 tags: ["how-to","tutorial","lemmy","docker","web"]
+toc: true
 draft: false
 ---
 ## Notice ~~!

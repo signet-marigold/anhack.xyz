@@ -1,0 +1,8 @@
+{{ if and (gt .WordCount (.Param "tocMinWordCount")) (.Params.toc) }}
+<aside id="toc-container" class="border-rainbow">
+	<header>
+		<h2>{{ i18n "tableOfContents" }}</h2>
+	</header>
+	{{ .TableOfContents }}
+</aside>
+{{ end }}

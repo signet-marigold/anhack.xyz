@@ -27,6 +27,8 @@ other = "(Last modified {{ . }})"
 other = "[image missing]"
 [draft]
 other = "[DRAFT]"
+[tableOfContents]
+other = "Table of Contents"
 
 # Post navigation
 [readMore]

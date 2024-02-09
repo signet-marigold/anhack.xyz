@@ -87,6 +87,11 @@ body.light-theme {
 			content: url("/img/logo-light.png");
 		}
 	}
+	main {
+		#toc-container {
+			background-color: $light-theme-bg;
+		}
+	}
 	footer > div {
 		color: #444;
 		#website-info .display-ib {

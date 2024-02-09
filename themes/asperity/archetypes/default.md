@@ -1,11 +1,13 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 subtitle: ""
-author: ""
 date: {{ .Date }}
 lastMod: {{ .Date }}
+author: ""
 image: ""
+imageAlt: ""
 category: ""
-tags: [""]
+tags: []
+toc: false
 draft: true
 ---

@@ -15,6 +15,7 @@
 		</div></header>
 		
 		<main><div>
+			{{ partial "toc.html" . }}
 			<article class="main-article {{ if eq .Kind "home" "page" }} page{{ end }}">
 				{{ block "main" . }}{{ .Content | emojify }}{{ end }}
 			</article>
