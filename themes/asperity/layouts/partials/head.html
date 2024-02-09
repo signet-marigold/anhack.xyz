@@ -1,4 +1,4 @@
-		{{- $has_subtitle := isset .Params "subtitle" -}}
+		{{- $has_subtitle := and (isset .Params "subtitle") (ne .Params.subtitle "") -}}
 		
 		{{ $subtitle_plain := "" -}}
 		{{ if $has_subtitle }}{{ $subtitle_plain = .Params.subtitle | htmlEscape }}{{ end -}}
