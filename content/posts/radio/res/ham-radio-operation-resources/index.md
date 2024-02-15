@@ -7,6 +7,7 @@ image: "image.jpg"
 imageAlt: "ham and radio"
 category: "resource"
 tags: ["radio"]
+toc: false
 draft: false
 ---
 ### Page a work in progress. Bear with me here
@@ -23,7 +24,7 @@ Structure
 1. [Radio clubs](#radio-clubs)
 
 {{< expand "Morse Code Chart" >}}
-{{< img src="morse-code-chart-gray-ef-min.png" nolazy="true" ratio="16 / 21" >}}
+{{< img src="morse-code-chart-gray-ef-min.png" nolazy="true" >}}
 {{< /expand >}}
 
 #### Resources

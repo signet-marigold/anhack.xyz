@@ -12,9 +12,6 @@ figure {
 		margin: 1rem 3rem;
 	}
 	display: inline-block;
-	// overflow:hidden pushes content from the bottom
-	// correctly after figcaption's negative margin
-	overflow: hidden;
 	img {
 		margin: 0 auto;
 		min-width: 7.5rem;

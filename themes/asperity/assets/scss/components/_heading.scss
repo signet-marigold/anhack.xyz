@@ -6,8 +6,19 @@ main {
 	article.page {
 		h1:not(:target),
 		h2:not(:target) {
-			border-bottom: $base-border-thickness solid $gray-900;
-			padding-bottom: $base-padding;
+			.text {
+				display: inline;
+				&::after {
+					content: "";
+					display: block;
+					width: 100%;
+					border-bottom: $base-border-thickness solid $gray-800;
+					padding-bottom: $base-padding;
+				}
+			}
+			&::after {
+				display: none;
+			}
 		}
 		h1:not(:target) {
 			margin-bottom: $h1-margin - $base-padding;
@@ -44,11 +55,21 @@ h6 {
 			}
 		}
 	}
+	.heading-link {
+		position: relative;
+	}
 	// When heading is selected with uri
 	&:target {
 		padding: $base-padding 0 $base-padding 1rem;
 		border-radius: if($rounded-corners, $base-border-radius, null);
 		border-left: $base-border-thickness * 3 solid $dandelion;
+		
+		a:where(.heading-link) {
+			i.link::after {
+				// Don't render link to when already selected
+				display: none;
+			}
+		}
 	}
 	&.leaf {
 		display: flex;

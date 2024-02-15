@@ -8,6 +8,7 @@ image: "image.jpg"
 imageAlt: "chad the bird in front of the sphere"
 category: "text"
 tags: ["shitpost","quote"]
+toc: false
 draft: false
 ---
 >By October of 2019  

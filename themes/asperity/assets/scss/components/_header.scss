@@ -4,7 +4,8 @@ header > div {
 		margin: 1.15rem 0 1rem;
 		.header-text {
 			.heading {
-				margin: $h1-margin - 1rem 0;
+				//margin: $h1-margin - 1rem 0; // I think maybe this remove "1rem" was for a margin on the image that doesn't exist anymore
+				margin: 0.5rem 0;
 				line-height: 1.05;
 			}
 			.subheading {

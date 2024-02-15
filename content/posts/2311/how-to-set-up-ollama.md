@@ -7,6 +7,7 @@ author: ""
 image: ""
 category: "dev"
 tags: ["how-to","tutorial","llm"]
+toc: false
 draft: true
 ---
 <https://ollama.ai/>

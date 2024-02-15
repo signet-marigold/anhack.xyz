@@ -24,8 +24,17 @@ code {
 
 		// Fixes right side padding on scrollable content
 		& > span > span {
-			padding-right: $base-padding * 2;
+			@include xs {
+				padding-right: $base-padding;
+			}
+			@include sm {
+				padding-right: $base-padding * 2;
+			}
 		}
+	}
+	
+	&.language-render {
+		line-height: 1.15;
 	}
 }
 

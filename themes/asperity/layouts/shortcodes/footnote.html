@@ -1,0 +1,17 @@
+{{- $title := "" }}
+{{- $target := "" -}}
+
+{{- if .IsNamedParams }}
+	{{- $title = .Get "title" }}
+	{{- $target = .Get "target" }}
+{{- else }}
+	{{- with .Get 1 }}
+		{{- $title = .Get 0 }}
+		{{- $target = . }}
+	{{- else }}
+		{{- $title = .Get 0 }}
+		{{- $target = .Get 0 }}
+	{{- end }}
+{{- end -}}
+
+<sup class="footnote-tag"><a href="#{{ replaceRE `[^a-zA-Z0-9_-]+` "" (replace ($target | lower | urlize) " " "-") }}">[{{ $title }}]</a></sup>

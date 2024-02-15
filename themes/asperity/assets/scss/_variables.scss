@@ -332,9 +332,12 @@ $sample: (
 
 // Sizes
 $page-max-width: 60rem;
-
+// Table of Contents
+// Margin around container
 $toc-loose-margin: 1rem;
-$toc-loose-min-width: 30rem;
+// Min width of container
+// Space required to start placing the table on the side
+$toc-loose-min-width: 24rem;
 $toc-loose-bp-min-width: $page-max-width + $toc-loose-min-width * 2;
 
 

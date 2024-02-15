@@ -12,20 +12,20 @@
 
 // Rainbow animation text & background classes
 @mixin rainbow-keyframes($property) {
-	0%    { #{$property}: $cornflower; }
-	7.7%  { #{$property}: $amethyst; }
-	15.4% { #{$property}: $fuchsia; }
-	23.0% { #{$property}: $violet; }
-	30.8% { #{$property}: $vermilion; }
-	38.5% { #{$property}: $ocher; }
-	46.2% { #{$property}: $amber; }
-	53.8% { #{$property}: $dandelion; }
-	61.5% { #{$property}: $chartreuse; }
-	69.2% { #{$property}: $emerald; }
-	76.9% { #{$property}: $caribbean; }
-	84.6% { #{$property}: $turquoise; }
-	92.3% { #{$property}: $cerulean; }
-	100%  { #{$property}: $cornflower; }
+	0%    { #{$property}: $cornflower }
+	7.7%  { #{$property}: $amethyst }
+	15.4% { #{$property}: $fuchsia }
+	23.0% { #{$property}: $violet }
+	30.8% { #{$property}: $vermilion }
+	38.5% { #{$property}: $ocher }
+	46.2% { #{$property}: $amber }
+	53.8% { #{$property}: $dandelion }
+	61.5% { #{$property}: $chartreuse }
+	69.2% { #{$property}: $emerald }
+	76.9% { #{$property}: $caribbean }
+	84.6% { #{$property}: $turquoise }
+	92.3% { #{$property}: $cerulean }
+	100%  { #{$property}: $cornflower }
 }
 @keyframes rainbow-tc {
 	@include rainbow-keyframes(color);
@@ -47,23 +47,25 @@
 	@include rainbow-animation;
 }
 
-@keyframes rainbow-bc {
-	0%    { border-image: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) 1 }
-	7.7%  { border-image: conic-gradient($amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst)   1 }
-	15.4% { border-image: conic-gradient($fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia)    1 }
-	23.0% { border-image: conic-gradient($violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet)     1 }
-	30.8% { border-image: conic-gradient($vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion)  1 }
-	38.5% { border-image: conic-gradient($ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher)      1 }
-	46.2% { border-image: conic-gradient($amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber)      1 }
-	53.8% { border-image: conic-gradient($dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion)  1 }
-	61.5% { border-image: conic-gradient($chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse) 1 }
-	69.2% { border-image: conic-gradient($emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald)    1 }
-	76.9% { border-image: conic-gradient($caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean)  1 }
-	84.6% { border-image: conic-gradient($turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise)  1 }
-	92.3% { border-image: conic-gradient($cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean)   1 }
-	100%  { border-image: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) 1 }
+@mixin rainbow-conical($property, $extra: null) {
+	0%    { #{$property}: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) #{$extra} }
+	7.7%  { #{$property}: conic-gradient($amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst)   #{$extra} }
+	15.4% { #{$property}: conic-gradient($fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia)    #{$extra} }
+	23.0% { #{$property}: conic-gradient($violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet)     #{$extra} }
+	30.8% { #{$property}: conic-gradient($vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion)  #{$extra} }
+	38.5% { #{$property}: conic-gradient($ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher)      #{$extra} }
+	46.2% { #{$property}: conic-gradient($amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber)      #{$extra} }
+	53.8% { #{$property}: conic-gradient($dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion)  #{$extra} }
+	61.5% { #{$property}: conic-gradient($chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse) #{$extra} }
+	69.2% { #{$property}: conic-gradient($emerald, $caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald)    #{$extra} }
+	76.9% { #{$property}: conic-gradient($caribbean, $turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean)  #{$extra} }
+	84.6% { #{$property}: conic-gradient($turquoise, $cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise)  #{$extra} }
+	92.3% { #{$property}: conic-gradient($cerulean, $cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean)   #{$extra} }
+	100%  { #{$property}: conic-gradient($cornflower, $amethyst, $fuchsia, $violet, $vermilion, $ocher, $amber, $dandelion, $chartreuse, $emerald, $caribbean, $turquoise, $cerulean, $cornflower) #{$extra} }
 }
-
+@keyframes rainbow-bc {
+	@include rainbow-conical(border-image, 1);
+}
 .border-rainbow {
 	border-width: $base-border-thickness;
 	border-style: solid;
