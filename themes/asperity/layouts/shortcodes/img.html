@@ -66,8 +66,6 @@
 			{{ errorf "The \"img\" shortcode scalewidth: %s larger than original width: %d" . $image.Width }}
 		{{ end }}
 	{{ end }}
-
-	{{ $image = $image.Process "Lanczos q95 webp" }}
 {{ end }}
 
 

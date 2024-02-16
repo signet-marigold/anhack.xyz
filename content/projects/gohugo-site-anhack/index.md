@@ -131,6 +131,8 @@ tags: []
 
 ### visual style
 
+{{< vid src="halftone-showcase.webm" loop="true" >}}
+
 ### highlights and hacks
 
 ## a call to the old ways
