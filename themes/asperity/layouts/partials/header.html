@@ -50,7 +50,7 @@
 					
 					{{ $image := $image.Process "resize 670x Lanczos q85 webp" }}
 
-					<img src="{{ $image.RelPermalink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} class="img-header" width="100%" height="100%"/>
+					<img src="{{ $image.RelPermalink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} class="img-header" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
 				{{ end -}}
 				<div class="header-text {{ .Type }}-header-text">
 					{{ if and (eq .Type "posts") .IsPage -}}
