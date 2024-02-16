@@ -131,9 +131,38 @@ tags: []
 
 ### visual style
 
-{{< vid src="halftone-showcase.webm" loop="true" >}}
 
 ### highlights and hacks
+
+#### the halftone plate
+
+The 'halftone' dot pattern used in the background is actually a tiled vector drawing on top of the background-image.
+
+```xml
+<svg id="halftone-plate" width="0" height="0">
+	<defs>
+		<pattern id="halftone" patternUnits="userSpaceOnUse" x="0" y="0" width="4" height="4" viewBox="0 0 4 4">
+			<rect width="1" height="3" x="1" y="0" fill="rgba(0,0,0,0.15)"></rect>
+			<rect width="3" height="1" x="0" y="1" fill="rgba(0,0,0,0.15)"></rect>
+			<rect width="1" height="1" x="1" y="1" fill="rgba(0,0,0,0.4)" stroke="rgba(0,0,0,0.05)" stroke-width="2"></rect>
+		</pattern>
+	</defs>
+	<g>
+		<rect x="0" y="0" width="100%" height="100%" fill="url(#halftone)"></rect>
+	</g>
+</svg>
+```
+
+{{< img src="halftone-plate-sample-532.png" class="full" >}}
+
+This looks pretty good! *however*, there's *one* trade off to this method.
+And it's also the reason it works so well. `<rect x="0" y="0" width="100%" height="100%" ...`
+will render a plate the size of the viewport. so while theres no overdraw, the plate also *does not move*
+
+{{< vid src="halftone-showcase.webm" loop="true" >}}
+
+SEE ^^^ NOT MOVING!  
+Pretty yucky if you can notice it. Fortunately, youd only see the problem if you have a highdpi display ***and*** are looking for it
 
 ## a call to the old ways
 

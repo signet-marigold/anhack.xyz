@@ -8,6 +8,6 @@
 {{- $ext := path.Ext $src -}}
 
 <video {{ if ne $loop true }}controls{{ else }}autoplay muted loop{{ end }}>
-	<source src="{{ $src }}" type="video/{{ trim $ext "." }}">
+	<source src="{{ .Page.RelPermalink }}{{ $src }}" type="video/{{ trim $ext "." }}">
 	Video could not be loaded
 </video>
