@@ -127,6 +127,67 @@ tags: []
 
 ### all the hacky shit
 
+#### image processing and DOM manipulation
+
+This piece of shite gets me an image object from a link. Whether it's a external url, global resource or just local to the post dir; this really shouldn't break
+```go
+{{ $image := "" }}
+// If it looks like an external link
+{{ if findRE "(^(https?:)?//)" (lower $imageLink) }}
+	{{ with resources.GetRemote $imageLink }}
+		{{ with .Err }}
+			{{ errorf "%s" . }}
+		{{ else -}}
+			{{ $image = . }}
+		{{ end }}
+	{{ else }}
+		{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page }}
+	{{ end }}
+{{ else -}}
+	// Look for file in global resources
+	{{ with resources.Get $imageLink }}
+		{{ with .Err }}
+			{{ errorf "%s" . }}
+		{{ else -}}
+			{{ $image = . }}
+		{{ end }}
+	{{ else }}
+		// Look for file in page resources
+		{{ with $.Page.Resources.GetMatch $imageLink -}}
+			{{ with .Err }}
+				{{ errorf "%s" . }}
+			{{ else }}
+				{{ $image = . }}
+			{{ end }}
+		{{ else }}
+			{{ errorf "Unable to get local resource %q in %s" $imageLink .Page }}
+		{{ end }}
+	{{ end }}
+{{ end -}}
+```
+
+Find greatest common factor:
+this reduces the image dimentions into the smallest integer ratio *(assuming it takes fewer than a thousand iterations)*
+```go
+// Find greatest common factor
+{{ $n1 := $image.Width }}
+{{ $n2 := $image.Height }}
+{{ range seq 1000 }}
+	{{ if eq $n1 $n2 }}
+		{{ break }}
+	{{ end }}
+	{{ if gt $n1 $n2 }}
+		{{ $n1 = sub $n1 $n2 }}
+	{{ else }}
+		{{ $n2 = sub $n2 $n1 }}
+	{{ end }}
+{{ end }}
+
+// Simplified ratio
+{{ $dHorizontal := div $image.Width $n1 }}
+{{ $dVertical   := div $image.Height $n1 }}
+```
+
 ## scss
 
 ### visual style
@@ -162,7 +223,9 @@ will render a plate the size of the viewport. so while theres no overdraw, the p
 {{< vid src="halftone-showcase.webm" loop="true" >}}
 
 SEE ^^^ NOT MOVING!  
-Pretty yucky if you can notice it. Fortunately, youd only see the problem if you have a highdpi display ***and*** are looking for it
+Pretty yucky if you can notice it. Fortunately, you'd only see the problem if you have a highdpi display ***and*** are looking for it
+
+
 
 ## a call to the old ways
 

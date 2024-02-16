@@ -23,6 +23,7 @@
 
 <!-- Generate image object -->
 {{ $image := "" }}
+<!-- If it looks like an external link -->
 {{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
 	{{ with resources.GetRemote $imageLink -}}
 		{{ with .Err -}}
@@ -57,52 +58,52 @@
 
 
 <!-- Process image -->
-{{ with .Get "noprocess" }}
-{{ else }}
-	{{ with .Get "scalewidth" }}
-		{{ if gt $image.Width . }}
-			{{ $image = $image.Process (printf "resize %sx Lanczos q95 webp" .) }}
-		{{ else }}
-			{{ errorf "The \"img\" shortcode scalewidth: %s larger than original width: %d" . $image.Width }}
-		{{ end }}
-	{{ end }}
-{{ end }}
+{{ with .Get "noprocess" -}}
+{{ else -}}
+	{{ with .Get "scalewidth" -}}
+		{{ if gt $image.Width . -}}
+			{{ $image = $image.Process (printf "resize %sx Lanczos q95 webp" .) -}}
+		{{ else -}}
+			{{ errorf "The \"img\" shortcode scalewidth: %s larger than original width: %d" . $image.Width -}}
+		{{ end -}}
+	{{ end -}}
+{{ end -}}
 
 
 <!-- Calculate image ratio -->
-{{ $width := $image.Width }}
-{{ $height := $image.Height }}
+{{- $width := $image.Width -}}
+{{ $height := $image.Height -}}
 <!-- Calculate greatest common factor -->
-{{ $n1 := $width }}
-{{ $n2 := $height }}
-{{ range seq 1000 }}
-	{{ if eq $n1 $n2 }}
-		{{ break }}
-	{{ end }}
-	{{ if gt $n1 $n2 }}
-		{{ $n1 = sub $n1 $n2 }}
-	{{ else }}
-		{{ $n2 = sub $n2 $n1 }}
-	{{ end }}
-{{ end }}
+{{ $n1 := $width -}}
+{{ $n2 := $height -}}
+{{ range seq 1000 -}}
+	{{ if eq $n1 $n2 -}}
+		{{ break -}}
+	{{ end -}}
+	{{ if gt $n1 $n2 -}}
+		{{ $n1 = sub $n1 $n2 -}}
+	{{ else -}}
+		{{ $n2 = sub $n2 $n1 -}}
+	{{ end -}}
+{{ end -}}
 <!-- Simplified ratio -->
-{{ $sw := div $width $n1 }}
-{{ $sh := div $height $n1 }}
+{{ $sw := div $width $n1 -}}
+{{ $sh := div $height $n1 -}}
 
 
 <!-- Add row container when specified -->
-{{ $nf_begin := 0 }}
-{{ $nf_end := 0 }}
-{{ with .Get "row" }}
-	{{ if findRE `^begin$` . }}
-		{{ $nf_begin = 1 }}
-	{{ else if findRE `^end$` . }}
-		{{ $nf_end = 1 }}
-	{{ end }}
-{{ end }}
+{{- $nf_begin := 0 -}}
+{{ $nf_end := 0 -}}
+{{ with .Get "row" -}}
+	{{ if findRE `^begin$` . -}}
+		{{ $nf_begin = 1 -}}
+	{{ else if findRE `^end$` . -}}
+		{{ $nf_end = 1 -}}
+	{{ end -}}
+{{ end -}}
 
 
-{{ if eq $nf_begin 1 }}<div class="nf-image-row">{{ end }}
+{{- if eq $nf_begin 1 }}<div class="nf-image-row">{{ end -}}
 
 <figure {{ with .Get "class" }}class="{{ . }}"{{ end -}}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
