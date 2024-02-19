@@ -79,7 +79,7 @@ footer > div {
 			background-position: center;
 			display: inline-block;
 			height: $we-height;
-			width: 1rem;
+			width: $we-height * 0.61;
 			background-image: url("/icons/lightbulb-white.svg");
 			margin-bottom: -0.15em;
 		}
