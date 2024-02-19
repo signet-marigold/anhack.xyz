@@ -20,6 +20,13 @@ a {
 	}
 }
 
+main,
+footer {
+	a > img:hover {
+		box-shadow: 0 0 0 $base-border-thickness * 2 $white;
+	}
+}
+
 // Icons
 @mixin link-icon {
 	content: "";

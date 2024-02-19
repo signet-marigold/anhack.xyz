@@ -2,7 +2,7 @@
 ---
 # Personal Dev Blog
 
-{{< img src="/images/singles-resources/index/waves.webp" class="full" nolazy="true" ratio="16 / 9" alt="black and white waves" >}}
+{{< img src="/images/singles-resources/index/waves.webp" class="full" nolazy="true" alt="black and white waves" >}}
 
 Welcome welcome!  
 this is my personal site for mayhem & mischief  
@@ -11,7 +11,7 @@ I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 this website anonymously (without cookies) collects basic analytics on a self hosted instance of [umami](https://umami.is/)  
 for the sake of transparency those analytics are viewable [here](https://data-sb-v-analytics.anhack.com/share/3SKpsTgESfggNkdM/anhack)
 
-{{< img src="/images/singles-resources/index/stickfight.jpg" class="stretch" caption="sticky bois" ratio="2 / 1" alt="stick figures fighting" >}}
+{{< img src="/images/singles-resources/index/stickfight.jpg" class="stretch" caption="sticky bois" alt="stick figures fighting" >}}
 
 ## Socials
 {{< grid >}}
@@ -24,3 +24,13 @@ for the sake of transparency those analytics are viewable [here](https://data-sb
 {{< plaque class="bg-g-black"             text="Github"   img="/icons/github-mark-white.svg"                    mouse="github.com"      link="https://github.com/signet-marigold" >}}
 {{< plaque class="bg-g-cornflower"        text="Codeberg" img="/icons/Codeberg-white.svg"                       mouse="codeberg.org"    link="https://codeberg.org/signet-marigold" >}}
 {{< /grid >}}
+
+
+## If ya wanna add my button to your site
+[![anhack.xyz.png](/badges/anhack.xyz.png)](/badges/anhack.xyz.png)
+```html
+<a href="https://anhack.xyz" target="_blank">
+	<img src="anhack.xyz.png" alt="anhack.xyz" title="anhack.xyz">
+</a>
+```
+Feel free to copy this button to your website, but **avoid hot-linking** if possible

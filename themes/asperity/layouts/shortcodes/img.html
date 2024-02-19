@@ -113,7 +113,7 @@
 		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
 		{{/**/}} style="aspect-ratio:{{ $sw }}/{{ $sh }}"
-		{{/**/}} width="{{ $width }}px" height="{{ $height }}px"/>
+		{{/**/}} width="{{ $width }}" height="{{ $height }}"/>
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 

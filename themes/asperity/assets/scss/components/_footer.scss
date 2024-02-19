@@ -15,21 +15,24 @@ footer > div {
 	// old style 88x31px banners
 	#badges {
 		margin-bottom: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		line-height: 1;
+		align-items: center;
+		justify-content: center;
 		& > * {
 			display: inline-block;
 		}
 		img {
 			border-radius: 0;
-			margin: 0;
+			margin: $base-border-thickness * 2;
 			height: 31px;
-			// banners may have a different width from the
-			// standard size so no width is specified
 		}
 	}
 	#website-info {
 		max-width: 40rem;
 		margin: 0 auto;
-		letter-spacing: 0.185em;
+		letter-spacing: 0.135em;
 		word-spacing: 0.05rem;
 		& > * {
 			margin: 0 0.1rem;
@@ -54,7 +57,7 @@ footer > div {
 		justify-content: center;
 	}
 	$we-horizontal-margin: 0.625rem;
-	$we-height: 1.6rem;
+	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
 	#rss-feed-link {
 		margin-left: $we-horizontal-margin;
 		img {

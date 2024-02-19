@@ -6,6 +6,7 @@
 	border: 0;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	font-weight: 600;
+	line-height: 1;
 }
 @mixin btn {
 	border: $base-border-thickness $gray-800 solid;
