@@ -79,7 +79,7 @@ footer > div {
 			background-position: center;
 			display: inline-block;
 			height: $we-height;
-			width: $we-height * 0.61;
+			width: $we-height * 0.61; // 1/.61 is the image ratio of the lightbulb
 			background-image: url("/icons/lightbulb-white.svg");
 			margin-bottom: -0.15em;
 		}
