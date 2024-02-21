@@ -70,7 +70,8 @@ body.light-theme {
 	}
 	// Language specific
 	code[class^="language-"] {
-		background-color: #404040;
+		background-color: $gray-700;
+		color: #f8f8f2;
 	}
 	// Disable gradient
 	// Reset link text color
@@ -90,6 +91,7 @@ body.light-theme {
 	main {
 		#toc-container {
 			background-color: $light-theme-bg;
+			box-shadow: $light-theme-outline-shadow;
 		}
 	}
 	footer > div {

@@ -22,63 +22,60 @@ Here is the hugo project structure.
 Project Root
 .
 ├── archetypes{{< footnote title="1" target="project-tree-ref-1" >}}
-│   ├── default.md{{< footnote title="1a" target="project-tree-ref-2" >}}
-│   ├── posts{{< footnote title="1b" target="project-tree-ref-3" >}}
+│   ├── default.md{{< footnote title="1a" target="project-tree-ref-1b" >}}
+│   ├── posts{{< footnote title="1b" target="project-tree-ref-1c" >}}
 │   └── projects
-├── assets{{< footnote title="4" target="project-tree-ref-4" >}}
+├── assets{{< footnote title="2" target="project-tree-ref-2" >}}
 │   └── images
-├── config.toml{{< footnote title="5" target="project-tree-ref-5" >}}
-├── content
-│   ├── _index.md
-│   ├── posts
-│   ├── projects
-│   └── recipes
-├── data
-├── deploy{{< footnote title="6" target="project-tree-ref-6" >}}
-├── layouts{{< footnote title="7" target="project-tree-ref-7" >}}
-│   ├── index.html{{< footnote title="8" target="project-tree-ref-8" >}}
-│   ├── partials{{< footnote title="9" target="project-tree-ref-9" >}}
-│   └── robots.txt{{< footnote title="10" target="project-tree-ref-10" >}}
-├── static{{< footnote title="11" target="project-tree-ref-11" >}}
+├── config.toml{{< footnote title="3" target="project-tree-ref-3" >}}
+├── content{{< footnote title="4" target="project-tree-ref-4" >}}
+│   ├── _index.md{{< footnote title="4a" target="project-tree-ref-4a" >}}
+│   ├── posts{{< footnote title="4b" target="project-tree-ref-4b" >}}
+│   └── projects{{< footnote title="4c" target="project-tree-ref-4c" >}}
+├── deploy{{< footnote title="5" target="project-tree-ref-5" >}}
+├── layouts{{< footnote title="6" target="project-tree-ref-6" >}}
+│   ├── index.html
+│   ├── partials{{< footnote title="6a" target="project-tree-ref-6a" >}}
+│   └── robots.txt
+├── static{{< footnote title="7" target="project-tree-ref-7" >}}
 │   ├── badges
 │   ├── icons
 │   └── img
-└── themes
-    └── asperity{{< footnote title="12" target="project-tree-ref-12" >}}
+└── themes{{< footnote title="8" target="project-tree-ref-8" >}}
+    └── asperity
         ├── archetypes
         ├── assets
         │   ├── css
         │   ├── js
         │   └── scss
-        │       ├── components{{< footnote title="13" target="project-tree-ref-13" >}}
+        │       ├── components{{< footnote title="9" target="project-tree-ref-9" >}}
         │       ├── css
-        │       │   └── normalize.css{{< footnote title="14" target="project-tree-ref-14" >}}
+        │       │   └── normalize.css{{< footnote title="10" target="project-tree-ref-10" >}}
         │       ├── fonts
         │       │   ├── noto-sans
         │       │   │   └── <font parts>
         │       │   └── _noto-sans.scss (font collection)
-        │       ├── _*.scss{{< footnote title="15" target="project-tree-ref-15" >}}
-        │       ├── fonts.scss{{< footnote title="16" target="project-tree-ref-16" >}}
-        │       └── main.scss{{< footnote title="17" target="project-tree-ref-17" >}}
-        ├── i18n{{< footnote title="18" target="project-tree-ref-18" >}}
-        ├── layouts{{< footnote title="19" target="project-tree-ref-19" >}}
-        │   ├── _default{{< footnote title="20" target="project-tree-ref-20" >}}
-        │   ├── partials{{< footnote title="21" target="project-tree-ref-21" >}}
-        │   └── shortcodes{{< footnote title="22" target="project-tree-ref-22" >}}
-        ├── static{{< footnote title="23" target="project-tree-ref-23" >}}
-        │   ├── 40{x}.html{{< footnote title="24" target="project-tree-ref-24" >}}
-        │   ├── css{{< footnote title="25" target="project-tree-ref-25" >}}
+        │       ├── _*.scss
+        │       ├── fonts.scss{{< footnote title="11a" target="project-tree-ref-11a" >}}
+        │       └── main.scss{{< footnote title="11b" target="project-tree-ref-11b" >}}
+        ├── i18n{{< footnote title="12" target="project-tree-ref-12" >}}
+        ├── layouts
+        │   ├── _default{{< footnote title="13a" target="project-tree-ref-13a" >}}
+        │   ├── partials{{< footnote title="13b" target="project-tree-ref-13b" >}}
+        │   └── shortcodes{{< footnote title="13c" target="project-tree-ref-13c" >}}
+        ├── static
+        │   ├── 40{x}.html{{< footnote title="14" target="project-tree-ref-14" >}}
+        │   ├── css
         │   ├── fonts
         │   ├── icons
         │   └── img
-        ├── config.toml{{< footnote title="26" target="project-tree-ref-26" >}}
-        └── theme.toml{{< footnote title="27" target="project-tree-ref-27" >}}
+        ├── config.toml
+        └── theme.toml
 ```
 
 #### references
 
 ##### ref 1: Archetypes store the new page templates {#project-tree-ref-1}
-
 Which looks something like this
 
 ```toml
@@ -91,33 +88,27 @@ image: ""
 tags: []
 ---
 ```
-
-##### ref 1a: Used if you run new on a main directory (e.g. new posts/new-post.md) {#project-tree-ref-2}
-##### ref 1b: posts/index.html, projects/index.html used if you run new on a subdirectory {#project-tree-ref-3}
+##### ref 1a: Used if you run new on a main directory (e.g. new posts/new-post.md) {#project-tree-ref-1a}
+##### ref 1b: posts/index.html, projects/index.html used if you run new on a subdirectory {#project-tree-ref-1b}
+##### ref 3:  {#project-tree-ref-3}
 ##### ref 4:  {#project-tree-ref-4}
+##### ref 4a:  {#project-tree-ref-4a}
+##### ref 4b:  {#project-tree-ref-4b}
+##### ref 4c:  {#project-tree-ref-4c}
 ##### ref 5:  {#project-tree-ref-5}
 ##### ref 6:  {#project-tree-ref-6}
+##### ref 6a:  {#project-tree-ref-6a}
 ##### ref 7:  {#project-tree-ref-7}
 ##### ref 8:  {#project-tree-ref-8}
 ##### ref 9:  {#project-tree-ref-9}
 ##### ref 10:  {#project-tree-ref-10}
-##### ref 11:  {#project-tree-ref-11}
+##### ref 11a: separate from the main styles for caching long term on the browser {#project-tree-ref-11a}
+##### ref 11b: pulls from files this folder and from components {#project-tree-ref-11b}
 ##### ref 12:  {#project-tree-ref-12}
-##### ref 13:  {#project-tree-ref-13}
-##### ref 14:  {#project-tree-ref-14}
-##### ref 15:  {#project-tree-ref-15}
-##### ref 16: separate from the main styles for caching long term on the browser {#project-tree-ref-16}
-##### ref 17: pulls from files this folder and from components {#project-tree-ref-17}
-##### ref 18:  {#project-tree-ref-18}
-##### ref 19:  {#project-tree-ref-19}
-##### ref 20:  {#project-tree-ref-20}
-##### ref 21:  {#project-tree-ref-21}
-##### ref 22:  {#project-tree-ref-22}
-##### ref 23:  {#project-tree-ref-23}
-##### ref 24: only http code 404 comes with a template in hugo. For other common codes, static pages have been made that will be placed in root once the site is generated. Then the `.htaccess` from the roots static will have definitions for those custom code pages. {#project-tree-ref-24}
-##### ref 25:  {#project-tree-ref-25}
-##### ref 26:  {#project-tree-ref-26}
-##### ref 27:  {#project-tree-ref-27}
+##### ref 13a:  {#project-tree-ref-13a}
+##### ref 13b:  {#project-tree-ref-13b}
+##### ref 13c:  {#project-tree-ref-13c}
+##### ref 14: only the 404 page comes with a template in hugo. For other common codes, static pages have been made that will be placed in root once the site is generated. Then the `.htaccess` from the roots static will have definitions for those custom code pages. {#project-tree-ref-14}
 
 ### pagination
 

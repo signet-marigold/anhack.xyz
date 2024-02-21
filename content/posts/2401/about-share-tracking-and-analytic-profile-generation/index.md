@@ -9,12 +9,17 @@ imageAlt: ""
 category: ""
 tags: ["news","tech","privacy"]
 toc: false
-draft: true
+draft: false
 ---
 
 You may have noticed that some of your youtube links are a bit longer than you've seen before.
 
 `https://youtu.be/dQw4w9WgXcQ?si=4xDc5_c39H5gZEqM`  
+
+Here's whats going on.
+Google along with other companies have figured out a way to track resource sharing outside of their platform.
+That number at the end is sent back along with reference data courtesy of your browser in the form of user-agents and http reference fields.
+So they can reliably *with a little guess-work* find what computer accessed that resource.
 
 For example: here are some source ids i've collected from my friends discord server over the last month
 
@@ -99,3 +104,6 @@ not necessary
 only on share links  
 ?? only on shortened links (not)  
 started in august  
+
+**Posted in an incompleate state**
+More to come.

@@ -1,8 +1,11 @@
 main {
-	h1,
+	h1 {
+		font-weight: 900;
+	}
 	h2 {
 		font-weight: 800;
 	}
+	// Underline h1s and h2s
 	article.page {
 		h1:not(:target),
 		h2:not(:target) {
@@ -19,6 +22,9 @@ main {
 			&::after {
 				display: none;
 			}
+		}
+		h1:not(:target) .text::after {
+			border-bottom: $base-border-thickness * 2 solid $violet;
 		}
 		h1:not(:target) {
 			margin-bottom: $h1-margin - $base-padding;
