@@ -346,13 +346,11 @@ $toc-loose-bp-min-width: $page-max-width + $toc-loose-min-width * 2;
 // Everything spacing-wise (except for the webkit scrollbar) is using
 // the default browser font size as a basis for spacing and size.
 $base-font-size: 1rem;
-$font-size-xxl: $base-font-size * 1.75;
+$font-size-xxl: $base-font-size * 1.9;
 $font-size-xl:  $base-font-size * 1.5;
 $font-size-lg:  $base-font-size * 1.17;
-$font-size-md:  $base-font-size * 1;
 $font-size-sm:  $base-font-size * 0.83;
 $font-size-xs:  $base-font-size * 0.67;
-
 
 // Spacing
 $base-padding: 0.5rem;
@@ -369,12 +367,40 @@ $indent-sm: $base-indent * 0.75;
 $indent-xs: $base-indent * 0.5;
 
 // heading
+$h1-size: $font-size-xxl;
+$h2-size: $font-size-xl;
+$h3-size: $font-size-lg;
+$h4-size: $base-font-size;
+$h5-size: $base-font-size;
+$h6-size: $base-font-size;
+
 $h1-margin: $base-font-size * 1.315;
 $h2-margin: $base-font-size * 1.245;
 $h3-margin: $base-font-size * 1.17;
 $h4-margin: $base-font-size * 1.33;
 $h5-margin: $base-font-size * 1.3861;
 $h6-margin: $base-font-size * 1.5611;
+
+$h1-word-spacing: 0.015em;
+$h2-word-spacing: 0.015em;
+$h3-word-spacing: 0.035em;
+$h4-word-spacing: 0.035em;
+$h5-word-spacing: 0.05em;
+$h6-word-spacing: 0.05em;
+
+$h1-page-weight: 500;
+$h2-page-weight: 500;
+$h3-page-weight: 900;
+$h4-page-weight: 900;
+$h5-page-weight: 700;
+$h6-page-weight: 700;
+
+$h1-page-letter-spacing: 0.01em;
+$h2-page-letter-spacing: 0.01em;
+$h3-page-letter-spacing: 0.03em;
+$h4-page-letter-spacing: 0.03em;
+$h5-page-letter-spacing: 0.02em;
+$h6-page-letter-spacing: 0.02em;
 
 // btn padding
 $btn-padding-vertical:   $base-padding * 0.75;

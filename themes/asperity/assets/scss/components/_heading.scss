@@ -1,12 +1,6 @@
 main {
-	h1 {
-		font-weight: 900;
-	}
-	h2 {
-		font-weight: 800;
-	}
-	// Underline h1s and h2s
 	article.page {
+		// Underline h1s and h2s
 		h1:not(:target),
 		h2:not(:target) {
 			.text {
@@ -23,14 +17,36 @@ main {
 				display: none;
 			}
 		}
-		h1:not(:target) .text::after {
-			border-bottom: $base-border-thickness * 2 solid $violet;
-		}
 		h1:not(:target) {
 			margin-bottom: $h1-margin - $base-padding;
 		}
 		h2:not(:target) {
 			margin-bottom: $h2-margin - $base-padding;
+		}
+		// Weights for page headings
+		h1 {
+			font-weight: $h1-page-weight;
+			letter-spacing: $h1-page-letter-spacing;
+		}
+		h2 {
+			font-weight: $h2-page-weight;
+			letter-spacing: $h2-page-letter-spacing;
+		}
+		h3 {
+			font-weight: $h3-page-weight;
+			letter-spacing: $h3-page-letter-spacing;
+		}
+		h4 {
+			font-weight: $h4-page-weight;
+			letter-spacing: $h4-page-letter-spacing;
+		}
+		h5 {
+			font-weight: $h5-page-weight;
+			letter-spacing: $h5-page-letter-spacing;
+		}
+		h6 {
+			font-weight: $h6-page-weight;
+			letter-spacing: $h6-page-letter-spacing;
 		}
 	}
 }
@@ -116,88 +132,88 @@ h6 {
 }
 
 h1 {
-	font-size: $font-size-xxl;
+	font-size: $h1-size;
 	margin: $h1-margin 0;
-	word-spacing: 0.015em;
+	word-spacing: $h1-word-spacing;
 	&:target {
 		margin: $h1-margin - $base-padding 0;
 	}
 	&::before {
-		margin-left: hhmc($font-size-xxl);
+		margin-left: hhmc($h1-size);
 	}
 	&::after {
-		margin-right: hhmc($font-size-xxl);
+		margin-right: hhmc($h1-size);
 	}
 }
 h2 {
-	font-size: $font-size-xl;
+	font-size: $h2-size;
 	margin: $h2-margin 0;
-	word-spacing: 0.015em;
+	word-spacing: $h2-word-spacing;
 	&:target {
 		margin: $h2-margin - $base-padding 0;
 	}
 	&::before {
-		margin-left: hhmc($font-size-xl);
+		margin-left: hhmc($h2-size);
 	}
 	&::after {
-		margin-right: hhmc($font-size-xl);
+		margin-right: hhmc($h2-size);
 	}
 }
 h3 {
-	font-size: $font-size-lg;
+	font-size: $h3-size;
 	margin: $h3-margin 0;
-	word-spacing: 0.035em;
+	word-spacing: $h3-word-spacing;
 	&:target {
 		margin: $h3-margin - $base-padding 0;
 	}
 	&::before {
-		margin-left: hhmc($font-size-lg);
+		margin-left: hhmc($h3-size);
 	}
 	&::after {
-		margin-right: hhmc($font-size-lg);
+		margin-right: hhmc($h3-size);
 	}
 }
 h4 {
-	font-size: $font-size-md;
+	font-size: $h4-size;
 	margin: $h4-margin 0;
-	word-spacing: 0.035em;
+	word-spacing: $h4-word-spacing;
 	&:target {
 		margin: $h4-margin - $base-padding 0;
 	}
 	&::before {
-		margin-left: hhmc($font-size-md);
+		margin-left: hhmc($h4-size);
 	}
 	&::after {
-		margin-right: hhmc($font-size-md);
+		margin-right: hhmc($h4-size);
 	}
 }
 h5 {
-	font-size: $font-size-sm;
+	font-size: $h5-size;
 	margin: $h5-margin 0;
-	word-spacing: 0.05em;
+	word-spacing: $h5-word-spacing;
 	&:target {
 		margin: $h5-margin - $base-padding 0;
 	}
 	&::before {
-		margin-left: hhmc($font-size-sm);
+		margin-left: hhmc($h5-size);
 	}
 	&::after {
-		margin-right: hhmc($font-size-sm);
+		margin-right: hhmc($h5-size);
 	}
 }
 h6 {
-	font-size: $font-size-sm;
+	font-size: $h6-size;
 	margin: $h6-margin 0;
-	word-spacing: 0.05em;
+	word-spacing: $h6-word-spacing;
 	color: $gray-300;
 	&:target {
 		margin: $h6-margin - $base-padding 0;
 	}
 	&::before {
-		margin-left: hhmc($font-size-sm);
+		margin-left: hhmc($h6-size);
 	}
 	&::after {
-		margin-right: hhmc($font-size-sm);
+		margin-right: hhmc($h6-size);
 	}
 }
 
