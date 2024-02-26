@@ -4,7 +4,7 @@ body {
 	font-family: "Noto Sans", sans-serif;
 	font-size: $base-font-size;
 	letter-spacing: -0.01em;
-	line-height: 1.525;
+	line-height: 1.5;
 	overflow-wrap: anywhere;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -80,6 +80,7 @@ main {
 		nav > ol,
 		nav > ul {
 			margin: 1rem 0 0;
+			padding-left: 1rem;
 		}
 		// Side mode
 		@include breakpoint($toc-loose-bp-min-width) {

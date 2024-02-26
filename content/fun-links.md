@@ -1,6 +1,6 @@
 ---
 title: "Fun Links"
-subtitle: "dont die"
+subtitle: "\"Sad men wait\" -Benjin Jeffersom"
 date: 2023-12-12T08:09:33Z
 lastMod: 2023-12-12T08:09:33Z
 author: ""
@@ -32,3 +32,5 @@ draft: false
 [rotatingsandwiches.com](https://rotatingsandwiches.com/)
 [rrrgggbbb.com](http://www.rrrgggbbb.com/)
 {{< /grid >}}
+
+- [hiddenhousing](https://www.hiddenhousing.org/)

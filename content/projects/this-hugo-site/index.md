@@ -1,5 +1,5 @@
 ---
-title: "This GoHugo Site"
+title: "This Hugo Site"
 subtitle: "How I made a custom blog"
 date: 2024-02-08T23:53:06-06:00
 lastMod: 2024-02-08T23:53:06-06:00
@@ -12,18 +12,20 @@ toc: true
 draft: true
 ---
 
-# Heading GeblgmqwPy 1
-## Heading GeblgmqwPy 2
-### Heading GeblgmqwPy 3
-#### Heading GeblgmqwPy 4
-##### Heading GeblgmqwPy 5
-###### Heading GeblgmqwPy 6
+## Intro
 
-## hugo structure
+Alright so first off I wanted a static site gen and I was looking at the options available.
+[Jekyll](https://jekyllrb.com/) honestly is fine I have no real problems with It but it doesn't appear to have the functionality I need. and [Eleventy](https://www.11ty.dev/) (actually a cool project) but not exactly what I was looking for.
+[Hugo](https://gohugo.io/)s modularity and live-reload is amazing, plus it's designed to be a general purpose generator. Meaning theres very little in the way of doing anything I want 
 
-### overview
+### Overview
 
-Here is the hugo project structure.
+## Hugo
+
+### Hugo Stucture
+
+Here is the project structure.
+
 
 ```render
 Project Root
@@ -97,24 +99,25 @@ tags: []
 ```
 ##### ref 1a: Used if you run new on a main directory (e.g. new posts/new-post.md) {#project-tree-ref-1a}
 ##### ref 1b: posts/index.html, projects/index.html used if you run new on a subdirectory {#project-tree-ref-1b}
-##### ref 3:  {#project-tree-ref-3}
-##### ref 4:  {#project-tree-ref-4}
-##### ref 4a:  {#project-tree-ref-4a}
-##### ref 4b:  {#project-tree-ref-4b}
-##### ref 4c:  {#project-tree-ref-4c}
-##### ref 5:  {#project-tree-ref-5}
-##### ref 6:  {#project-tree-ref-6}
-##### ref 6a:  {#project-tree-ref-6a}
-##### ref 7:  {#project-tree-ref-7}
-##### ref 8:  {#project-tree-ref-8}
-##### ref 9:  {#project-tree-ref-9}
-##### ref 10:  {#project-tree-ref-10}
+##### ref 2: Assets are resources that are transformed in some way by hugo before they are used {#project-tree-ref-2}
+##### ref 3: config here will override any variables set by configs in the theme folder {#project-tree-ref-3}
+##### ref 4: content. where all of the posts, projects and any other page markdown lives {#project-tree-ref-4}
+##### ref 4a: is the homepage of the site {#project-tree-ref-4a}
+##### ref 4b: markdown here will live on the /posts/ folder after generation {#project-tree-ref-4b}
+##### ref 4c: markdown here will live on the /projects/ folder after generation {#project-tree-ref-4c}
+##### ref 5: is a script I made for generating and then sending the ready site to my host server {#project-tree-ref-5}
+##### ref 6: most layouts are defined in the theme however there are a few that are site specific {#project-tree-ref-6}
+##### ref 6a: like the badges in the footer for example {#project-tree-ref-6a}
+##### ref 7: resources that don't need to be transformed. as they appear in this folder they will be in the root {#project-tree-ref-7}
+##### ref 8: if not already defined, every file in the theme will be used to generate the site {#project-tree-ref-8}
+##### ref 9: i've separated the css into different parts when it felt like they could be grouped {#project-tree-ref-9}
+##### ref 10: some browsers treat default styles slightly differently. this fixes the largest offenders {#project-tree-ref-10}
 ##### ref 11a: separate from the main styles for caching long term on the browser {#project-tree-ref-11a}
 ##### ref 11b: pulls from files this folder and from components {#project-tree-ref-11b}
-##### ref 12:  {#project-tree-ref-12}
-##### ref 13a:  {#project-tree-ref-13a}
-##### ref 13b:  {#project-tree-ref-13b}
-##### ref 13c:  {#project-tree-ref-13c}
+##### ref 12: language translations. some strings show up as a part of the base layout. not like a have multi language support rn tho {#project-tree-ref-12}
+##### ref 13a: defines layoutes for basic page types {#project-tree-ref-13a}
+##### ref 13b: parts of a layout so they can be reused {#project-tree-ref-13b}
+##### ref 13c: shortcodes are almost like partials except they are suposed to only be used inside of markdown files in the \{\{\< shortcodename \>\}\} format {#project-tree-ref-13c}
 ##### ref 14: only the 404 page comes with a template in hugo. For other common codes, static pages have been made that will be placed in root once the site is generated. Then the `.htaccess` from the roots static will have definitions for those custom code pages. {#project-tree-ref-14}
 
 ### pagination
