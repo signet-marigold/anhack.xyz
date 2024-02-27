@@ -2,7 +2,7 @@
 title: "Self Immolation"
 subtitle: ""
 date: 2024-02-26T23:20:42-06:00
-lastMod: 2024-02-26T23:20:42-06:00
+lastMod: 2024-02-27T09:06:40-06:00
 author: ""
 image: ""
 imageAlt: ""
@@ -16,11 +16,11 @@ draft: false
 
 This article describes serious topics including extreme political protest. Especially self-harm in service of political protest.
 
-If this makes you very uncomfortable I advise skipping this post.
+If this makes you very uncomfortable I advise you to skip this post.
 
 ---
 
-## Atlanta Friday Dec 01 2023
+## Atlanta Georgia, Friday, Dec 01 2023
 
 ### Protester sets self on fire outside Israeli consulate in Atlanta
 
@@ -35,22 +35,26 @@ Authorities said there is no "nexus to terrorism", but the incident was "likely 
 "A building security guard also suffered minor burns in the process of attempting to stop the protester from self-immolating."  
 -The Hill
 
-Authorities did not release the protester's name, age or gender
+Palestinian flag was found at the scene, police said.
 
-## Washington Sunday Feb 25 2024
+Authorities did not release the protester's name, age or gender.
 
-### U.S. Airman sets self on fire outside Israeli embassy in Washington
+## Washington D.C., Sunday, Feb 25 2024
+
+### U.S. Airman sets self on fire outside Israeli embassy in Washington, D.C.
 
 Senior Airman Aaron Bushnell, 25, a cyber defence operations specialist with the 531st Intelligence Support Squadron, died from injuries sustained in the incident, the Air Force said in a statement.
 
-"I am an active duty member of the U.S. Air Force and I will no longer be complicit in genocide.  I am about to engage in an extreme act of protest; but compared to what people have been experiencing in Palestine at the hands of their colonizers, it is not extreme at all. This is what our ruling class has decided will be normal."  
+The protest was livestreamed on twitch.
+
+"My name is Aaron Bushnell, I am an active duty member of the U.S. Air Force and I will no longer be complicit in genocide.  I am about to engage in an extreme act of protest; but compared to what people have been experiencing in Palestine at the hands of their colonizers, it is not extreme at all. This is what our ruling class has decided will be normal."  
 -Full quote from Aaron Bushnell's livestream
 
 That last sentence is left out of almost all news reporting.
 
 Bushnell then doused himself in a clear liquid before setting himself on fire.
 
-After setting himself on fire, he repeatedly shouted "free Palestine".
+Bushnell filmed himself as he stood outside the embassy, screaming "Free Palestine" repeatedly before nearby responders extinguished the flames.
 
 He later died in a hospital.
 
@@ -60,11 +64,16 @@ He later died in a hospital.
 
 No embassy staff members were injured in the incident, said a spokeswoman for the embassy.
 
+A Palestinian flag found at the scene was part of the protest, police said.
 
 #### Articles for more info
-[Aaron Bushnell: US airman dies after setting himself on fire outside Israeli embassy in Washington](https://www.bbc.com/news/world-us-canada-68405119)
+[Aaron Bushnell: US airman dies after setting himself on fire outside Israeli embassy in Washington - BBC](https://www.bbc.com/news/world-us-canada-68405119)
 
-[Protester sets themself on fire outside Israel consulate in Atlanta, Georgia](https://www.bbc.com/news/uk-67597395)
+[U.S. airman dies after setting himself on fire outside the Israeli Embassy - npr](https://www.npr.org/2024/02/25/1233810136/fire-man-israeli-embassy-washington)
+
+[Suicide vs genocide: Rest in power, Aaron Bushnell - Aljazeera](https://www.aljazeera.com/opinions/2024/2/26/suicide-vs-genocide-rest-in-power-aaron-bushnell)
+
+[Protester sets themself on fire outside Israel consulate in Atlanta, Georgia - BBC](https://www.bbc.com/news/uk-67597395)
 
 #### Full video of Bushnell's protest livestream
 Warning: video of suicide by immolation; Viewer discretion is advised  
@@ -76,3 +85,5 @@ I will keep this link current when the video is removed.
 ## According to Palestinian health officials
 
 Israeli forces launched a military campaign against the Palestinian Islamist group that rules Gaza, destroying much of the coastal enclave, with nearly 30,000 people confirmed killed.
+
+As of mid-January, 1.9 million civilians in Gaza have been displaced amid Israel's military operations, according to the UN, accounting for 85% of its population. 
