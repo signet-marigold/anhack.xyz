@@ -7,7 +7,7 @@ author: ""
 image: ""
 imageAlt: ""
 category: ""
-tags: []
+tags: ["news"]
 toc: false
 draft: false
 ---
