@@ -5,10 +5,11 @@ date: 2024-02-25T23:53:49-06:00
 lastMod: 2024-02-25T23:53:49-06:00
 author: ""
 image: ""
+imageAlt: ""
 category: "dev"
 tags: ["how-to","tutorial","llm"]
 toc: false
-draft: true
+draft: false
 ---
 
 Project homepage: <https://ollama.ai/>  
@@ -32,6 +33,7 @@ More than 140+ contributors working on it right now. With updates coming two a w
 	- editors
 	- desktop and mobile
 - library support (like langchain)
+- built in gpu accel
 
 ## Alright let's get into it
 
@@ -48,6 +50,8 @@ There is an official docker image on docker hub as `ollama/ollama`
 
 The README has links to the binary and instructions for setting up a service but it's literally just running `ollama serve`  
 
+---
+
 Either way you are going to be starting in the cli with `ollama run <model>`  
 
 Running a model for the first time will also run the pull command before anything else `ollama pull <model>`
@@ -55,3 +59,8 @@ which will download the model for use later.
 These models are *Very* large so you may be forced to delete some as you shop around for something that fits your needs.
 `ollama rm <model>`
 
+After that, models can be initialized with a prompt. Which can help tune the output to fit your needs.
+
+Personally the only setup I have constantly running is a mistral model hosted on a computer at home to that I can use it from my phone anytime I want.
+
+I plan to make another post when I am using ollama as a part of a project.

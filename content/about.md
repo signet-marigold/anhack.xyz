@@ -6,31 +6,62 @@ image: ""
 category: "single"
 tags: ["personal"]
 ---
-Hi im Alex
+Hi im alex
 
 - amateur photographer (you can see my work [here](https://pixelfed.social/tenebriscaelum))
 - amateur radio operator
 - programmer (mostly c & python)
-- socialist
 - super gay
 
-This site is like a general shitposting, info dump, and interesting things i run into - blog.
-and also updates on projects other people may find useful.
+SHITPOSTING SIIIIIIIIITE
 
-Proponent of [Free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software)
+im not going to explain myself and you're going to have to deal with it
 
-Big fan of the federated web movement <https://www.fediverse.to/>
+Cool shit [Free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
-After the reddit implosion i mostly just post on [lemmy](https://casavaga.com/u/alaliliiso)
+Big fan of the federated web movement <https://www.fediverse.to/>  
+But we'll see where it goes
 
 You can also find me at:
 
 - [Mastodon](https://mastodon.social/@alis_sy)
-- [Firefish](https://firefish.social/@alis)
+- [Firefish](https://firefish.social/@alis) <note: firefish,social is currently dead>
 
 im hosting [a lemmy instance](https://casavaga.com/)
 
-lemmy, the tolerable link aggregator.
+lemmy, a link aggregator.
 you can find an instance to use here <https://join-lemmy.org/>
+
+## Stack & Tools
+
+### Code editors
+
+* Kate & Neo Vim
+
+### Note taking
+
+* QownNotes w/ SyncThing
+
+### Desktop stacks
+
+#### Desktop computer
+
+* Debian with KDE
+
+#### Laptop computer
+
+* Arch with DWM and Suckless apps
+
+### Terminal
+
+* Alacritty with zshell
+
+### LLMs
+
+* Ollama
+
+### Browser
+
+* LibreWolf
 
 Thanks for joining me !
