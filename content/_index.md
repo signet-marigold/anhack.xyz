@@ -1,6 +1,6 @@
 ---
 ---
-# Personal Dev Blog
+# A Personal Blog
 
 {{< img src="/images/singles-resources/index/waves.webp" class="full" nolazy="true" alt="black and white waves" >}}
 

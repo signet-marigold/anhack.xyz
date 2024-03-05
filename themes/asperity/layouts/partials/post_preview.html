@@ -1,7 +1,7 @@
 <section class="post-preview">
-	<a href="{{ .Permalink }}">
+	<a href="{{ .Permalink }}" class="post-link">
 		<h2 class="post-title">{{ .Title }}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}</h2>
-	</a>
+	
 {{ if .Site.Params.showPreviewImage -}}
 	{{ if .Params.image -}}
 		{{- $imageLink := "" -}}
@@ -13,6 +13,7 @@
 		<div class="img-title"><img src="{{ $imageLink }}" alt="{{ i18n "missingImage" }}" /></div>
 	{{- end }}
 {{- end }}
+	</a>
 {{ if .Site.Params.showPreviewVideo -}}
 	{{ if .Params.video -}}
 		<video loop autoplay muted playsinline class="img-title">

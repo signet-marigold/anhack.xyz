@@ -2,24 +2,38 @@
 .post-preview {
 	//background-color: rgba(0,0,0,0.15);
 	//border: $base-border-thickness $gray-800 solid;
-	//border-radius: $base-border-radius;
-	padding: 1.5rem 2rem;
-	//margin: 1.5rem 0;
+	//border-radius: if($rounded-corners, $base-border-radius, null);
+	
+	// Fixes line height padding on post-title
+	// centering the content a little bit better
+	$top-indent: 0.25;
+	// padding horizontal & padding vertical
+	// top-indent is halved and then removed from the top padding and added to the bottom
+	$xs-pv: 1.5rem;
+	$xs-ph: 0.75rem;
+	$sm-pv: 2rem;
+	$sm-ph: 2rem;
+	//$md-pv: 2rem;
+	//$md-ph: 2rem;
+	
 	&:first-child {
-		margin-top: 1rem;
+		margin-top: 1rem - $top-indent;
 	}
 	&:last-child {
 		margin-bottom: 1rem;
 	}
 	@include xs {
-		padding: 0.625rem 0.75rem;
+		padding: ($xs-pv - $top-indent * 0.5) $xs-ph ($xs-pv + $top-indent * 0.5);
 	}
 	@include sm {
-		padding: 1rem 2rem;
+		padding: ($sm-pv - $top-indent * 0.5) $sm-ph ($sm-pv + $top-indent * 0.5);
 	}
 	@include md {
+		//padding: ($md-pv - $top-indent * 0.5) $md-ph ($md-pv + $top-indent * 0.5);
 		margin-left: 2rem;
 		margin-right: 2rem;
+	}
+	.post-link {
 	}
 	.post-title {
 		margin: 0;
@@ -30,8 +44,11 @@
 		margin-top: 0.25rem;
 	}
 	.img-title {
-		margin-top: 0.5rem;
+		padding-top: 0.5rem;
+		margin-bottom: 0.5rem;
 		img {
+			border: $base-border-thickness * 3 solid $pure-black;
+			box-shadow: 0 0 0 $base-border-thickness $pure-white;
 			margin: 0 auto;
 			max-height: 10rem;
 			width: 100%;
@@ -48,11 +65,13 @@
 		@include sm {
 			line-height: 1.25;
 		}
-		margin-top: 0.75rem;
+		border-top: $base-border-thickness $gray-500 solid;
+		padding-top: 0.25rem;
+		margin-top: 0.35rem;
 		.post-read-more {
-
+			margin-left: 0.25rem;
 		}
 	}
 	.blog-tags {
-	}	
+	}
 }

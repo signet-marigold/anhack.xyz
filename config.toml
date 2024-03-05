@@ -3,11 +3,11 @@ title = 'anhack blog'
 theme = 'asperity'
 languageCode = 'en-US'
 defaultContentLanguage = 'en'
-copyright = '&copy; 2024 Alexander Hack.'
+copyright = '© 2024 Alexander Hack.'
 keywords = 'blog,developer,development,personal'
 enableRobotsTXT = true
 summaryLength = 50
-paginate = 10
+paginate = 8
 
 [author]
 	name = 'alex'
@@ -19,11 +19,12 @@ paginate = 10
 
 [params]
 	showbadges = true
-	summaryMaxChar = 300
+	summaryMaxChar = 200
+	tocMinWordCount = 480
 
 [sitemap]
 	changeFreq = 'weekly'
-	filename = 'sitemap.xml'
+	filename = 'msitemap.xml'
 	priority = -1
 
 [menu]

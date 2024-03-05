@@ -22,9 +22,9 @@ languageCode = 'en-us'
 	showRelatedPosts = true
 	hideAuthor = false
 	hideTags = false
-	showPreviewImage = false
+	showPreviewImage = true
 	showPreviewVideo = false
-	showPreviewSummary = false
+	showPreviewSummary = true
 
 	# Table of Contents
 	tocMinWordCount = 480

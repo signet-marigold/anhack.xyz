@@ -31,5 +31,25 @@ header > div {
 			}
 		}
 	}
+	.page-number {
+		text-align: right;
+		font-weight: 700;
+		margin-bottom: -2rem;
+		@include xs {
+			margin-left: 1rem;
+			margin-right: 1rem;
+			font-size: 130%;
+		}
+		@include sm {
+			margin-left: 2.5rem;
+			margin-right: 2.5rem;
+			font-size: 150%;
+		}
+		@include md {
+			margin-left: 4rem;
+			margin-right: 4rem;
+		}
+		
+	}
 }
 

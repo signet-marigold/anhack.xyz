@@ -2,7 +2,7 @@
 title: "Self Immolation"
 subtitle: ""
 date: 2024-02-26T23:20:42-06:00
-lastMod: 2024-02-27T09:06:40-06:00
+lastMod: 2024-02-27T09:57:02-06:00
 author: ""
 image: ""
 imageAlt: ""
@@ -65,6 +65,10 @@ He later died in a hospital.
 No embassy staff members were injured in the incident, said a spokeswoman for the embassy.
 
 A Palestinian flag found at the scene was part of the protest, police said.
+
+“Many of us like to ask ourselves, ‘What would I do if I was alive during slavery? Or the Jim Crow South? Or apartheid? What would I do if my country was committing genocide?’”  
+“The answer is, you’re doing it. Right now.”  
+-Bushnell on Facebook, Feb 24
 
 #### Articles for more info
 [Aaron Bushnell: US airman dies after setting himself on fire outside Israeli embassy in Washington - BBC](https://www.bbc.com/news/world-us-canada-68405119)

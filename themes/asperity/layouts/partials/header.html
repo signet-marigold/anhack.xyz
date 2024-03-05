@@ -59,13 +59,6 @@
 					<h1 class="heading {{ .Type }}-heading">
 						{{- with $term }}{{ . }}: {{ end }}{{ with $title }}{{ . }}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
 					</h1>
-					{{- if eq .Kind "section" }}
-						{{- with .Paginator }}
-							{{- if ne .TotalPages 1 }}
-								<div class="subheading page-number">Page: {{ .PageNumber }}</div>
-							{{ end -}}
-						{{ end -}}
-					{{ end -}}
 					{{ if $subtitle -}}
 						{{ if eq .Type "page" -}}
 						<div class="subheading {{ .Type }}-subheading">{{ $subtitle }}</div>
@@ -75,5 +68,12 @@
 					{{ end -}}
 				</div>
 				<hr class="small"/>
+				{{- if eq .Kind "section" }}
+					{{- with .Paginator }}
+						{{- if ne .TotalPages 1 }}
+ 							<div class="subheading page-number">Page [ {{ .PageNumber }} ]</div>
+						{{ end -}}
+					{{ end -}}
+				{{ end -}}
 			</div>
 		{{ end -}}

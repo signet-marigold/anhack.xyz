@@ -20,4 +20,4 @@ User-agent: Google-Extended
 Disallow: /
 
 User-agent: *
-Sitemap: https://anhack.xyz/sitemap.xml
+Sitemap: https://anhack.xyz/msitemap.xml
