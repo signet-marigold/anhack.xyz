@@ -4,7 +4,6 @@ header > div {
 		margin: 1.15rem 0 1rem;
 		.header-text {
 			.heading {
-				//margin: $h1-margin - 1rem 0; // I think maybe this remove "1rem" was for a margin on the image that doesn't exist anymore
 				margin: 0.5rem 0;
 				line-height: 1.05;
 			}
@@ -31,25 +30,31 @@ header > div {
 			}
 		}
 	}
-	.page-number {
-		text-align: right;
-		font-weight: 700;
-		margin-bottom: -2rem;
-		@include xs {
-			margin-left: 1rem;
-			margin-right: 1rem;
-			font-size: 130%;
+	.index-lock {
+		position: relative;
+		.index-text {
+			position: absolute;
+			right: 0;
+			text-align: right;
+			font-weight: 700;
+			@include xs {
+				margin-left: 1rem;
+				margin-right: 1rem;
+				font-size: 130%;
+			}
+			@include sm {
+				margin-left: 2.5rem;
+				margin-right: 2.5rem;
+				font-size: 150%;
+			}
+			@include md {
+				margin-left: 4rem;
+				margin-right: 4rem;
+			}
+			.page-number {
+				
+			}
 		}
-		@include sm {
-			margin-left: 2.5rem;
-			margin-right: 2.5rem;
-			font-size: 150%;
-		}
-		@include md {
-			margin-left: 4rem;
-			margin-right: 4rem;
-		}
-		
 	}
 }
 

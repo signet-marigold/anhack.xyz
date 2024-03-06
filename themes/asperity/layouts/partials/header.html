@@ -57,7 +57,12 @@
 						{{ partial "post_meta.html" . -}}
 					{{ end }}
 					<h1 class="heading {{ .Type }}-heading">
-						{{- with $term }}{{ . }}: {{ end }}{{ with $title }}{{ . }}{{ else }}<br/>{{ end -}}{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
+						{{- with $term -}}
+							{{ . }} [ {{ $title }} ]
+						{{- else -}}
+							{{ with $title }}{{ . }} {{ else }}<br/>{{ end -}}
+						{{- end -}}
+						{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
 					</h1>
 					{{ if $subtitle -}}
 						{{ if eq .Type "page" -}}
@@ -71,7 +76,9 @@
 				{{- if eq .Kind "section" }}
 					{{- with .Paginator }}
 						{{- if ne .TotalPages 1 }}
- 							<div class="subheading page-number">Page [ {{ .PageNumber }} ]</div>
+							<div class="index-lock">
+								<div class="index-text">Page [ <span id="page-number">{{ .PageNumber }}</span> ]</div>
+ 							</div>
 						{{ end -}}
 					{{ end -}}
 				{{ end -}}

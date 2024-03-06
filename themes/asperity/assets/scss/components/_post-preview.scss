@@ -16,11 +16,11 @@
 	//$md-pv: 2rem;
 	//$md-ph: 2rem;
 	
-	&:first-child {
-		margin-top: 1rem - $top-indent;
+	&:first-of-type {
+		margin-top: 1.5rem;
 	}
-	&:last-child {
-		margin-bottom: 1rem;
+	&:last-of-type {
+		margin-bottom: 1.5rem;
 	}
 	@include xs {
 		padding: ($xs-pv - $top-indent * 0.5) $xs-ph ($xs-pv + $top-indent * 0.5);
@@ -52,6 +52,7 @@
 			margin: 0 auto;
 			max-height: 10rem;
 			width: 100%;
+			width: calc(100% - #{$base-border-thickness * 6});
 			object-fit: cover;
 		}
 	}
