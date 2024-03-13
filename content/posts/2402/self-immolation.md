@@ -2,7 +2,7 @@
 title: "Self Immolation"
 subtitle: ""
 date: 2024-02-26T23:20:42-06:00
-lastMod: 2024-02-27T09:57:02-06:00
+lastMod: 2024-03-05T21:50:19-06:00
 author: ""
 image: ""
 imageAlt: ""
@@ -14,7 +14,7 @@ draft: false
 
 ## Strong Disclaimer
 
-This article describes serious topics including extreme political protest. Especially self-harm in service of political protest.
+This article describes serious topics including extreme political protest.
 
 If this makes you very uncomfortable I advise you to skip this post.
 
@@ -48,7 +48,7 @@ Senior Airman Aaron Bushnell, 25, a cyber defence operations specialist with the
 The protest was livestreamed on twitch.
 
 "My name is Aaron Bushnell, I am an active duty member of the U.S. Air Force and I will no longer be complicit in genocide.  I am about to engage in an extreme act of protest; but compared to what people have been experiencing in Palestine at the hands of their colonizers, it is not extreme at all. This is what our ruling class has decided will be normal."  
--Full quote from Aaron Bushnell's livestream
+-From Aaron Bushnell's livestream
 
 That last sentence is left out of almost all news reporting.
 

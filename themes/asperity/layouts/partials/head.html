@@ -1,7 +1,7 @@
 		{{- $has_subtitle := and (isset .Params "subtitle") (ne .Params.subtitle "") -}}
 		
 		{{ $subtitle_plain := "" -}}
-		{{ if $has_subtitle }}{{ $subtitle_plain = .Params.subtitle | htmlEscape }}{{ end -}}
+		{{ if $has_subtitle }}{{ $subtitle_plain = .Params.subtitle | safeHTML }}{{ end -}}
 		
 		{{ $title_plain := "" -}}
 		{{ if .IsHome -}}
