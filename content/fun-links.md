@@ -36,7 +36,7 @@ draft: false
 [iFixit guides](https://www.ifixit.com/Guide)
 [radio.garden](https://radio.garden/)
 [copykat.com](https://copykat.com/)
-[aslas os](https://aslasos.net/)
+[atlasos](https://atlasos.net/)
 [lostgamer.io](https://lostgamer.io/)
 [republiquedesmangues.fr](http://www.republiquedesmangues.fr/)
 [cursoreffects.com](https://cursoreffects.com/)
