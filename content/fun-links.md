@@ -50,7 +50,7 @@ draft: false
 [sandspiel.club](https://sandspiel.club/)
 [theuselessweb.com](https://theuselessweb.com/)
 [maps driving simulator](https://framesynthesis.com/drivingsimulator/maps/)
-[Current steam sales](https://steamdb.info/sales/)
+[steamdb sales](https://steamdb.info/sales/)
 [isitbadforyou.com](https://www.isitbadforyou.com/)
 [stellarium-web.org](https://stellarium-web.org/)
 [create.xyz](https://www.create.xyz/)

@@ -8,7 +8,7 @@ nav ul {
 	display: none;
 }
 #logo-banner #logo-image {
-	content: url("/logo-light.png");
+	content: url("/img/logo-light.png");
 }
 #nextprev {
 	display: none;
@@ -30,4 +30,15 @@ body.light-theme a:hover,
 body.light-theme a:active {
 	color: #000;
 	text-decoration: underline;
+}
+article a:after {
+	width: initial;
+	height: initial;
+	margin: 0;
+}
+main a:not(.heading-link):after {
+	content: " (" attr(href) ") ";
+}
+a.post-read-more:after {
+	content: " (" attr(href) ") ";
 }

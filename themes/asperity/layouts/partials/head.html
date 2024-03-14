@@ -12,6 +12,17 @@
 			{{ $title_plain = printf "%s" .Site.Title | printf "%s | %s" (.Title | title) | printf "%s" | markdownify | plainify -}}
 		{{ end -}}
 		
+		<!-- OpenGraph version of the title -->
+		<!-- Removes site name from the end of the list because it will be rendered with the view -->
+		{{ $title_plain_og := "" -}}
+		{{ if .IsHome -}}
+			{{ $title_plain_og = .Site.Title | markdownify | plainify -}}
+		{{ else if $has_subtitle -}}
+			{{ $title_plain_og = printf "%s" ($subtitle_plain | truncate 60) | printf "%s | %s" (.Title | title) -}}
+		{{ else -}}
+			{{ $title_plain_og = printf "%s" (.Title | title) | markdownify | plainify -}}
+		{{ end -}}
+		
 		{{ $description_plain := "" -}}
 		{{ with .Params.description -}}
 			{{ $description_plain = . | markdownify | plainify -}}
@@ -153,7 +164,7 @@
 		<meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
 		<meta property="og:site" content="{{ .Site.Title }}">
 		<meta property="og:site_name" content="{{ .Site.Title }}">
-		<meta property="og:title" content="{{ $title_plain }}">
+		<meta property="og:title" content="{{ $title_plain_og }}">
 		<meta property="og:type" content="{{ cond $is_blog "article" "website" }}">
 		<meta property="og:url" content="{{ .Permalink }}" />
 		<meta property="og:description" content="{{ $description_plain }}">
@@ -179,6 +190,6 @@
 	{{ end -}}
 	
 		<meta name="twitter:card" content="summary{{ if and $has_image $is_blog }}_large_image{{ end }}">
-		<meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
+		<meta name="twitter:title" content="{{ $title_plain_og | truncate 70 }}">
 		<meta property="twitter:description" content="{{ $description_plain | truncate 200 }}">
 		{{- partialCached "analytics.html" . -}}
