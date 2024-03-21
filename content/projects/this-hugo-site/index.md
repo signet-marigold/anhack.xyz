@@ -16,7 +16,9 @@ draft: true
 
 Alright so first off I wanted a static site gen and I was looking at the options available.
 [Jekyll](https://jekyllrb.com/) honestly is fine I have no real problems with It but it doesn't appear to have the functionality I need. and [Eleventy](https://www.11ty.dev/) (actually a cool project) but not exactly what I was looking for.
-[Hugo](https://gohugo.io/)s modularity and live-reload is amazing, plus it's designed to be a general purpose generator. Meaning theres very little in the way of doing anything I want 
+[Hugo](https://gohugo.io/)s modularity and live-reload is amazing, plus it's designed to be a general purpose generator. Meaning theres very little in the way of doing anything I want.
+
+In the end, I picked Hugo just because it seemed to work. Nothing more.
 
 ### Overview
 
@@ -114,7 +116,7 @@ tags: []
 ##### ref 10: some browsers treat default styles slightly differently. this fixes the largest offenders {#project-tree-ref-10}
 ##### ref 11a: separate from the main styles for caching long term on the browser {#project-tree-ref-11a}
 ##### ref 11b: pulls from files this folder and from components {#project-tree-ref-11b}
-##### ref 12: language translations. some strings show up as a part of the base layout. not like a have multi language support rn tho {#project-tree-ref-12}
+##### ref 12: language translations. some strings show up as a part of the base layout. not like a have multi language support rn though {#project-tree-ref-12}
 ##### ref 13a: defines layoutes for basic page types {#project-tree-ref-13a}
 ##### ref 13b: parts of a layout so they can be reused {#project-tree-ref-13b}
 ##### ref 13c: shortcodes are almost like partials except they are suposed to only be used inside of markdown files in the \{\{\< shortcodename \>\}\} format {#project-tree-ref-13c}
@@ -189,14 +191,28 @@ this reduces the image dimentions into the smallest integer ratio *(assuming it 
 {{ $dVertical   := div $image.Height $n1 }}
 ```
 
-## scss
+## SCSS
 
-### visual style
+### Text
+
+Text is using the Noto Sans font; all except for the build date at the bottom of the page, and the code blocks, *which are using system monospace*.
+All spacing is based on the font size as absolute reference. Using em and rem mesurements everywhere.
+The theme was built with the browser font size set to 16px. And keeping the other mesurements fixed with the font size means that even though you may be using a different font size, the relative spacing will stay the same.
+Interesting fact: the text you see is actually compressed ever so slightly. `letter-spacing: -0.01em` I feel keeps the text more readable. Furthermore `line-height` was increased as well.
+
+### Constrained content bodies
 
 
-### highlights and hacks
+### Navagation bar
 
-#### the halftone plate
+
+
+### Visual style
+
+
+### Highlights and hacks
+
+#### The halftone plate
 
 The 'halftone' dot pattern used in the background is actually a tiled vector drawing on top of the background-image.
 
@@ -224,9 +240,8 @@ will render a plate the size of the viewport. so while theres no overdraw, the p
 {{< vid src="halftone-showcase.webm" loop="true" >}}
 
 SEE ^^^ NOT MOVING!  
-Pretty yucky if you can notice it. Fortunately, you'd only see the problem if you have a highdpi display ***and*** are looking for it
-
-
+Pretty yucky if you can notice it. Fortunately, you'd only see the problem if you have a highdpi display ***and*** are looking for it.
+Oh well, it works well enough.
 
 ## a call to the old ways
 
@@ -243,22 +258,3 @@ Pretty yucky if you can notice it. Fortunately, you'd only see the problem if yo
 ##### underground webrings, i see u
 
 ## whats the point of it all
-
-
-
-
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-fa gg dsa g asd g adgs a a a a a a a a a a a a a a a a a a a aa a a a a a a a a a a a a  a
-
-
