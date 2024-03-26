@@ -80,6 +80,8 @@ I do recommend changing the font in the live environment
 
 And mount boot efi disk to `/boot` and not `/boot/efi`
 
+---
+
 ### After Chroot
 Once you're in root partition
 
@@ -137,6 +139,8 @@ FONT=ter-132b
 ># passwd
 ```
 
+---
+
 ### Install linux-surface project
 These commands are subject to change. I will write out everything that I did so that maybe you can find where something went wrong
 
@@ -174,6 +178,8 @@ Server = https://pkg.surfacelinux.com/arch/
 ```
 
 This is everything for `linux-surface` for now, but we'll get back to it later.
+
+---
 
 ### Install grub
 
@@ -224,6 +230,8 @@ The setting: `intel_idle.max_cstate=1 i915.enable_dc=0 intel_iommu=off iommu=off
 ```sh
 ># update-grub
 ```
+
+---
 
 ### Create user
 
@@ -360,6 +368,8 @@ CONFIG_DRM_I915=m
 For arch-6.8.1 the only ones we need to change are `CONFIG_PWM_CRC` and `CONFIG_I2C_DESIGNWARE_PCI`
 
 Caution: kernel build files use approximately 10-12 GB of disk space, and build took me around 5 hours to complete.
+
+---
 
 #### Alright so lets get into it
 
