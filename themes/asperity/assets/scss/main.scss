@@ -1,19 +1,21 @@
-// normalize
+// Normalize browser values
 @import 'css/normalize';
 
+// Brakepoint shows up in compiled css
+/*! styles in asperity theme */
 
-/*! styles in the asperity theme */
-
-// variables & functions
+// Variables & Functions
 @import 'functions';
+@import 'color-variables';
 @import 'variables';
 @import 'multi-color-list';
 
-// base layout
+// Base Layout
 @import 'breakpoints';
 @import 'base';
 
-// components
+// Components
+@import 'components/table-of-contents';
 @import 'components/scrollbar';
 @import 'components/anchor';
 @import 'components/heading';
@@ -33,9 +35,9 @@
 @import 'components/plaque';
 @import 'components/grid-container';
 
-// utilities
+// Utilities
 @import 'colors';
 @import 'utilities';
 
-// light theme variables & styles
+// Light Theme Variables & Styles
 @import 'light';

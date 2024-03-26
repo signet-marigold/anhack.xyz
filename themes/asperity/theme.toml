@@ -8,4 +8,5 @@ min_version = 0.119
 
 [author]
     name = "anhack"
+    email = 'me@anhack.xyz'
     homepage = "https://anhack.xyz"

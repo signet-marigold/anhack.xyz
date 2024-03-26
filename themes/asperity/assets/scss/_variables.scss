@@ -3,348 +3,24 @@
 //
 
 
-// Colors
-$pure-white:    #fff;
-$pure-black:    #000;
-
-$pure-black-and-white: (
-	"pure-white": $pure-white,
-	"pure-black": $pure-black
-);
-
-$white:         #efefef !default;
-$black:         #141416 !default;
-
-$black-and-white: (
-	"white": $white,
-	"black": $black
-);
-
-$gray-100:      mix($black, $white, 23.4%) !default;
-$gray-200:      mix($black, $white, 40.5%) !default;
-$gray-300:      mix($black, $white, 53.3%) !default;
-$gray-400:      mix($black, $white, 63.2%) !default;
-$gray-500:      mix($black, $white, 71.2%) !default;
-$gray-600:      mix($black, $white, 78.0%) !default;
-$gray-700:      mix($black, $white, 83.9%) !default;
-$gray-800:      mix($black, $white, 89.3%) !default;
-$gray-900:      mix($black, $white, 94.3%) !default;
-
-$grays: () !default;
-$grays: map-merge(
-	(
-		"100": $gray-100,
-		"200": $gray-200,
-		"300": $gray-300,
-		"400": $gray-400,
-		"500": $gray-500,
-		"600": $gray-600,
-		"700": $gray-700,
-		"800": $gray-800,
-		"900": $gray-900
-	),
-	$grays
-);
-
-$code-dark:     #26272d !default;
-$code-light:    lighten($code-dark, 10%) !default;
-$caption-bg:    #191b1e !default;
-$table-bg:      #1c1d22 !default;
-$nav-bg:        #363245 !default;
-$selection-color: $pure-white !default;
-$selection-background: #14598f !default;
-
-$cornflower:    #4769ff !default;
-$amethyst:      #7e55eb !default;
-$fuchsia:       #ed55ff !default;
-$violet:        #f55c9b !default;
-$vermilion:     #f5473a !default;
-$ocher:         #ff7534 !default;
-$amber:         #eb9d38 !default; /* #eba438 */
-$dandelion:     #dfbb2c !default; /* #ffd73e */
-$chartreuse:    #c1f01a !default; /* #f5f442 */
-$emerald:       #51f54a !default;
-$caribbean:     #47ffb5 !default;
-$turquoise:     #5adaeb !default;
-$cerulean:      #4eaeff !default;
-
-$colors: () !default;
-$colors: map-merge(
-	(
-		"cornflower":  $cornflower,
-		"amethyst":    $amethyst,
-		"fuchsia":     $fuchsia,
-		"violet":      $violet,
-		"vermilion":   $vermilion,
-		"ocher":       $ocher,
-		"amber":       $amber,
-		"dandelion":   $dandelion,
-		"chartreuse":  $chartreuse,
-		"emerald":     $emerald,
-		"caribbean":   $caribbean,
-		"turquoise":   $turquoise,
-		"cerulean":    $cerulean
-	),
-	$colors
-);
-
-$primary:       $cornflower !default;
-$secondary:     $gray-600 !default;
-$success:       $emerald !default;
-$info:          $turquoise !default;
-$warning:       $dandelion !default;
-$danger:        $vermilion !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
-
-$theme-colors: () !default;
-$theme-colors: map-merge(
-	(
-		"primary":    $primary,
-		"secondary":  $secondary,
-		"success":    $success,
-		"info":       $info,
-		"warning":    $warning,
-		"danger":     $danger,
-		"light":      $light,
-		"dark":       $dark
-	),
-	$theme-colors
-);
-
-$light-cornflower:    lighten-color($cornflower);
-$light-amethyst:      lighten-color($amethyst);
-$light-fuchsia:       lighten-color($fuchsia);
-$light-violet:        lighten-color($violet);
-$light-vermilion:     lighten-color($vermilion);
-$light-ocher:         lighten-color($ocher);
-$light-amber:         lighten-color($amber);
-$light-dandelion:     lighten-color($dandelion);
-$light-chartreuse:    lighten-color($chartreuse);
-$light-emerald:       lighten-color($emerald);
-$light-caribbean:     lighten-color($caribbean);
-$light-turquoise:     lighten-color($turquoise);
-$light-cerulean:      lighten-color($cerulean);
-
-$light-colors: () !default;
-$light-colors: map-merge(
-	(
-		"light-cornflower":  $light-cornflower,
-		"light-amethyst":    $light-amethyst,
-		"light-fuchsia":     $light-fuchsia,
-		"light-violet":      $light-violet,
-		"light-vermilion":   $light-vermilion,
-		"light-ocher":       $light-ocher,
-		"light-amber":       $light-amber,
-		"light-dandelion":   $light-dandelion,
-		"light-chartreuse":  $light-chartreuse,
-		"light-emerald":     $light-emerald,
-		"light-caribbean":   $light-caribbean,
-		"light-turquoise":   $light-turquoise,
-		"light-cerulean":    $light-cerulean
-	),
-	$light-colors
-);
-
-$dark-cornflower:     darken-color($cornflower);
-$dark-amethyst:       darken-color($amethyst);
-$dark-fuchsia:        darken-color($fuchsia);
-$dark-violet:         darken-color($violet);
-$dark-vermilion:      darken-color($vermilion);
-$dark-ocher:          darken-color($ocher);
-$dark-amber:          darken-color($amber);
-$dark-dandelion:      darken-color($dandelion);
-$dark-chartreuse:     darken-color($chartreuse);
-$dark-emerald:        darken-color($emerald);
-$dark-caribbean:      darken-color($caribbean);
-$dark-turquoise:      darken-color($turquoise);
-$dark-cerulean:       darken-color($cerulean);
-
-$dark-colors: () !default;
-$dark-colors: map-merge(
-	(
-		"dark-cornflower":   $dark-cornflower,
-		"dark-amethyst":     $dark-amethyst,
-		"dark-fuchsia":      $dark-fuchsia,
-		"dark-violet":       $dark-violet,
-		"dark-vermilion":    $dark-vermilion,
-		"dark-ocher":        $dark-ocher,
-		"dark-amber":        $dark-amber,
-		"dark-dandelion":    $dark-dandelion,
-		"dark-chartreuse":   $dark-chartreuse,
-		"dark-emerald":      $dark-emerald,
-		"dark-caribbean":    $dark-caribbean,
-		"dark-turquoise":    $dark-turquoise,
-		"dark-cerulean":     $dark-cerulean
-	),
-	$dark-colors
-);
-
-$sample: (
-	"001": #C62828,
-	"002": #E53935,
-	"003": #EF5350,
-	"004": #E57373,
-	"005": #AD1457,
-	"006": #D81B60,
-	"007": #EC407A,
-	"008": #F06292,
-	"009": #6A1B9A,
-	"010": #8E24AA,
-	"011": #AB47BC,
-	"012": #BA68C8,
-	"013": #4527A0,
-	"014": #5E35B1,
-	"015": #7E57C2,
-	"016": #9575CD,
-	"017": #283593,
-	"018": #3949AB,
-	"019": #5C6BC0,
-	"020": #7986CB,
-	"021": #1565C0,
-	"022": #1E88E5,
-	"023": #42A5F5,
-	"024": #64B5F6,
-	"025": #0277BD,
-	"026": #039BE5,
-	"027": #29B6F6,
-	"028": #4FC3F7,
-	"029": #00838F,
-	"030": #00ACC1,
-	"031": #26C6DA,
-	"032": #4DD0E1,
-	"033": #00695C,
-	"034": #00897B,
-	"035": #26A69A,
-	"036": #80CBC4,
-	"037": #2E7D32,
-	"038": #43A047,
-	"039": #66BB6A,
-	"040": #81C784,
-	"041": #558B2F,
-	"042": #7CB342,
-	"043": #9CCC65,
-	"044": #AED581,
-	"045": #9E9D24,
-	"046": #C0CA33,
-	"047": #D4E157,
-	"048": #DCE775,
-	"049": #F9A825,
-	"050": #FDD835,
-	"051": #FFEE58,
-	"052": #FFF176,
-	"053": #FF8F00,
-	"054": #FFB300,
-	"055": #FFCA28,
-	"056": #FFD54F,
-	"057": #EF6C00,
-	"058": #FB8C00,
-	"059": #FFA726,
-	"060": #FFB74D,
-	"061": #D84315,
-	"062": #F4511E,
-	"063": #FF7043,
-	"064": #FF8A65,
-	"065": #BCAAA4,
-	"066": #546E7A,
-	"067": #78909C,
-	"068": #B0BEC5,
-	// gray
-	"069": #444444,
-	"070": #555555,
-	"071": #666666,
-	"072": #777777,
-	"073": #888888,
-	"074": #999999,
-	"075": #AAAAAA,
-	"076": #BBBBBB,
-	"077": #CCCCCC,
-	"078": #DDDDDD,
-	// Extra
-	"079": #BF1A2F,
-	"080": #F00699,
-	"081": #454E9E,
-	"082": #018E42,
-	"083": #F7D002,
-	"084": #E8F1F2,
-	"085": #B3EFB2,
-	"086": #7A9E7E,
-	"087": #31493C,
-	"088": #D81159,
-	"089": #8F2D56,
-	"090": #218380,
-	"091": #FBB13C,
-	"092": #73D2DE,
-	"093": #F6EFA6,
-	"094": #F0D2D1,
-	"095": #8EB19D,
-	"096": #66B3BA,
-	"097": #42CAFD,
-	"098": #613A3A,
-	"099": #60993E,
-	"100": #A1E44D,
-	"101": #77FF94,
-	"102": #7AFDD6,
-	"103": #383F51,
-	"104": #DDDBF1,
-	"105": #3C4F76,
-	"106": #88A2AA,
-	"107": #E2856E,
-	"108": #F42C04,
-	"109": #EDE3E9,
-	"110": #3A2618,
-	"111": #754043,
-	"112": #9A8873,
-	"113": #37423D,
-	"114": #7F055F,
-	"115": #E5A4CB,
-	"116": #FBBA72,
-	"117": #8F250C,
-	"118": #691E06,
-	"119": #BB4D00,
-	"120": #51291E,
-	"121": #FDE74C,
-	"122": #5BC0EB,
-	"123": #9BC53D,
-	"124": #C3423F,
-	"125": #3a2d34,
-	"126": #817E9F,
-	"127": #7FC29B,
-	"128": #3454D1,
-	"129": #D1345B,
-	"130": #34D1BF,
-	"131": #FAD4C0,
-	"132": #64B6AC,
-	"133": #32533D,
-	"134": #F374AE,
-	"135": #ED9390,
-	"136": #E6B89C,
-	"137": #541388,
-	"138": #FFD400,
-	"139": #D90368,
-	"140": #2E294E
-);
-
-// End colors
-
-
-
-
 // Sizes
 $page-max-width: 60rem;
+
+
+// Spacing
+$base-padding: 0.5rem;
+$base-margin: 0.5rem;
+$body-margin: 0.875rem;
+
+
 // Table of Contents
-// Margin around container
-$toc-loose-margin: 1rem;
-// Min width of container
-// Space required to start placing the table on the side
-$toc-loose-min-width: 24rem;
-$toc-loose-bp-min-width: $page-max-width + $toc-loose-min-width * 2;
+$toc-loose-margin: 2rem; // Margin around container
+$toc-loose-min-width: 24rem; // Free space required on the side of the page to move the table over
 
 
 // Font sizes
-// ** Design made using 1rem = 16px
-// Everything spacing-wise (except for the webkit scrollbar) is using
-// the default browser font size as a basis for spacing and size.
+// ** Designed using 16px browser default
+// Everything is using browser font size as a reference, except for the webkit scrollbar
 $base-font-size: 1rem;
 $font-size-xxl: $base-font-size * 1.9;
 $font-size-xl:  $base-font-size * 1.5;
@@ -352,12 +28,8 @@ $font-size-lg:  $base-font-size * 1.17;
 $font-size-sm:  $base-font-size * 0.83;
 $font-size-xs:  $base-font-size * 0.67;
 
-// Spacing
-$base-padding: 0.5rem;
-$base-margin: 0.5rem;
-$body-margin: 0.625rem;
 
-// indent
+// Indent
 $base-indent: 2.5rem;
 $indent-xxl: $base-indent * 1.75;
 $indent-xl: $base-indent * 1.5;
@@ -366,7 +38,8 @@ $indent-md: $base-indent * 1;
 $indent-sm: $base-indent * 0.75;
 $indent-xs: $base-indent * 0.5;
 
-// heading
+
+// Heading
 $h1-size: $font-size-xxl;
 $h2-size: $font-size-xl;
 $h3-size: $font-size-lg;
@@ -402,11 +75,13 @@ $h4-page-letter-spacing: 0.03em;
 $h5-page-letter-spacing: 0.02em;
 $h6-page-letter-spacing: 0.02em;
 
-// btn padding
+
+// Button padding
 $btn-padding-vertical:   $base-padding * 0.75;
 $btn-padding-horizontal: $base-padding * 2.2;
 
-// nav padding
+
+// Navigation padding
 $nav-vertical-padding:   $base-padding * 0.75;
 $nav-horizontal-padding: $base-margin;
 
@@ -426,6 +101,6 @@ $scrollbar-webkit-width: 1rem;
 $scrollbar-webkit-border-radius: $base-border-radius;
 
 
-// Box-shadow
+// Box shadow
 $base-box-shadow-spacing: 0.25rem 0.5rem 0;
 $base-box-shadow: $base-box-shadow-spacing rgba(0,0,0,0.55);

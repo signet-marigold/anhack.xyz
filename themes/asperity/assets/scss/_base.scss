@@ -53,52 +53,6 @@ nav > div {
 	max-width: $page-max-width - ($nav-horizontal-padding * 2);
 }
 
-main {
-	#toc-container {
-		font-size: 0.95em;
-		border-radius: if($rounded-corners, $base-border-radius, null);
-		margin: 0 0 2rem;
-		background-color: $black;
-		@include xs {
-			padding-left:  1rem;
-			padding-right: 1rem;
-		}
-		@include sm {
-			padding-left:  2rem;
-			padding-right: 2rem;
-		}
-		@include md {
-			padding-left:  3rem;
-			padding-right: 3rem;
-		}
-		padding-top: 1rem;
-		padding-bottom: 0.5rem;
-		h2 {
-			margin: 0;
-			font-size: 1.5rem * 0.95;
-		}
-		nav > ol,
-		nav > ul {
-			margin: 1rem 0 0;
-			padding-left: 1rem;
-		}
-		// Side mode
-		@include breakpoint($toc-loose-bp-min-width) {
-			$horizontal-padding: 2.5rem;
-			padding-left:  $horizontal-padding;
-			padding-right: $horizontal-padding;
-			padding-top: 1.75rem;
-			padding-bottom: 1.5rem;
-			margin: 0;
-			position: absolute;
-			top: $body-margin + 12rem;
-			left: calc(50% + #{$page-max-width * 0.5 + $toc-loose-margin});
-			//min-width: #{$toc-loose-min-width - $toc-loose-margin * 2 - $horizontal-padding * 2};
-			max-width: calc((100% - #{$page-max-width}) * 0.5 - #{$toc-loose-margin * 2 + $horizontal-padding * 2})
-		}
-	}
-}
-
 // Page content body margins
 .header-text,
 .main-article,

@@ -22,7 +22,7 @@ draft: false
 - salt to taste
 - optionally add cream
 
-**Instructions:**  
+**Instructions:**
 1. Get a large pot. 1.5 gallons
 1. Cover the bottom of the pot with 3-4 tbsp olive oil
 1. Large chop onions and add to pot
