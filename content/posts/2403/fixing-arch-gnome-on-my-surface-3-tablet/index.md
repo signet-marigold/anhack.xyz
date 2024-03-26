@@ -2,7 +2,7 @@
 title: "How I fixed arch linux on my Surface 3"
 subtitle: ""
 date: 2024-03-25T03:57:01-05:00
-lastMod: 2024-03-25T03:57:01-05:00
+lastMod: 2024-03-25T21:48:16-05:00
 author: ""
 image: "anhack-surface3-arch-gnome.jpeg"
 imageAlt: "Arch on Surface3"
@@ -32,16 +32,16 @@ If you've run into the same issues that I have and haven't been able to find a f
 
 List of all fixes that worked on my surface 3
 
-DEVICE INFO: Arch Kernel 6.8.1; Gnome 45;
+DEVICE INFO: Kernel 6.8.1 Arch; GNOME 45.5;
 Surface 3; 2GB Ram
 
 ## General Surface Drivers and Support
 
-[Linux Surface Project](https://github.com/linux-surface/linux-surface)
-
 [Arch install](https://github.com/linux-surface/linux-surface/wiki/Installation-and-Setup#arch)
 
- [`libwacom-surface`](https://aur.archlinux.org/packages/libwacom-surface) can be installed through the AUR.
+[Linux Surface Project](https://github.com/linux-surface/linux-surface)
+
+[`libwacom-surface` driver](https://aur.archlinux.org/packages/libwacom-surface) can be installed through the AUR.
 
 Even though it's not needed, I did install the marvel firmware for the wifi.
 
@@ -57,9 +57,7 @@ Fix: Added `intel_idle.max_cstate=1 i915.enable_dc=0 intel_iommu=off iommu=off` 
 
 Problem: Backlight controls do not work.
 
-Fix: Rebuild kernel with two drivers (pwm and i2c) switching places as installed and module.
-
-Those two being `CONFIG_PWM_CRC`  and ``CONFIG_I2C_DESIGNWARE_PCI`
+Fix: Rebuild kernel with two drivers (pwm and i2c) switching places.
 
 This causes the drivers to load in a different order. It's more of a hack than anything.
 
@@ -73,82 +71,90 @@ This is exactly what I did to install arch with gnome and get the touchscreen an
 <https://wiki.archlinux.org/title/Installation_guide>
 Follow this guide for the initial setup before you get to the chroot part.
 
+### Preface
+
 I do recommend changing the font in the live environment
-```
-# setfont ter-132b
+```sh
+># setfont ter-132b
 ```
 
 And mount boot efi disk to `/boot` and not `/boot/efi`
 
-### Chroot
+### After Chroot
 Once you're in root partition
 
-### Set timezone
-```
-# ln -sf /usr/share/zoneinfo/<Region>/<City> /etc/localtime
-```
-
-### Update hardware clock
-```
-# hwclock --systohc
+#### Set timezone
+```sh
+># ln -sf /usr/share/zoneinfo/<Region>/<City> /etc/localtime
 ```
 
-### Generate locales
+#### Update hardware clock
+```sh
+># hwclock --systohc
+```
+
+#### Generate locales
 
 edit `/etc/locale.gen` and uncomment `en_US.UTF-8 UTF-8` and other needed UTF-8 locales
 
-```
-# locale-gen
+```sh
+># locale-gen
 ```
 
-```
+```sh
 /etc/locale.conf
 ---------------------------------------
 LANG=en_us.UTF-8
 ```
 
-### Set terminal font
-```
-# pacman -S terminus-font
+#### Set terminal font
+```sh
+># pacman -S terminus-font
 ```
 
-```
+```sh
 /etc/vconsole.conf
 ---------------------------------------
 FONT=ter-132b
 ```
 
-### Set hostname
+#### Set hostname
 
-```
+```sh
 /etc/hostname
 ---------------------------------------
 <yourhostname>
 ```
 
-### Install text editors for later
+#### Install text editors for later
+```sh
+># pacman -S vi vim
 ```
-# pacman -S vi vim
+
+#### Set root password
+
+```sh
+># passwd
 ```
 
 ### Install linux-surface project
 These commands are subject to change. I will write out everything that I did so that maybe you can find where something went wrong
 
-```
-# curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc | sudo pacman-key --add -
-```
-
-```
-# pacman-key --finger 56C464BAAC421453
+```sh
+># curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc | sudo pacman-key --add -
 ```
 
+```sh
+># pacman-key --finger 56C464BAAC421453
 ```
-# pacman-key --lsign-key 56C464BAAC421453
+
+```sh
+># pacman-key --lsign-key 56C464BAAC421453
 ```
 
 #### Add repository to the end of `pacman.conf`
 
-```
+```sh
 /etc/pacman.conf
 ---------------------------------------
 [linux-surface]
@@ -156,31 +162,32 @@ Server = https://pkg.surfacelinux.com/arch/
 ```
 
 #### Install main packages for linux-surface
-```
-# pacman -Syu linux-surface linux-surface-headers iptsd
+
+```sh
+># pacman -Syu linux-surface linux-surface-headers iptsd
 ```
 
 #### Install additional packages we will need later
 
-```
-# pacman -S linux-firmware-marvell intel-ucode sudo networkmanager
+```sh
+># pacman -S linux-firmware-marvell intel-ucode sudo networkmanager
 ```
 
 This is everything for `linux-surface` for now, but we'll get back to it later.
 
 ### Install grub
 
-```
-# pacman -S grub efibootmgr
+```sh
+># pacman -S grub efibootmgr
 ```
 
-```
-# grub-mkconfig -o /boot/grub/grub.cfg
+```sh
+># grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 #### Create update-grub script
 
-```
+```sh
 /usr/sbin/update-grub
 ---------------------------------------
 #!/bin/sh
@@ -188,139 +195,130 @@ set -e
 exec grub-mkconfig -o /boot/grub/grub.cfg "$@"
 ```
 
+```sh
+># chown root:root /usr/sbin/update-grub
+```
 
-```
-# chown root:root /usr/sbin/update-grub
-```
-
-```
-# chmod 755 /usr/sbin/update-grub
+```sh
+># chmod 755 /usr/sbin/update-grub
 ```
 
 #### Install into `/boot`
-```
-# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+
+```sh
+># grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 ```
 
 #### Update grub config
-Change line `GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet`
-```
+
+Change line `GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"`
+
+```sh
 /etc/default/grub
 ---------------------------------------
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet intel_idle.max_cstate=1 i915.enable_dc=0 intel_iommu=off iommu=off"
 ```
 
-`intel_idle.max_cstate=1 i915.enable_dc=0 intel_iommu=off iommu=off` with the wacom driver, that we will install later, will fix the issue of the touchscreen controller dying randomly some time after boot
+The setting: `intel_idle.max_cstate=1 i915.enable_dc=0 intel_iommu=off iommu=off`, along with the wacom driver (that we will install later) will fix the issue of the touchscreen controller randomly dying some time after boot.
 
-```
-# update-grub
-```
-
-### Set root password
-```
-# passwd
+```sh
+># update-grub
 ```
 
 ### Create user
 
-```
-# useradd -m -g users -G wheel,video <username>
-```
-
-### Set new user password
-
-```
-# password <username>
+```sh
+># useradd -m -g users -G wheel,video <username>
 ```
 
-### Enable sudo for new user
+#### Set new user password
+
+```sh
+># password <username>
 ```
-# visudo
+
+#### Enable sudo for new user
+
+```sh
+># visudo
 ```
 
 This will open the sudoers file
 
 Uncomment either:
 
-```
-%wheel ALL=(ALL:ALL) ALL
-```
+`%wheel ALL=(ALL:ALL) ALL` For sudo access for the wheel group
 
-For sudo access for the wheel group
-
-```
-%wheel ALL=(ALL:ALL) NOPASSWD: ALL
-```
-
-Same thing without a password
+`%wheel ALL=(ALL:ALL) NOPASSWD: ALL` Same thing without a password
 
 ### Done with Arch install
-```
-# exit
+
+```sh
+># exit
 ```
 
-```
-# reboot
+```sh
+># reboot
 ```
 
 ## Login as user
 
 ### Setup NetworkManager
 
-```
-$ systemctl enable NetworkManager
-```
-
-```
-$ systemctl start NetworkManager
+```sh
+>$ systemctl enable NetworkManager
 ```
 
+```sh
+>$ systemctl start NetworkManager
 ```
-$ nmcli device wifi connect <SSID> password <password>
+
+```sh
+>$ nmcli device wifi connect <SSID> password <password>
 ```
 
 ### Install gnome
 
-```
-$ sudo pacman -S gnome
-```
-
-```
-$ systemctl enable gdm.service
+```sh
+>$ sudo pacman -S gnome
 ```
 
+```sh
+>$ systemctl enable gdm.service
 ```
-$ reboot
+
+```sh
+>$ reboot
 ```
 
 ### Install yay
 
-```
-$ sudo pacman -S git base-devel
-```
-
-```
-$ git clone https://aur.archlinux.org/yay-bin.git
+```sh
+>$ sudo pacman -S git base-devel
 ```
 
-```
-$ cd yay-bin/
+```sh
+>$ git clone https://aur.archlinux.org/yay-bin.git
 ```
 
+```sh
+>$ cd yay-bin/
 ```
-$ makepkg -si
+
+```sh
+>$ makepkg -si
 ```
 
 ### Install libwacom-surface
 
-```
-$ yay -S libwacom-surface
+```sh
+>$ yay -S libwacom-surface
 ```
 
 ### Install onscreen keyboard panel button
 
-```
-$ sudo pacman -S firefox gnome-browser-connector
+```sh
+>$ sudo pacman -S firefox gnome-browser-connector
 ```
 
 Open firefox and go to <https://extensions.gnome.org/>
@@ -339,8 +337,8 @@ Go to Settings > Users > Automatic Login : Enable
 
 #### Out of suspend
 
-```
-$ gsettings set org.gnome.desktop.screensaver lock-enabled false
+```sh
+>$ gsettings set org.gnome.desktop.screensaver lock-enabled false
 ```
 
 ### Rebuild the Kernel
@@ -364,40 +362,42 @@ For arch-6.8.1 the only ones we need to change are `CONFIG_PWM_CRC` and `CONFIG_
 Caution: kernel build files use approximately 10-12 GB of disk space, and build took me around 5 hours to complete.
 
 #### Alright so lets get into it
-```
-$ git clone https://github.com/linux-surface/linux-surface.git
+
+```sh
+>$ git clone https://github.com/linux-surface/linux-surface.git
 ```
 
-```
-$ cd linux-surface/pkg/arch/kernel/
+```sh
+>$ cd linux-surface/pkg/arch/kernel/
 ```
 
 Get checksum of default config
 
-```
-$ sha256sum config 
+```sh
+>$ sha256sum config 
 ```
 
 Keep this output for a bit later
 
 ##### Edit kernel configuration
 
-```
+```sh
 config
 ---------------------------------------
 CONFIG_PWM_CRC=y
+...
 CONFIG_I2C_DESIGNWARE_PCI=m
 ```
 
 Now you have to resign the config file
 
-```
-$ sha256sum config
+```sh
+>$ sha256sum config
 ```
 
 Take the output of that command and place it into `PKGBUILD`
 
-```
+```sh
 PKGBUILD
 ---------------------------------------
 sha256sums=('SKIP'
@@ -415,22 +415,22 @@ Replace checksum and save `PKGBUILD`
 
 ##### Build kernel
 
-```
-$ PKGEXT=".pkg.tar" MAKEFLAGS="-j8" makepkg -s --skippgpcheck
+```sh
+>$ PKGEXT=".pkg.tar" MAKEFLAGS="-j8" makepkg -s --skippgpcheck
 ```
 
 ##### Install new kernel package
 
-```
-$ sudo pacman -U linux-surface-*.pkg.tar
-```
-
-```
-$ sudo update-grub
+```sh
+>$ sudo pacman -U linux-surface-*.pkg.tar
 ```
 
+```sh
+>$ sudo update-grub
 ```
-$ reboot
+
+```sh
+>$ reboot
 ```
 
 And that's it. That is everything I've done to make gnome arch working on my surface 3.
