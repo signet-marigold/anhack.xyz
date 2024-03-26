@@ -24,7 +24,7 @@
 		</video>
 	{{- end }}
 {{- end }}
-{{ if ne .Type "page" -}}
+{{ if eq .Type "posts" -}}
 	{{ partial "post_meta.html" . }}
 {{- end -}}
 

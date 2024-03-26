@@ -9,23 +9,18 @@ imageAlt: ""
 category: "recipe"
 tags: []
 toc: false
-draft: true
+draft: false
 ---
 Creamy dill dip - makes 2 cups
 
 **Ingredients:**
-- 1 C dairy saire cream
-- 1 C mayo a salad D.
+- 1 C dairy sour cream
+- 1 C mayo or salad dressing
 - 1 T minced dried onion
 - 1 T dried dillweed
 - 1/2 tsp. seasoned salt
 
-
-
-
-
-
 **Instructions:**
-allarted mixed fresh veg ar crisp clachure
-
-thoroughly combine S. cream, mayo, aiok, dillweed, + d each cour + chill thoroughly to blend blanae
+1. Thoroughly combine sour cream, mayo, onion, dillweed, and seasoned salt
+1. Cover + chill thoroughly to blend flavor
+1. Pair with Assorted mix of fresh vegtables or crisp crackers

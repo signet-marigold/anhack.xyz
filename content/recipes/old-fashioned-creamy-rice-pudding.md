@@ -9,19 +9,20 @@ imageAlt: ""
 category: "recipe"
 tags: []
 toc: false
-draft: true
+draft: false
 ---
-old fashioned creamy rice pudding - 5 terines for crock pot (6gt)
+Old fashioned creamy rice pudding - 5 times the recipe for a crock pot (6gt)
 
 **Ingredients:**
-- 1/2 c. uncooked rice
-- 1/2 tsp. salt
-- 1/4 c sugar
+- 1/2 C uncooked rice, not instant type
+- 1/2 tsp salt
+- 1/4 C sugar
 - 1/4 tsp cinnamon or nutmeg
-- 2 1/2 c. milk
-- 1/2 c feedlied raierered of driered drained
+- 2 1/2 C milk
+- 1/2 C seedless raisins if desired
 
 **Instructions:**
+1. Combine all ingredients
+1. Cook until desired consistency
 
-combine all ingredients
-cook until desiered consistency
+Cook temp: high

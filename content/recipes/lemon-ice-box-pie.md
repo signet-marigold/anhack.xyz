@@ -9,8 +9,6 @@ category: "recipe"
 tags: []
 draft: false
 ---
-misha's classic recipe  
-
 ## Ingredients:
 
 - 1/2 cup lemon juice
