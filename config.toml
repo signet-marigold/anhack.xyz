@@ -1,5 +1,5 @@
 baseURL = 'https://anhack.xyz/'
-title = 'ANHACK BLOG'
+title = 'ANHack Blog'
 theme = 'asperity'
 languageCode = 'en-US'
 defaultContentLanguage = 'en'

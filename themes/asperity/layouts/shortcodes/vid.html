@@ -1,12 +1,6 @@
-{{- $loop := false -}}
-{{- if eq (.Get "loop") "true" -}}
-	{{- $loop = true -}}
-{{- end -}}
-
 {{- $src := .Get "src" -}}
-
 {{- $ext := path.Ext $src -}}
 
-<video {{ if ne $loop true }}controls{{ else }}autoplay muted loop{{ end }}>
+<video controls{{ if eq (.Get "loop") "true" }} autoplay loop muted{{ end }}>
 	<source src="{{ .Page.RelPermalink }}{{ $src }}" type="video/{{ trim $ext "." }}">
 </video>
