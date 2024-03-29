@@ -7,10 +7,16 @@ languageCode = 'en-us'
 	authorsinlist = true
 
 	# Footer items
-	nextprev = true
-	taglist = true
-	showrss = true
-	showthemeinfo = false
+	nextPrev = true
+	tagList = true
+	showLicence = true
+	showAnalytics = true
+	showCopyright = true
+	showLastBuild = true
+	showThemeInfo = true
+	showSource = true
+	showRSS = true
+	showThemeToggle = true
 
 	# Don't know where this one is
 	commit = false

@@ -29,15 +29,15 @@ footer > div {
 			height: 31px;
 		}
 	}
-	#website-info {
+	#site-info {
 		max-width: 40rem;
 		margin: 0 auto;
-		letter-spacing: 0.135em;
-		word-spacing: 0.05rem;
+		letter-spacing: 0.025em;
+		word-spacing: 0.1rem;
 		& > * {
 			margin: 0 0.1rem;
 		}
-		#website-copyright {
+		#site-copyright {
 		}
 		.display-ib {
 			font-weight: 600;
@@ -50,7 +50,7 @@ footer > div {
 			margin: 0.4rem auto;
 		}
 	}
-	#website-extra {
+	#site-extra {
 		margin-top: 0.625rem;
 		display: flex;
 		align-items: center;
@@ -60,11 +60,22 @@ footer > div {
 	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
 	#rss-feed-link {
 		margin-left: $we-horizontal-margin;
-		img {
-			border: $base-border-thickness solid $gray-800;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			content: "";
+			background-repeat: no-repeat;
+			background-position: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			height: $we-height;
 			width: $we-height;
-			margin: 0;
+			margin: -#{$we-height * 0.5} 0;
+			margin-right: -0.3rem;
+			background-image: url("/icons/rss.svg");
 		}
 	}
 	.theme-toggle {

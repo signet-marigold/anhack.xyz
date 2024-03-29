@@ -1,28 +1,78 @@
-{{- $pageTime := (time.Now | time.Format (i18n "buildTimeDateFormat")) -}}
+{{- $buildTime := (time.Now | time.Format (i18n "buildTimeDateFormat")) -}}
 {{- /* Match non number characters and add separator class */ -}}
-{{- $pageTimeFormatted := (replaceRE `[^0-9]+` "<span class='dsb'>$0</span>" $pageTime) | safeHTML -}}
+{{- $buildTimeFormatted := (replaceRE `[^0-9]+` "<span class='dsb'>$0</span>" $buildTime) | safeHTML -}}
 			
-			{{ if .Param "showbadges" }}<div id="badges">
+			{{- if .Param "showbadges" -}}
+			<div id="badges">
 				{{ partialCached "badges.html" . }}
-			</div>{{ end -}}
-			<div id="website-info">
-				<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
-				{{ if .Site.Copyright }}<span id="website-copyright">{{ .Site.Copyright | markdownify }}</span>{{ end }}
-				<span>{{ i18n "rights" }}</span>
-				<div class="display-ib">{{ i18n "lastBuild" }}: {{ $pageTimeFormatted -}}</div>
 			</div>
-			{{- if .Param "showthemeinfo" }}
-			<p>
-				Published with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> using the <a href="https://github.com/signet-marigold/anhack.xyz/tree/main/themes/asperity" target="_blank" rel="noopener">Asperity Theme</a>.&nbsp;<a href='/theme-license.html'>Theme License</a>.
-			</p>
-			{{ end -}}
-			<div id="website-extra">
-				<a href="https://github.com/signet-marigold/anhack.xyz" target="_blank" rel="noopener">
-					<div class="btn-cerulean" title="View this website's source code.">View Source</div>
+			{{- end -}}
+			
+			<div id="site-info">
+				
+				{{- if .Param "showLicence" -}}
+				{{- if .Param "licenceLink" }}<a href="{{ .Param "licenceLink" }}" target="_blank" rel="noopener">{{ end -}}
+				{{- with .Param "licenceText" }}{{ . }}{{ end -}}
+				{{- if .Param "licenceLink" }}</a>{{ end -}}
+				{{- end -}}
+				
+				{{ if and 
+					(and (.Param "showLicence") (.Param "licenceText"))
+					(and (.Param "showAnalytics") (.Param "analyticsText"))
+				}}&nbsp;|&nbsp;{{ end }}
+				
+				{{- if .Param "showAnalytics" -}}
+				{{- if .Param "analyticsLink" }}<a href="{{ .Param "analyticsLink" }}" target="_blank" rel="noopener">{{ end -}}
+				{{- with .Param "analyticsText" }}{{ . }}{{ end -}}
+				{{- if .Param "analyticsLink" }}</a>{{ end -}}
+				{{- end -}}
+				
+				<br/>
+				
+				{{- if .Param "showCopyright" -}}
+				{{- if .Site.Copyright -}}
+				<p>
+					<a href="{{ .Site.BaseURL }}">
+						<span id="site-copyright">{{ .Site.Copyright }}</span>
+					</a>
+				</p>
+				{{- end -}}
+				{{- end -}}
+				
+				{{- if .Param "showLastBuild" -}}
+				<div class="display-ib">{{ i18n "lastBuild" }}: {{ $buildTimeFormatted }}</div>
+				{{- end -}}
+				
+				{{- if .Param "showThemeInfo" -}}
+				<p>
+					Published with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> using the <a href="https://github.com/signet-marigold/anhack.xyz/tree/main/themes/asperity" target="_blank" rel="noopener">Asperity Theme</a>
+				</p>
+				{{- end -}}
+				
+			</div>
+			
+			<div id="site-extra">
+			
+				{{- if .Param "showSource" -}}
+				{{- with .Param "source" -}}
+				<a href="{{ . }}" target="_blank" rel="noopener">
+					<div class="btn-cerulean" title="View this site's source code.">View Source</div>
 				</a>
-				{{- if .Param "showrss" }}<a href="/index.xml" id="rss-feed-link" target="_blank" rel="noopener"><img width="24" src="/icons/rss.svg" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
+				{{- end -}}
+				{{- end -}}
+			
+				{{- if .Param "showRSS" -}}
+				<a href="/index.xml" target="_blank" rel="noopener" title="Subscribe via RSS for updates.">
+					<div class="btn-ocher" id="rss-feed-link">RSS Main Feed</div>
+				</a>
+				{{- end -}}
+				
+				{{- if .Param "showThemeToggle" -}}
 				<div class="theme-toggle" title="Click to change theme (light/dark)"></div>
+				{{- end -}}
+			
 			</div>
+			
 			{{- partialCached "assets/css-loader.html" "easyzoom.css" -}}
 			{{- partialCached "assets/js-loader.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}
 			{{- partialCached "theme-switcher/script-btn.html" . -}}

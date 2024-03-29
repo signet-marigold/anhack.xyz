@@ -59,5 +59,3 @@ other = "in"
 # Footer
 [lastBuild]
 other = "Last build"
-[rights]
-other = "Some rights reserved; please attribute properly and link back."
