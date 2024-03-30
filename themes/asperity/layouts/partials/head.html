@@ -23,39 +23,41 @@
 			{{ $title_plain_og = printf "%s" (.Title | title) | markdownify | plainify -}}
 		{{ end -}}
 		
+		
 		{{ $description_plain := "" -}}
 		{{ with .Params.description -}}
 			{{ $description_plain = . | markdownify | plainify -}}
 		{{ else -}}
 			{{ $description_plain = .Summary | markdownify | plainify -}}
 		{{ end }}
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow, snippet, archive" />
 		<title>{{ $title_plain }}</title>
-		<meta name="description" content="{{ $description_plain }}" />
-		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}" />{{ end }}
-{{ partialCached "preload.html" . }}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<meta name="Description" content="{{ $description_plain }}">
+		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}">{{ end }}
+		
+		
+		{{ partialCached "preload.html" . }}
 		{{ $options := dict "transpiler" "libsass" "targetPath" "css/fonts.css" -}}
 		{{ with resources.Get "scss/fonts.scss" | toCSS $options | minify | fingerprint -}}
-			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 		{{ end -}}
 		{{ $options := dict "transpiler" "libsass" "targetPath" "css/style.css" -}}
 		{{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint -}}
-			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 		{{ end -}}
-		<link rel="stylesheet" href="/css/print.css" media="print" />
+		<link rel="stylesheet" href="/css/print.css" media="print">
 		
-		<link rel="canonical" href="{{ .Permalink }}" />
+		
+		<link rel="canonical" href="{{ .Permalink }}">
 		<link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
 		
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-touch-icon.png" | relURL }}" />
-		<link rel="icon" type="image/png" sizes="128x128" href="{{ "img/favicon-128x128.png" | relURL }}" />
-		<link rel="icon" type="image/png" sizes="64x64" href="{{ "img/favicon-64x64.png" | relURL }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ "img/favicon-32x32.png" | relURL }}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ "img/favicon-16x16.png" | relURL }}" />
-		<link rel="shortcut icon" type="image/x-icon" href="{{ "img/favicon.ico" | relURL }}" />
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-touch-icon.png" | relURL }}">
+		<link rel="icon" type="image/png" sizes="128x128" href="{{ "img/favicon-128x128.png" | relURL }}">
+		<link rel="icon" type="image/png" sizes="64x64" href="{{ "img/favicon-64x64.png" | relURL }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ "img/favicon-32x32.png" | relURL }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ "img/favicon-16x16.png" | relURL }}">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ "img/favicon.ico" | relURL }}">
 
 		<!-- OpenGraph tags -->
 		{{- $is_blog := and (eq .Kind "page") (or (eq .Type "posts") (eq .Type "project")) -}}
@@ -166,7 +168,7 @@
 		<meta property="og:site_name" content="{{ .Site.Title }}">
 		<meta property="og:title" content="{{ $title_plain_og }}">
 		<meta property="og:type" content="{{ cond $is_blog "article" "website" }}">
-		<meta property="og:url" content="{{ .Permalink }}" />
+		<meta property="og:url" content="{{ .Permalink }}">
 		<meta property="og:description" content="{{ $description_plain }}">
 		
 	{{- with $image }}
@@ -192,4 +194,7 @@
 		<meta name="twitter:card" content="summary{{ if and $has_image $is_blog }}_large_image{{ end }}">
 		<meta name="twitter:title" content="{{ $title_plain_og | truncate 70 }}">
 		<meta property="twitter:description" content="{{ $description_plain | truncate 200 }}">
+		
+		<meta name="robots" content="index, follow">
+		
 		{{- partialCached "analytics.html" . -}}

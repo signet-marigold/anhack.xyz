@@ -163,6 +163,22 @@ body.light-theme {
 			box-shadow: $base-box-shadow-spacing mix($val, $light-theme-bg, 50%);
 		}
 	}
+	.panel-note > .panel-icon {
+		background-image: url("/icons/notepad.svg");
+	}
+	.panel-example > .panel-icon {
+		background-image: url("/icons/question-mark.svg");
+	}
+	.panel-info > .panel-icon {
+		background-image: url("/icons/info.svg");
+	}
+	.panel-error > .panel-icon,
+	.panel-caution > .panel-icon {
+		background-image: url("/icons/caution.svg");
+	}
+	.panel-danger > .panel-icon {
+		background-image: url("/icons/skull-n-bones.svg");
+	}
 	// Headings are big and bold, best to keep them lighter then the rest of the text
 	h1,
 	h2 {
