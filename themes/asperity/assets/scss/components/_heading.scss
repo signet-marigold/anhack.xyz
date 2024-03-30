@@ -1,4 +1,5 @@
 main {
+	// In page
 	article.page {
 		// Underline h1s and h2s
 		h1:not(:target),
@@ -23,30 +24,59 @@ main {
 		h2:not(:target) {
 			margin-bottom: $h2-margin - $base-padding;
 		}
-		// Weights for page headings
+		
+		@function fcConvert($size) {
+			@return $size + $size * $page-heading-base-fc-mult;
+		}
+		
+		// Weights and extra top margin for page headings
 		h1 {
 			font-weight: $h1-page-weight;
 			letter-spacing: $h1-page-letter-spacing;
+			margin-top: fcConvert($h1-margin);
+			&:target {
+				margin-top: fcConvert($h1-margin) - $base-padding;
+			}
 		}
 		h2 {
 			font-weight: $h2-page-weight;
 			letter-spacing: $h2-page-letter-spacing;
+			margin-top: fcConvert($h2-margin);
+			&:target {
+				margin-top: fcConvert($h2-margin) - $base-padding;
+			}
 		}
 		h3 {
 			font-weight: $h3-page-weight;
 			letter-spacing: $h3-page-letter-spacing;
+			margin-top: fcConvert($h3-margin);
+			&:target {
+				margin-top: fcConvert($h3-margin) - $base-padding;
+			}
 		}
 		h4 {
 			font-weight: $h4-page-weight;
 			letter-spacing: $h4-page-letter-spacing;
+			margin-top: fcConvert($h4-margin);
+			&:target {
+				margin-top: fcConvert($h4-margin) - $base-padding;
+			}
 		}
 		h5 {
 			font-weight: $h5-page-weight;
 			letter-spacing: $h5-page-letter-spacing;
+			margin-top: fcConvert($h5-margin);
+			&:target {
+				margin-top: fcConvert($h5-margin) - $base-padding;
+			}
 		}
 		h6 {
 			font-weight: $h6-page-weight;
 			letter-spacing: $h6-page-letter-spacing;
+			margin-top: fcConvert($h6-margin);
+			&:target {
+				margin-top: fcConvert($h6-margin) - $base-padding;
+			}
 		}
 	}
 }
@@ -126,6 +156,7 @@ h6 {
 }
 
 // header horizontal margin calculator
+// outdents headers ever so slightly
 @function hhmc($in) {
 	$mul: 0.02;
 	@return $in * -$mul;

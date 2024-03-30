@@ -16,6 +16,7 @@ $body-margin: 0.875rem;
 // Table of Contents
 $toc-loose-margin: 2rem; // Margin around container
 $toc-loose-min-width: 24rem; // Free space required on the side of the page to move the table over
+$toc-loose-max-width: 34rem; // Max space toc can take up; cannot be smaller than $toc-loose-min-width
 
 
 // Font sizes
@@ -74,6 +75,10 @@ $h3-page-letter-spacing: 0.03em;
 $h4-page-letter-spacing: 0.03em;
 $h5-page-letter-spacing: 0.02em;
 $h6-page-letter-spacing: 0.02em;
+
+// Forehead clearance
+// Extra space above header
+$page-heading-base-fc-mult: 0.5;
 
 
 // Button padding

@@ -23,29 +23,68 @@ main {
 			margin: 1rem 0 0;
 			padding-left: 1rem;
 		}
+		// Wrapping text packs for readablility
+		line-height: 1.2;
+		ol,
+		ul {
+			li {
+				margin: 0.5rem 0;
+			}
+		}
+		
 		// Side mode
-		$toc-loose-bp-min-width: $page-max-width + $toc-loose-min-width * 2;
-		@include breakpoint($toc-loose-bp-min-width) {
-			$horizontal-padding: 2.5rem;
-			padding-left:  $horizontal-padding;
-			padding-right: $horizontal-padding;
+		$sm-breakpoint: $page-max-width + $toc-loose-min-width * 2;
+		$sm-indent-start-sm: 4rem;
+		$sm-indent-start-md: 8rem;
+		$sm-flex-distance: $toc-loose-max-width - $toc-loose-min-width;
+		nav ol,
+		nav ul {
+			@include breakpoint($sm-breakpoint) {
+				padding-left: $indent-xs;
+			}
+			@if ($sm-flex-distance >= $sm-indent-start-sm) {
+				@include breakpoint($sm-breakpoint + $sm-indent-start-sm) {
+					padding-left: $indent-sm;
+				}
+			}
+			@if ($sm-flex-distance >= $sm-indent-start-md) {
+				@include breakpoint($sm-breakpoint + $sm-indent-start-md) {
+					padding-left: $indent-md;
+				}
+			}
+		}
+		$sm-horizontal-padding: 2.5rem;
+		@include breakpoint($sm-breakpoint) {
+			nav > ol,
+			nav > ul {
+				padding-left: 1rem;
+			}
+			padding-left:  $sm-horizontal-padding;
+			padding-right: $sm-horizontal-padding;
 			padding-top: 1.75rem;
 			padding-bottom: 1.5rem;
 			margin: 0;
 			position: absolute;
 			top: $body-margin + 6rem;
 			
-			// Fix unsupported calc() browsers
+			// Begin: fix unsupported calc() browsers
+			// Bind right; max-width set to minimum safe width
 			right: $toc-loose-margin;
-			max-width: $toc-loose-min-width - ($toc-loose-margin * 2 + $horizontal-padding * 2);
+			max-width: $toc-loose-min-width - ($toc-loose-margin * 2 + $sm-horizontal-padding * 2);
 			
 			// Reset right if calc() is supported
 			@supports (right: calc(0px)) {
 				right: auto;
 			}
+			// End: fix unsupported calc() browsers
 			
 			left: calc(50% + #{$page-max-width * 0.5 + $toc-loose-margin});
-			max-width: calc((100% - #{$page-max-width}) * 0.5 - #{$toc-loose-margin * 2 + $horizontal-padding * 2});
+			max-width: calc((100% - #{$page-max-width}) * 0.5 - #{$toc-loose-margin * 2 + $sm-horizontal-padding * 2});
+		}
+		
+		// Side mode. Set max expand width
+		@include breakpoint($page-max-width + $toc-loose-max-width * 2) {
+			max-width: $toc-loose-max-width - ($toc-loose-margin * 2 + $sm-horizontal-padding * 2);
 		}
 	}
 }

@@ -35,6 +35,7 @@ footer > div {
 		margin: 0 auto;
 		letter-spacing: 0.025em;
 		word-spacing: 0.1rem;
+		color: $gray-100;
 		& > * {
 			margin: 0 0.1rem;
 		}
@@ -47,8 +48,12 @@ footer > div {
 			font-family: monospace;
 			font-variant: common-ligatures tabular-nums;
 			background: $dark-cornflower;
+			color: $white;
 			width: fit-content;
 			margin: 0.4rem auto;
+		}
+		a {
+			color: $white;
 		}
 	}
 	#site-extra {

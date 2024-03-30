@@ -95,10 +95,16 @@ body.light-theme {
 		}
 	}
 	footer > div {
-		color: #444;
-		#website-info .display-ib {
-			background: $cornflower;
-			color: #fff;
+		color: #222;
+		#site-info {
+			color: #444;
+			.display-ib {
+				background: $cornflower;
+				color: #fff;
+			}
+			a {
+				color: $light-theme-text;
+			}
 		}
 	}
 	// Some elements are simply the wrong color now
