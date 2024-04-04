@@ -1,6 +1,6 @@
 ---
 title: "Fun Links"
-subtitle: "\"ma ass is on fire\" -Benjin Jeffersom"
+subtitle: "Sugma"
 date: 2023-12-12T08:09:33Z
 lastMod: 2023-12-12T08:09:33Z
 author: ""
@@ -10,108 +10,94 @@ tags: []
 draft: false
 ---
 {{< grid markdown="true" >}}
-[musclewiki.com](https://musclewiki.com/)
-[puginarug.com](https://puginarug.com/)
-[copykat.com](https://copykat.com/)
-[NotablePeople map](https://tjukanovt.github.io/notable-people)
-[myrient.erista.me](https://myrient.erista.me/)
-[stilltasty.com](https://stilltasty.com/)
-[flightaware.com](https://www.flightaware.com/)
-[osintframework.com](https://osintframework.com/)
-[LEOlabs visualization](https://platform.leolabs.space/visualizations/leo)
-[fotoforensics.com](https://fotoforensics.com/)
-[carcarekiosk.com](https://www.carcarekiosk.com/)
-[tldraw.com](https://www.tldraw.com/)
-[photopea.com](https://www.photopea.com/)
-[zoomeye.org](https://www.zoomeye.org/)
-[moreorless.io](https://moreorless.io/)
-[5e.tools](https://5e.tools/)
-[govdeals.com](https://www.govdeals.com/)
-[iFixit guides](https://www.ifixit.com/Guide)
-[inspiral web](https://nathanfriend.io/inspiral-web/)
-[mikrotakt.app](https://mikrotakt.app/)
-[moviewiser.com](https://moviewiser.com/)
-[sidehustlestack.co](https://sidehustlestack.co/)
-[atlasos](https://atlasos.net/)
-[reviewmeta.com](https://reviewmeta.com/)
-[lightningmaps.org](https://www.lightningmaps.org/)
-[ocearch tracker](https://www.ocearch.org/tracker/)
-[boredhumans.com](https://boredhumans.com/)
-[googlefeud.com](https://googlefeud.com/)
-[pointerpointer.com](https://pointerpointer.com/)
-[wayback.archive.org](https://wayback.archive.org/)
-[bricklink studio](https://www.bricklink.com/v3/studio/download.page)
-[campfirewriting.com](https://www.campfirewriting.com/)
-[paveldogreat's fluid simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
-[minecraft classic](https://classic.minecraft.net/)
-[thelifeengine.net](https://thelifeengine.net/)
-[ptable.com](https://ptable.com/)
-[rsoe edis eventMap](https://rsoe-edis.org/eventMap)
-[sandspiel.club](https://sandspiel.club/)
-[theuselessweb.com](https://theuselessweb.com/)
-[maps driving simulator](https://framesynthesis.com/drivingsimulator/maps/)
-[steamdb sales](https://steamdb.info/sales/)
-[isitbadforyou.com](https://www.isitbadforyou.com/)
-[stellarium-web.org](https://stellarium-web.org/)
-[create.xyz](https://www.create.xyz/)
-[The password game](https://neal.fun/password-game/)
-[staggeringbeauty.com](http://www.staggeringbeauty.com/)
-[cooked.wiki](https://cooked.wiki/)
-[Smithsonian virtual tour](https://naturalhistory.si.edu/visit/virtual-tour)
-[cursoreffects.com](https://cursoreffects.com/)
-[window-swap.com](https://www.window-swap.com/Window)
-[broadcastify.com](https://www.broadcastify.com/)
-[justwatch.com](https://www.justwatch.com/)
-[eyecannndy.com](https://eyecannndy.com/)
-[my00stv.com](https://my00stv.com/)
-[inkarnate.com](https://inkarnate.com/)
-[listed.fun](https://listed.fun/)
-[Outrider bomb blast](https://outrider.org/nuclear-weapons/interactive/bomb-blast)
-[melodice.org](https://melodice.org/)
-[learn-anything.xyz](https://learn-anything.xyz/)
-[thetruesize.com](https://www.thetruesize.com/)
-[1aauto.com/videos](https://www.1aauto.com/videos)
-[rotatingsandwiches.com](https://rotatingsandwiches.com/)
-[appliancepartspros.com](https://www.appliancepartspros.com/)
-[tabletopaudio.com](https://tabletopaudio.com/)
-[eelslap.com](http://eelslap.com/)
-[TVChart](https://tvchart.benmiz.com/)
-[smmry.com](https://smmry.com/)
-[archive.org](https://archive.org/)
-[longdogechallenge.com](https://longdogechallenge.com/)
-[onesquareminesweeper.com](https://onesquareminesweeper.com/)
-[willrobotstakemyjob.com](https://willrobotstakemyjob.com/)
-[rockauto.com](https://www.rockauto.com/)
-[goblin.tools](https://goblin.tools/)
-[heeeeeeeey.com](https://heeeeeeeey.com/)
-[vlipsy.com](https://vlipsy.com/)
-[vesselfinder.com](https://www.vesselfinder.com/)
-[bodyvisualizer.com](https://bodyvisualizer.com/)
-[forebears.io](https://forebears.io/)
-[webmaster links](https://goblin-heart.net/sadgrl/webmastery/webmaster-links)
-[asteroid launcher](https://neal.fun/asteroid-launcher/)
-[republiquedesmangues.fr](http://www.republiquedesmangues.fr/)
-[hiddenhousing.org](https://www.hiddenhousing.org/)
-[syrinscape.com](https://app.syrinscape.com/)
-[marinetraffic.com](https://www.marinetraffic.com/)
-[corndog.io](http://corndog.io/)
-[edx.org](https://www.edx.org/)
-[radio.garden](https://radio.garden/)
-[answersocrates.com](https://answersocrates.com/)
-[findtheinvisiblecow.com](https://findtheinvisiblecow.com/)
-[flipp.com](https://flipp.com/)
-[ufostalker.com](https://ufostalker.com/)
-[supercook.com](https://www.supercook.com/)
-[rrrgggbbb.com](http://www.rrrgggbbb.com/)
-[fakedetail.com](http://fakedetail.com/)
-[shodan.io](https://www.shodan.io/)
-[toms.toys](https://toms.toys/)
-[FullScreenMario](http://www.joshuakgoldberg.com/FullScreenMario/Source/)
-[alternativeto.net](https://alternativeto.net/)
-[orb.farm](https://orb.farm/)
-[lostgamer.io](https://lostgamer.io/)
-[flightradar24.com](https://www.flightradar24.com/)
-[pcsrefurbished.com](https://pcsrefurbished.com/)
-[driveandlisten](https://driveandlisten.herokuapp.com/)
-[Simon Tatham's portable puzzle collection](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/)
+
+
 {{< /grid >}}
+
+## Informational / Educational
+[musclewiki.com](https://musclewiki.com/)
+
+### Cars
+[carcarekiosk.com](https://www.carcarekiosk.com/)
+[rockauto.com](https://www.rockauto.com/)
+
+### Food
+[stilltasty.com](https://stilltasty.com/)
+[isitbadforyou.com](https://www.isitbadforyou.com/)
+[cooked.wiki](https://cooked.wiki/)
+
+### Electronics
+[iFixit guides](https://www.ifixit.com/Guide)
+
+
+
+
+## Entertaining / Cool
+[forebears.io](https://forebears.io/)
+
+
+
+## Tools
+[5e.tools](https://5e.tools/)
+
+
+### Data
+
+#### Games
+[myrient.erista.me](https://myrient.erista.me/)
+
+#### Space Mapping
+[shodan.io](https://www.shodan.io/)
+[zoomeye.org](https://www.zoomeye.org/)
+
+#### Security Resources
+[osintframework.com](https://osintframework.com/)
+
+
+### Extra
+
+[fotoforensics.com](https://fotoforensics.com/)
+
+
+### Maps
+
+[NotablePeople map](https://tjukanovt.github.io/notable-people)
+[ufostalker.com](https://ufostalker.com/)
+[radio.garden](https://radio.garden/)
+[hiddenhousing.org](https://www.hiddenhousing.org/)
+
+
+#### Radio
+[flightaware.com](https://www.flightaware.com/)
+[flightradar24.com](https://www.flightradar24.com/)
+[vesselfinder.com](https://www.vesselfinder.com/)
+[marinetraffic.com](https://www.marinetraffic.com/)
+
+#### Space
+[stellarium-web.org](https://stellarium-web.org/)
+[LEOlabs visualization](https://platform.leolabs.space/visualizations/leo)
+
+
+
+
+## Games
+[The password game](https://neal.fun/password-game/)
+[Simon Tatham's portable puzzle collection](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/)
+[lostgamer.io](https://lostgamer.io/)
+[orb.farm](https://orb.farm/)
+[toms.toys](https://toms.toys/)
+[findtheinvisiblecow.com](https://findtheinvisiblecow.com/)
+
+
+
+
+## Random
+[puginarug.com](https://puginarug.com/)
+[heeeeeeeey.com](https://heeeeeeeey.com/)
+[staggeringbeauty.com](http://www.staggeringbeauty.com/)
+[rrrgggbbb.com](http://www.rrrgggbbb.com/)
+[corndog.io](http://corndog.io/)
+
+
+
+

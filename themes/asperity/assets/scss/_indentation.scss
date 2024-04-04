@@ -1,0 +1,26 @@
+@mixin list-indent {
+	@include xs {
+		padding-left: $indent-xs;
+	}
+	@include sm {
+		padding-left: $indent-sm;
+	}
+	@include md {
+		padding-left: $indent-md;
+	}
+}
+
+@mixin squeeze-indent {
+	@include xs {
+		margin: 1rem 0;
+	}
+	@include sm {
+		margin: 1rem $indent-sm;
+	}
+	@include md {
+		margin: 1rem $indent-lg;
+	}
+	@include lg {
+		margin: 1rem $indent-xxl;
+	}
+}

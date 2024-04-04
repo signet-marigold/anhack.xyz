@@ -1,6 +1,6 @@
 main {
 	#toc-container {
-		font-size: 0.95em;
+		font-size: 0.9em;
 		border-radius: if($rounded-corners, $base-border-radius, null);
 		margin: 0 0 2rem;
 		background-color: $black;
@@ -16,7 +16,7 @@ main {
 		}
 		h2 {
 			margin: 0;
-			font-size: 1.5rem * 0.95;
+			font-size: 1.5rem * 0.9;
 		}
 		nav > ol,
 		nav > ul {
@@ -34,35 +34,35 @@ main {
 		
 		// Side mode
 		$sm-breakpoint: $page-max-width + $toc-loose-min-width * 2;
-		$sm-indent-start-sm: 4rem;
-		$sm-indent-start-md: 8rem;
 		$sm-flex-distance: $toc-loose-max-width - $toc-loose-min-width;
 		nav ol,
 		nav ul {
 			@include breakpoint($sm-breakpoint) {
 				padding-left: $indent-xs;
 			}
-			@if ($sm-flex-distance >= $sm-indent-start-sm) {
-				@include breakpoint($sm-breakpoint + $sm-indent-start-sm) {
+			@if ($sm-flex-distance >= $tocs-indent-start-sm) {
+				@include breakpoint($sm-breakpoint + $tocs-indent-start-sm) {
 					padding-left: $indent-sm;
 				}
 			}
-			@if ($sm-flex-distance >= $sm-indent-start-md) {
-				@include breakpoint($sm-breakpoint + $sm-indent-start-md) {
+			@if ($sm-flex-distance >= $tocs-indent-start-md) {
+				@include breakpoint($sm-breakpoint + $tocs-indent-start-md) {
 					padding-left: $indent-md;
 				}
 			}
+			@if ($sm-flex-distance >= $tocs-indent-start-lg) {
+				@include breakpoint($sm-breakpoint + $tocs-indent-start-lg) {
+					padding-left: $indent-lg;
+				}
+			}
 		}
-		$sm-horizontal-padding: 2.5rem;
+		$sm-horizontal-padding: 3rem;
 		@include breakpoint($sm-breakpoint) {
 			nav > ol,
 			nav > ul {
-				padding-left: 1rem;
+				padding-left: 0;
 			}
-			padding-left:  $sm-horizontal-padding;
-			padding-right: $sm-horizontal-padding;
-			padding-top: 1.75rem;
-			padding-bottom: 1.5rem;
+			padding: 1.75rem $sm-horizontal-padding 1.15rem;
 			margin: 0;
 			position: absolute;
 			top: $body-margin + 6rem;

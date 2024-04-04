@@ -1,16 +1,4 @@
 figure {
-	@include xs {
-		margin: 1rem 0;
-	}
-	@include sm {
-		margin: 1rem 1rem;
-	}
-	@include md {
-		margin: 1rem 2rem;
-	}
-	@include lg {
-		margin: 1rem 3rem;
-	}
 	display: inline-block;
 	img {
 		margin: 0 auto;
@@ -19,13 +7,13 @@ figure {
 		height: auto;
 	}
 	figcaption {
+		border-top: $base-border-thickness $gray-700 solid;
 		background-color: $caption-bg;
 		padding: $base-padding $base-padding * 2;
 		$br: if($rounded-corners, $base-border-radius, 0);
 		padding-top: $br + $base-padding;
 		margin-top: -$br;
 		border-radius: 0 0 $br $br;
-//		border: $base-border-thickness $gray-700 solid;
 		text-align: center;
 		letter-spacing: 0.01em;
 		@include xs {
@@ -56,8 +44,8 @@ figure {
 		margin-right: 0;
 	}
 	&.half {
-		width: 49%;
-		width: calc(50% - 0.5rem);
+		width: 48.5%;
+		width: calc(50% - 0.5rem - #{$base-border-thickness * 2});
 		margin-left: 0;
 		margin-right: 0;
 		img {

@@ -368,7 +368,8 @@ CONFIG_DRM_I915=m
 For arch-6.8.1 the only ones we need to change are `CONFIG_PWM_CRC` and `CONFIG_I2C_DESIGNWARE_PCI`
 
 {{< panel "caution" >}}
-Caution: kernel build files use approximately 10-12 GB of disk space, and the build took me around 5 hours to complete.
+Caution: kernel build files use approximately 10-12 GB of disk space,  
+and the build took me around 5 hours to complete.
 {{< /panel >}}
 
 ---

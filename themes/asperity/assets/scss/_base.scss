@@ -54,6 +54,8 @@ nav > div {
 }
 
 // Page content body margins
+// Adds just a biiiit of margin to the content body
+// And increases padding when there is no whitespace around content
 .header-text,
 .main-article,
 #article-info {
@@ -61,7 +63,7 @@ nav > div {
 		padding-left:  0.156rem;
 		padding-right: 0.156rem;
 	}
-	// Breakpoint at the max width of the page
+	// Breakpoint at the max width of the page before it starts shrinking
 	@include breakpoint($page-max-width + $body-margin * 2) {
 		padding-left:  0.078rem;
 		padding-right: 0.078rem;
@@ -90,6 +92,7 @@ nav > div {
 	user-select: none;
 }
 
+
 // Basic elements
 p {
 	margin: 1rem 0;
@@ -104,18 +107,16 @@ hr {
 		border-bottom-color: $pure-black;
 	}
 }
+header .intro-header hr {
+	margin-bottom: 1.5rem;
+}
+main hr {
+	margin: 1.5rem 0 2.5rem;
+}
 
 ol,
 ul {
-	@include xs {
-		padding-left: $indent-xs;
-	}
-	@include sm {
-		padding-left: $indent-sm;
-	}
-	@include md {
-		padding-left: $indent-md;
-	}
+	@include list-indent;
 	li {
 		margin: 0.25rem 0;
 	}
@@ -130,18 +131,7 @@ blockquote {
 		font-size: $quote-size;
 		line-height: 0;
 	}
-	@include xs {
-		margin: 1rem 0;
-	}
-	@include sm {
-		margin: 1rem $indent-sm;
-	}
-	@include md {
-		margin: 1rem $indent-lg;
-	}
-	@include lg {
-		margin: 1rem $indent-xxl;
-	}
+	@include squeeze-indent;
 	quotes: "“" "”" "‘" "’";
 	background-color: mix($color, $black, 30%);
 	background-color: rgba($color, 0.3);
@@ -169,32 +159,44 @@ dl {
 	dt {
 	}
 	dd {
-		@include xs {
-			margin-left: $indent-xs;
-		}
-		@include sm {
-			margin-left: $indent-sm;
-		}
-		@include md {
-			margin-left: $indent-md;
-		}
+		@include list-indent;
 	}
 }
 
-img {
-	display: block;
-	max-width: 100%;
-	border-radius: if($rounded-corners, $base-border-radius, null);
-	margin: 1rem auto;
+header,
+main {
+	figure,
+	.video-container {
+		border: $base-border-thickness $gray-700 solid;
+		border-radius: if($rounded-corners, $base-border-radius, null);
+	}
 }
 
+img,
 video {
 	display: block;
 	max-width: 100%;
-	border-radius: if($rounded-corners, $base-border-radius, null);
 	margin: 1rem auto;
 }
 
+.video-container {
+	display: inline-block;
+	video {
+		margin: 0 auto;
+		min-width: 7.5rem;
+		min-height: 2.625rem;
+		height: auto;
+	}
+}
+
+figure,
+.video-container {
+	@include squeeze-indent;
+}
+
+
+// Footer page summary block
+// Holds post splash and nearby page navigation
 #article-info {
 	margin-top: 1rem;
 }
@@ -210,12 +212,7 @@ video {
 	z-index: -99;
 }
 
-.taglist {
-	text-align: center;
-	clear: both;
-	padding-top: 1rem;
-}
-
+// Nearby page navigation
 #nextprev {
 	overflow: auto;
 	margin-top: 1rem;

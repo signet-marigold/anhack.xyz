@@ -4,7 +4,7 @@
 
 
 // Sizes
-$page-max-width: 60rem;
+$page-max-width: 48rem;
 
 
 // Spacing
@@ -15,8 +15,15 @@ $body-margin: 0.875rem;
 
 // Table of Contents
 $toc-loose-margin: 2rem; // Margin around container
-$toc-loose-min-width: 24rem; // Free space required on the side of the page to move the table over
-$toc-loose-max-width: 34rem; // Max space toc can take up; cannot be smaller than $toc-loose-min-width
+$toc-loose-min-width: 22rem; // Free space required on the side of the page to move the table over
+$toc-loose-max-width: 28rem; // Max space toc can take up; cannot be smaller than $toc-loose-min-width
+// Side mode list indent breakpoints
+// (if larger than the maximum width, breakpoint will not be used)
+$tocs-indent-start-lg: 18rem;
+$tocs-indent-start-md: 12rem;
+$tocs-indent-start-sm: 6rem;
+
+
 
 
 // Font sizes
@@ -92,10 +99,10 @@ $nav-horizontal-padding: $base-margin;
 
 
 // Borders
-$rounded-corners: false; // Disables border-radius across all styles
+$rounded-corners: false; // False: Disables border-radius across all styles
 $base-border-thickness: 0.0625rem;
 $base-border-radius: 0.25rem;
-$term-border-radius: 1rem;
+$term-border-radius: 0.25rem;
 
 
 // Scrollbar
