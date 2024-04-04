@@ -38,7 +38,7 @@ footer > div {
 		flex-wrap: wrap;
 		line-height: 1;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-evenly;
 		& > * {
 			display: inline-block;
 		}
