@@ -1,6 +1,8 @@
 main {
 	// In page
 	article.page {
+		$line-offset: 0.75rem;
+		$line-free-space: 0.5rem;
 		// Underline h1s and h2s
 		h1:not(:target),
 		h2:not(:target) {
@@ -11,7 +13,8 @@ main {
 					display: block;
 					width: 100%;
 					border-bottom: $base-border-thickness solid $gray-800;
-					padding-bottom: $base-padding;
+					padding-bottom: $line-offset;
+					margin-bottom: $base-padding;
 				}
 			}
 			&::after {
@@ -19,10 +22,10 @@ main {
 			}
 		}
 		h1:not(:target) {
-			margin-bottom: $h1-margin - $base-padding;
+			margin-bottom: $h1-margin - $base-padding + $line-free-space;
 		}
 		h2:not(:target) {
-			margin-bottom: $h2-margin - $base-padding;
+			margin-bottom: $h2-margin - $base-padding + $line-free-space;
 		}
 		
 		@function fcConvert($size) {

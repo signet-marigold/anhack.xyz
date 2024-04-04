@@ -21,6 +21,7 @@ $panel-icon-size: 2.5rem;
 		padding: 1rem 2rem;
 	}
 	@include squeeze-indent;
+	margin-bottom: 1rem + $base-padding * 0.5;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	border-width: $base-border-thickness;
 	border-style: solid;
@@ -32,7 +33,7 @@ $panel-icon-size: 2.5rem;
 	}
 }
 
-%panel {
+%panel-icon {
 	// set the box large enough to always fit the icon
 	min-height: $panel-icon-size;
 	& > .panel-icon {
@@ -65,10 +66,20 @@ $panel-icon-size: 2.5rem;
 	background-color: rgba($dark-color, 0.3);
 }
 
+// Standard panel
 @each $key, $val in $panel-colors {
 	.panel-#{$key} {
 		@extend %panel-base;
-		@extend %panel;
+		@extend %panel-icon;
+		@include panel-colors($val);
+	}
+}
+
+// Simplified panel (no icon, more colors)
+@each $key, $val in $colors {
+	.simple-panel-#{$key} {
+		padding: $base-padding;
+		@extend %panel-base;
 		@include panel-colors($val);
 	}
 }
@@ -92,13 +103,4 @@ $panel-icon-size: 2.5rem;
 
 .panel-danger > .panel-icon {
 	background-image: url("/icons/skull-n-bones-white.svg");
-}
-
-// Simplified panel
-@each $key, $val in $colors {
-	.simple-panel-#{$key} {
-		padding: $base-padding;
-		@extend %panel-base;
-		@include panel-colors($val);
-	}
 }

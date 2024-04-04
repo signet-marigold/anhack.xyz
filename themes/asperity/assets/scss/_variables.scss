@@ -114,5 +114,5 @@ $scrollbar-webkit-border-radius: $base-border-radius;
 
 
 // Box shadow
-$base-box-shadow-spacing: 0.25rem 0.5rem 0;
+$base-box-shadow-spacing: $base-padding * 0.5 $base-padding 0;
 $base-box-shadow: $base-box-shadow-spacing rgba(0,0,0,0.55);

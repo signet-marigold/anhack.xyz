@@ -11,16 +11,21 @@
 }
 
 @mixin squeeze-indent {
+	margin: 1rem 0;
 	@include xs {
-		margin: 1rem 0;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	@include sm {
-		margin: 1rem $indent-sm;
+		margin-left: $indent-sm;
+		margin-right: $indent-sm;
 	}
 	@include md {
-		margin: 1rem $indent-lg;
+		margin-left: $indent-lg;
+		margin-right: $indent-lg;
 	}
 	@include lg {
-		margin: 1rem $indent-xxl;
+		margin-left: $indent-xxl;
+		margin-right: $indent-xxl;
 	}
 }
