@@ -25,7 +25,7 @@
 		@include multi-color-list(
 			shuffle($sample),
 			box-shadow,
-			"#{$base-border-thickness*2} #{$base-border-thickness*2}"
+			"#{$base-border-thickness * 2} #{$base-border-thickness * 2}"
 		);
 		border-radius: if($rounded-corners, $term-border-radius, null);
 		@include xs {

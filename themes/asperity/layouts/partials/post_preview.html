@@ -1,6 +1,6 @@
-<section class="post-preview">
+<section class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
 	<a href="{{ .RelPermalink }}" class="post-link">
-		<h2 class="post-title">
+		<h2 class="post-title" itemprop="name">
 			{{- .Title -}}
 			{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
 		</h2>

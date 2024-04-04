@@ -12,7 +12,7 @@
 {{ $title := $.Scratch.Get "title" -}}
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 		{{- if $title }}
-			<div class="intro-header {{ .Kind }}-header">
+			<div class="intro-header {{ .Kind }}-header" itemscope itemtype="http://schema.org/BlogPosting">
 				{{ if $imageLink := .Params.image -}}
 
 					{{ $image := "" }}
@@ -56,7 +56,7 @@
 					{{ if and (eq .Type "posts") .IsPage -}}
 						{{ partial "post_meta.html" . -}}
 					{{ end }}
-					<h1 class="heading {{ .Type }}-heading">
+					<h1 class="heading {{ .Type }}-heading" itemprop="name">
 						{{- with $term -}}
 							{{ . }} [ {{ $title }} ]
 						{{- else -}}

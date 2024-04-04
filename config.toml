@@ -8,6 +8,7 @@ keywords = 'blog,developer,development,personal'
 enableRobotsTXT = true
 summaryLength = 50
 paginate = 8
+enableGitInfo = true
 
 [author]
 	name = 'alex'
@@ -21,7 +22,7 @@ paginate = 8
 	source = 'https://github.com/signet-marigold/anhack.xyz'
 	licenceText = 'Licensed under CC-BY 4.0'
 	licenceLink = 'https://creativecommons.org/licenses/by/4.0/'
-	analyticsText = 'Uses Selfhosted Umami Analytics'
+	analyticsText = 'Uses Umami Analytics'
 	analyticsLink = 'https://data-sb-v-analytics.anhack.com/share/3SKpsTgESfggNkdM/anhack'
 	showbadges = true
 	summaryMaxChar = 200

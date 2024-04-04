@@ -1,8 +1,6 @@
 ---
 title: "Fun Links"
 subtitle: "Sugma"
-date: 2023-12-12T08:09:33Z
-lastMod: 2023-12-12T08:09:33Z
 author: ""
 image: ""
 category: "single"

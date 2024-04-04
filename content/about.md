@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: 2023-10-20T06:25:46Z
 subtitle: ""
 image: ""
 category: "single"
