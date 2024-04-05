@@ -125,6 +125,12 @@ h6 {
 				display: none;
 			}
 		}
+		
+		// When heading is displayed inline, the margin crush causes
+		// a line that is short enough to fit on one line to split to two.
+		&::after {
+			margin-right: 0;
+		}
 	}
 	&.leaf {
 		display: flex;
