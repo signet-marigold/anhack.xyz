@@ -131,6 +131,7 @@ footer hr {
 
 ol,
 ul {
+	margin: 1.5rem 0;
 	@include list-indent;
 	li {
 		margin: 0.25rem 0;
@@ -211,7 +212,7 @@ video {
 }
 
 .video-container {
-	display: inline-block;
+	display: block;
 	video {
 		margin: 0 auto;
 		min-width: 7.5rem;

@@ -63,9 +63,13 @@ figure {
 }
 
 .nf-image-row {
+	margin: 1rem 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
 	align-content: center;
 	justify-content: space-between;
+	figure.half {
+		margin: 0;
+	}
 }
