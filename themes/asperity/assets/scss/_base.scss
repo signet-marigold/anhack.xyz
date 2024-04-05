@@ -54,19 +54,32 @@ nav > div {
 }
 
 // Page content body margins
+$pbm-compact:  0.156rem;
+$pbm-expanded: 0.078rem;
 // Adds just a biiiit of margin to the content body
 // And increases padding when there is no whitespace around content
 .header-text,
 .main-article,
 #article-info {
 	@include xs {
-		padding-left:  0.156rem;
-		padding-right: 0.156rem;
+		padding-left:  $pbm-compact;
+		padding-right: $pbm-compact;
 	}
 	// Breakpoint at the max width of the page before it starts shrinking
 	@include breakpoint($page-max-width + $body-margin * 2) {
-		padding-left:  0.078rem;
-		padding-right: 0.078rem;
+		padding-left:  $pbm-expanded;
+		padding-right: $pbm-expanded;
+	}
+}
+// Undo page content body margins to full size figure images
+.main-article figure.full {
+	@include xs {
+		margin-left:  -$pbm-compact;
+		margin-right: -$pbm-compact;
+	}
+	@include breakpoint($page-max-width + $body-margin * 2) {
+		margin-left:  -$pbm-expanded;
+		margin-right: -$pbm-expanded;
 	}
 }
 
@@ -74,7 +87,6 @@ nav > div {
 	background: $selection-background;
 	color: $selection-color;
 }
-
 // Text/element mouse selection
 ::-moz-selection {
 	// ! Keep Separate !
@@ -166,11 +178,27 @@ dl {
 	}
 }
 
-header,
+
+header .intro-header {
+	.img-header,
+	.img-header > img {
+		border-radius: if($rounded-corners, $base-border-radius, null);
+	}
+	.img-header {
+		border: $base-border-thickness $gray-700 solid;
+	}
+}
 main {
 	figure,
 	.video-container {
 		border: $base-border-thickness $gray-700 solid;
+	}
+}
+main {
+	figure,
+	img,
+	.video-container,
+	video {
 		border-radius: if($rounded-corners, $base-border-radius, null);
 	}
 }

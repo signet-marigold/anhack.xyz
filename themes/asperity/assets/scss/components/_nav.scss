@@ -2,6 +2,7 @@ nav > div {
 	background-color: $nav-bg;
 	background-image: linear-gradient(to top right, $nav-bg, darken($nav-bg, 8%));
 	padding: $nav-vertical-padding $nav-horizontal-padding;
+	margin-bottom: 0.15rem;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	box-shadow: $base-box-shadow;
 	@include xs {
