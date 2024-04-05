@@ -123,19 +123,19 @@ header .intro-header hr {
 	margin-bottom: 1.5rem;
 }
 main hr {
-	margin: 1.5rem 0 2.5rem;
-}
-footer hr {
-	margin: 1rem 0;
+	margin: 2rem 0;
 }
 
 ol,
 ul {
-	margin: 1.5rem 0;
 	@include list-indent;
 	li {
 		margin: 0.25rem 0;
 	}
+}
+.main-article > ol,
+.main-article > ul {
+	margin: 2rem 0;
 }
 
 blockquote {
