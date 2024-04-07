@@ -6,7 +6,7 @@ main {
 		// Underline h1s and h2s
 		h1:not(:target),
 		h2:not(:target) {
-			.text {
+			.line {
 				display: inline;
 				&::after {
 					content: "";
@@ -115,13 +115,13 @@ h6 {
 	}
 	// When heading is selected with uri
 	&:target {
-		padding: $base-padding 0 $base-padding 1rem;
+		padding: $base-padding 0 $base-padding 1.5rem;
 		border-radius: if($rounded-corners, $base-border-radius, null);
-		border-left: $base-border-thickness * 3 solid $dandelion;
+		box-shadow: inset $heading-target-marker-width 0 0 0 $dandelion;
 		
 		a:where(.heading-link) {
 			i.link::after {
-				// Don't render link to when already selected
+				// Don't render link when already selected
 				display: none;
 			}
 		}
@@ -176,7 +176,8 @@ h1 {
 	margin: $h1-margin 0;
 	word-spacing: $h1-word-spacing;
 	&:target {
-		margin: $h1-margin - $base-padding 0;
+		margin-top: $h1-margin - $base-padding;
+		margin-bottom: $h1-margin - $base-padding;
 	}
 	&::before {
 		margin-left: hhmc($h1-size);
@@ -190,7 +191,8 @@ h2 {
 	margin: $h2-margin 0;
 	word-spacing: $h2-word-spacing;
 	&:target {
-		margin: $h2-margin - $base-padding 0;
+		margin-top: $h2-margin - $base-padding;
+		margin-bottom: $h2-margin - $base-padding;
 	}
 	&::before {
 		margin-left: hhmc($h2-size);
@@ -204,7 +206,8 @@ h3 {
 	margin: $h3-margin 0;
 	word-spacing: $h3-word-spacing;
 	&:target {
-		margin: $h3-margin - $base-padding 0;
+		margin-top: $h3-margin - $base-padding;
+		margin-bottom: $h3-margin - $base-padding;
 	}
 	&::before {
 		margin-left: hhmc($h3-size);
@@ -218,7 +221,8 @@ h4 {
 	margin: $h4-margin 0;
 	word-spacing: $h4-word-spacing;
 	&:target {
-		margin: $h4-margin - $base-padding 0;
+		margin-top: $h4-margin - $base-padding;
+		margin-bottom: $h4-margin - $base-padding;
 	}
 	&::before {
 		margin-left: hhmc($h4-size);
@@ -232,7 +236,8 @@ h5 {
 	margin: $h5-margin 0;
 	word-spacing: $h5-word-spacing;
 	&:target {
-		margin: $h5-margin - $base-padding 0;
+		margin-top: $h5-margin - $base-padding;
+		margin-bottom: $h5-margin - $base-padding;
 	}
 	&::before {
 		margin-left: hhmc($h5-size);
@@ -247,7 +252,8 @@ h6 {
 	word-spacing: $h6-word-spacing;
 	color: $gray-300;
 	&:target {
-		margin: $h6-margin - $base-padding 0;
+		margin-top: $h6-margin - $base-padding;
+		margin-bottom: $h6-margin - $base-padding;
 	}
 	&::before {
 		margin-left: hhmc($h6-size);

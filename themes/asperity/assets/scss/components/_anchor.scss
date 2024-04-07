@@ -57,8 +57,9 @@ article {
 	}
 }
 article.page {
-	$max-overdraw-size: 0.375rem * 2 + 0.9rem;
-	@include breakpoint($page-max-width + $body-margin * 2 + $max-overdraw-size * 2) {
+	$overdraw-size: 2rem;
+	// Should cover the link on the left side
+	@include breakpoint($content-max-width + ($overdraw-size - $pbm-expand + $heading-target-marker-width) * 2) {
 		a:where(.heading-link) {
 			i.link::after {
 				position: absolute;
@@ -72,10 +73,16 @@ article.page {
 		h4,
 		h5,
 		h6 {
-			// Should cover the link on the left side
-			$overdraw-size: 0.375em + 0.9em;
 			margin-left: -$overdraw-size;
 			padding-left: $overdraw-size;
+		}
+		h1:target,
+		h2:target,
+		h3:target,
+		h4:target,
+		h5:target,
+		h6:target {
+			padding-left: $overdraw-size + $pbm-expand;
 		}
 	}
 }

@@ -34,11 +34,11 @@ body {
 		background-size: 100%;
 		background-repeat: repeat-y;
 		image-rendering: pixelated;
-	}
 
-	// Reset image rendering after background is set to pixelated
-	& > * {
-		image-rendering: initial;
+		// Reset image rendering after background is set to pixelated
+		& > * {
+			image-rendering: initial;
+		}
 	}
 }
 
@@ -55,33 +55,34 @@ nav > div {
 	max-width: $page-max-width - ($nav-horizontal-padding * 2);
 }
 
-// Page content body margins
-$pbm-compact:  0.156rem;
-$pbm-expanded: 0.078rem;
-// Adds just a biiiit of margin to the content body
-// And increases padding when there is no whitespace around content
+// Indent most text in the page
 .header-text,
-.main-article,
-#article-info {
+p {
 	@include xs {
-		padding-left:  $pbm-compact;
-		padding-right: $pbm-compact;
+		padding: 0 $pbm-compact;
 	}
-	// Breakpoint at the max width of the page before it starts shrinking
-	@include breakpoint($page-max-width + $body-margin * 2) {
-		padding-left:  $pbm-expanded;
-		padding-right: $pbm-expanded;
+	@include breakpoint($content-max-width) {
+		padding: 0 $pbm-expand;
 	}
 }
-// Undo page content body margins to full size figure images
-.main-article figure.full {
+h1:not(:target) .text,
+h1:target,
+h2:not(:target) .text,
+h2:target,
+h3:not(:target) .text,
+h3:target,
+h4:not(:target) .text,
+h4:target,
+h5:not(:target) .text,
+h5:target,
+h6:not(:target) .text,
+h6:target {
+	display: inline-block;
 	@include xs {
-		margin-left:  -$pbm-compact;
-		margin-right: -$pbm-compact;
+		margin: 0 $pbm-compact;
 	}
-	@include breakpoint($page-max-width + $body-margin * 2) {
-		margin-left:  -$pbm-expanded;
-		margin-right: -$pbm-expanded;
+	@include breakpoint($content-max-width) {
+		margin: 0 $pbm-expand;
 	}
 }
 
@@ -183,19 +184,21 @@ dl {
 }
 
 
+$img-border-style: $base-border-thickness $gray-700 solid;
+
 header .intro-header {
 	.img-header,
 	.img-header > img {
 		border-radius: if($rounded-corners, $base-border-radius, null);
 	}
 	.img-header {
-		border: $base-border-thickness $gray-700 solid;
+		border: $img-border-style;
 	}
 }
 main {
 	figure,
 	.video-container {
-		border: $base-border-thickness $gray-700 solid;
+		border: $img-border-style;
 	}
 }
 main {
@@ -230,12 +233,6 @@ figure,
 }
 
 
-// Footer page summary block
-// Holds post splash and nearby page navigation
-#article-info {
-	margin-top: 1rem;
-}
-
 // Background 'dot' pattern
 @if $show-bg-halftone {
 	#halftone-plate {
@@ -247,4 +244,10 @@ figure,
 		left: 0;
 		z-index: -99;
 	}
+}
+
+// Footer page summary block
+// Holds post splash and nearby page navigation
+#article-info {
+	margin-top: 1rem;
 }

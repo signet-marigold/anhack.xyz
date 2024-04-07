@@ -4,9 +4,9 @@
 
 
 // Background
+$bg-texture-path: "/img/background.webp";
 $show-bg-texture: true;
 $show-bg-halftone: true;
-$bg-texture-path: "/img/background.webp";
 
 
 // Sizes
@@ -17,6 +17,13 @@ $page-max-width: 48rem;
 $base-padding: 0.5rem;
 $base-margin: 0.5rem;
 $body-margin: 0.875rem;
+// Body text indent
+$pbm-compact: 0.3rem;
+$pbm-expand:  0.15rem;
+
+
+// Breakpoints
+$content-max-width: $page-max-width + $body-margin * 2;
 
 
 // Table of Contents
@@ -28,8 +35,6 @@ $toc-loose-max-width: 28rem; // Max space toc can take up; cannot be smaller tha
 $tocs-indent-start-lg: 18rem;
 $tocs-indent-start-md: 12rem;
 $tocs-indent-start-sm: 6rem;
-
-
 
 
 // Font sizes
@@ -51,6 +56,23 @@ $indent-lg: $base-indent * 1.25;
 $indent-md: $base-indent * 1;
 $indent-sm: $base-indent * 0.75;
 $indent-xs: $base-indent * 0.5;
+
+
+// Button padding
+$btn-padding-vertical:   $base-padding * 0.75;
+$btn-padding-horizontal: $base-padding * 2.2;
+
+
+// Navigation padding
+$nav-vertical-padding:   $base-padding * 0.75;
+$nav-horizontal-padding: $base-margin;
+
+
+// Borders
+$rounded-corners: false; // False: Disables border-radius across all styles
+$base-border-thickness: 0.0625rem;
+$base-border-radius: 0.25rem;
+$term-border-radius: 0.25rem;
 
 
 // Heading
@@ -90,25 +112,10 @@ $h5-page-letter-spacing: 0.02em;
 $h6-page-letter-spacing: 0.02em;
 
 // Forehead clearance
-// Extra space above header
+// Extra space above heading
 $page-heading-base-fc-mult: 0.5;
 
-
-// Button padding
-$btn-padding-vertical:   $base-padding * 0.75;
-$btn-padding-horizontal: $base-padding * 2.2;
-
-
-// Navigation padding
-$nav-vertical-padding:   $base-padding * 0.75;
-$nav-horizontal-padding: $base-margin;
-
-
-// Borders
-$rounded-corners: false; // False: Disables border-radius across all styles
-$base-border-thickness: 0.0625rem;
-$base-border-radius: 0.25rem;
-$term-border-radius: 0.25rem;
+$heading-target-marker-width: $base-border-thickness * 3;
 
 
 // Scrollbar
