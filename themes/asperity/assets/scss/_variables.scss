@@ -3,6 +3,12 @@
 //
 
 
+// Background
+$show-bg-texture: true;
+$show-bg-halftone: true;
+$bg-texture-path: "/img/background.webp";
+
+
 // Sizes
 $page-max-width: 48rem;
 
@@ -110,7 +116,7 @@ $scrollbar-thumb-color: $gray-200;
 $scrollbar-track-color: rgba(0,0,0,0.3);
 $scrollbar-webkit-track-hover: $gray-800;
 $scrollbar-webkit-width: 1rem;
-$scrollbar-webkit-border-radius: $base-border-radius;
+$scrollbar-webkit-border-radius: $base-border-radius; // not used if $rounded-corners=false
 
 
 // Box shadow
