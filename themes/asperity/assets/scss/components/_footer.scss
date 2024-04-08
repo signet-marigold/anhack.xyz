@@ -11,12 +11,14 @@ footer > div {
 	}
 	#article-info {
 		font-size: $base-font-size;
+		margin: 1rem 0 2.25rem;
 	}
 	// Nearby page navigation
 	#nextprev {
 		overflow: auto;
 		margin-top: 2rem;
-		padding: 1rem 0;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 	#prevart {
 		float: left;
@@ -29,6 +31,7 @@ footer > div {
 	#nextart,
 	#prevart {
 		max-width: 45%;
+		max-width: calc(50% - 1rem);
 	}
 	// Old style 88x31px banners
 	#badges {
@@ -50,7 +53,7 @@ footer > div {
 	}
 	#site-info {
 		max-width: 40rem;
-		margin: 0 auto;
+		margin: 1.75rem auto 0;
 		letter-spacing: 0.025em;
 		word-spacing: 0.1rem;
 		color: $gray-100;
@@ -84,7 +87,6 @@ footer > div {
 	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
 	#rss-feed-link {
 		margin-left: $we-horizontal-margin;
-
 		display: flex;
 		align-items: center;
 		justify-content: center;

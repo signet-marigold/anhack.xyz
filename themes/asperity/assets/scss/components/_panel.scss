@@ -31,6 +31,11 @@ $panel-icon-size: 2.5rem;
 	p {
 		margin: 1rem 0;
 	}
+	hr {
+		border-color: transparent;
+		border-width: $base-border-thickness;
+		margin: $base-padding $base-padding * 4;
+	}
 }
 
 %panel-icon {
@@ -64,6 +69,10 @@ $panel-icon-size: 2.5rem;
 	$dark-color: darken-color($color);
 	background-color: mix($dark-color, $black, 30%);
 	background-color: rgba($dark-color, 0.3);
+	hr {
+		border-top-color: mix($color, $black, 30%);
+		border-top-color: rgba($color, 0.3);
+	}
 }
 
 // Standard panel

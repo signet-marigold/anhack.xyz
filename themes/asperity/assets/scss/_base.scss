@@ -55,9 +55,10 @@ nav > div {
 	max-width: $page-max-width - ($nav-horizontal-padding * 2);
 }
 
-// Indent most text in the page
+// Indent text in the page
+p,
 .header-text,
-p {
+#nextprev {
 	@include xs {
 		padding: 0 $pbm-compact;
 	}
@@ -66,16 +67,16 @@ p {
 	}
 }
 h1:not(:target) .text,
-h1:target,
 h2:not(:target) .text,
-h2:target,
 h3:not(:target) .text,
-h3:target,
 h4:not(:target) .text,
-h4:target,
 h5:not(:target) .text,
-h5:target,
 h6:not(:target) .text,
+h1:target,
+h2:target,
+h3:target,
+h4:target,
+h5:target,
 h6:target {
 	display: inline-block;
 	@include xs {
@@ -86,11 +87,12 @@ h6:target {
 	}
 }
 
+
+// Text/element mouse selection
 @mixin selection {
 	background: $selection-background;
 	color: $selection-color;
 }
-// Text/element mouse selection
 ::-moz-selection {
 	// ! Keep Separate !
 	// When browsers find a part of a select they
@@ -109,10 +111,12 @@ h6:target {
 
 
 // Basic elements
+// Paragraphs
 p {
 	margin: 1rem 0;
 }
 
+// Heading Rows
 hr {
 	margin: 1rem 0;
 	border: $base-border-thickness $gray-700 solid;
@@ -122,11 +126,16 @@ hr {
 		border-bottom-color: $pure-black;
 	}
 }
-header .intro-header hr {
-	margin-bottom: 1.5rem;
+header .intro-header.page-header hr {
+	@include sm {
+		margin-bottom: 1.5rem;
+	}
+	@include lg {
+		margin-bottom: 2rem;
+	}
 }
 main hr {
-	margin: 2rem 0;
+	margin: 1.5rem 0;
 }
 
 ol,
@@ -244,10 +253,4 @@ figure,
 		left: 0;
 		z-index: -99;
 	}
-}
-
-// Footer page summary block
-// Holds post splash and nearby page navigation
-#article-info {
-	margin-top: 1rem;
 }
