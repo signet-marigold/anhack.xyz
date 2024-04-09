@@ -3,6 +3,12 @@
 
 <div class="video-container">
 <video controls{{ if eq (.Get "loop") "true" }} autoplay loop muted{{ end }}>
-	<source src="{{ .Page.RelPermalink }}{{ $src }}" type="video/{{ trim $ext "." }}">
+	<source src="
+	{{- if findRE "(^(https?:)?//)" (lower $src) -}}
+		{{ $src }}
+	{{- else -}}
+		{{ .Page.RelPermalink }}{{ $src }}
+	{{- end -}}
+	" type="video/{{ replaceRE `\?.*$` "" (trim $ext ".") }}">
 </video>
 </div>
