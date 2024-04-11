@@ -13,47 +13,50 @@
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 		{{- if $title }}
 			<div class="intro-header {{ .Kind }}-header" itemscope itemtype="http://schema.org/BlogPosting">
-				{{ if $imageLink := .Params.image -}}
-
-					{{ $image := "" }}
-					{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
-						{{ with resources.GetRemote $imageLink -}}
-							{{ with .Err -}}
-								{{ errorf "%s" . -}}
-							{{ else -}}
-								{{ $image = . -}}
-							{{ end -}}
+			{{ if $imageLink := .Params.image -}}
+				{{ $image := "" }}
+				{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
+					{{ with resources.GetRemote $imageLink -}}
+						{{ with .Err -}}
+							{{ errorf "%s" . -}}
 						{{ else -}}
-							{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
+							{{ $image = . -}}
 						{{ end -}}
 					{{ else -}}
-						<!-- Look for file in global res -->
-						{{ with resources.Get $imageLink -}}
+						{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
+					{{ end -}}
+				{{ else -}}
+					<!-- Look for file in global res -->
+					{{ with resources.Get $imageLink -}}
+						{{ with .Err -}}
+							{{ errorf "%s" . -}}
+						{{ else -}}
+							{{ $image = . -}}
+						{{ end -}}
+					{{ else -}}
+						<!-- Look for file in page res -->
+						{{ with $.Page.Resources.GetMatch $imageLink -}}
 							{{ with .Err -}}
 								{{ errorf "%s" . -}}
 							{{ else -}}
 								{{ $image = . -}}
 							{{ end -}}
 						{{ else -}}
-							<!-- Look for file in page res -->
-							{{ with $.Page.Resources.GetMatch $imageLink -}}
-								{{ with .Err -}}
-									{{ errorf "%s" . -}}
-								{{ else -}}
-									{{ $image = . -}}
-								{{ end -}}
-							{{ else -}}
-								{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
-							{{ end -}}
+							{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
 						{{ end -}}
 					{{ end -}}
-					
-					{{ $image := $image.Process "resize 670x Lanczos q85 webp" }}
-
-					<div class="img-header">
-						<img src="{{ $image.RelPermalink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}">
-					</div>
 				{{ end -}}
+				
+				{{- if gt $image.Width 900 }}
+					{{- $image = $image.Process "resize 900x Lanczos" -}}
+				{{ end -}}
+				
+				{{- $image = $image.Process "q92 webp" -}}
+				
+				<div class="header-image">
+					<img src="{{ $image.RelPermalink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}">
+				</div>
+			{{ end -}}
 				<div class="header-text {{ .Type }}-header-text">
 					{{ if and (eq .Type "posts") .IsPage -}}
 						{{ partial "post_meta.html" . -}}

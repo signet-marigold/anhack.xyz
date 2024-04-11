@@ -43,17 +43,27 @@
 		margin: 0;
 		margin-top: 0.25rem;
 	}
-	.img-title {
+	.post-image {
 		padding-top: 0.5rem;
 		margin-bottom: 0.5rem;
 		img {
 			border: $base-border-thickness * 3 solid $pure-black;
 			box-shadow: 0 0 0 $base-border-thickness $pure-white;
 			margin: 0 auto;
-			max-height: 10rem;
 			width: 100%;
 			width: calc(100% - #{$base-border-thickness * 6});
 			object-fit: cover;
+			
+			
+			@include xs {
+				max-height: 6rem;
+			}
+			@include sm {
+				max-height: 8rem;
+			}
+			@include md {
+				max-height: 10rem;
+			}
 		}
 	}
 	.post-meta {

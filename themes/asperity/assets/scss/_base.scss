@@ -196,11 +196,11 @@ dl {
 $img-border-style: $base-border-thickness $gray-700 solid;
 
 header .intro-header {
-	.img-header,
-	.img-header > img {
+	.header-image,
+	.header-image > img {
 		border-radius: if($rounded-corners, $base-border-radius, null);
 	}
-	.img-header {
+	.header-image {
 		border: $img-border-style;
 	}
 }

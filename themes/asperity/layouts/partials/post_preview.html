@@ -6,20 +6,55 @@
 		</h2>
 	
 {{ if .Site.Params.showPreviewImage -}}
-	{{ if .Params.image -}}
-		{{- $imageLink := "" -}}
-		{{ if findRE "(^(https?:)?//|^/)" (lower .Params.image) -}}
-			{{- $imageLink = .Params.image -}}
+	{{ if $imageLink := .Params.image -}}
+		{{ $image := "" }}
+		{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
+			{{ with resources.GetRemote $imageLink -}}
+				{{ with .Err -}}
+					{{ errorf "%s" . -}}
+				{{ else -}}
+					{{ $image = . -}}
+				{{ end -}}
+			{{ else -}}
+				{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
+			{{ end -}}
 		{{ else -}}
-			{{- $imageLink = print (.RelPermalink) (.Params.image) -}}
-		{{- end }}
-		<div class="img-title"><img src="{{ $imageLink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} /></div>
+			<!-- Look for file in global res -->
+			{{ with resources.Get $imageLink -}}
+				{{ with .Err -}}
+					{{ errorf "%s" . -}}
+				{{ else -}}
+					{{ $image = . -}}
+				{{ end -}}
+			{{ else -}}
+				<!-- Look for file in page res -->
+				{{ with $.Page.Resources.GetMatch $imageLink -}}
+					{{ with .Err -}}
+						{{ errorf "%s" . -}}
+					{{ else -}}
+						{{ $image = . -}}
+					{{ end -}}
+				{{ else -}}
+					{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
+				{{ end -}}
+			{{ end -}}
+		{{ end -}}
+		
+		{{- if gt $image.Width 780 }}
+			{{- $image = $image.Process "resize Lanczos 780x" -}}
+		{{ end -}}
+		
+		{{- $image = $image.Process (printf "%s%d%s" "crop Center " $image.Width "x300 q85 webp") -}}
+		
+		<div class="post-image">
+			<img src="{{ $image.RelPermalink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}">
+		</div>
 	{{- end }}
 {{- end }}
 	</a>
 {{ if .Site.Params.showPreviewVideo -}}
 	{{ if .Params.video -}}
-		<video loop autoplay muted playsinline class="img-title">
+		<video loop autoplay muted playsinline class="post-image">
 			<source src="{{ .Params.video }}"/>
 		</video>
 	{{- end }}
