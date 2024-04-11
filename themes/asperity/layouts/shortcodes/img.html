@@ -103,9 +103,12 @@
 {{ end -}}
 
 
+{{- $image_fixed_width := 800 -}}
+
+
 {{- if eq $nf_begin 1 }}<div class="nf-image-row">{{ end -}}
 
-<figure {{ with .Get "class" }}class="{{ . }}"{{ end -}}>
+<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
 	{{ if eq $zoom 1 }}<div class="easyzoom easyzoom--overlay">{{ end -}}
 	{{- with $link }}<a href="{{ . }}">{{ end -}}
 	<img {{ if not (.Get "nolazy") }}loading="lazy" {{ end -}}
@@ -113,7 +116,7 @@
 		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
 		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
 		{{/**/}} style="aspect-ratio:{{ $sw }}/{{ $sh }}"
-		{{/**/}} width="{{ $width }}" height="{{ $height }}"/>
+		{{/**/}} width="{{ $image_fixed_width }}" height="{{ div (mul $image_fixed_width $sh) $sw }}">
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 
