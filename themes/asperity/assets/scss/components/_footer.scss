@@ -3,7 +3,7 @@ footer {
 	margin-top: auto;
 }
 footer > div {
-	padding-bottom: 4rem - $body-margin;
+	padding-bottom: 2rem;
 	font-size: $font-size-sm;
 	text-align: center;
 	p {
@@ -35,8 +35,7 @@ footer > div {
 	}
 	// Old style 88x31px banners
 	#badges {
-		margin: 0 auto;
-		margin-bottom: 1rem;
+		margin: 1.25rem auto;
 		display: flex;
 		flex-wrap: wrap;
 		line-height: 1;
@@ -53,7 +52,7 @@ footer > div {
 	}
 	#site-info {
 		max-width: 40rem;
-		margin: 1.75rem auto 0;
+		margin: 1.5rem auto 0;
 		letter-spacing: 0.025em;
 		word-spacing: 0.1rem;
 		color: $gray-100;
@@ -78,7 +77,7 @@ footer > div {
 		}
 	}
 	#site-extra {
-		margin-top: 0.625rem;
+		margin-top: 1.25rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;

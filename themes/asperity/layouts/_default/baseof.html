@@ -15,6 +15,10 @@
 		</div></header>
 		
 		<main><div>
+			{{ if and (eq .Kind "home") (not .Site.Params.showHomeTitle) }}
+			{{ else if ne .Kind "section" }}
+			<hr class="small">
+			{{ end -}}
 			{{ partial "toc.html" . }}
 			<article class="main-article {{ if eq .Kind "home" "page" }} page{{ end }}">
 				{{ block "main" . }}{{ .Content | emojify }}{{ end }}

@@ -16,7 +16,7 @@ other = "2006-01-02T15:04:05 Z07:00"
 [buildTimeDateFormat]
 other = "2006-01-02T15:04:05 Z07:00"
 [postedOnDate]
-other = "{{ . }}"
+other = "Posted on {{ . }}"
 [lastModified]
 other = "(Last modified {{ . }})"
 [translationsLabel]

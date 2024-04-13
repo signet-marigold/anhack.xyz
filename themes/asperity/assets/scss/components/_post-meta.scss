@@ -5,11 +5,12 @@
 	.post-date,
 	.author-name {
 		font-weight: 700;
-		color: $gray-100;
+		//color: $gray-100;
 	}
 	.post-date {
 	}
 	.post-last-modified {
+		margin-left: 0.15em;
 	}
 	.post-reading-time {
 	}
@@ -18,8 +19,8 @@
 	.author-name {
 	}
 	.post-tags {
-		a {
-			line-break: anywhere;
+		.tag {
+			display: inline-block;
 		}
 	}
 }

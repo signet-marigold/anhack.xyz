@@ -1,16 +1,19 @@
-{{ if .IsHome -}}
-{{/*	{{ if .Site.Params.homeTitle }}{{ $.Scratch.Set "title" .Site.Params.homeTitle }}{{ else }}{{ $.Scratch.Set "title" .Site.Title }}{{ end -}}
-	{{ if .Site.Params.subtitle }}{{ $.Scratch.Set "subtitle" .Site.Params.subtitle }}{{ end -}} */}}
-{{ else -}}
+{{- if .IsHome -}}
+	{{- if .Site.Params.showHomeTitle -}}
+		{{- if .Site.Params.homeTitle }}{{ $.Scratch.Set "title" .Site.Params.homeTitle }}{{ else }}{{ $.Scratch.Set "title" .Site.Title }}{{ end -}}
+		{{- if .Site.Params.homeSubtitle }}{{ $.Scratch.Set "subtitle" .Site.Params.homeSubtitle }}{{ end -}}
+	{{- end -}}
+{{- else -}}
 	{{- if eq .Kind "term" -}}
 		{{- $.Scratch.Set "term" (humanize .Data.Singular) -}}
 	{{- end -}}
-	{{ $.Scratch.Set "title" .Title -}}
-	{{ if .Params.subtitle }}{{ $.Scratch.Set "subtitle" .Params.subtitle }}{{ end -}}
-{{ end -}}
-{{ $term := $.Scratch.Get "term" -}}
-{{ $title := $.Scratch.Get "title" -}}
-{{ $subtitle := $.Scratch.Get "subtitle" }}
+	{{- $.Scratch.Set "title" .Title -}}
+	{{- if .Params.subtitle }}{{ $.Scratch.Set "subtitle" .Params.subtitle }}{{ end -}}
+{{- end -}}
+{{- $term := $.Scratch.Get "term" -}}
+{{- $title := $.Scratch.Get "title" -}}
+{{- $subtitle := $.Scratch.Get "subtitle" -}}
+
 		{{- if $title }}
 			<div class="intro-header {{ .Kind }}-header" itemscope itemtype="http://schema.org/BlogPosting">
 			{{ if $imageLink := .Params.image -}}
@@ -77,8 +80,8 @@
 						{{ end -}}
 					{{ end -}}
 				</div>
-				<hr class="small">
 				{{- if eq .Kind "section" }}
+					<hr class="small">
 					{{- with .Paginator }}
 						{{- if ne .TotalPages 1 }}
 							<div class="index-lock">

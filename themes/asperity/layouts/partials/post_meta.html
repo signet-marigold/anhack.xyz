@@ -37,7 +37,7 @@
 	&nbsp;&middot;&nbsp;{{ i18n "inTags" }}&nbsp;<span class="post-tags" itemprop="keywords">
 	{{- range $key, $value := .Params.tags -}}
 		{{- $url := printf "/tags/%s/" (. | urlize | lower) -}}
-		<a id="tag_{{ . | lower }}" href="{{ $url }}">{{ . }}</a>{{ if lt $key (sub $tagsLen 1) }},&nbsp;{{ end }}
+		<span class="tag"><a id="tag_{{ . | lower }}" href="{{ $url }}">{{ . }}</a>{{ if lt $key (sub $tagsLen 1) }},&nbsp;{{ end }}</span>
 	{{- end -}}
 	</span>
 {{- end -}}

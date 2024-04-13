@@ -64,7 +64,8 @@ body.light-theme {
 	}
 	// White with black outline and drop shadow
 	code,
-	nav > div {
+	nav > div,
+	#toc-container {
 		background-color: $light-theme-bg;
 		box-shadow: $light-theme-outline-shadow, $light-theme-drop-shadow;
 	}
@@ -90,8 +91,7 @@ body.light-theme {
 	}
 	main {
 		#toc-container {
-			background-color: $light-theme-bg;
-			box-shadow: $light-theme-outline-shadow;
+			background-image: none;
 		}
 	}
 	footer > div {
@@ -202,7 +202,6 @@ body.light-theme {
 			a {
 				&:hover {
 					background-color: #ccc;
-
 				}
 				&:active {
 					background-color: #999;

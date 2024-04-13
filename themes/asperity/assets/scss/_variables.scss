@@ -16,7 +16,7 @@ $page-max-width: 48rem;
 // Spacing
 $base-padding: 0.5rem;
 $base-margin: 0.5rem;
-$body-margin: 0.875rem;
+$body-margin: 0.625rem;
 // Body text indent
 $pbm-compact: 0.375rem;
 $pbm-expand:  0.25rem;
@@ -97,10 +97,10 @@ $h4-word-spacing: 0.035em;
 $h5-word-spacing: 0.05em;
 $h6-word-spacing: 0.05em;
 
-$h1-page-weight: 500;
-$h2-page-weight: 500;
-$h3-page-weight: 900;
-$h4-page-weight: 900;
+$h1-page-weight: 800;
+$h2-page-weight: 800;
+$h3-page-weight: 700;
+$h4-page-weight: 700;
 $h5-page-weight: 700;
 $h6-page-weight: 700;
 
@@ -114,7 +114,7 @@ $h6-page-letter-spacing: 0.02em;
 // Forehead clearance multiplier
 // Extra space above heading
 // 0 = no extra space, normal padding
-$page-heading-base-fc-mult: 1;
+$page-heading-base-fc-mult: 0.5;
 
 // Target marker visual size
 $heading-target-marker-width: $base-border-thickness * 3;

@@ -2,6 +2,10 @@ title = 'Asperty'
 languageCode = 'en-us'
 
 [params]
+	showHomeTitle = false
+	homeTitle = ''
+	homeSubtitle = ''
+
 	# List items
 	datesinlist = true
 	authorsinlist = true
@@ -26,7 +30,7 @@ languageCode = 'en-us'
 	readingTime = true
 	wordCount = false
 	showRelatedPosts = true
-	hideAuthor = false
+	hideAuthor = true
 	hideTags = false
 	showPreviewImage = true
 	showPreviewVideo = false

@@ -126,17 +126,6 @@ hr {
 		border-bottom-color: $pure-black;
 	}
 }
-header .intro-header.page-header hr {
-	@include sm {
-		margin-bottom: 1.5rem;
-	}
-	@include lg {
-		margin-bottom: 2rem;
-	}
-}
-main hr {
-	margin: 1.5rem 0;
-}
 
 ol,
 ul {

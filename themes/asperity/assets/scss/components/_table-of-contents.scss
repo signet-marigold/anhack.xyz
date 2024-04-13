@@ -1,9 +1,11 @@
 main {
 	#toc-container {
 		font-size: 0.9em;
-		border-radius: if($rounded-corners, $base-border-radius, null);
 		margin: 0 0 2rem;
+		border-radius: if($rounded-corners, $base-border-radius, null);
+		box-shadow: $base-box-shadow;
 		background-color: $black;
+		background-image: linear-gradient(to bottom right, lighten($black, 3%), $black);
 		@include xs {
 			padding: 1rem 1rem 0.5rem
 		}
