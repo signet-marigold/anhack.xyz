@@ -1,3 +1,27 @@
+.index-lock {
+	position: relative;
+	.index-text {
+		position: absolute;
+		right: 0;
+		top: -1.5rem;
+		text-align: right;
+		font-weight: 700;
+		@include xs {
+			margin-right: 1rem;
+			font-size: 130%;
+		}
+		@include sm {
+			margin-right: 2.5rem;
+			font-size: 150%;
+		}
+		@include md {
+			margin-right: 4rem;
+		}
+		#page-number {
+		}
+	}
+}
+
 // Taxonomy page list navigation buttons
 ul.pagination {
 	margin: 0;
