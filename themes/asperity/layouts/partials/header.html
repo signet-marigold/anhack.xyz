@@ -80,15 +80,5 @@
 						{{ end -}}
 					{{ end -}}
 				</div>
-				{{- if eq .Kind "section" }}
-					<hr class="small">
-					{{- with .Paginator }}
-						{{- if ne .TotalPages 1 }}
-							<div class="index-lock">
-								<div class="index-text">Page [ <span id="page-number">{{ .PageNumber }}</span> ]</div>
- 							</div>
-						{{ end -}}
-					{{ end -}}
-				{{ end -}}
 			</div>
 		{{ end -}}

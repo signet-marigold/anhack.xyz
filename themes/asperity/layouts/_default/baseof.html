@@ -19,6 +19,7 @@
 			{{ else if ne .Kind "section" }}
 			<hr class="small">
 			{{ end -}}
+			{{ partial "page_divider.html" . }}
 			{{ partial "toc.html" . }}
 			<article class="main-article {{ if eq .Kind "home" "page" }} page{{ end }}">
 				{{ block "main" . }}{{ .Content | emojify }}{{ end }}
