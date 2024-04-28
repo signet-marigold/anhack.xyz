@@ -37,6 +37,7 @@
 	}
 	.post-title {
 		margin: 0;
+		padding: 0;
 		font-weight: 800;
 	}
 	.post-subtitle {
@@ -85,4 +86,9 @@
 	}
 	.blog-tags {
 	}
+}
+// Remove added margin if post-preview is in a page article
+// e.g. shortcode "recentposts"
+article.page .post-preview h2:not(:target) {
+	margin-bottom: 0;
 }

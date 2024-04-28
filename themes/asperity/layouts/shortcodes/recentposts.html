@@ -1,0 +1,5 @@
+{{- $count := default "3" (.Get "count") -}}
+
+{{- range ( where .Site.RegularPages "Type" "posts" | first $count ) }}
+	{{ partial "post_preview.html" . | emojify }}
+{{ end -}}

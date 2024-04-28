@@ -7,10 +7,29 @@ Welcome welcome!
 this is my personal site for mayhem & mischief  
 I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
-## Index:
-- [Posts](/posts/)
-- [Projects](/projects/)
+## Most recent posts
+{{< recentposts count=3 >}}
+[[View more posts]](/posts/)
 
 ---
+
+## This is a mental dumping ground
+of anything on my mind...
+
+- News,
+- Project updates,
+- Resources,
+- Technical write-ups, Etc.
+
+Expect nothing of very high quality
+
+## Index
+- [About](/about/)
+- [Posts](/posts/)
+- [Projects](/projects/)
+- [Tags](/tags/)
+- [Categories](/category/)
+- [Fun Links](/fun-links/)
+- [Playlist](/playlist/)
 
 {{< img src="/images/singles-resources/index/marble.webp" class="full" nolazy="true" alt="marbled collage of color" >}}
