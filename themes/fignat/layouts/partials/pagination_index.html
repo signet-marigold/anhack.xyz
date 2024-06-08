@@ -1,0 +1,7 @@
+{{- with .Page.Paginator }}
+	{{- if gt .TotalPages 1 }}
+		<div class="index-lock">
+			<div class="index-text">Page [ <span id="page-number">{{ .PageNumber }}</span> ]</div>
+		</div>
+	{{ end -}}
+{{ end -}}

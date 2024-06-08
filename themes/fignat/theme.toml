@@ -1,6 +1,6 @@
-name = 'Asperty'
+name = 'Fignat'
 license = 'MIT'
-licenselink = 'https://github.com/signet-marigold/anhack.xyz/blob/main/themes/asperity/LICENSE'
+licenselink = 'https://github.com/signet-marigold/anhack.xyz/blob/main/themes/fignat/LICENSE'
 description = ''
 tags = ['blog', 'projects', 'mobile']
 features = ['blog', 'projects', 'mobile']

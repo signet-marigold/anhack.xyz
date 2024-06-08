@@ -1,0 +1,11 @@
+<!--
+	Inner: Content inside shortcode
+	markdown: Bool: render as markdown insted of html
+-->
+<div class="grid-container">
+	{{- if eq (.Get "markdown") "true" -}}
+		{{ .Inner | markdownify }}
+	{{- else -}}
+		{{ .Inner }}
+	{{- end -}}
+</div>

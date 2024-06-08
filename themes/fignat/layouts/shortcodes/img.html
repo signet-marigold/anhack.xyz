@@ -1,0 +1,131 @@
+<!--
+	class: class of the figure
+	link: anchor url
+	src: image link
+	alt: alternative text
+	caption: text underneath
+	mouse: what the image says when moused over ("title" in HTML)
+	ratio: aspect ratio of the image (in "x / y") for better dom loading
+-->
+{{ $zoom := 0 -}}
+{{ with .Get "zoomsrc" -}}
+	{{ $zoom = 1 -}}
+	{{ $.Scratch.Set "link" . -}}
+{{ else -}}
+	{{ with .Get "link" -}}
+		{{ $.Scratch.Set "link" . -}}
+	{{ end -}}
+{{ end -}}
+{{ $link := $.Scratch.Get "link" -}}
+
+{{ $imageLink := .Get "src" -}}
+
+
+<!-- Generate image object -->
+{{ $image := "" }}
+<!-- If it looks like an external link -->
+{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
+	{{ with resources.GetRemote $imageLink -}}
+		{{ with .Err -}}
+			{{ errorf "%s" . -}}
+		{{ else -}}
+			{{ $image = . -}}
+		{{ end -}}
+	{{ else -}}
+		{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
+	{{ end -}}
+{{ else -}}
+	<!-- Look for file in global res -->
+	{{ with resources.Get $imageLink -}}
+		{{ with .Err -}}
+			{{ errorf "%s" . -}}
+		{{ else -}}
+			{{ $image = . -}}
+		{{ end -}}
+	{{ else -}}
+		<!-- Look for file in page res -->
+		{{ with $.Page.Resources.GetMatch $imageLink -}}
+			{{ with .Err -}}
+				{{ errorf "%s" . -}}
+			{{ else -}}
+				{{ $image = . -}}
+			{{ end -}}
+		{{ else -}}
+			{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
+		{{ end -}}
+	{{ end -}}
+{{ end -}}
+
+
+<!-- Process image -->
+{{ with .Get "noprocess" -}}
+{{ else -}}
+	{{ with .Get "scalewidth" -}}
+		{{ if gt $image.Width . -}}
+			{{ $image = $image.Process (printf "resize %sx Lanczos q95 webp" .) -}}
+		{{ else -}}
+			{{ errorf "The \"img\" shortcode scalewidth: %s larger than original width: %d" . $image.Width -}}
+		{{ end -}}
+	{{ end -}}
+{{ end -}}
+
+
+<!-- Calculate image ratio -->
+{{- $width := $image.Width -}}
+{{ $height := $image.Height -}}
+<!-- Calculate greatest common factor -->
+{{ $n1 := $width -}}
+{{ $n2 := $height -}}
+{{ range seq 1000 -}}
+	{{ if eq $n1 $n2 -}}
+		{{ break -}}
+	{{ end -}}
+	{{ if gt $n1 $n2 -}}
+		{{ $n1 = sub $n1 $n2 -}}
+	{{ else -}}
+		{{ $n2 = sub $n2 $n1 -}}
+	{{ end -}}
+{{ end -}}
+<!-- Simplified ratio -->
+{{ $sw := div $width $n1 -}}
+{{ $sh := div $height $n1 -}}
+
+
+<!-- Add row container when specified -->
+{{- $nf_begin := 0 -}}
+{{ $nf_end := 0 -}}
+{{ with .Get "row" -}}
+	{{ if findRE `^begin$` . -}}
+		{{ $nf_begin = 1 -}}
+	{{ else if findRE `^end$` . -}}
+		{{ $nf_end = 1 -}}
+	{{ end -}}
+{{ end -}}
+
+
+{{- $image_fixed_width := 800 -}}
+
+
+{{- if eq $nf_begin 1 }}<div class="nf-image-row">{{ end -}}
+
+<details>
+	<summary>Click to expand image{{ with .Get "alt" }}: "{{ . }}"{{ end }}</summary>
+	<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
+		{{- with $link }}<a href="{{ . }}">{{ end -}}
+		<img loading="lazy"
+			src="{{ $image.RelPermalink }}"
+			{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
+			{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
+			{{/**/}} style="aspect-ratio:{{ $sw }}/{{ $sh }}"
+			{{/**/}} width="{{ $image_fixed_width }}" height="{{ div (mul $image_fixed_width $sh) $sw }}">
+		{{- if $link }}</a>{{ end -}}
+
+		{{- with .Get "caption" -}}
+			<figcaption>
+				{{- . -}}
+			</figcaption>
+		{{- end }}
+	</figure>
+</details>
+
+{{ if eq $nf_end 1 }}</div>{{ end }}

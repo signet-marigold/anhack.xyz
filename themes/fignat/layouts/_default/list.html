@@ -1,0 +1,7 @@
+{{ define "main" -}}
+{{ partial "pagination_index.html" . }}
+{{ range .Paginator.Pages -}}
+	{{ partial "post_preview.html" . | emojify }}
+{{- end }}
+{{ partial "pagination.html" . }}
+{{- end }}

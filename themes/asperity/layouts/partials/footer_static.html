@@ -51,9 +51,9 @@
 				{{- end -}}
 				
 			</div>
-			
+
 			<div id="site-extra">
-			
+
 				{{- if .Param "showSource" -}}
 				{{- with .Param "source" -}}
 				<a href="{{ . }}" target="_blank" rel="noopener">
@@ -67,13 +67,21 @@
 					<div class="btn-ocher" id="rss-feed-link">RSS Main Feed</div>
 				</a>
 				{{- end -}}
-				
+
+				{{- with .Param "switchSiteURL"}}
+				<a href="{{ . }}" rel="nofollow">
+					<div class="btn-vermilion">{{ i18n "switchSites" }}</div>
+				</a>
+				{{ end -}}
+
 				{{- if .Param "showThemeToggle" -}}
 				<div class="theme-toggle" title="Click to change theme (light/dark)"></div>
 				{{- end -}}
-			
+				
 			</div>
-			
+
+
+
 			{{- partialCached "assets/css-loader.html" "easyzoom.css" -}}
 			{{- partialCached "assets/js-loader.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}
 			{{- partialCached "theme-switcher/script-btn.html" . -}}

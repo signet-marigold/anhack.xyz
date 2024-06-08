@@ -1,16 +1,11 @@
-title = 'Asperty'
+title = 'Fignat'
 languageCode = 'en-us'
 
 [params]
 	showHomeTitle = false
 	homeTitle = ''
 	homeSubtitle = ''
-
-	# List items
-	datesinlist = true
-	authorsinlist = true
-
-	# Footer items
+	
 	nextPrev = true
 	tagList = true
 	showLicence = true
@@ -32,11 +27,8 @@ languageCode = 'en-us'
 	showRelatedPosts = true
 	hideAuthor = true
 	hideTags = false
-	showPreviewImage = true
+	showPreviewImage = false
 	showPreviewVideo = false
 	showPreviewSummary = true
-
-	# Table of Contents
-	tocMinWordCount = 480
 	
-	switchSiteURL = 'https://simple.anhack.xyz'
+	switchSiteURL = 'https://anhack.xyz'

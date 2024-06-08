@@ -1,0 +1,19 @@
+{{ define "main" -}}
+{{ $data := .Data -}}
+{{ $isTag := eq .Data.Singular "tag" -}}
+
+<article class="post-term-list">
+	{{ range $key, $value := .Data.Terms.ByCount -}}
+	<div class="post-term">
+		<a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}/">
+			<div class="term-heading" id="header-{{ $value.Name | anchorize }}">
+			<h4 class="term-title">
+				<span class="term">{{/*{{ if $isTag }}#{{ end }}*/}}{{ $value.Name }}</span>
+				<span class="badge">{{ $value.Count }}</span>
+			</h4>
+			</div>
+		</a>
+	</div>
+	{{ end -}}
+</article>
+{{- end }}

@@ -1,6 +1,6 @@
 ---
 title: "Fun Links"
-subtitle: "Sugma"
+subtitle: "Those who are wary of the past something something something"
 author: ""
 image: ""
 category: "single"

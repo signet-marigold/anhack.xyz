@@ -1,0 +1,15 @@
+{{- $src := .Get "src" -}}
+{{- $ext := path.Ext $src -}}
+
+
+<div class="video-container">
+<video controls preload="none">
+	<source src="
+	{{- if findRE "(^(https?:)?//)" (lower $src) -}}
+		{{ $src }}
+	{{- else -}}
+		{{ .Page.RelPermalink }}{{ $src }}
+	{{- end -}}
+	" type="video/{{ replaceRE `\?.*$` "" (trim $ext ".") }}">
+</video>
+</div>

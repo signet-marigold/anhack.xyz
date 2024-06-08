@@ -1,0 +1,3 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+	<span class="line"><span class="text"><a class="heading-link" href="#{{ .Anchor | safeURL }}"><i class="link" aria-hidden="true" title="{{ i18n "link_to_heading" | default "Link to heading" }}"></i></a>{{- .Text | safeHTML -}}</span></span>
+</h{{ .Level }}>

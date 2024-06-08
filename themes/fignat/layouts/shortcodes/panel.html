@@ -1,0 +1,8 @@
+<!--
+	0: type {note, example, info, error, caution, danger}
+	Inner: Content inside shortcode
+-->
+<div class="panel-{{ .Get 0 }}">
+	<div class="panel-icon"></div>
+	{{ .Inner | markdownify }}
+</div>

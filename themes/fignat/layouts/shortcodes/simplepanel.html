@@ -1,0 +1,7 @@
+<!--
+	0: color class: base theme colors
+	Inner: Content inside shortcode
+-->
+<div class="simple-panel-{{ .Get 0 }}">
+	{{ .Inner | markdownify }}
+</div>

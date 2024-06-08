@@ -1,0 +1,4 @@
+			{{- /* disable row if home page and parameter showHomeTitle is false */ -}}
+			{{- if not (and (eq .Kind "home") (not .Site.Params.showHomeTitle)) }}
+			<hr class="small">
+			{{ end -}}

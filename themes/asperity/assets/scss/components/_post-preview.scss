@@ -87,8 +87,17 @@
 	.blog-tags {
 	}
 }
-// Remove added margin if post-preview is in a page article
-// e.g. shortcode "recentposts"
-article.page .post-preview h2:not(:target) {
-	margin-bottom: 0;
+
+article.page {
+	// Remove added margin if post-preview is in a page article
+	// e.g. shortcode "recentposts"
+	.post-preview h2:not(:target) {
+		margin-bottom: 0;
+	}
+	.post-preview:first-of-type {
+		margin-top: 0;
+	}
+	.post-preview:last-of-type {
+		margin-bottom: 0;
+	}
 }

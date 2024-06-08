@@ -1,0 +1,5 @@
+			<section id="article-info">
+				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end -}}
+			</section>
+			<hr>
+			{{- partialCached "footer_static.html" . }}

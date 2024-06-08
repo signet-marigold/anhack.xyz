@@ -1,0 +1,80 @@
+<section class="post-preview">
+	<a href="{{ .RelPermalink }}" class="post-link">
+		<h2 class="post-title" itemprop="name">
+			{{- .Title -}}
+			{{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
+		</h2>
+	
+{{ if .Site.Params.showPreviewImage -}}
+	{{ if $imageLink := .Params.image -}}
+		{{ $image := "" }}
+		{{ if findRE "(^(https?:)?//)" (lower $imageLink) -}}
+			{{ with resources.GetRemote $imageLink -}}
+				{{ with .Err -}}
+					{{ errorf "%s" . -}}
+				{{ else -}}
+					{{ $image = . -}}
+				{{ end -}}
+			{{ else -}}
+				{{ errorf "Unable to get remote resource %q in %s" $imageLink .Page -}}
+			{{ end -}}
+		{{ else -}}
+			<!-- Look for file in global res -->
+			{{ with resources.Get $imageLink -}}
+				{{ with .Err -}}
+					{{ errorf "%s" . -}}
+				{{ else -}}
+					{{ $image = . -}}
+				{{ end -}}
+			{{ else -}}
+				<!-- Look for file in page res -->
+				{{ with $.Page.Resources.GetMatch $imageLink -}}
+					{{ with .Err -}}
+						{{ errorf "%s" . -}}
+					{{ else -}}
+						{{ $image = . -}}
+					{{ end -}}
+				{{ else -}}
+					{{ errorf "Unable to get local resource %q in %s" $imageLink .Page -}}
+				{{ end -}}
+			{{ end -}}
+		{{ end -}}
+		
+		<div class="post-image">
+			<img src="{{ $image.RelPermalink }}"{{ with .Params.imageAlt }} alt="{{ . }}"{{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}">
+		</div>
+	{{- end }}
+{{- end }}
+	</a>
+{{ if .Site.Params.showPreviewVideo -}}
+	{{ if .Params.video -}}
+		<video loop autoplay muted playsinline class="post-image">
+			<source src="{{ .Params.video }}"/>
+		</video>
+	{{- end }}
+{{- end }}
+{{ if eq .Type "posts" -}}
+	{{ partial "post_meta.html" . }}
+{{- end -}}
+
+{{ if .Params.subtitle -}}
+	<h4 class="post-subtitle">
+		{{ .Params.subtitle }}
+	</h4>
+{{- end }}
+
+{{- if .Site.Params.showPreviewSummary -}}
+{{ if ne .WordCount 0 -}}
+	<div class="post-entry">
+	{{ if .Site.Params.summaryMaxChar -}}
+		{{ substr (htmlUnescape .Summary) 0 .Site.Params.summaryMaxChar }}...
+	{{ else -}}
+		{{ .Summary }}
+	{{- end }}
+	{{ if .Truncated -}}
+		<a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
+	{{- end }}
+	</div>
+{{- end }}
+{{- end }}
+</section>

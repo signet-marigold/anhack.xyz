@@ -19,12 +19,6 @@ other = "2006-01-02T15:04:05 Z07:00"
 other = "Posted on {{ . }}"
 [lastModified]
 other = "(Last modified {{ . }})"
-[translationsLabel]
-#other = "Other languages: "
-[translationsSeparator]
-#other = ", "
-[missingImage]
-other = "[image missing]"
 [draft]
 other = "[DRAFT]"
 [tableOfContents]
@@ -60,4 +54,4 @@ other = "in"
 [lastBuild]
 other = "Last build"
 [switchSites]
-other = "Go to simplified site"
+other = "Go to normal site"

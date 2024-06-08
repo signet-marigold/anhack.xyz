@@ -1,0 +1,11 @@
+<!--
+	link: url
+	color: button color class
+	text: button text
+	alt: alternative text
+	mouse: what the image says when moused over ("title" in HTML)
+-->
+<a href="{{ .Get "link" }}"{{ if findRE "^(https?:)?//" (lower (.Get "link")) }} target="_blank" rel="noopener"{{ end }}><button {{ with .Get "color" }}class="btn-{{ . }}"{{ end -}}
+		{{- with .Get "mouse" }} title="{{ . }}"{{ end -}}
+		{{- with .Get "alt" }} alt="{{ . }}"{{ end -}}
+>{{ .Get "text" }}</button></a>

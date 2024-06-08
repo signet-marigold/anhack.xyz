@@ -1,0 +1,34 @@
+{{- $buildTime := (time.Now | time.Format (i18n "buildTimeDateFormat")) -}}
+			<div id="site-info">
+				
+				{{- if .Param "showLicence" -}}
+				{{- if .Param "licenceLink" }}<a href="{{ .Param "licenceLink" }}" target="_blank" rel="noopener">{{ end -}}
+				{{- with .Param "licenceText" }}{{ . }}{{ end -}}
+				{{- if .Param "licenceLink" }}</a>{{ end -}}
+				{{- end -}}
+				
+				<br/>
+				
+				{{- if .Param "showCopyright" -}}
+				{{- if .Site.Copyright -}}
+				<p>
+					<a href="{{ .Site.BaseURL }}">
+						<span id="site-copyright">{{ .Site.Copyright }}</span>
+					</a>
+				</p>
+				{{- end -}}
+				{{- end -}}
+				
+				{{- if .Param "showLastBuild" -}}
+				<div class="display-ib">{{ i18n "lastBuild" }}: {{ $buildTime }}</div>
+				{{- end -}}
+				
+				{{- if .Param "showThemeInfo" -}}
+				<p>
+					Published with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> using the <a href="https://github.com/signet-marigold/anhack.xyz/tree/main/themes/fignat" target="_blank" rel="noopener">Fignat Theme</a>
+				</p>
+				{{- end -}}
+				
+				{{- with .Param "switchSiteURL"}}<a href="{{ . }}" rel="nofollow">{{ i18n "switchSites" }}</a>{{ end -}}
+				
+			</div>

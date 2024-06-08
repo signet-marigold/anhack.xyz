@@ -8,4 +8,8 @@ BUILD_FLAGS=--minify
 rm -rf public/*
 hugo ${BUILD_FLAGS} && sshpass -p ${DHOUS_PASS} rsync -avz --delete public/ ${DHOUS_USER}@${DHOUS_HOST}:~/${DHOUS_DIR}
 
+# build simplified version of the site
+rm -rf public-simple/*
+hugo ${BUILD_FLAGS} --environment simple && sshpass -p ${DHOUS_S_PASS} rsync -avz --delete public-simple/ ${DHOUS_S_USER}@${DHOUS_S_HOST}:~/${DHOUS_S_DIR}
+
 exit 0
