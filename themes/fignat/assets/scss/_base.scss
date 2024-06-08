@@ -122,6 +122,10 @@ hr {
 	padding: 10px 0;
 }
 
+.post-preview:first-of-type {
+	padding-top: 0;
+}
+
 .post-term-list {
 	margin: 48px 0 48px;
 	padding: 0;
@@ -181,6 +185,7 @@ hr {
 
 .index-lock > .index-text {
 	font-size: 24px;
+	margin-bottom: 36px;
 }
 
 footer > div {

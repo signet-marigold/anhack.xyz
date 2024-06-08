@@ -1,13 +1,10 @@
 {{- $dateTime    := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format    -}}
 {{- $lastmodTime := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
-<!-- Match non number characters and add separator class -->
-{{- $dateTimeFormatted    := (replaceRE `[^0-9]+` "<span class='ds'>$0</span>"  $dateTime)    -}}
-{{- $lastmodTimeFormatted := (replaceRE `[^0-9]+` "<span class='dsm'>$0</span>" $lastmodTime) -}}
 
 <div class="post-meta">
-	<time class="post-date" itemprop="datePublished" datetime="{{ "2006-01-02" | .Date.Format }}">{{ $dateTimeFormatted | i18n "postedOnDate" | safeHTML }}</time>
+	<span class="post-date">{{ $dateTime | i18n "postedOnDate" | safeHTML }}</span>
 	{{- if ne $dateTime $lastmodTime -}}
-		&nbsp;<time class="post-last-modified" itemprop="dateModified" datetime="{{ "2006-01-02" | .Date.Format }}">{{ $lastmodTimeFormatted | i18n "lastModified" | safeHTML }}</time>
+		&nbsp;<span class="post-last-modified">{{ $lastmodTime | i18n "lastModified" | safeHTML }}</span>
 	{{- end -}}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}

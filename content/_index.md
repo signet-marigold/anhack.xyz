@@ -8,7 +8,9 @@ this is my personal site for mayhem & mischief
 I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
 ## Most recent posts
+
 {{< recentposts count=3 >}}
+
 [[View more posts]](/posts/)
 
 ---
