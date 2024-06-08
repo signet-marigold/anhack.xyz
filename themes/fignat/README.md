@@ -1,6 +1,6 @@
 # Fignat theme
 
 
-simple blogging theme. no frills
+simple blogging theme. no frills. written in [Hugo](https://gohugo.io/)
 
-used in the alt page for my blog fn.anhack.xyz
+used in the alt page for my blog [simple.anhack.xyz](https://simple.anhack.xyz)
