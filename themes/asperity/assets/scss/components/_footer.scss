@@ -76,34 +76,40 @@ footer > div {
 			color: $white;
 		}
 	}
+	$we-horizontal-margin: 0.625rem;
+	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
+	
 	#site-extra {
 		margin-top: 1.25rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-	$we-horizontal-margin: 0.625rem;
-	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
-	& > div:not(:first-child) > * {
-		margin-left: $we-horizontal-margin;
+		& > * {
+			margin-left: $we-horizontal-margin;
+		}
+		& > :first-child {
+			margin-left: 0;
+		}
 	}
 	#rss-feed-link {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		text-decoration: none;
-		&::before {
-			content: "";
-			background-repeat: no-repeat;
-			background-position: center;
+		& > div {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: $we-height;
-			width: $we-height;
-			margin: -#{$we-height * 0.5} 0;
-			margin-right: -0.3rem;
-			background-image: url("/icons/rss-custom.svg");
+			&::before {
+				content: "";
+				background-repeat: no-repeat;
+				background-position: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: $we-height;
+				width: $we-height;
+				margin: -#{$we-height * 0.5} 0;
+				margin-right: -0.3rem;
+				background-image: url("/icons/rss-custom.svg");
+			}
 		}
 	}
 	.theme-toggle {
@@ -125,5 +131,8 @@ footer > div {
 		&.visable {
 			display: block;
 		}
+	}
+	#switch-site > div {
+		margin-top: 0.4rem;
 	}
 }

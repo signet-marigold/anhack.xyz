@@ -3,3 +3,7 @@
 			</section>
 			<hr>
 			{{- partialCached "footer_static.html" . }}
+			
+			{{- if .Param "switchSiteURL" -}}
+			<a href="{{ .Param "switchSiteURL" }}{{ .RelPermalink }}" rel="nofollow">{{ i18n "switchSites" }}</a>
+			{{- end -}}

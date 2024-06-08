@@ -6,3 +6,6 @@
 			</section>
 			<hr>
 			{{- partialCached "footer_static.html" . }}
+			{{- if .Param "switchSiteURL" -}}
+			<a id="switch-site" href="{{ .Param "switchSiteURL" }}{{ .RelPermalink }}" rel="nofollow"><div class="btn-vermilion">{{ i18n "switchSites" }}</div></a>
+			{{- end -}}
