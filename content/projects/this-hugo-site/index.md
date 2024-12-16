@@ -258,9 +258,26 @@ but i feel that in this pursuit of professional and legible weve lost
 
 ***\~ ☆ p e r s o n a l i t y ☆ \~***
 
+ive always appreciated the aesthetic of
+90s Usenet blogs, early internet blogs, neocities pages, myspace
+
 
 
 ### personality
+
+I feel like this is often overlooked.
+Replaced with a clean inoffensive layout.
+Now there's lots to blame for this. You have sight builders like Wix that make it very easy to have your own page.
+Hell even everyone can set up a WordPress nowadays with a clean stylish theme for cheap.
+All of this, in my opinion, is the distillation of capitalism on the internet.
+Everyone needs to sell you something.
+And if you're not using your personal blog to sell, you're doing yourself a disservice.
+
+I think this hypothesis thoroughly explains why everything is so bleached.
+
+Once again, marketing has ruined everything.
+
+
 
 #### badges
 
@@ -271,5 +288,10 @@ but i feel that in this pursuit of professional and legible weve lost
 ##### neocities
 
 ##### underground webrings, i see u
+
+if you are an **uber nerd** or were **active on the internet in the nineties**
+
+>A webring (or web ring) is a collection of websites linked together in a circular structure, and usually organized around a specific theme, often educational or social. They were popular in the 1990s and early 2000s, particularly among amateur websites.
+{cite="https://en.wikipedia.org/wiki/Webring" caption="Wikipedia page on Webring(s)"}
 
 ## whats the point of it all

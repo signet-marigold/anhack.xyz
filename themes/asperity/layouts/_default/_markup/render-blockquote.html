@@ -1,0 +1,6 @@
+<blockquote {{ with .Attributes.cite }}cite="{{ . }}"{{ end }}>
+<div class="blockquote-quote">{{- .Text -}}</div>
+{{- with .Attributes.caption -}}
+<div class="blockquote-caption"><i>— {{ . | safeHTML }}</i></div>
+{{- end -}}
+</blockquote>

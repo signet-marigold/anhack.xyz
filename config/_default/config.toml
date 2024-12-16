@@ -83,3 +83,8 @@ enableGitInfo = true
 	[markup.highlight]
 		style = 'monokai'
 		tabWidth = 4
+	[markup.goldmark]
+		[markup.goldmark.parser]
+			[markup.goldmark.parser.attribute]
+				block = true
+

@@ -144,36 +144,49 @@ ul {
 }
 
 blockquote {
-	$color: $gray-500;
-	$quote-size: 3.5em;
-	$quote-margin: 0.5rem;
+	$color: $gray-400;
+	// these two have to be the same but
+	$quote-offset: 3em; // this one is em
+	$quote-size: 3rem;  // and this one is in rem
+	$quote-margin: 0.25rem;
 	@mixin quote {
 		color: $color;
-		vertical-align: $quote-size * -0.12;
+		vertical-align: $quote-offset * -0.12;
 		font-size: $quote-size;
 		line-height: 0;
 	}
 	@include squeeze-indent;
 	quotes: "“" "”" "‘" "’";
-	background-color: mix($color, $black, 30%);
-	background-color: rgba($color, 0.3);
+	background-color: mix($color, $black, 20%);
+	background-color: rgba($color, 0.2);
 	border-left: 0.1875rem solid $color;
 	border-radius: if($rounded-corners, $base-border-radius, null);
-	padding: 0.5em;
+	padding: 1rem;
 	p {
+		font-size: $base-font-size;
 		margin-top: 0;
-		//line-height: 1.4em;
 		display: inline;
 	}
-	&:before {
-		content: open-quote;
-		margin-right: $quote-margin;
-		@include quote;
+	.blockquote-quote {
+		// hugo creates extra whitespace by having a dangling p tag in the blockquote.
+		// this is the easiest way to get rid of it
+		font-size: 0;
+
+		&:before {
+			content: open-quote;
+			margin-right: $quote-margin;
+			@include quote;
+		}
+		&:after {
+			content: close-quote;
+			margin-left: $quote-margin;
+			@include quote;
+		}
 	}
-	&:after {
-		content: close-quote;
-		margin-left: $quote-margin;
-		@include quote;
+	.blockquote-caption {
+		font-size: $base-font-size;
+		color: $gray-100;
+		margin-top: 0.5rem;
 	}
 }
 
