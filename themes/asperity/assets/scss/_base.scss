@@ -156,7 +156,7 @@ blockquote {
 		line-height: 0;
 	}
 	@include squeeze-indent;
-	quotes: "“" "”" "‘" "’";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 	background-color: mix($color, $black, 20%);
 	background-color: rgba($color, 0.2);
 	border-left: 0.1875rem solid $color;
