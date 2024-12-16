@@ -10,9 +10,9 @@
 	// padding horizontal & padding vertical
 	// top-indent is halved and then removed from the top padding and added to the bottom
 	$xs-pv: 1.5rem;
-	$xs-ph: 0.75rem;
+	$xs-ph: 1rem;
 	$sm-pv: 2rem;
-	$sm-ph: 2rem;
+	$sm-ph: 0.5rem;
 	//$md-pv: 2rem;
 	//$md-ph: 2rem;
 	
@@ -23,15 +23,15 @@
 		margin-bottom: 1.5rem;
 	}
 	@include xs {
-		padding: ($xs-pv - $top-indent * 0.5) $xs-ph ($xs-pv + $top-indent * 0.5);
+		padding: ($xs-pv - $top-indent * 0.5) $pag-h-xs ($xs-pv + $top-indent * 0.5);
 	}
 	@include sm {
-		padding: ($sm-pv - $top-indent * 0.5) $sm-ph ($sm-pv + $top-indent * 0.5);
+		padding: ($sm-pv - $top-indent * 0.5) $pag-h-sm ($sm-pv + $top-indent * 0.5);
 	}
 	@include md {
 		//padding: ($md-pv - $top-indent * 0.5) $md-ph ($md-pv + $top-indent * 0.5);
-		margin-left: 2rem;
-		margin-right: 2rem;
+		margin-left: $pag-h-md - $pag-h-sm;
+		margin-right: $pag-h-md - $pag-h-sm;
 	}
 	.post-link {
 	}

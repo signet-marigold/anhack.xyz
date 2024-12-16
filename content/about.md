@@ -81,7 +81,6 @@ You can also find me at:
 {{< /grid >}}
 
 - [Mastodon](https://mastodon.social/@alis_sy)
-- [Firefish](https://firefish.social/@alis) <note: firefish,social is currently dead>
 
 im hosting [a lemmy instance](https://casavaga.com/)
 
@@ -124,6 +123,12 @@ Thanks for joining me !
 
 ---
 
+[pscircle](https://gitlab.com/mildlyparallel/pscircle)
+[qownnotes](https://www.qownnotes.org/)
+[syncthing](https://syncthing.net/)
+
+---
+
 
 ## Desktops
 
@@ -131,23 +136,31 @@ Thanks for joining me !
 	* KDE on Debian
 * Surface3
 	* GNOME on Arch
-* 2015 Macbook
+* 2015 Macbook Pro
 	* DWM on Arch
+* T480 Thinkpad
+	* Gnome on Fedora
 
 
 
 ## Favorite blogs
 
-- [sqrtminusone](https://sqrtminusone.xyz/)
-- [michal sapka](https://michal.sapka.me/)
-- [dan luu](https://danluu.com/)
-- [maia arson crimew](https://maia.crimew.gay/)
-- [adryd](https://adryd.com/)
-- [daniel pecos](https://danielpecos.com/)
+[sqrtminusone](https://sqrtminusone.xyz/) |
+[michal sapka](https://michal.sapka.me/) |
+[dan luu](https://danluu.com/) |
+[maia arson crimew](https://maia.crimew.gay/) |
+[adryd](https://adryd.com/) |
+[daniel pecos](https://danielpecos.com/)
 
 
-## anhack.xyz 88x31 badge
+## anhack.xyz 88x31 pixel banner
+
+if you want to add my site as a banner on yours you can use this image
 
 [![anhack.xyz.png](/badges/anhack.xyz.png)](/badges/anhack.xyz.png)
 
-if you're into that sort of thing
+```html
+<a href="https://anhack.xyz"><img src="images/badges/anhack.xyz.png"></a>
+```
+
+please host the image yourself *if at all possible*

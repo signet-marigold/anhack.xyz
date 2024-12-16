@@ -1,12 +1,11 @@
 {{- $buildTime := (time.Now | time.Format (i18n "buildTimeDateFormat")) -}}
 {{- /* Match non number characters and add separator class */ -}}
 {{- $buildTimeFormatted := (replaceRE `[^0-9]+` "<span class='dsb'>$0</span>" $buildTime) | safeHTML -}}
-			
+
 			{{- if .Param "showbadges" -}}
 			<div id="badges">
 				{{ partialCached "badges.html" . }}
 			</div>
-			<hr>
 			{{- end -}}
 			
 			<div id="site-info">

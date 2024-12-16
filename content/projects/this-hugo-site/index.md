@@ -231,19 +231,34 @@ The 'halftone' dot pattern used in the background is actually a tiled vector dra
 </svg>
 ```
 
+isn't that cool!? we can create a micro pattern and tile it to the whole object with our `<g><rect width="100%" height="100%"> ...`
+
 {{< img src="halftone-plate-sample-532.png" class="full" >}}
 
 This looks pretty good! *however*, there's *one* trade off to this method.
-And it's also the reason it works so well. `<rect x="0" y="0" width="100%" height="100%" ...`
-will render a plate the size of the viewport. so while theres no overdraw, the plate also *does not move*
+because we are tiling in the `<rect>` and then expanding that to fill our viewport,
+the plate also *does not move*
+
+so theres that
 
 {{< vid src="halftone-showcase.webm" loop="true" >}}
 
 SEE ^^^ NOT MOVING!  
-Pretty yucky if you can notice it. Fortunately, you'd only see the problem if you have a highdpi display ***and*** are looking for it.
+Pretty yucky if you can notice it. Fortunately,
+you'd only see the problem if you have a highdpi display ***and*** are looking for it.
 Oh well, it works well enough.
 
+Id take this over jitter anyday~!
+
 ## a call to the old ways
+
+i've been building websites for the past decade or more.
+and most sites ive made have been for my entertainment ill give you that
+but i feel that in this pursuit of professional and legible weve lost
+
+***\~ ☆ p e r s o n a l i t y ☆ \~***
+
+
 
 ### personality
 

@@ -40,6 +40,10 @@ body {
 			image-rendering: initial;
 		}
 	}
+	
+	//@include breakpoint($page-max-width) {
+	//	margin: $body-margin * 2;
+	//}
 }
 
 // Content bodies

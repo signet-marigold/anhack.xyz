@@ -8,15 +8,15 @@
 		text-align: right;
 		font-weight: 700;
 		@include xs {
-			margin-right: 1rem;
+			margin-right: $pag-h-xs;
 			font-size: 130%;
 		}
 		@include sm {
-			margin-right: 2.5rem;
+			margin-right: $pag-h-sm;
 			font-size: 150%;
 		}
 		@include md {
-			margin-right: 4rem;
+			margin-right: $pag-h-md;
 		}
 		#page-number {
 		}

@@ -1,18 +1,14 @@
 baseURL = 'https://anhack.xyz/'
-title = 'ANHack Blog'
+title = 'anhack blog'
 theme = 'asperity'
 languageCode = 'en-US'
 defaultContentLanguage = 'en'
-copyright = 'Alexander Hack, 2024'
+copyright = 'alexander hack, 2024'
 keywords = 'blog,developer,development,personal'
 enableRobotsTXT = true
 summaryLength = 50
-paginate = 8
+pagination.pagerSize = 8
 enableGitInfo = true
-
-[author]
-	name = 'alex'
-	email = 'me@anhack.xyz'
 
 [taxonomies]
 	category = 'category'
@@ -27,6 +23,9 @@ enableGitInfo = true
 	showbadges = true
 	summaryMaxChar = 200
 	tocMinWordCount = 480
+	[params.author]
+		name = 'alex'
+		email = 'me@anhack.xyz'
 
 [sitemap]
 	changeFreq = 'weekly'
@@ -81,3 +80,6 @@ enableGitInfo = true
 		startLevel = 1
 		endLevel = 4
 		ordered = false
+	[markup.highlight]
+		style = 'monokai'
+		tabWidth = 4

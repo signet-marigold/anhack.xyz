@@ -77,6 +77,8 @@ draft: false
 
 [fakedetail.com](https://fakedetail.com/)
 
+[selfhost open list](https://github.com/awesome-selfhosted/awesome-selfhosted)
+
 ## Resources
 [archive.org](https://archive.org/)
 [wayback machine](https://wayback.archive.org/)

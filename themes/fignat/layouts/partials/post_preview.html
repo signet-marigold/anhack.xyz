@@ -66,10 +66,10 @@
 {{- if .Site.Params.showPreviewSummary -}}
 {{- if ne .WordCount 0 -}}
 	<div class="post-entry">
-	{{- if .Site.Params.summaryMaxChar -}}
-		{{- substr (htmlUnescape .Summary) 0 .Site.Params.summaryMaxChar }}...
-	{{- else -}}
-		{{- .Summary -}}
+	{{ if .Site.Params.summaryMaxChar -}}
+		{{ substr (htmlUnescape .Summary | plainify) 0 .Site.Params.summaryMaxChar }}...
+	{{ else -}}
+		{{ .Summary | plainify }}
 	{{- end }}
 	{{ if .Truncated -}}
 		<a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>

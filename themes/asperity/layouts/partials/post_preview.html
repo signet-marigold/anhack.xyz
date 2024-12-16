@@ -73,9 +73,9 @@
 {{ if ne .WordCount 0 -}}
 	<div class="post-entry">
 	{{ if .Site.Params.summaryMaxChar -}}
-		{{ substr (htmlUnescape .Summary) 0 .Site.Params.summaryMaxChar }}...
+		{{ substr (htmlUnescape .Summary | plainify) 0 .Site.Params.summaryMaxChar }}...
 	{{ else -}}
-		{{ .Summary }}
+		{{ .Summary | plainify }}
 	{{- end }}
 	{{ if .Truncated -}}
 		<a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>

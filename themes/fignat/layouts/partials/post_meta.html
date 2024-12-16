@@ -25,7 +25,7 @@
 			&nbsp;&middot;&nbsp;{{ i18n "authoredBy" }}&nbsp;<span class="author-name" itemprop="author">{{ .Params.author | safeHTML }}</span>
 		{{- end -}}
 	{{- else -}}
-		&nbsp;&middot;&nbsp;{{ i18n "authoredBy" }}&nbsp;<span class="author-name" itemprop="author">{{ .Site.Author.name | safeHTML }}</span>
+		&nbsp;&middot;&nbsp;{{ i18n "authoredBy" }}&nbsp;<span class="author-name" itemprop="author">{{ .Site.Params.author.name | safeHTML }}</span>
 	{{- end -}}
 {{- end -}}
 {{- if and .Params.tags (not .Site.Params.hideTags) -}}
