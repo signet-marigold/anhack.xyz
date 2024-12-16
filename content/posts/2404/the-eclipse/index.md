@@ -5,8 +5,8 @@ date: 2024-04-09T00:12:04-05:00
 author: ""
 image: "eclipse-1.jpg"
 imageAlt: ""
-category: ""
-tags: []
+category: "update"
+tags: ["update", "astrophotography", "cool", "awesome"]
 toc: false
 draft: false
 ---

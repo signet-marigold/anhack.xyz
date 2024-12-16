@@ -6,7 +6,7 @@ lastMod: 2024-03-25T21:48:16-05:00
 author: ""
 image: "anhack-surface3-arch-gnome.jpeg"
 imageAlt: "Arch on Surface3"
-category: ""
+category: "dev"
 tags: ["linux","arch","surface3"]
 toc: true
 draft: false

@@ -6,8 +6,8 @@ lastMod: 2024-02-27T00:17:40-06:00
 author: ""
 image: ""
 imageAlt: ""
-category: ""
-tags: ["cat-update", "gummy", "peeve"]
+category: "update"
+tags: ["update", "cat-update", "gummy", "peeve"]
 toc: false
 draft: false
 ---

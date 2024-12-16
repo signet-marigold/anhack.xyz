@@ -16,4 +16,11 @@ Requires
 
 Run `hugo serve` to view locally  
 
-`./deploy` builds and transfers to a webserver
+# Deploy
+
+Requires
+- sshpass
+
+creds stored in `.env` file in the root
+
+run `deploy` builds and transfers to a webserver

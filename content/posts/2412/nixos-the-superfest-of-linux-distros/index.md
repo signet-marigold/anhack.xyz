@@ -5,8 +5,8 @@ date: 2024-12-15T13:27:30-06:00
 author: ""
 image: ""
 imageAlt: ""
-category: ""
-tags: []
+category: "update"
+tags: ["linux", "nixos", "nix", "rant", "update", "dev-update"]
 toc: false
 draft: false
 ---
