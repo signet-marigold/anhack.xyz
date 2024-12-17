@@ -245,4 +245,17 @@ body.light-theme {
 	span.dsb {
 		color: $white;
 	}
+
+	// Blockquote and reference
+	.blockquote-caption {
+		color: $gray-500;
+	}
+	.reference-body {
+		background-color: $light-theme-bg;
+		border-color: $light-theme-text;
+		color: $light-theme-text !important;
+		&:where(.external-link)::after {
+			background-image: url(/icons/external-link.svg);
+		}
+	}
 }

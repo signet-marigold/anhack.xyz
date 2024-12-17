@@ -159,6 +159,7 @@ blockquote {
 	quotes: "\201C" "\201D" "\2018" "\2019";
 	background-color: mix($color, $black, 20%);
 	background-color: rgba($color, 0.2);
+	font-family: serif;
 	border-left: 0.1875rem solid $color;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	padding: 1rem;
@@ -245,6 +246,40 @@ video {
 figure,
 .video-container {
 	@include squeeze-indent;
+}
+
+.reference {
+	@include squeeze-indent;
+}
+.reference-body {
+	display: block;
+	border-radius: if($rounded-corners, $base-border-radius, null);
+	text-align: center;
+	background-color: #19191d;
+	font-family: serif;
+	letter-spacing: .1em;
+    padding: 1rem 2.5rem;
+	border: $base-border-thickness solid transparent;
+	&:hover {
+		border-color: $fuchsia;
+	}
+	color: $white !important;
+	&:where(.external-link) {
+		position: relative;
+		&::after {
+			content: "";
+			background-repeat: no-repeat;
+			background-position: 50%;
+			display: inline-block;
+			position: absolute;
+			width: .9em;
+			height: 1em;
+			background-image: url(/icons/external-link-white.svg);
+			margin: 0.9em 1em;
+			right: 0;
+			top: 0;
+		}
+	}
 }
 
 
