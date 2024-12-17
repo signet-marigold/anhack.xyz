@@ -20,12 +20,3 @@ Project updates,
 Resources,
 Technical write-ups, Etc.  
 Expect nothing of high quality
-
-### Index
-[About](/about/) |
-[Posts](/posts/) |
-[Projects](/projects/) |
-[Tags](/tags/) |
-[Categories](/category/) |
-[Fun Links](/fun-links/) |
-[Playlist](/playlist/)

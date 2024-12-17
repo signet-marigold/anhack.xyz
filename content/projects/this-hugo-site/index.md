@@ -302,9 +302,10 @@ Once again, marketing has ruined everything.
 
 ##### underground webrings, i see u
 
-if you are an **uber nerd** or were **active on the internet in the nineties**
-
 >A webring (or web ring) is a collection of websites linked together in a circular structure, and usually organized around a specific theme, often educational or social. They were popular in the 1990s and early 2000s, particularly among amateur websites.
 {cite="https://en.wikipedia.org/wiki/Webring" caption="Wikipedia page on Webring(s)"}
+
+{{< img src="website-screenshots/2024-12-17_16-17-35_ksnip.png" >}}
+
 
 ## whats the point of it all

@@ -23,8 +23,9 @@ enableGitInfo = true
 	showbadges = true
 	summaryMaxChar = 200
 	tocMinWordCount = 480
+	hideAuthor = false
 	[params.author]
-		name = 'alex'
+		name = 'alex hack'
 		email = 'me@anhack.xyz'
 
 [sitemap]

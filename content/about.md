@@ -108,13 +108,6 @@ Notes: QOwnNotes & Syncthing
 [adryd](https://adryd.com/) |
 [daniel pecos](https://danielpecos.com/)
 
-## anhack.xyz 88x31 pixel banner
+## anhack.xyz 88x31 button
 
-if you want to add my site as a banner on yours you can use this image
-[![anhack.xyz.png](/badges/anhack.xyz.png)](/badges/anhack.xyz.png)
-```html
-<a href="https://anhack.xyz">
-	<img src="images/badges/anhack.xyz.png">
-</a>
-```
-please host the image, not hot-link, thanks
+if you want to include my site in your banners ive made an button; first of the list in this sites footer.

@@ -250,6 +250,8 @@ figure,
 
 .reference {
 	@include squeeze-indent;
+	margin-top: 0rem;
+	margin-bottom: 2rem;
 }
 .reference-body {
 	display: block;
