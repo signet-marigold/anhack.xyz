@@ -1,0 +1,9 @@
+<!--
+	cite: url
+	caption: text
+-->
+<div class="reference">
+{{- with .Get "cite" }}<a href="{{ . }}" class="reference-body{{ if findRE "^(https?:)?//" (lower .) }} external-link" target="_blank" rel="noopener"{{ else }}"{{ end }}>{{ else }}<div class="reference-body">{{ end -}}
+{{ .Get "caption" }}
+{{ with .Get "cite" }}<br>{{ . }}</a>{{ else }}</div>{{ end -}}
+</div>
