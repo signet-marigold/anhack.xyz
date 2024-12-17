@@ -55,15 +55,21 @@
 
 				{{- if .Param "showSource" -}}
 				{{- with .Param "source" -}}
-				<a href="{{ . }}" target="_blank" rel="noopener">
-					<div class="btn-cerulean" title="View this site's source code.">View Source</div>
+				<a href="{{ . }}" target="_blank" rel="noopener" title="View this site's source code">
+					<div class="btn-cerulean">View Source</div>
 				</a>
 				{{- end -}}
 				{{- end -}}
-			
+
 				{{- if .Param "showRSS" -}}
-				<a id="rss-feed-link" href="/index.xml" target="_blank" title="Subscribe via RSS for updates.">
+				<a id="rss-feed-link" href="/index.xml" target="_blank" title="Subscribe via RSS for updates. People still use RSS right?">
 					<div class="btn-ocher">RSS Main Feed</div>
+				</a>
+				{{- end -}}
+
+				{{- if .Param "switchSiteURL" -}}
+				<a href="{{ .Param "switchSiteURL" }}{{ .RelPermalink }}" rel="nofollow" title="View a simplified version of this page. This may be easier to read/load on some hardware">
+					<div class="btn-vermilion">{{ i18n "switchSites" }}</div>
 				</a>
 				{{- end -}}
 
@@ -72,8 +78,6 @@
 				{{- end -}}
 				
 			</div>
-
-
 
 			{{- partialCached "assets/css-loader.html" "easyzoom.css" -}}
 			{{- partialCached "assets/js-loader.html" "jquery-3.7.1.slim.min.js,easyzoom.js,main.js" -}}

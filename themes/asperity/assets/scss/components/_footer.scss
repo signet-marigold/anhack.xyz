@@ -76,20 +76,21 @@ footer > div {
 			color: $white;
 		}
 	}
-	$we-horizontal-margin: 0.625rem;
+
 	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
-	
 	#site-extra {
+		$margin-h: 0.5rem;
+		$margin-v: 0.625rem;
 		margin-top: 1.25rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-flow: wrap;
 		& > * {
-			margin-left: $we-horizontal-margin;
+			margin-left: $margin-v;
+			margin-bottom: $margin-h;
 		}
-		& > :first-child {
-			margin-left: 0;
-		}
+		margin-left: -$margin-v;
 	}
 	#rss-feed-link {
 		text-decoration: none;
@@ -113,7 +114,7 @@ footer > div {
 		}
 	}
 	.theme-toggle {
-		// javascript will set display to visable
+		// javascript will make visable
 		display: none;
 		height: $we-height;
 		cursor: pointer;
@@ -131,8 +132,5 @@ footer > div {
 		&.visable {
 			display: block;
 		}
-	}
-	#switch-site > div {
-		margin-top: 0.4rem;
 	}
 }
