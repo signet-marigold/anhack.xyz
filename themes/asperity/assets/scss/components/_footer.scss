@@ -81,7 +81,7 @@ footer > div {
 	#site-extra {
 		$margin-v: 0.4rem;
 		$margin-h: 0.625rem;
-		margin-top: 1.25rem;
+		margin-top: 1.5rem - $margin-v * 0.5;
 		display: flex;
 		align-items: center;
 		justify-content: center;
