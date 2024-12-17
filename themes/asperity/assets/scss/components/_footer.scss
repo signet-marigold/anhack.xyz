@@ -79,18 +79,16 @@ footer > div {
 
 	$we-height: 1rem + $btn-padding-vertical + $base-border-thickness * 2;
 	#site-extra {
-		$margin-h: 0.5rem;
-		$margin-v: 0.625rem;
+		$margin-v: 0.4rem;
+		$margin-h: 0.625rem;
 		margin-top: 1.25rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-flow: wrap;
 		& > * {
-			margin-left: $margin-v;
-			margin-bottom: $margin-h;
+			margin: $margin-v * 0.5 $margin-h * 0.5;
 		}
-		margin-left: -$margin-v;
 	}
 	#rss-feed-link {
 		text-decoration: none;
