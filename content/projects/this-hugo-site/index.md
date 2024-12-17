@@ -285,6 +285,8 @@ Once again, marketing has ruined everything.
 
 #### examples
 
+{{< figure src="website-screenshots/db-db-2003.png" title="he" >}}
+
 ##### neocities
 
 ##### underground webrings, i see u

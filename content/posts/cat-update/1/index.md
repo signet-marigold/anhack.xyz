@@ -15,12 +15,12 @@ draft: false
 
 im going to try to have a monthy update here. really just free pictures of cats.
 
-{{< img src="gato_239213868.jpeg" class="half" caption="gumbo shlep" row="begin" >}}
+{{< img src="gato_239213868.jpeg" class="half" title="gumbo shlep" row="begin" >}}
 
-{{< img src="gato_630172953.jpeg" class="half" caption="pembo" row="end" >}}
+{{< img src="gato_630172953.jpeg" class="half" title="pembo" row="end" >}}
 
 i can never really get a still photo of peeve. he just moves to quick
 
-{{< img src="gato_985328952.jpeg" caption="he really likes takin up my whole desk" >}}
+{{< img src="gato_985328952.jpeg" title="he really likes takin up my whole desk" >}}
 
 gumbo keeps screaming for the outside

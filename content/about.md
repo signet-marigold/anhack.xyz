@@ -5,6 +5,8 @@ image: ""
 category: "single"
 tags: ["personal"]
 ---
+{{< img src="/images/singles-resources/index/marble.webp" class="full" nolazy="true" alt="marbled collage of color" >}}
+
 **alex**
 
 - amateur photographer (you can see my work [here](https://pixelfed.social/tenebriscaelum))
@@ -57,14 +59,7 @@ You can also find me at:
 	img="/decentralized-social-icons/src/ds-matrix.svg"
 	mouse="@alaliliiso:matrix.org"
 	link="https://matrix.to/#/@alaliliiso:matrix.org" >}}
-{{< /grid >}}
 
-### Other links
-
-- email
-- public pgp
-
-{{< grid >}}
 {{< plaque
 	class="bg-g-black"
 	text="Github"
@@ -80,68 +75,29 @@ You can also find me at:
 	link="https://codeberg.org/signet-marigold" >}}
 {{< /grid >}}
 
-- [Mastodon](https://mastodon.social/@alis_sy)
+### Other links
 
-im hosting [a lemmy instance](https://casavaga.com/)
+email & public pgp available on [alexanderhack.com](https://alexanderhack.com)
 
-lemmy, a link aggregator.
-you can find an instance to use here <https://join-lemmy.org/>
+I'm also hosting [a lemmy instance](https://casavaga.com/)  
+wtf is lemmy?  
+imagine reddit style forums, but distributed hosting  
+learn more here -> <https://join-lemmy.org/>
 
 ## Stack & Tools
 
-### Code editors
+you can see what tools i use from my [nixos config](https://codeberg.org/signet-marigold/nixos-config)
 
-* Kate & Neo Vim
+But basically the stack looks like
 
-### Note taking
-
-* QownNotes w/ SyncThing
-
-### Desktop stacks
-
-#### Desktop computer
-
-* Debian with KDE
-
-#### Laptop computer
-
-* Arch with DWM and Suckless apps
-
-### Terminal
-
-* Alacritty with zshell
-
-### LLMs
-
-* Ollama
-
-### Browser
-
-* LibreWolf
-
-Thanks for joining me !
+DE: none but i am using LightDM as my greeter  
+WM: DWM  
+OS: NixOS 24.11 x86_64  
+Browser: Librewolf  
+Editor: Kate  
+Notes: QOwnNotes & Syncthing  
 
 ---
-
-[pscircle](https://gitlab.com/mildlyparallel/pscircle)
-[qownnotes](https://www.qownnotes.org/)
-[syncthing](https://syncthing.net/)
-
----
-
-
-## Desktops
-
-* Gaming Desktop (AMD cpu 1st gen ryzen, NVIDIA gpu)
-	* KDE on Debian
-* Surface3
-	* GNOME on Arch
-* 2015 Macbook Pro
-	* DWM on Arch
-* T480 Thinkpad
-	* Gnome on Fedora
-
-
 
 ## Favorite blogs
 
@@ -152,15 +108,13 @@ Thanks for joining me !
 [adryd](https://adryd.com/) |
 [daniel pecos](https://danielpecos.com/)
 
-
 ## anhack.xyz 88x31 pixel banner
 
 if you want to add my site as a banner on yours you can use this image
-
 [![anhack.xyz.png](/badges/anhack.xyz.png)](/badges/anhack.xyz.png)
-
 ```html
-<a href="https://anhack.xyz"><img src="images/badges/anhack.xyz.png"></a>
+<a href="https://anhack.xyz">
+	<img src="images/badges/anhack.xyz.png">
+</a>
 ```
-
-please host the image yourself *if at all possible*
+please host the image, not hot-link, thanks

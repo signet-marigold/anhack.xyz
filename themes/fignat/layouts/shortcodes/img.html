@@ -3,7 +3,7 @@
 	link: anchor url
 	src: image link
 	alt: alternative text
-	caption: text underneath
+	title: text underneath
 	mouse: what the image says when moused over ("title" in HTML)
 	ratio: aspect ratio of the image (in "x / y") for better dom loading
 -->
@@ -120,7 +120,7 @@
 			{{/**/}} width="{{ $image_fixed_width }}" height="{{ div (mul $image_fixed_width $sh) $sw }}">
 		{{- if $link }}</a>{{ end -}}
 
-		{{- with .Get "caption" -}}
+		{{- with .Get "title" -}}
 			<figcaption>
 				{{- . -}}
 			</figcaption>

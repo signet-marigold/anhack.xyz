@@ -9,9 +9,8 @@ figure {
 	figcaption {
 		border-top: $base-border-thickness $gray-700 solid;
 		background-color: $caption-bg;
-		padding: $base-padding $base-padding * 2;
 		$br: if($rounded-corners, $base-border-radius, 0);
-		padding-top: $br + $base-padding;
+		padding: $br + $base-padding $base-padding * 2 $base-padding;
 		margin-top: -$br;
 		border-radius: 0 0 $br $br;
 		text-align: center;

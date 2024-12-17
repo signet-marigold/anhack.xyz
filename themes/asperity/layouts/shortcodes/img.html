@@ -3,7 +3,7 @@
 	link: anchor url
 	src: image link
 	alt: alternative text
-	caption: text underneath
+	title: text underneath
 	mouse: what the image says when moused over ("title" in HTML)
 	ratio: aspect ratio of the image (in "x / y") for better dom loading
 -->
@@ -120,7 +120,7 @@
 	{{- if $link }}</a>{{ end -}}
 	{{ if eq $zoom 1 }}</div>{{ end -}}
 
-	{{- with .Get "caption" -}}
+	{{- with .Get "title" -}}
 		<figcaption>
 			{{- . -}}
 		</figcaption>
