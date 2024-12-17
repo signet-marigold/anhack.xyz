@@ -1,0 +1,15 @@
+$res-root: '/fonts/noto-serif/';
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(#{$res-root}NotoSerif-VariableFont_wdth,wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url(#{$res-root}NotoSerif-Italic-VariableFont_wdth,wght.ttf) format('truetype');
+}

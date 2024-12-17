@@ -159,7 +159,7 @@ blockquote {
 	quotes: "\201C" "\201D" "\2018" "\2019";
 	background-color: mix($color, $black, 20%);
 	background-color: rgba($color, 0.2);
-	font-family: serif;
+	font-family: "Playfair Display", serif;
 	border-left: 0.1875rem solid $color;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	padding: 1rem;
@@ -256,9 +256,9 @@ figure,
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	text-align: center;
 	background-color: #19191d;
-	font-family: serif;
-	letter-spacing: .1em;
-    padding: 1rem 2.5rem;
+	font-family: "Noto Serif", serif;
+	padding: 1rem 2.5rem;
+	line-height: 1.15rem;
 	border: $base-border-thickness solid transparent;
 	&:hover {
 		border-color: $fuchsia;
@@ -272,14 +272,19 @@ figure,
 			background-position: 50%;
 			display: inline-block;
 			position: absolute;
-			width: .9em;
-			height: 1em;
+			width: .9rem;
+			height: 1rem;
 			background-image: url(/icons/external-link-white.svg);
-			margin: 0.9em 1em;
+			margin: 0.6rem 0.7rem;
 			right: 0;
 			top: 0;
 		}
 	}
+}
+.reference-cite {
+	margin-top: 0.415rem;
+	color: $gray-200;
+	font-size: 90%;
 }
 
 

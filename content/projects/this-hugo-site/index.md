@@ -285,11 +285,18 @@ Once again, marketing has ruined everything.
 
 #### examples
 
-{{< img src="website-screenshots/db-db-2003.png" title="he" >}}
+{{< img src="website-screenshots/db-db-2003.png" >}}
 
-[db-db in 2003](https://www.webdesignmuseum.org/gallery/db-db-2003)
+{{< ref cite="https://www.webdesignmuseum.org/gallery/db-db-2003" caption="Website \"db-db\" in 2003" >}}
 
-{{< ref cite="https://www.webdesignmuseum.org/gallery/db-db-2003" caption="db-db in 2003" >}}
+{{< img src="website-screenshots/designgraphik-2001.png" >}}
+
+{{< ref cite="https://www.webdesignmuseum.org/golden-age-of-web-design/designgraphik-2001" caption="Website \"designgraphik\" in 2001" >}}
+
+{{< img src="website-screenshots/cubadust-2003.png" >}}
+
+{{< ref cite="https://www.webdesignmuseum.org/golden-age-of-web-design/cubadust-2003" caption="Website \"cubadust\" in 2003" >}}
+
 
 ##### neocities
 
