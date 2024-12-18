@@ -20,3 +20,7 @@ Project updates,
 Resources,
 Technical write-ups, Etc.  
 Expect nothing of high quality
+
+Checkout [Fun Links](/fun-links/) if you get bored
+
+Or my [Recipes](/recipes/) if you're feelin creative

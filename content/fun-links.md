@@ -36,7 +36,7 @@ draft: false
 [inspiral web](https://nathanfriend.io/inspiral-web/)
 [theuselessweb.com](https://theuselessweb.com/)
 [ptable.com](https://ptable.com/)
-[my00stv.com](https://my00stv.com/)
+[my00stv.com](https://00s.myretrotvs.com/)
 
 ## Tools
 [melodice.org](https://melodice.org/)
@@ -46,7 +46,7 @@ draft: false
 [tabletopaudio.com](https://tabletopaudio.com/)
 [goblin.tools](https://goblin.tools/)
 
-[smmry.com](https://smmry.com/)
+[smmry.ai](https://smmry.ai/)
 
 [12ft.io](https://12ft.io/)
 
@@ -81,7 +81,7 @@ draft: false
 
 ## Resources
 [archive.org](https://archive.org/)
-[wayback machine](https://wayback.archive.org/)
+[wayback machine](https://web.archive.org/)
 [answersocrates.com](https://answersocrates.com/)
 [shodan.io](https://www.shodan.io/)
 [zoomeye.org](https://www.zoomeye.org/)
@@ -140,7 +140,6 @@ draft: false
 [eelslap.com](https://eelslap.com/)
 [longdogechallenge.com](https://longdogechallenge.com/)
 [willrobotstakemyjob.com](https://willrobotstakemyjob.com/)
-[bodyvisualizer.com](https://bodyvisualizer.com/)
 [republiquedesmangues.fr](http://www.republiquedesmangues.fr/)
 
 ## Extra
@@ -156,7 +155,7 @@ draft: false
 ## Experiences
 [broadcastify.com](https://www.broadcastify.com/)
 [window-swap.com](https://www.window-swap.com/Window)
-[driveandlisten](https://driveandlisten.herokuapp.com/)
+[driveandlisten](https://drivenlisten.com/)
 
 ## Movie Info
 [moviewiser.com](https://moviewiser.com/)
