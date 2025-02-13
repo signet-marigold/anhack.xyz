@@ -27,6 +27,8 @@
 		{{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint -}}
 			<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 		{{ end -}}
+
+		<link rel="canonical" href="{{ .Permalink }}">
 		
 		<link rel="icon" type="image/png" sizes="128x128" href="{{ "img/favicon-128x128.png" | relURL }}">
 		<link rel="icon" type="image/png" sizes="64x64" href="{{ "img/favicon-64x64.png" | relURL }}">

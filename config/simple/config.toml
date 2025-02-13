@@ -2,6 +2,17 @@ baseURL = 'https://simple.anhack.xyz/'
 theme = 'fignat'
 publishDir = 'public-simple'
 
+disableKinds = ['sitemap', 'rss']
+
+[sitemap]
+	disable = true
+
+[outputs]
+	home = ['html']
+	section = ['html']
+	taxonomy = ['html']
+	term = ['html']
+
 [menu]
 	[[menu.main]]
 		identifier = 'home'
