@@ -4,7 +4,7 @@ other = "Page Not Found"
 [pageDoesNotExist]
 other = "Sorry, this page does not exist."
 [headBack]
-other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
+other = "You can head back to the homepage."
 
 # Content
 [dateFormat]
