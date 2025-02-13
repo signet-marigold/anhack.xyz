@@ -37,6 +37,10 @@ img {
 	height: auto;
 }
 
+img.invert-img, .invert-img img {
+	filter: invert(100%);
+}
+
 figure {
 	margin: 0;
 }

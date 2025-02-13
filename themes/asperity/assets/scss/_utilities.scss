@@ -16,3 +16,6 @@ span.dsm {
 span.dsb {
 	padding: 0 0.0625em;
 }
+img.invert-img, .invert-img img {
+	filter: invert(100%);
+}
