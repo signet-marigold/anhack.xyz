@@ -32,3 +32,10 @@ languageCode = 'en-us'
 	showPreviewSummary = true
 	
 	switchSiteURL = 'https://anhack.xyz'
+
+[menu]
+	[[menu.main]]
+		identifier = 'home'
+		name = 'Home'
+		url = '/'
+		weight = 10

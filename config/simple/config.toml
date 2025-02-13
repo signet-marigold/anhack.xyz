@@ -49,3 +49,9 @@ disableKinds = ['sitemap', 'rss']
 		name = 'Categories'
 		url = '/category/'
 		weight = 60
+
+	[[menu.main]]
+		identifier = 'simplified'
+		name = 'Simplified?'
+		url = '/what-is-simplified/'
+		weight = 70

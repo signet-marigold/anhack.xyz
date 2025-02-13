@@ -1,0 +1,18 @@
+<!doctype html>
+<!--
+- Redirect hook from """
+-   [simple.anhack]/what-is-simplified/index.html -> [anhack]/what-is-simplified/index.html
+- """
+- without this page, redirection back to the main site would hit a 404 error
+- not a good look
+-->
+<html>
+	<head>
+		<style>
+			body { background: #141414 }
+		</style>
+		<meta http-equiv="refresh" content="0; url=/" />
+	</head>
+	<body>
+	</body>
+</html>
