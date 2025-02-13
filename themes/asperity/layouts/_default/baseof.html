@@ -19,7 +19,7 @@
 			{{ partial "toc.html" . }}
 			
 			<article class="main-article{{ if eq .Kind "home" "page" }} page{{ end }}{{ if eq .Kind "section" }} list{{ end }}">
-				{{ block "main" . }}{{ .Content | emojify }}{{ end }}
+				{{ block "main" . }}{{ end }}
 			</article>
 		</div></main>
 		
