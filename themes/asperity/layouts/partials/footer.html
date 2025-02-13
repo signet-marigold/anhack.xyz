@@ -22,7 +22,10 @@
 				{{- end -}}
 
 				{{- if .Param "switchSiteURL" -}}
-				<a href="{{ .Param "switchSiteURL" }}{{ .RelPermalink }}" rel="nofollow" title="View a simplified version of this page. This may be easier to read/load on some hardware">
+				{{- $switchPage := "/" -}}
+				{{- $currentPage := .RelPermalink -}}
+				{{- if ne $currentPage "/404.html" }}{{ $switchPage = $currentPage }}{{ end -}}
+				<a href="{{ .Param "switchSiteURL" }}{{ $switchPage }}" rel="nofollow" title="View a simplified version of this page. This may be easier to read/load on some hardware">
 					<div class="btn-vermilion">{{ i18n "switchSites" }}</div>
 				</a>
 				{{- end -}}

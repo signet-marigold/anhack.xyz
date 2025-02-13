@@ -5,5 +5,8 @@
 			{{- partialCached "footer_static.html" . }}
 			
 			{{- if .Param "switchSiteURL" -}}
-			<a href="{{ .Param "switchSiteURL" }}{{ .RelPermalink }}" rel="nofollow">{{ i18n "switchSites" }}</a>
+			{{- $switchPage := "/" -}}
+			{{- $currentPage := .RelPermalink -}}
+			{{- if ne $currentPage "/404.html" }}{{ $switchPage = $currentPage }}{{ end -}}
+			<a href="{{ .Param "switchSiteURL" }}{{ $switchPage }}" rel="nofollow">{{ i18n "switchSites" }}</a>
 			{{- end -}}

@@ -81,7 +81,7 @@ email & public pgp available on [alexanderhack.com](https://alexanderhack.com)
 
 I'm also hosting [a lemmy instance](https://casavaga.com/)  
 wtf is lemmy?  
-imagine reddit style forums, but distributed hosting  
+open source reddit with semi-distributed hosting  
 learn more here -> <https://join-lemmy.org/>
 
 ## Stack & Tools
@@ -90,24 +90,19 @@ you can see what tools i use from my [nixos config](https://codeberg.org/signet-
 
 But basically the stack looks like
 
-DE: none but i am using LightDM as my greeter  
-WM: DWM  
 OS: NixOS 24.11 x86_64  
-Browser: Librewolf  
-Editor: Kate  
-Notes: QOwnNotes & Syncthing  
+WM: DWM  
+DE: none; but i am using LightDM as my greeter  
+Term: st + fish shell + tmux  
+Browser: Zen  
+Editor: Helix, Kate, Idea (for java)  
+Notes: QOwnNotes + Syncthing  
+File Browser: thunar
+
 
 ---
 
-## Favorite blogs
-
-[sqrtminusone](https://sqrtminusone.xyz/) |
-[michal sapka](https://michal.sapka.me/) |
-[dan luu](https://danluu.com/) |
-[maia arson crimew](https://maia.crimew.gay/) |
-[adryd](https://adryd.com/) |
-[daniel pecos](https://danielpecos.com/)
 
 ## anhack.xyz 88x31 button
 
-if you want to include my site in your banners ive made an button; first of the list in this sites footer.
+if you want to include my site in your banners ive made an button; [![anhack.xyz banner](https://anhack.xyz/badges/anhack.xyz.png)](https://anhack.xyz/badges/anhack.xyz.png)
