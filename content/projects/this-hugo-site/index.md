@@ -200,6 +200,7 @@ All spacing is based on the font size as absolute reference. Using em and rem me
 The theme was built with the browser font size set to 16px. And keeping the other mesurements fixed with the font size means that even though you may be using a different font size, the relative spacing will stay the same.
 Interesting fact: the text you see is actually compressed ever so slightly. `letter-spacing: -0.01em` I feel keeps the text more readable. Furthermore `line-height` was increased as well.
 
+
 ### Constrained content bodies
 
 
@@ -208,6 +209,14 @@ Interesting fact: the text you see is actually compressed ever so slightly. `let
 
 
 ### Visual style
+
+I've had a few designs of the past for my main blog ranging from esoteric terminals with block ascii art. To forums styled pages.
+To Bright and Bold, and lots of transparency and curves and animations.
+
+Honestly i kind of threw this layout together. There were a few constraints at the beginning and that helped narow down what i wanted
+
+- layout had to fit in one column, centered. in order to compress well to mobile
+- originally everything had a small curve applied to the corners. 
 
 
 ### Highlights and hacks
@@ -250,6 +259,8 @@ Oh well, it works well enough.
 
 Id take this over jitter anyday~!
 
+
+
 ## a call to the old ways
 
 i've been building websites for the past decade or more.
@@ -277,11 +288,17 @@ I think this hypothesis thoroughly explains why everything is so bleached.
 
 Once again, marketing has ruined everything.
 
-
-
 #### badges
 
+idk if yall remember in the old days on the internet, before google ads
+
+
+
+
 ### personal blogs in general
+
+
+
 
 #### examples
 

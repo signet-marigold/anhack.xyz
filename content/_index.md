@@ -7,10 +7,6 @@ Welcome welcome!
 this is my personal site for mayhem & mischief  
 I hope your day was full of industrial sabotage (｡•̀‿ -｡)
 
-## Most recent posts
-{{< recentposts count=2 >}}
-[[View more posts]](/posts/)
-
 ---
 
 ## This is a mental dumping ground
@@ -24,3 +20,7 @@ Expect nothing of high quality
 Checkout [Fun Links](/fun-links/) if you get bored
 
 Or my [Recipes](/recipes/) if you're feelin creative
+
+### and, of course, my most recent posts
+{{< recentposts count=2 >}}
+[[View more posts]](/posts/)
