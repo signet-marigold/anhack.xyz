@@ -154,33 +154,42 @@ hr {
 	display: flex;
 	flex-wrap: wrap;
 	line-height: 1;
+	h4 {
+		margin: 0;
+		padding-top: 11px;
+		padding-right: 10px;
+	}
 	li {
 		display: inline;
 		word-wrap: normal;
-		margin: 0 8px;
-		a, span {
-			padding: 2px 12px;
+		margin: 0 5px;
+		span, a {
+			position: relative;
+			display: inline-block;
 			font-size: 20px;
 			font-weight: bold;
-			border: 2px solid #fff;
+			text-align: center;
+			width: 32px;
+			padding: 9px 0;
 		}
 		span {
-			border-color: $anchor-active;
+			color: $anchor-active;
 		}
 		a {
 			color: $text;
-			text-decoration: none;
+			//text-decoration: none;
 			&:link {
-				border-color: $anchor-link;
+				color: $anchor-link;
 			}
 			&:visited {
-				border-color: $anchor-visited;
+				color: $anchor-visited;
 			}
 			&:hover {
-				border-color: saturate(mix($anchor-visited, $anchor-active, 50%), 10%);
+				color: $text;
 			}
-			&:active {
-				border-color: $anchor-active;
+			&:active, &:active:hover {
+				color: $background;
+				background-color: $text;
 			}
 		}
 		&.hidden {

@@ -5,6 +5,7 @@
 {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
 {{ if gt $paginator.TotalPages 1 }}
 	<ul class="pagination">
+		<h4>Page:</h4>
 	{{ if $paginator.HasPrev }}
 		{{ if ne $paginator.PageNumber 1 }}
 			<li><a href="{{ $paginator.First.URL }}">&laquo;</a></li>
