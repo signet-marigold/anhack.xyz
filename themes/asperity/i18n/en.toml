@@ -42,6 +42,10 @@ other = "Previous Post"
 [nextPost]
 other = "Next Post"
 
+# Page navigation
+[paginationIndexTitle]
+other = "Page"
+
 # Post meta
 [authoredBy]
 other = "by"
