@@ -2,6 +2,14 @@ baseURL = 'https://simple.anhack.xyz/'
 theme = 'fignat'
 publishDir = 'public-simple'
 
+[[module.mounts]]
+source = 'content'
+target = 'content'
+
+[[module.mounts]]
+source = 'content-simple'
+target = 'content'
+
 [params]
 	logoPathDefault = '/img/logo-simplep.png'
 	logoPathAlt     = '/img/logo-light-simplep.png'

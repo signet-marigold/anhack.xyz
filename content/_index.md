@@ -15,7 +15,7 @@ News,
 Project updates,
 Resources,
 Technical write-ups, Etc.  
-Expect nothing of high quality
+Expect nothing of high quality :smile:
 
 Checkout [Fun Links](/fun-links/) if you get bored
 

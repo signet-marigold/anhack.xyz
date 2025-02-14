@@ -10,6 +10,14 @@ summaryLength = 50
 pagination.pagerSize = 8
 enableGitInfo = true
 
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[[module.mounts]]
+source = 'static-default'
+target = 'static'
+
 [taxonomies]
 	category = 'category'
 	tag = 'tags'
