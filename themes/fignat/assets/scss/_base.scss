@@ -76,6 +76,8 @@ a {
 	#logo-image {
 		height: 70px;
 		margin: 0 10px;
+		object-fit: cover;
+		object-position: 0%  50%;
 	}
 }
 

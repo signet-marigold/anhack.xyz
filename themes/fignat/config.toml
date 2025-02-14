@@ -2,6 +2,9 @@ title = 'Fignat'
 languageCode = 'en-us'
 
 [params]
+	logoPathDefault = '/img/logo.png'
+	logoPathAlt     = '/img/logo-light.png'
+
 	showHomeTitle = false
 	homeTitle = ''
 	homeSubtitle = ''

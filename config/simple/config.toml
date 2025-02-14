@@ -2,6 +2,10 @@ baseURL = 'https://simple.anhack.xyz/'
 theme = 'fignat'
 publishDir = 'public-simple'
 
+[params]
+	logoPathDefault = '/img/logo-simplep.png'
+	logoPathAlt     = '/img/logo-light-simplep.png'
+
 disableKinds = ['sitemap', 'rss']
 
 [sitemap]

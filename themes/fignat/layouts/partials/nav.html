@@ -1,6 +1,6 @@
 <nav><div>
 	<div id="logo-banner">
-		<img id="logo-fallback" loading="lazy" height="56" src="/img/logo-light.png" alt="{{ .Site.Title }}" /><img id="logo-image" height="0" src="/img/logo.png" />
+		<img id="logo-fallback" loading="lazy" height="56" src="{{ .Site.Params.logoPathAlt }}" alt="{{ .Site.Title }}" /><img id="logo-image" height="0" src="{{ .Site.Params.logoPathDefault }}" />
 	</div>
 	<ul>
 	{{- $sec := .Page.Section -}}
