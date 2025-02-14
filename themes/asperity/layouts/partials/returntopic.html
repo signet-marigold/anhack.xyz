@@ -1,0 +1,38 @@
+{{ $currentNode := . }}
+{{ if eq .Kind "page" }}
+    {{ if eq .Type "page" }}
+        <span class="center">{{ i18n "returnFindMore" }}</span><br>
+        <a href="/">Home</a>
+        {{ range where site.RegularPages "Type" "page" }}
+            {{ if ne .Permalink $currentNode.Permalink }}
+            &nbsp;&bullet;&nbsp;&nbsp;<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+        {{ end }}
+        {{ range site.Sections }}
+            &nbsp;&bullet;&nbsp;&nbsp;<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+    {{ else }}
+        {{ with site.GetPage .Kind .Type }}
+            <a href="{{ .RelPermalink }}">{{ i18n "returnBackTo" }} {{ .LinkTitle }}</a>
+        {{ end }}
+        {{ range site.Sections }}
+            {{ if ne .Type $currentNode.Type }}
+                &nbsp;&bullet;&nbsp;&nbsp;<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ else if eq .Kind "section" }}
+    <br>
+    {{ range $i, $d := site.Menus.main }}
+        {{ if $i }}&nbsp;&bullet;&nbsp;&nbsp;{{ end }}<a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+{{ else if eq .Kind "taxonomy" }}
+{{ else if eq .Kind "term" }}
+    {{ with site.GetPage .Kind .Type }}
+        <a href="{{ .RelPermalink }}">{{ i18n "returnBackTo" }} {{ .LinkTitle }}</a>
+        <br>{{ i18n "returnCheckOut" }}<br>
+        {{ range $i, $d := site.Sections }}
+            {{ if $i }}&nbsp;&bullet;&nbsp;&nbsp;{{ end }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+    {{ end }}
+{{ end }}

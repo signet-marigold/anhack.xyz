@@ -1,5 +1,6 @@
 			<section id="article-info">
 				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . }}{{ end -}}
+				{{ if .Param "returntopic" }}{{ partial "returntopic.html" . }}{{ end -}}
 				{{- if and (eq .Kind "page") (ne .Type "page") }}
 					{{ partialCached "bottom-of-post.html" . }}
 				{{ end -}}

@@ -42,6 +42,14 @@ other = "Page"
 [paginationNavTitle]
 other = "Page:"
 
+# Divert
+[returnBackTo]
+other = "Back to"
+[returnFindMore]
+other = "Find more"
+[returnCheckOut]
+other = "or check out"
+
 # Post meta
 [authoredBy]
 other = "by"
