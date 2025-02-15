@@ -1,6 +1,5 @@
 ---
 title: "000001"
-subtitle: ""
 date: 2025-02-15T00:12:55-06:00
 ---
 updates init!
