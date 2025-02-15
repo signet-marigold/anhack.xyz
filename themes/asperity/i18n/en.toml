@@ -50,7 +50,9 @@ other = "Page"
 [returnBackTo]
 other = "Back to"
 [returnFindMore]
-other = "Find more"
+other = "Find More"
+[returnRecentPosts]
+other = "Recent Posts"
 [returnCheckOut]
 other = "or check out"
 

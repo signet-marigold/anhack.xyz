@@ -20,6 +20,46 @@ im not going to explain myself and you're going to have to deal with it
 
 just a place where i throw my posts, updates, news, projects, personal life and anything fun that others may enjoy.
 
+
+
+### Other links
+
+email & public pgp available on [alexanderhack.com](https://alexanderhack.com)
+
+I'm also hosting [a lemmy instance](https://casavaga.com/)  
+wtf is lemmy?  
+open source reddit with semi-distributed hosting  
+learn more here -> <https://join-lemmy.org/>
+
+## Stack & Tools
+
+you can see what tools i use from my [nixos config](https://codeberg.org/signet-marigold/nixos-config)
+
+But basically the stack looks like
+
+OS: NixOS 24.11 x86_64  
+WM: DWM  
+DE: none; but i am using LightDM as my greeter  
+Term: st + fish shell + tmux  
+Browser: Zen  
+Editor: Helix, Kate, Idea (for java)  
+Notes: QOwnNotes + Syncthing  
+File Browser: thunar
+
+
+---
+
+
+## anhack.xyz 88x31 button
+
+if you want to include my site in your banners ive made an button;
+
+here you go ![anhack.xyz banner](https://anhack.xyz/badges/anhack.xyz.png)
+
+
+---
+
+
 You can also find me at:
 
 ## Socials
@@ -74,37 +114,3 @@ You can also find me at:
 	mouse="codeberg.org"
 	link="https://codeberg.org/signet-marigold" >}}
 {{< /grid >}}
-
-### Other links
-
-email & public pgp available on [alexanderhack.com](https://alexanderhack.com)
-
-I'm also hosting [a lemmy instance](https://casavaga.com/)  
-wtf is lemmy?  
-open source reddit with semi-distributed hosting  
-learn more here -> <https://join-lemmy.org/>
-
-## Stack & Tools
-
-you can see what tools i use from my [nixos config](https://codeberg.org/signet-marigold/nixos-config)
-
-But basically the stack looks like
-
-OS: NixOS 24.11 x86_64  
-WM: DWM  
-DE: none; but i am using LightDM as my greeter  
-Term: st + fish shell + tmux  
-Browser: Zen  
-Editor: Helix, Kate, Idea (for java)  
-Notes: QOwnNotes + Syncthing  
-File Browser: thunar
-
-
----
-
-
-## anhack.xyz 88x31 button
-
-if you want to include my site in your banners ive made an button;
-
-here you go ![anhack.xyz banner](https://anhack.xyz/badges/anhack.xyz.png)

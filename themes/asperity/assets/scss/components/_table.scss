@@ -32,6 +32,7 @@ table {
 	border: $base-border-thickness $gray-700 solid;
 	border-radius: if($rounded-corners, $base-border-radius, null);
 	overflow-wrap: break-word;
+	line-height: 1;
 	thead,
 	tbody {
 		text-align: left;
@@ -39,20 +40,20 @@ table {
 			th,
 			td {
 				@include xs {
-					padding: $base-padding * 0.25 $base-padding * 0.5;
+					padding: $base-padding * 0.5 $base-padding * 0.5;
 					width: 1%;
 				}
 				@include breakpoint(300px) {
 					width: initial;
-					padding: $base-padding * 0.25 $base-padding;
+					padding: $base-padding * 0.5 $base-padding;
 				}
 				@include sm {
 				}
 				@include md {
-					padding: $base-padding * 0.375 $base-padding;
+					padding: $base-padding * 0.75 $base-padding;
 				}
 				@include lg {
-					padding: $base-padding * 0.5 $base-padding * 1.75;
+					padding: $base-padding * 1 $base-padding * 1.75;
 				}
 			}
 		}
@@ -87,6 +88,21 @@ table {
 					border-style: solid;
 					border-width: 1px;
 					border-color: #333 #000 #000 #333;
+				}
+			}
+		}
+	}
+	&.nostyle {
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		border-color: transparent;
+		thead,
+		tbody {
+			tr {
+				th,
+				td {
+					padding: 0.4rem 0.5rem;
 				}
 			}
 		}

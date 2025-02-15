@@ -18,10 +18,6 @@ target = 'static'
 source = 'static-default'
 target = 'static'
 
-[taxonomies]
-	category = 'category'
-	tag = 'tags'
-
 [params]
 	source = 'https://github.com/signet-marigold/anhack.xyz'
 	licenceText = 'Licensed under CC-BY 4.0'
@@ -32,6 +28,7 @@ target = 'static'
 	summaryMaxChar = 200
 	tocMinWordCount = 480
 	hideAuthor = false
+	wordCount = true
 	[params.author]
 		name = 'alex hack'
 		email = 'me@anhack.xyz'
@@ -46,6 +43,10 @@ target = 'static'
 	section = ['html', 'rss']
 	taxonomy = ['html']
 	term = ['html']
+
+[taxonomies]
+	category = 'category'
+	tag = 'tags'
 
 [menu]
 	[[menu.main]]
@@ -64,19 +65,25 @@ target = 'static'
 		identifier = 'projects'
 		name = 'Projects'
 		url = '/projects/'
-		weight = 30
+		weight = 21
+
+	[[menu.main]]
+		identifier = 'updates'
+		name = 'Updates'
+		url = '/updates/'
+		weight = 22
 
 	[[menu.main]]
 		identifier = 'tags'
 		name = 'Tags'
 		url = '/tags/'
-		weight = 40
+		weight = 30
 
 	[[menu.main]]
 		identifier = 'category'
 		name = 'Categories'
 		url = '/category/'
-		weight = 50
+		weight = 31
 
 	[[menu.main]]
 		identifier = 'playlist'

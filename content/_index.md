@@ -23,4 +23,4 @@ Or my [Recipes](/recipes/) if you're feelin creative
 
 ### and, of course, my most recent posts
 {{< recentposts count=2 >}}
-[[View more posts]](/posts/)
+{{< center-text >}}[[View more posts]](/posts/){{< /center-text >}}

@@ -1,11 +1,5 @@
-{{- $dateTime    := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format    -}}
-{{- $lastmodTime := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
-
 <div class="post-meta">
-	<span class="post-date">{{ $dateTime | i18n "postedOnDate" | safeHTML }}</span>
-	{{- if ne $dateTime $lastmodTime -}}
-		&nbsp;<span class="post-last-modified">{{ $lastmodTime | i18n "lastModified" | safeHTML }}</span>
-	{{- end -}}
+	{{ partial "post_meta_date.html" . }}
 {{ if ne .WordCount 0 -}}
 	{{ if .Site.Params.readingTime -}}
 		&nbsp;&middot;&nbsp;<span class="post-reading-time">{{ .ReadingTime }}&nbsp;{{ i18n "readTime" .ReadingTime }}&nbsp;{{ i18n "toRead" }}</span>

@@ -61,6 +61,11 @@
 					{{ if and (eq .Type "posts") .IsPage -}}
 						{{ partial "post_meta.html" . -}}
 					{{ end }}
+					{{ if and (or (eq .Type "projects") (eq .Type "updates")) .IsPage -}}
+						<div class="post-meta">
+							{{ partial "post_meta_date.html" . }}
+						</div>
+					{{ end }}
 					<h1 class="heading {{ .Type }}-heading" itemprop="name">
 						{{- with $term -}}
 							{{ . }} [ {{ $title }} ]

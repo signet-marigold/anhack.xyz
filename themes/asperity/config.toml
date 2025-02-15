@@ -26,9 +26,6 @@ languageCode = 'en-us'
 	showRSS = true
 	showThemeToggle = true
 
-	# Don't know where this one is
-	commit = false
-
 	# Post preview and meta settings
 	summary = true
 	readingTime = true

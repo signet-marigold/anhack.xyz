@@ -1,0 +1,6 @@
+{{- $dateTime    := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format    -}}
+{{- $lastmodTime := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format -}}
+<span class="post-date">{{ $dateTime | i18n "postedOnDate" | safeHTML }}</span>
+{{- if ne $dateTime $lastmodTime -}}
+    &nbsp;<span class="post-last-modified">{{ $lastmodTime | i18n "lastModified" | safeHTML }}</span>
+{{- end -}}

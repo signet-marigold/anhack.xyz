@@ -30,37 +30,43 @@ disableKinds = ['sitemap', 'rss']
 		identifier = 'home'
 		name = 'Home'
 		url = '/'
-		weight = 10
+		weight = 1
 
 	[[menu.main]]
 		identifier = 'about'
 		name = 'About'
 		url = '/about/'
-		weight = 20
+		weight = 10
 
 	[[menu.main]]
 		identifier = 'posts'
 		name = 'Posts'
 		url = '/posts/'
-		weight = 30
+		weight = 20
 
 	[[menu.main]]
 		identifier = 'projects'
 		name = 'Projects'
 		url = '/projects/'
-		weight = 40
+		weight = 21
+
+	[[menu.main]]
+		identifier = 'updates'
+		name = 'Updates'
+		url = '/updates/'
+		weight = 22
 
 	[[menu.main]]
 		identifier = 'tags'
 		name = 'Tags'
 		url = '/tags/'
-		weight = 50
+		weight = 30
 
 	[[menu.main]]
 		identifier = 'category'
 		name = 'Categories'
 		url = '/category/'
-		weight = 60
+		weight = 31
 
 	[[menu.main]]
 		identifier = 'simplified'

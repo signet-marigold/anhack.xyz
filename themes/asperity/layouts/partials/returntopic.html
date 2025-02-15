@@ -1,7 +1,7 @@
 {{ $currentNode := . }}
 {{ if eq .Kind "page" }}
-    {{ if eq .Type "page" }}
-        <span class="center">{{ i18n "returnFindMore" }}</span><br>
+    {{ if eq .Type "page" }}      <!-- Singles page -->
+        <div class="center">{{ i18n "returnFindMore" }}</div>
         <a href="/">Home</a>
         {{ range where site.RegularPages "Type" "page" }}
             {{ if ne .Permalink $currentNode.Permalink }}
@@ -11,7 +11,33 @@
         {{ range site.Sections }}
             &nbsp;&bullet;&nbsp;&nbsp;<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         {{ end }}
-    {{ else }}
+        <!-- Recent posts -->
+        {{ if ge (len (where .Site.RegularPages "Section" "eq" "posts")) 1 }}
+        <br><br>
+        <table class="nostyle">
+        {{ end }}
+        {{ range ( where .Site.RegularPages "Type" "posts" | first 5 ) }}
+            <tr>
+                <td>
+                    <a href="{{ .RelPermalink }}" class="post-link">
+                        <span class="post-title" itemprop="name">
+                            {{- .Title -}}
+                            {{- if .Param "draft" }} {{ i18n "draft" }}{{ end -}}
+                        </span>
+                    </a>
+                </td>
+                {{- $dateTime := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format -}}
+                {{- $dateTimeFormatted := (replaceRE `[^0-9]+` "<span class='ds'>$0</span>"  $dateTime) -}}
+                <td class="right">
+                    <time class="post-date" itemprop="datePublished" datetime="{{ "2006-01-02" | .Date.Format }}">{{ $dateTimeFormatted | safeHTML }}</time>
+                </td>
+            </tr>
+        {{ end }}
+        {{ if ge (len (where .Site.RegularPages "Section" "eq" "posts")) 1 }}
+        </table>
+        <div class="center">{{ i18n "returnRecentPosts" }}</div>
+        {{ end }}
+    {{ else }}                    <!-- Updates page -->
         {{ with site.GetPage .Kind .Type }}
             <a href="{{ .RelPermalink }}">{{ i18n "returnBackTo" }} {{ .LinkTitle }}</a>
         {{ end }}
@@ -21,13 +47,13 @@
             {{ end }}
         {{ end }}
     {{ end }}
-{{ else if eq .Kind "section" }}
+{{ else if eq .Kind "section" }}  <!-- Updates list -->
     <br>
     {{ range $i, $d := site.Menus.main }}
         {{ if $i }}&nbsp;&bullet;&nbsp;&nbsp;{{ end }}<a href="{{ .URL }}">{{ .Name }}</a>
     {{ end }}
-{{ else if eq .Kind "taxonomy" }}
-{{ else if eq .Kind "term" }}
+{{ else if eq .Kind "taxonomy" }} <!-- Tags list -->
+{{ else if eq .Kind "term" }}     <!-- Tags section updates list -->
     {{ with site.GetPage .Kind .Type }}
         <a href="{{ .RelPermalink }}">{{ i18n "returnBackTo" }} {{ .LinkTitle }}</a>
         <br>{{ i18n "returnCheckOut" }}<br>
