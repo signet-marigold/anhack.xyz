@@ -10,6 +10,8 @@ tags: ["cool", "dev-update", "update", "code"]
 toc: false
 draft: false
 ---
+# Pluvio
+
 I'm starting to build quick weekend apps.
 this started as a comment one of my friends made about wanting to develop their skills by building an app.
 
@@ -28,14 +30,22 @@ I found that there are a few good alternatives nowadays [tauri](https://tauri.ap
 Anyways, I have something working in tauri now. Im still working out some of the visual bugs on build vs dev.
 But here it is! Ready to compile and use if you'd like
 
----
+## Screenshots
 
 ![](2025-02-26_01-18-15_ksnip.png)
 
-here's what it looks like in its current state
+here's what it looks like in version 0.1.0
 
 ---
 
-I named it pluvio from the modern word pluviophile. Meaning rain loving.
+## Download
+
+[v0.1.0 Released!](https://github.com/signet-marigold/Pluvio/releases/tag/v0.1.0)
+
+## Source
 
 You can [view the source here](https://github.com/signet-marigold/Pluvio)
+
+still have some rendering bugs. but as far as i can tell in my limited testing its working on deb package debian 12, flatpak on debian 12, windows 10 and windows 11
+
+this is in an early development stage. if you encounter any bugs please add and issue to the github.
