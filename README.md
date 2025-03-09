@@ -1,4 +1,4 @@
-# anhack.xyz [[visit]](https://anhack.xyz)
+# anhack.xyz [\[visit]\](https://anhack.xyz)
 
 ### Hugo Based personal blog
 
