@@ -38,10 +38,6 @@ here's what it looks like in version 0.1.0
 
 ---
 
-## Download
-
-[v0.1.0 Released!](https://github.com/signet-marigold/Pluvio/releases/tag/v0.1.0)
-
 ## Source
 
 You can [view the source here](https://github.com/signet-marigold/Pluvio)
@@ -49,3 +45,11 @@ You can [view the source here](https://github.com/signet-marigold/Pluvio)
 still have some rendering bugs. but as far as i can tell in my limited testing its working on deb package debian 12, flatpak on debian 12, windows 10 and windows 11
 
 this is in an early development stage. if you encounter any bugs please add and issue to the github.
+
+## Updates
+
+### [Febuary 27 - v0.1.0 Released](https://github.com/signet-marigold/Pluvio/releases/tag/v0.1.0)
+
+### [March 02 - Dan's Rain Machine is Now Available](https://github.com/DanMyers300/rain-mixer)
+
+### [March 08 - Flake Released](https://github.com/signet-marigold/pluvio-flake)
