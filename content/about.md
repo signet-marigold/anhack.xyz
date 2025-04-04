@@ -3,7 +3,7 @@ title: "About"
 subtitle: ""
 image: ""
 category: "single"
-tags: ["personal"]
+tags: ["personalinfo"]
 ---
 {{< img src="/images/singles-resources/index/marble.webp" class="full" nolazy="true" alt="marbled collage of color" >}}
 
