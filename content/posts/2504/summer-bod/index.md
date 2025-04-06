@@ -8,7 +8,7 @@ imageAlt: ""
 category: ""
 tags: ["personal-update", "update"]
 toc: false
-draft: true
+draft: false
 ---
 I'm going to max out all my stats istg
 
