@@ -1,5 +1,5 @@
 ---
-title: "From China Manufacturing"
+title: "EXW CHINA"
 subtitle: "Important Info, Sites, Manufacturers, and Importers for Chinese Made Products for use in Importing as a Consumer in the US"
 date: 2025-04-13T17:26:29-05:00
 author: ""
