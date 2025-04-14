@@ -173,6 +173,9 @@ blockquote {
 		// this is the easiest way to get rid of it
 		font-size: 0;
 
+		// get the quote to wrap correctly if there is no space
+		display: contents;
+
 		&:before {
 			content: open-quote;
 			margin-right: $quote-margin;
