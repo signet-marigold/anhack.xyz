@@ -1,7 +1,8 @@
 {{ $currentNode := . }}
 {{ if eq .Kind "page" }}
     {{ if eq .Type "page" }}      <!-- Singles page -->
-        <span class="center">{{ i18n "returnFindMore" }}</span><br>
+        <hr>
+        <h2>{{ i18n "returnFindMore" }}</h2>
         <a href="/">Home</a>
         {{ range where site.RegularPages "Type" "page" }}
             {{ if ne .Permalink $currentNode.Permalink }}
@@ -13,7 +14,8 @@
         {{ end }}
         <!-- Recent posts -->
         {{ if ge (len (where .Site.RegularPages "Section" "eq" "posts")) 1 }}
-        <br><br>
+        <hr>
+        <h2>{{ i18n "returnRecentPosts" }}</h2>
         <table>
         {{ end }}
         {{ range ( where .Site.RegularPages "Type" "posts" | first 5 ) }}
@@ -35,7 +37,6 @@
         {{ end }}
         {{ if ge (len (where .Site.RegularPages "Section" "eq" "posts")) 1 }}
         </table>
-        <div class="center">{{ i18n "returnRecentPosts" }}</div>
         {{ end }}
     {{ else }}                    <!-- Updates page -->
         {{ with site.GetPage .Kind .Type }}

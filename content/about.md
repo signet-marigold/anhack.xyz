@@ -5,7 +5,7 @@ image: ""
 category: "single"
 tags: ["personalinfo"]
 ---
-{{< img src="/images/singles-resources/index/marble.webp" class="full" nolazy="true" alt="marbled collage of color" >}}
+{{< img src="/images/singles/about/marble.webp" class="full" nolazy="true" alt="marbled collage of color" >}}
 
 **alex**
 

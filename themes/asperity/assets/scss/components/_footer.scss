@@ -3,9 +3,20 @@ footer {
 	margin-top: auto;
 }
 footer > div {
-	padding-bottom: 2rem;
+	padding-bottom: 5rem;
 	font-size: $font-size-sm;
 	text-align: center;
+	#end-of-page {
+		top: 4rem;
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		&::before {
+			content: "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+			font-size: 2rem;
+
+		}
+	}
 	p {
 		margin: 1rem 0;
 	}
